@@ -1,0 +1,12 @@
+<?xml-stylesheet type="text/css" href="../blocks.css" ?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+
+    <g class="lines">
+      <path d="M29,50V30a9,9,0,0,0-9-9H0"/>
+      <path d="M21,50V30a1,1,0,0,0-1-1H0"/>
+    </g>
+
+    <rect class="solid" y="12.5" width="8" height="25"/>
+
+</svg>

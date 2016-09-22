@@ -1,0 +1,31 @@
+<?xml-stylesheet type="text/css" href="../blocks.css" ?>
+<?xml-stylesheet type="text/css" href="../liquid.css" ?>
+
+<svg id="text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" width="200" height="100">
+
+      <g>
+        <path class="lines2" d="M200,25H150s-27.5,0-50,1L50,30.57"/>
+        <path class="liquid" d="M200,25H150s-27.5,0-50,1L50,30.57"/>
+      </g>
+      <g>
+        <line class="lines2" x1="150" y1="40.86" x2="50" y2="50"/>
+        <line class="liquid" x1="150" y1="40.86" x2="50" y2="50"/>
+      </g>
+      <g>
+        <line class="lines2" x1="150" y1="60.29" x2="50" y2="69.43"/>
+        <line class="liquid" x1="150" y1="60.29" x2="50" y2="69.43"/>
+      </g>
+      <g>
+        <line class="lines2" x1="50" y1="50" x2="150" y2="60.29"/>
+        <line class="liquid" x1="50" y1="50" x2="150" y2="60.29"/>
+      </g>
+      <g>
+        <line class="lines2" x1="50" y1="30.57" x2="150" y2="40.86"/>
+        <line class="liquid" x1="50" y1="30.57" x2="150" y2="40.86"/>
+      </g>
+      <g>
+        <path class="lines2" d="M50,69.43L100,74c22.5,1,50,1,50,1h50"/>
+        <path class="liquid" d="M50,69.43L100,74c22.5,1,50,1,50,1h50"/>
+      </g>
+
+</svg>

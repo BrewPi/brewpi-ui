@@ -1,0 +1,14 @@
+<?xml-stylesheet type="text/css" href="../blocks.css" ?>
+<?xml-stylesheet type="text/css" href="../liquid.css" ?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+
+    <line class="liquid hotwater" y1="25" x2="50" y2="25"/>
+
+      <g class="lines">
+        <line class="line" y1="21" x2="50" y2="21"/>
+        <line class="line" y1="29" x2="50" y2="29"/>
+    </g>
+
+
+</svg>

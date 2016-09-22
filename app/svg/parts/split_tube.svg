@@ -1,0 +1,9 @@
+<?xml-stylesheet type="text/css" href="../blocks.css" ?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+      <g class="lines">
+        <line x1="39.5" y1="21" x2="50" y2="21"/>
+        <line x1="39.5" y1="29" x2="50" y2="29"/>
+        <line y1="21" x2="10.5" y2="21"/>
+        <line y1="29" x2="10.5" y2="29"/>
+  </g>
+</svg>

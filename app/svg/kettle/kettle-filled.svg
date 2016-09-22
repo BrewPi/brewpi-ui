@@ -1,0 +1,13 @@
+<?xml-stylesheet type="text/css" href="../blocks.css" ?>
+<?xml-stylesheet type="text/css" href="../liquid.css" ?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300" xmlns:xlink="http://www.w3.org/1999/xlink">>
+    <rect x="2" y="50" class="kettleliquid" width="195" height="250" rx="5" ry="5" preserveAspectRatio="xMaxYMax meet"/>
+    <rect x="2" y="2" class="lines kettle" width="195" height="295" rx="5" ry="5"/>
+
+    <text transform="translate(180 50)" class="asd">
+      <tspan class="temp" text-anchor="end">66.0°<tspan x="0" y="30" class="liters" text-anchor="end">40.0L</tspan>
+        </tspan>
+    </text>
+
+</svg>

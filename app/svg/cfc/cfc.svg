@@ -1,0 +1,40 @@
+<?xml-stylesheet type="text/css" href="../blocks.css" ?>
+
+<svg version="1.1" id="cfc" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150.1 100" width="150" height="100" style="enable-background:new 0 0 150.1 100;" xml:space="preserve">
+
+	<g class="liquid">
+		<path class="hotwater" d="M0,25h4.1c2.2,0,5.7,2.2,7.6,4.8l2.7,3.6c2,2.6,5.1,4.8,7,4.8h4.5"/>
+		<path class="cold-liquid" d="M150,25H146c-2.2,0-5.7,2.2-7.6,4.8l-2.7,3.6c-2,2.6-5.1,4.8-7,4.8h-4.5"/>
+		<path class="hotwater" d="M25.9,61.8h-5.1c-2.2,0-5.7,2.2-7.6,4.8l-2.7,3.6c-2,2.6-5.1,4.8-7,4.8H0"/>
+		<path class="cold-liquid" d="M124.2,61.8h5.1c2.2,0,5.7,2.2,7.6,4.8l2.7,3.6c2,2.6,5.1,4.8,7,4.8h3.5"/>
+
+		<line class="cold-liquid cfc" x1="36.8" y1="37.5" x2="113.3" y2="37.5"/>
+		<line class="cold-liquid cfc" x1="36.8" y1="62.5" x2="113.3" y2="62.5"/>
+	</g>
+
+	<linearGradient id="gradient" gradientUnits="userSpaceOnUse" x1="25.28" y1="39.5" x2="124.78" y2="39.5" gradientTransform="matrix(1 0 0 -1 0 100)">
+		<stop offset="0" style="stop-color:#DB0023"/>
+		<stop offset="1" style="stop-color:#DB0023;stop-opacity:0"/>
+	</linearGradient>
+	<line class="gradient" x1="36.8" y1="62.5" x2="113.3" y2="62.5"/>
+
+	<linearGradient id="gradient" gradientUnits="userSpaceOnUse" x1="25.28" y1="64.5" x2="124.78" y2="64.5" gradientTransform="matrix(1 0 0 -1 0 100)">
+		<stop offset="0" style="stop-color:#DB0023"/>
+		<stop offset="1" style="stop-color:#DB0023;stop-opacity:0"/>
+	</linearGradient>
+	<line class="gradient" x1="36.8" y1="37.5" x2="113.3" y2="37.5"/>
+
+	<g class="lines">
+		<path d="M0,21h5.3c2.9,0,6.9,2.2,8.8,4.8l2.7,3.6c2,2.6,4.6,4.8,5.8,4.8h2.3"/>
+		<path d="M0,29h2.8c1.5,0,4.4,2.2,6.3,4.8l2.7,3.6c2,2.6,5.9,4.8,8.8,4.8h5.3"/>
+		<path d="M150,21h-5.3c-2.9,0-6.9,2.2-8.8,4.8l-2.7,3.6c-2,2.6-4.6,4.8-5.8,4.8h-2.3"/>
+		<path d="M150,29h-2.8c-1.5,0-4.4,2.2-6.3,4.8l-2.7,3.6c-2,2.6-5.9,4.8-8.8,4.8h-5.3"/>
+		<path d="M25.9,57.8h-5.8c-3.6,0.2-7,2-9.3,4.8l-2.7,3.6c-2,2.6-4.6,4.8-5.8,4.8H0"/>
+		<path d="M24.9,65.8h-2.8c-1.5,0-4.4,2.2-6.3,4.8l-2.7,3.6c-2,2.6-5.7,4.8-8.3,4.8H0"/>
+		<path d="M124.2,57.8h5.8c3.6,0.2,7,2,9.3,4.8l2.7,3.6c2,2.6,4.6,4.8,5.8,4.8h2.2"/>
+		<path d="M125.2,65.8h2.8c1.5,0,4.4,2.2,6.3,4.8l2.7,3.6c2,2.6,5.7,4.8,8.3,4.8h4.7"/>
+		<path d="M37.5,25h75c6.9,0,12.5,5.6,12.5,12.5l0,0c0,6.9-5.6,12.5-12.5,12.5h-75C30.6,50,25,44.4,25,37.5 l0,0C25,30.6,30.6,25,37.5,25z"/>
+		<path d="M37.5,50h75c6.9,0,12.5,5.6,12.5,12.5l0,0c0,6.9-5.6,12.5-12.5,12.5h-75C30.6,75,25,69.4,25,62.5 l0,0C25,55.6,30.6,50,37.5,50z"/>
+	</g>
+
+</svg>

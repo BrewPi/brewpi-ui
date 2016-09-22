@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+
+   <style type="text/css" >
+    .gridlines{
+    fill: none;
+    stroke: #49565e;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+    }
+  </style>
+
+    <g class="gridlines">
+        <polyline points="0 10 0 0 10 0"/>
+        <polyline points="10 50 0 50 0 40"/>
+        <polyline points="50 40 50 50 40 50"/>
+        <polyline points="40 0 50 0 50 10"/>
+    </g>
+
+</svg>

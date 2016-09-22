@@ -1,0 +1,9 @@
+<?xml-stylesheet type="text/css" href="../blocks.css" ?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+
+  <g class="ball">
+    <path d="M39.7,22a15,15,0,0,0-29.4,0H39.7Z"/>
+    <path d="M10.31,28a15,15,0,0,0,29.37,0H10.31Z"/>
+  </g>
+
+</svg>

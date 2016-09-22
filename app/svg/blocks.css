@@ -1,0 +1,243 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:700,900,300,400);
+svg {
+    font-family: 'Roboto', sans-serif;
+}
+.hidden {
+    opacity: 0
+}
+
+.solid{
+  fill:#fff;
+}
+
+.lines {
+    stroke: #fff;
+    stroke-width: 2pt;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+.lines2 {
+    stroke: #fff;
+    stroke-width: 8pt;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    fill: none;
+}
+.kettle {
+    stroke-width: 4pt;
+}
+
+
+
+.temp, .liters {
+    fill: #fff;
+    stroke-width: 8;
+    stroke: #24333D;
+    paint-order: stroke;
+    text-align: left;
+    stroke-linejoin: round;
+}
+.temp {
+    font-weight: bold;
+    font-size: 40px;
+}
+.liters {
+    font-size: 30px;
+    font-weight: normal;
+}
+.ball, .checkarrow {
+    fill: #fff;
+    transform-origin: 50% 50%;
+}
+.ball {
+    transform-origin: 25px 25px;
+}
+.power {
+    transform-origin: 50% 50%;
+}
+.motor .poweron {
+    fill: #E1AC00;
+}
+.heater-element, .lauterhexe {
+    fill:none;
+    stroke-linecap: round;
+    stroke-linejoin:round;
+}
+
+.heater-power_on{
+  fill:#f15a24;
+}
+
+.heater-power_off{
+  fill:#000;
+}
+
+.heater-percent{
+  fill:#fff;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.heater-element.outer {
+    stroke-width: 10;
+    stroke: gray;
+}
+.heater-element.inner, .heater-power_on, .heater-power_off {
+    stroke-width: 4;
+    stroke: #b3b3b3;
+}
+
+.filter{
+  fill:none;
+  stroke:#fff;
+  stroke-width:4;
+  stroke-dasharray: 20 5;
+}
+
+.rvsblock{
+  fill:gray;
+}
+
+.lauterhexe{
+  fill:none;
+    stroke-width:3;
+    stroke:#b3b3b3;
+}
+
+.power.opening {
+    fill: green;
+    -webkit-animation: closing 2s linear infinite;
+    -moz-animation: closing 2s linear infinite;
+    -ms-animation: closing 2s linear infinite;
+    -o-animation: closing 2s linear infinite;
+    animation: closing 2s linear infinite;
+    transform-origin: 50% 50%;
+}
+.power.closing {
+    fill: red;
+    -webkit-animation: opening 2s linear infinite;
+    -moz-animation: opening 2s linear infinite;
+    -ms-animation: opening 2s linear infinite;
+    -o-animation: opening 2s linear infinite;
+    animation: opening 2s linear infinite;
+}
+.opening {
+    -webkit-animation: opening 2s linear infinite;
+    -moz-animation: opening 2s linear infinite;
+    -ms-animation: opening 2s linear infinite;
+    -o-animation: opening 2s linear infinite;
+    animation: opening 2s linear infinite;
+}
+.closing {
+    -webkit-animation: closing 2s linear infinite;
+    -moz-animation: closing 2s linear infinite;
+    -ms-animation: closing 2s linear infinite;
+    -o-animation: closing 2s linear infinite;
+    animation: closing 2s linear infinite;
+}
+.open {
+    transform: rotate(90deg);
+}
+.closed {
+    transform: rotate(90deg);
+}
+.halfopen {
+    transform: rotate(45deg);
+}
+.liquid {
+    fill: none;
+    transition: 1000ms;
+}
+.temp-text {
+    font-size: 14px;
+    fill: #fff;
+    font-family: Roboto;
+    font-weight: 700;
+    text-anchor: middle;
+}
+#test .lines {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+    transform-origin: 50% 50%;
+}
+@-webkit-keyframes rotating
+/* Safari and Chrome */
+
+{
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes opening
+/* Safari and Chrome */
+
+{
+    0% {
+        -ms-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    50% {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+@-webkit-keyframes closing
+/* Safari and Chrome */
+
+{
+    0% {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50% {
+        -ms-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    100% {
+        -ms-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+
+/*svg:hover .liquid{
+	stroke-width:4pt;
+  stroke:#1A8AAB;
+}*/

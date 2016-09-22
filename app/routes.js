@@ -34,6 +34,14 @@ export default function createRoutes(store) {
         importModules.catch(errorLoading);
       },
     }, {
+      path: '/grid',
+      name: 'gridPage',
+      getComponent(location, cb) {
+        System.import('containers/GridPage')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    }, {
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {

@@ -1,0 +1,21 @@
+<?xml-stylesheet type="text/css" href="../blocks.css" ?>
+<?xml-stylesheet type="text/css" href="../liquid.css" ?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+
+    <line class="liquid" y1="25" x2="50" y2="25"/>
+
+    <g class="arrows">
+        <polyline class="arrow north" points="21 14.5 25 10.5 29 14.5"/>
+        <polyline class="arrow east out" points="35.5 21 39.5 25 35.5 29"/>
+        <polyline class="arrow south" points="29 35.5 25 39.5 21 35.5"/>
+        <polyline class="arrow west in" points="14.5 21 10.5 25 14.5 29"/>
+    </g>
+
+      <g class="lines">
+        <line class="line" y1="21" x2="50" y2="21"/>
+        <line class="line" y1="29" x2="50" y2="29"/>
+    </g>
+
+
+</svg>

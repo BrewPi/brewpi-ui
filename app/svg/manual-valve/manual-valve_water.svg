@@ -1,0 +1,26 @@
+<?xml-stylesheet type="text/css" href="../blocks.css" ?>
+<?xml-stylesheet type="text/css" href="../liquid.css" ?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+
+  <line class="liquid" y1="25" x2="50" y2="25"/>
+
+      <g class="lines">
+        <line x1="39.5" y1="21" x2="50" y2="21"/>
+        <line x1="39.5" y1="29" x2="50" y2="29"/>
+        <line y1="21" x2="10.5" y2="21"/>
+        <line y1="29" x2="10.5" y2="29"/>
+  </g>
+
+  <g class="ball">
+    <path d="M39.7,22a15,15,0,0,0-29.4,0H39.7Z"/>
+    <path d="M10.31,28a15,15,0,0,0,29.37,0H10.31Z"/>
+  </g>
+
+  <g class="lines">
+      <path d="M39.42,21A15,15,0,0,0,10.5,21"/>
+      <path d="M10.51,29a15,15,0,0,0,28.89,0"/>
+  </g>
+
+
+</svg>

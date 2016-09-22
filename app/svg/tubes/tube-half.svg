@@ -1,0 +1,12 @@
+<svg id="color" xmlns="http://www.w3.org/2000/svg" viewBox="25 50" width="25" height="50">
+  <title>block</title>
+  <line id="color-2" data-name="color" y1="25" x2="25" y2="25" style="fill: none;stroke: #1a8aab;stroke-linejoin: round;stroke-width: 6px"/>
+  <g id="tube-tile_half">
+    <g id="tube-2" data-name="tube">
+      <g id="lines">
+        <line id="line" y1="21" x2="25" y2="21" style="fill: none;stroke: #fff;stroke-linejoin: round;stroke-width: 2px"/>
+        <line id="line-2" data-name="line" y1="29" x2="25" y2="29" style="fill: none;stroke: #fff;stroke-linejoin: round;stroke-width: 2px"/>
+      </g>
+    </g>
+  </g>
+</svg>

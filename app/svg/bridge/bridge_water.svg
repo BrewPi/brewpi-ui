@@ -1,0 +1,20 @@
+<?xml-stylesheet type="text/css" href="../blocks.css" ?>
+<?xml-stylesheet type="text/css" href="../liquid.css" ?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+
+    <g class="lines" transform="rotate(90 25 25)">
+        <line class="liquid" y1="25" x2="50" y2="25"/>
+        <line x1="50" y1="21" x2="22" y2="21"/>
+        <line x1="50" y1="29" x2="22" y2="29"/>
+        <line y1="21" x2="10.5" y2="21"/>
+        <line y1="29" x2="10.5" y2="29"/>
+  </g>
+
+  <path class="liquid" d="M50,25H41.31a7.69,7.69,0,0,1-6-3.46l-1-1.73a7.69,7.69,0,0,0-6-3.46H21.69a7.69,7.69,0,0,0-6,3.46l-1,1.73a7.69,7.69,0,0,1-6,3.46H0"/>
+
+  <g class="lines">
+      <path class="cls-2" d="M50,29H39a7.69,7.69,0,0,1-6-3.46l-1-1.9A7.87,7.87,0,0,0,26,20H24a7.87,7.87,0,0,0-6,3.63l-1,1.82A7.78,7.78,0,0,1,11,29H0"/>
+      <path class="cls-2" d="M0,21H6.5a7.67,7.67,0,0,0,6-3.47l1-1.9a7.86,7.86,0,0,1,6-3.64H30.62a7.87,7.87,0,0,1,6,3.63l1,1.82a7.78,7.78,0,0,0,6,3.55H50"/>
+  </g>
+
+</svg>

@@ -1,0 +1,20 @@
+<?xml-stylesheet type="text/css" href="../blocks.css" ?>
+<?xml-stylesheet type="text/css" href="../liquid.css" ?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+
+	<g class="liquid">
+		<path d="M0,25h25V0"/>
+		<path d="M25,0v25h25"/>
+		<path d="M25,50V25H0"/>
+		<path d="M50,25H25v25"/>
+	</g>
+
+	<g class="lines" y1="25" x2="50" y2="25">
+		<polyline points="50,21 29,21 29,0 	"/>
+		<polyline points="21,0 21,21 0,21 	"/>
+		<polyline points="0,29 21,29 21,50 	"/>
+		<polyline points="29,50 29,29 50,29 	"/>
+	</g>
+
+</svg>

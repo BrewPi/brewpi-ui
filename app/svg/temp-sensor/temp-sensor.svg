@@ -1,0 +1,17 @@
+<?xml-stylesheet type="text/css" href="../blocks.css" ?>
+<?xml-stylesheet type="text/css" href="../liquid.css" ?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+
+  <g class="lines">
+    <line x1="60" y1="21" x2="46" y2="21"/>
+    <line x1="60" y1="29" x2="46" y2="29"/>
+    <line y1="21" x2="5" y2="21"/>
+    <line y1="29" x2="5" y2="29"/>
+</g>
+
+  <g id="temp-sensor">
+      <rect class="lines cold" x="5.5" y="7.86" width="40" height="34.29" rx="5" ry="5"/>
+      <text class="temp-text" transform="translate(26.61 29.72)">0°</text>
+    </g>
+</svg>

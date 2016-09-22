@@ -1,0 +1,17 @@
+<?xml-stylesheet type="text/css" href="../blocks.css" ?>
+<?xml-stylesheet type="text/css" href="../liquid.css" ?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 100" width="50" height="100">
+
+      <path class="liquid" d="M0,25H20a5,5,0,0,1,5,5V75"/>
+
+      <g class="lines">
+        <path d="M29,75V30a9,9,0,0,0-9-9H0"/>
+        <path d="M21,75V30a1,1,0,0,0-1-1H0"/>
+      </g>
+
+      <rect class="solid" y="12.5" width="8" height="25"/>
+
+    <circle class="lines liquidfill" cx="25" cy="75" r="4"/>
+
+</svg>

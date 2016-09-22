@@ -19,6 +19,8 @@ export default class HomePage extends React.Component { // eslint-disable-line r
     return (
       <h1>
         <FormattedMessage {...messages.header} />
+        <hr />
+        <a href='grid'>Grid WIP</a>
       </h1>
     );
   }

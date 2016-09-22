@@ -1,0 +1,86 @@
+.liquid {
+    stroke-width: 5pt;
+    stroke: #1A8AAB;
+    stroke-linecap: round;
+    stroke-dasharray: 870;
+    stroke-dashoffset: 870;
+    animation: draw 5s infinite linear;
+}
+
+.noliquid{
+  stroke-width: 5pt;
+  stroke: #000;
+      stroke-linecap: round;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+.liquidfill {
+    fill: #1A8AAB;
+}
+.kettleliquid {
+    position: absolute;
+    fill: #1A8AAB;
+    bottom: 0;
+}
+.cold {
+    fill: #1A8AAB;
+}
+.hot {
+    fill: #DB0023;
+}
+.water {
+    stroke: #1A8AAB;
+}
+.hotwater {
+    stroke: #DB0023;
+}
+.beer {
+    stroke: #E1AC00;
+}
+.arrow {
+    stroke-width: 2pt;
+    stroke: white;
+    fill: none;
+}
+.arrow {
+    opacity: 0;
+    transform-origin: center;
+}
+.arrow.in, .arrow.out {
+    opacity: 1;
+}
+.arrow.in {
+    transform: rotate(180deg);
+}
+.bridge.arrows .west {
+    transform: translate(-6px) rotate(180deg);
+}
+.bridge.arrows .east {
+    transform: translate(6px);
+}
+
+/* special */
+
+.cfc {
+    stroke-width: 22;
+    stroke-linecap: round;
+}
+.gradient {
+    fill: none;
+    stroke: url(#gradient);
+    stroke-width: 23;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+}
+
+/* hovers */
+
+
+/*svg:hover .liquid{
+	stroke-width:1pt;
+  stroke-miterlimit:0;
+}*/

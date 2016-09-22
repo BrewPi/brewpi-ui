@@ -1,0 +1,15 @@
+<?xml-stylesheet type="text/css" href="../blocks.css" ?>
+<?xml-stylesheet type="text/css" href="../liquid.css" ?>
+
+<svg id="text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+
+    <line class="filter" x1="-10" y1="11" x2="200" y2="11"/>
+    <rect id="bolt" x="194" y="12.5" width="6" height="25" fill="#fff"/>
+    <path class="liquid" d="M175,40v-10a5,5,0,0,1,5-5h20"/>
+
+    <g class="lines">
+        <path d="M171,40v-10a9,9,0,0,1,9-9h20"/>
+        <path d="M179,40v-10a1,1,0,0,1,1-1h20"/>
+    </g>
+
+</svg>
