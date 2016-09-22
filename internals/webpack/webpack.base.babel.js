@@ -37,7 +37,7 @@ module.exports = (options) => ({
       include: /node_modules/,
       loaders: ['style-loader', 'css-loader'],
     }, {
-      test: /\.(eot|svg|ttf|woff|woff2)$/,
+      test: /\.(eot|ttf|woff|woff2)$/,
       loader: 'file-loader',
     }, {
       test: /\.(jpg|png|gif)$/,
@@ -54,7 +54,11 @@ module.exports = (options) => ({
     }, {
       test: /\.(mp4|webm)$/,
       loader: 'url-loader?limit=10000',
-    }],
+    }, {
+      test: /\.svg$/,
+      loader: 'babel!svg-react',
+    },
+    ],
   },
   plugins: options.plugins.concat([
     new webpack.ProvidePlugin({
