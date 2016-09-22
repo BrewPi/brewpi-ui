@@ -16,7 +16,7 @@ class Grid extends React.Component { // eslint-disable-line react/prefer-statele
     return (
       <div className={styles.grid}>
         <Tile>
-          <Valves.Motor />
+          <Valves.Manual rotate={90} /> 
         </Tile>
       </div>
     );

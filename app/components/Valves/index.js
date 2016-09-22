@@ -1,9 +1,25 @@
 import React from 'react';
 import SVG from '../../svg/svg.js';
+import styles from './styles.css';
+
+const SvgBall = require('./svg/ball.svg');
+const SvgShell = require('./svg/ball_shell.svg');
+const SvgMotor = require('./svg/motor.svg');
+const SvgTube = require('./svg/split_tube.svg');
+
 
 export const Manual = (props) => {
-  const className = props.rotate ? 'rotate-' + props.rotate : '';
-  return <SVG.Valve.Manual className={className} />;
+  let svgClass = '';
+  if (props.rotate) {
+    svgClass = styles[`rotate-${props.rotate}`];
+  }
+  return (
+    <svg className={svgClass}>
+      <SvgTube className={styles.tube} />
+      <SvgShell />
+      <SvgBall />
+    </svg>
+    );
 };
 
 export const Motor = (props) => {

@@ -1,7 +1,17 @@
-.tile { /* stylelint-disable */
-
+.content, .tile
+{ 
+    float: left;
+    display: block;
+    clear: left;
+    width: 50px;
+    height: 50px;
 }
 
 span.coordinates{
     font-size: 9px;
+    z-index: 1;
+    clear: none;
+    position: absolute;
+    display: block;
+    margin: 3px;
 }
