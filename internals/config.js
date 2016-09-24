@@ -21,6 +21,7 @@ const ReactBoilerplate = {
        * by listing them here.
        */
       exclude: [
+        'bootstrap-css-only',
         'chalk',
         'compression',
         'cross-env',
