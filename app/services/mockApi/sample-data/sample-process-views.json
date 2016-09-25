@@ -1,0 +1,313 @@
+{
+  "id" : 1,
+  "name": "HERMS",
+  "rows": 20,
+  "cols": 10,
+  "showCoordinates": false,
+  "layouts": [
+    {
+      "id": 1,
+      "name": "mashing",
+      "tiles" :[
+        {
+          "x": 0,
+          "y": 1,
+          "part": {
+            "type": "TUBE_KNEE",
+            "rotate": 90
+          }
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 90
+          }
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 90
+          }
+        },
+        {
+          "x": 0,
+          "y": 4,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 90
+          }
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 90
+          }
+        },
+        {
+          "x": 0,
+          "y": 6,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 90
+          }
+        },
+        {
+          "x": 0,
+          "y": 7,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 90
+          }
+        },
+        {
+          "x": 0,
+          "y": 8,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 90
+          }
+        },
+        {
+          "x": 0,
+          "y": 9,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 90
+          }
+        },
+        {
+          "x": 0,
+          "y": 10,
+          "part": {
+            "type": "TUBE_KNEE",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 1,
+          "y": 6,
+          "part": {
+            "type": "TUBE_KNEE",
+            "rotate": 90
+          }
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 90
+          }
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "part": {
+            "type": "TUBE_KNEE",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 1,
+          "y": 10,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "part": {
+            "type": "VALVE_MANUAL",
+            "rotate": 0,
+            "id": 1
+          }
+        },
+        {
+          "x": 2,
+          "y": 6,
+          "part": {
+            "type": "VALVE_MANUAL",
+            "rotate": 0,
+            "id": 2
+          }
+        },
+        {
+          "x": 2,
+          "y": 8,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 2,
+          "y": 10,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 3,
+          "y": 8,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 3,
+          "y": 10,
+          "part": {
+            "type": "VALVE_MOTOR",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 4,
+          "y": 9,
+          "part": {
+            "type": "VALVE_CHECK",
+            "rotate": 90
+          }
+        },
+        {
+          "x": 4,
+          "y": 10,
+          "part": {
+            "type": "TUBE_CROSS",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 4,
+          "y": 11,
+          "part": {
+            "type": "VALVE_MOTOR",
+            "rotate": 90
+          }
+        },
+        {
+          "x": 5,
+          "y": 10,
+          "part": {
+            "type": "VALVE_MOTOR",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 6,
+          "y": 10,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 7,
+          "y": 10,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 7,
+          "y": 4,
+          "part": {
+            "type": "VALVE_MANUAL",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 7,
+          "y": 5,
+          "part": {
+            "type": "VALVE_MANUAL",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 8,
+          "y": 4,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 8,
+          "y": 5,
+          "part": {
+            "type": "TUBE_KNEE",
+            "rotate": 180
+          }
+        },
+        {
+          "x": 8,
+          "y": 6,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 90
+          }
+        },
+        {
+          "x": 8,
+          "y": 7,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 90
+          }
+        },
+        {
+          "x": 8,
+          "y": 8,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 90
+          }
+        },
+        {
+          "x": 8,
+          "y": 9,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 90
+          }
+        },
+        {
+          "x": 8,
+          "y": 10,
+          "part": {
+            "type": "TUBE_CROSS",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 9,
+          "y": 4,
+          "part": {
+            "type": "TUBE_BRIDGE",
+            "rotate": 0
+          }
+        }
+      ]
+    }
+  ]
+}

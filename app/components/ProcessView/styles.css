@@ -1,9 +1,12 @@
-.grid { 
+.ProcessView {
   background: #24333D;
   font-family: sans-serif;
   font-size: 12px;
-  color: #fff;
+  color: #FFF;
   width: inherit;
-  height: 1000px;
   overflow: auto;
+}
+
+span {
+  margin: 5px;
 }

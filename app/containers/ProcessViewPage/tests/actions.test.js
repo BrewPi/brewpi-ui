@@ -6,7 +6,7 @@ import {
   DEFAULT_ACTION,
 } from '../constants';
 
-describe('Grid actions', () => {
+describe('ProcessViews actions', () => {
   describe('Default Action', () => {
     it('has a type of DEFAULT_ACTION', () => {
       const expected = {

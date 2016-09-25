@@ -212,6 +212,7 @@
     "express": "4.14.0",
     "fontfaceobserver": "2.0.4",
     "immutable": "3.8.1",
+    "immutable-table": "^1.0.0",
     "intl": "1.2.4",
     "invariant": "2.2.1",
     "ip": "1.1.3",

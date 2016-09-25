@@ -13,19 +13,41 @@
 
 import React from 'react';
 
+// Import react-bootstrap components for Navbar
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Link } from 'react-router';
+
 import styles from './styles.css';
 
 export default class App extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
-  static propTypes = {
-    children: React.PropTypes.node,
-  };
-
   render() {
     return (
       <div className={styles.container}>
+        <Navbar inverse>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <Link to={'/'}>BrewPi</Link>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+          </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav>
+              <NavItem>
+                <Link to={'/process-view'}>Process View</Link>
+              </NavItem>
+            </Nav>
+            <Nav pullRight>
+              <NavItem eventKey={1} href="#">Settings</NavItem>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
         {React.Children.toArray(this.props.children)}
       </div>
     );
   }
 }
+
+App.propTypes = {
+  children: React.PropTypes.node,
+};

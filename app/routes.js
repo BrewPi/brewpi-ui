@@ -34,10 +34,10 @@ export default function createRoutes(store) {
         importModules.catch(errorLoading);
       },
     }, {
-      path: '/grid',
-      name: 'gridPage',
+      path: '/process-view',
+      name: 'processview',
       getComponent(location, cb) {
-        System.import('containers/GridPage')
+        System.import('containers/ProcessViewPage')
           .then(loadModule(cb))
           .catch(errorLoading);
       },
