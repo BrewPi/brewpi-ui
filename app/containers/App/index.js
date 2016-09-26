@@ -36,6 +36,9 @@ export default class App extends React.Component { // eslint-disable-line react/
               <NavItem>
                 <Link to={'/process-view'}>Process View</Link>
               </NavItem>
+              <NavItem>
+                <Link to={'/catalog'}>Catalog</Link>
+              </NavItem>
             </Nav>
             <Nav pullRight>
               <NavItem eventKey={1} href="#">Settings</NavItem>

@@ -42,6 +42,14 @@ export default function createRoutes(store) {
           .catch(errorLoading);
       },
     }, {
+      path: '/catalog',
+      name: 'catalogPage',
+      getComponent(location, cb) {
+        System.import('components/CatalogPage')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    }, {
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {

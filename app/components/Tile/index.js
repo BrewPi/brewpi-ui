@@ -24,11 +24,13 @@ const Tile = (props) => {
   );
 };
 
-Tile.defaultPropsTypes = {
+Tile.propTypes = {
   x: React.PropTypes.number,
   y: React.PropTypes.number,
   showCoordinates: React.PropTypes.boolean,
+  children: React.PropTypes.node,
 };
+
 Tile.defaultProps = {
   x: -1,
   y: -1,
