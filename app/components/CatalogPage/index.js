@@ -36,14 +36,20 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               <td>
                 <Tubes.Straight />
               </td>
-              <td>TODO</td>
+              <td>
+                <Tubes.Straight flow={'We'} />
+                <Tubes.Straight flow={'wE'} />
+              </td>
             </tr>
             <tr>
               <td>Tube Elbow</td>
               <td>
                 <Tubes.Elbow />
               </td>
-              <td>TODO</td>
+              <td>
+                <Tubes.Elbow flow={'Ne'} />
+                <Tubes.Elbow flow={'nE'} />
+              </td>
             </tr>
             <tr>
               <td>Valve</td>

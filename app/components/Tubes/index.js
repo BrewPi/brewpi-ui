@@ -11,6 +11,7 @@ const SvgLiquidStraight = require('./svg/liquid_straight.svg?tag=g');
 const SvgTubeElbow = require('./svg/tube_elbow.svg?tag=g');
 const SvgLiquidElbow = require('./svg/liquid_elbow.svg?tag=g');
 import { SvgParent } from 'components/SvgParent';
+import { FlowArrows } from 'components/FlowArrows';
 
 const Input = (props) => (
   <SvgParent>
@@ -30,15 +31,23 @@ const Straight = (props) => (
   <SvgParent>
     <SvgTubeStraight className={styles.tube} />
     <SvgLiquidStraight className={styles.liquid} />
+    <FlowArrows flow={props.flow} />
   </SvgParent>
 );
+Straight.propTypes = {
+  flow: React.PropTypes.string,
+};
 
 const Elbow = (props) => (
   <SvgParent>
     <SvgTubeElbow className={styles.tube} />
     <SvgLiquidElbow className={styles.liquid} />
+    <FlowArrows flow={props.flow} />
   </SvgParent>
 );
+Elbow.propTypes = {
+  flow: React.PropTypes.string,
+};
 
 export const Tubes = {
   Input,
