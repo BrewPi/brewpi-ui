@@ -17,9 +17,12 @@
   transform: rotate(270deg);
 }
 
-.power_off{
-  color: black;
+.powerClosing {
+  color: #f53;
+ }
+.powerOpening {
+  color: #5c5;
 }
-.power_opening {
-  color: green;
+.powerIcon {
+  color: black;
 }

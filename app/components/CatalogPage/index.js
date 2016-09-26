@@ -45,6 +45,7 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               </td>
               <td>
                 <Valves.Motor powered={'opening'} />
+                <Valves.Motor powered={'closing'} />
               </td>
             </tr>
             <tr>

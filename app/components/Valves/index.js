@@ -19,15 +19,32 @@ const Manual = (props) => (
   </SvgParent>
 );
 
-const Motor = (props) => (
-  <SvgParent>
-    <SvgTube className={styles.tube} />
-    <SvgShell />
-    <SvgBall />
-    <SvgMotor className={styles.motor} />
-    <SvgMotorPower className={styles.power_opening} />
-  </SvgParent>
-);
+const Motor = (props) => {
+  let powerClass;
+  switch (props.powered) {
+    case 'opening':
+      powerClass = styles.powerOpening;
+      break;
+    case 'closing':
+      powerClass = styles.powerClosing;
+      break;
+    default:
+      powerClass = styles.powerIdle;
+      break;
+  }
+  return (
+    <SvgParent>
+      <SvgTube className={styles.tube} />
+      <SvgShell />
+      <SvgBall />
+      <SvgMotor className={powerClass} />
+      <SvgMotorPower className={styles.powerIcon} />
+    </SvgParent>
+  );
+};
+Motor.propTypes = {
+  powered: React.PropTypes.string,
+};
 
 const Check = (props) => (
   <SvgParent>
