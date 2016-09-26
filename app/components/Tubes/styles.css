@@ -1,0 +1,25 @@
+.tube {
+    stroke: #fff;
+    stroke-width: 2pt;
+    stroke-linecap: round;
+    fill: none;
+}
+
+.rotate_90 {
+  transform: rotate(90deg);
+}
+
+.rotate_180 {
+  transform: rotate(180deg);
+}
+
+.rotate_270 {
+  transform: rotate(270deg);
+}
+
+.power_off{
+  color: black;
+}
+.power_opening {
+  color: green;
+}

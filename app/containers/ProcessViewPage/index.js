@@ -12,8 +12,8 @@ import messages from './messages';
 import styles from './styles.css';
 import ProcessView from 'components/ProcessView';
 import { makeViewSelector } from './selectors.js';
-import Tile from '../../components/Tile';
-import * as Valves from '../../components/Valves/index.js';
+import Tile from 'components/Tile';
+import { Valves } from 'components/Valves';
 
 export class ProcessViewPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 

@@ -8,7 +8,8 @@ import React from 'react';
 
 import styles from './styles.css';
 import { Table } from 'react-bootstrap';
-import * as Valves from '../../components/Valves/index.js';
+import { Valves } from 'components/Valves';
+import { Tubes } from 'components/Tubes';
 
 class CatalogPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -23,6 +24,13 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td>Tube Straight</td>
+              <td>
+                <Tubes.Straight />
+              </td>
+              <td>TODO</td>
+            </tr>
             <tr>
               <td>Valve</td>
               <td>

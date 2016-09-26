@@ -1,7 +1,5 @@
 import React from 'react';
-import SVG from '../../svg/svg.js';
 import styles from './styles.css';
-import classNames from 'classnames';
 
 const SvgBall = require('./svg/ball.svg');
 const SvgShell = require('./svg/ball-shell.svg');
@@ -13,7 +11,7 @@ const SvgMotorPower = require('./svg/motor-power.svg');
 import { SvgParent } from 'components/SvgParent';
 
 
-export const Manual = (props) => (
+const Manual = (props) => (
   <SvgParent>
     <SvgTube className={styles.tube} />
     <SvgShell />
@@ -21,7 +19,7 @@ export const Manual = (props) => (
   </SvgParent>
 );
 
-export const Motor = (props) => (
+const Motor = (props) => (
   <SvgParent>
     <SvgTube className={styles.tube} />
     <SvgShell />
@@ -31,9 +29,15 @@ export const Motor = (props) => (
   </SvgParent>
 );
 
-export const Check = (props) => (
+const Check = (props) => (
   <SvgParent>
     <SvgTube className={styles.tube} />
     <SvgCheck />
   </SvgParent>
 );
+
+export const Valves = {
+  Manual,
+  Motor,
+  Check,
+};
