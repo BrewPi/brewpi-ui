@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './styles.css';
 
-const SvgBall = require('./svg/ball.svg');
-const SvgMotor = require('./svg/motor.svg');
-const SvgCheck = require('./svg/check-arrow.svg');
-const SvgTube = require('./svg/split-tube.svg');
-const SvgMotorPower = require('./svg/motor-power.svg');
+// load svg's and inline them wigh g tag instead of svg tag, because they are used nested
+const SvgBall = require('./svg/ball.svg?tag=g');
+const SvgMotor = require('./svg/motor.svg?tag=g');
+const SvgCheck = require('./svg/check-arrow.svg?tag=g');
+const SvgTube = require('./svg/split-tube.svg?tag=g');
+const SvgMotorPower = require('./svg/motor-power.svg?tag=g');
 
 import { SvgParent } from 'components/SvgParent';
 

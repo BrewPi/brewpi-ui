@@ -19,19 +19,22 @@
 
 .powerClosing {
   color: #f53;
- }
+}
+
 .powerOpening {
   color: #5c5;
 }
+
 .powerIcon {
   color: black;
 }
 
-.ballMidway > g {
+.ballMidway {
+  transform-origin: 25px 25px;
   transform: rotate(45deg);
-  transform-origin: 50% 50%;
 }
-.ballClosed > g {
+
+.ballClosed {
+  transform-origin: 25px 25px;
   transform: rotate(90deg);
-  transform-origin: 50% 50%;
 }
