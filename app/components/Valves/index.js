@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './styles.css';
 
 const SvgBall = require('./svg/ball.svg');
-const SvgShell = require('./svg/ball-shell.svg');
 const SvgMotor = require('./svg/motor.svg');
 const SvgCheck = require('./svg/check-arrow.svg');
 const SvgTube = require('./svg/split-tube.svg');
@@ -10,33 +9,40 @@ const SvgMotorPower = require('./svg/motor-power.svg');
 
 import { SvgParent } from 'components/SvgParent';
 
+const powerClasses = {
+  opening: styles.powerOpening,
+  closing: styles.powerClosing,
+  default: styles.powerIdle,
+};
+const posClasses = {
+  open: styles.ballOpen,
+  closed: styles.ballClosed,
+  midway: styles.ballMidway,
+  default: styles.ballOpen,
+};
 
-const Manual = (props) => (
-  <SvgParent>
-    <SvgTube className={styles.tube} />
-    <SvgShell />
-    <SvgBall />
-  </SvgParent>
-);
-
-const Motor = (props) => {
-  let powerClass;
-  switch (props.powered) {
-    case 'opening':
-      powerClass = styles.powerOpening;
-      break;
-    case 'closing':
-      powerClass = styles.powerClosing;
-      break;
-    default:
-      powerClass = styles.powerIdle;
-      break;
-  }
+const Manual = (props) => {
+  const posClass = posClasses[props.position] || posClasses.default;
   return (
     <SvgParent>
       <SvgTube className={styles.tube} />
-      <SvgShell />
-      <SvgBall />
+      <SvgBall className={posClass} />
+    </SvgParent>
+  );
+};
+Manual.propTypes = {
+  position: React.PropTypes.string,
+};
+
+
+const Motor = (props) => {
+  const powerClass = powerClasses[props.powered] || powerClasses.default;
+  const posClass = posClasses[props.position] || posClasses.default;
+
+  return (
+    <SvgParent>
+      <SvgTube className={styles.tube} />
+      <SvgBall className={posClass} />
       <SvgMotor className={powerClass} />
       <SvgMotorPower className={styles.powerIcon} />
     </SvgParent>
@@ -44,6 +50,7 @@ const Motor = (props) => {
 };
 Motor.propTypes = {
   powered: React.PropTypes.string,
+  position: React.PropTypes.string,
 };
 
 const Check = (props) => (

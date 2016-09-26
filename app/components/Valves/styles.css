@@ -26,3 +26,12 @@
 .powerIcon {
   color: black;
 }
+
+.ballMidway > g {
+  transform: rotate(45deg);
+  transform-origin: 50% 50%;
+}
+.ballClosed > g {
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+}
