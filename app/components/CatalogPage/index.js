@@ -25,9 +25,23 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
           </thead>
           <tbody>
             <tr>
+              <td>Tube Input</td>
+              <td>
+                <Tubes.Input />
+              </td>
+              <td>TODO</td>
+            </tr>
+            <tr>
               <td>Tube Straight</td>
               <td>
                 <Tubes.Straight />
+              </td>
+              <td>TODO</td>
+            </tr>
+            <tr>
+              <td>Tube Elbow</td>
+              <td>
+                <Tubes.Elbow />
               </td>
               <td>TODO</td>
             </tr>

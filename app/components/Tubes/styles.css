@@ -1,8 +1,14 @@
 .tube {
-    stroke: #fff;
-    stroke-width: 2pt;
-    stroke-linecap: round;
-    fill: none;
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.liquid {
+  fill: none;
+  stroke-width: 5pt;
+  stroke: #1A8AAB;
 }
 
 .rotate_90 {
@@ -17,9 +23,10 @@
   transform: rotate(270deg);
 }
 
-.power_off{
+.power_off {
   color: black;
 }
+
 .power_opening {
   color: green;
 }

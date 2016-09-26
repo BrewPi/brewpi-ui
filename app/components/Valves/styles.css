@@ -1,8 +1,8 @@
 .tube {
-    stroke: #fff;
-    stroke-width: 2pt;
-    stroke-linecap: round;
-    fill: none;
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  fill: none;
 }
 
 .rotate_90 {
@@ -18,11 +18,11 @@
 }
 
 .powerClosing {
-  color: #f53;
+  color: #F53;
 }
 
 .powerOpening {
-  color: #5c5;
+  color: #5C5;
 }
 
 .powerIcon {
