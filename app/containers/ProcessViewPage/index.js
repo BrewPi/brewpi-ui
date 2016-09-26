@@ -13,7 +13,7 @@ import styles from './styles.css';
 import ProcessView from 'components/ProcessView';
 import { makeViewSelector } from './selectors.js';
 import Tile from '../../components/Tile';
-// import * as Valves from '../../components/Valves/index.js';
+import * as Valves from '../../components/Valves/index.js';
 
 export class ProcessViewPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
@@ -29,12 +29,13 @@ export class ProcessViewPage extends React.Component { // eslint-disable-line re
         const key = `tile-${x}-${y}`;
         row.push(
           <Tile key={key} x={x} y={y}>
+            <Valves.Manual />
           </Tile>
         );
       }
-      tiles.push(<div className={'row'} key={`row-${y}`}>{row}</div>);
+      tiles.push(<div className={styles.row} key={`row-${y}`}>{row}</div>);
     }
-    return <div>{tiles}</div>;
+    return <div className={styles.tiles}>{tiles}</div>;
   }
 
   render() {
@@ -49,7 +50,7 @@ export class ProcessViewPage extends React.Component { // eslint-disable-line re
         />
         <h2><FormattedMessage {...messages.header} /></h2>
         <ProcessView>
-          {tiles};
+          {tiles}
         </ProcessView>
         <span>view: {JSON.stringify(this.props.view) }</span>
       </div>

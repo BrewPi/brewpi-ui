@@ -1,3 +1,19 @@
 .ProcessViewPage { /* stylelint-disable */
 
 }
+
+.tiles {
+  text-align: center;
+  vertical-align: center;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.row{
+  clear: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
