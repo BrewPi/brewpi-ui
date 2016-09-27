@@ -1,6 +1,8 @@
 /* eslint no-unused-vars: ["error", { "argsIgnorePattern": "props" }] */
 import React from 'react';
 import styles from './styles.css';
+import liquidStyle from '../liquids.css';
+const classNames = require('classnames');
 
 const SvgTubeInput = require('./svg/tube_input.svg?tag=g');
 const SvgTubeOutput = require('./svg/tube_output.svg?tag=g');
@@ -13,12 +15,25 @@ const SvgLiquidElbow = require('./svg/liquid_elbow.svg?tag=g');
 import { SvgParent } from 'components/SvgParent';
 import { FlowArrows } from 'components/FlowArrows';
 
-const Input = (props) => (
-  <SvgParent>
-    <SvgTubeInput className={styles.tube} />
-    <SvgLiquidInput className={styles.liquid} />
-  </SvgParent>
-);
+const liquids = {
+  beer: liquidStyle.beer,
+  water: liquidStyle.water,
+  hotwater: liquidStyle.hotwater,
+};
+
+const Input = (props) => {
+  const liquidClass = liquids[props.liquid];
+  return (
+    <SvgParent>
+      <SvgTubeInput className={styles.tube} />
+      <SvgLiquidInput className={classNames(styles.liquid, liquidClass)} />
+    </SvgParent>
+  );
+};
+Input.propTypes = {
+  flow: React.PropTypes.string,
+  liquid: React.PropTypes.string,
+};
 
 const Output = (props) => (
   <SvgParent>
@@ -26,27 +41,39 @@ const Output = (props) => (
     <SvgLiquidOutput className={styles.liquid} />
   </SvgParent>
 );
-
-const Straight = (props) => (
-  <SvgParent>
-    <SvgTubeStraight className={styles.tube} />
-    <SvgLiquidStraight className={styles.liquid} />
-    <FlowArrows flow={props.flow} />
-  </SvgParent>
-);
-Straight.propTypes = {
+Output.propTypes = {
   flow: React.PropTypes.string,
+  liquid: React.PropTypes.string,
 };
 
-const Elbow = (props) => (
-  <SvgParent>
-    <SvgTubeElbow className={styles.tube} />
-    <SvgLiquidElbow className={styles.liquid} />
-    <FlowArrows flow={props.flow} />
-  </SvgParent>
-);
+const Straight = (props) => {
+  const liquidClass = liquids[props.liquid];
+  return (
+    <SvgParent>
+      <SvgTubeStraight className={styles.tube} />
+      <SvgLiquidStraight className={classNames(styles.liquid, liquidClass)} />
+      <FlowArrows flow={props.flow} />
+    </SvgParent>
+  );
+};
+Straight.propTypes = {
+  flow: React.PropTypes.string,
+  liquid: React.PropTypes.string,
+};
+
+const Elbow = (props) => {
+  const liquidClass = liquids[props.liquid];
+  return (
+    <SvgParent>
+      <SvgTubeElbow className={styles.tube} />
+      <SvgLiquidElbow className={classNames(styles.liquid, liquidClass)} />
+      <FlowArrows flow={props.flow} />
+    </SvgParent>
+  );
+};
 Elbow.propTypes = {
   flow: React.PropTypes.string,
+  liquid: React.PropTypes.string,
 };
 
 export const Tubes = {

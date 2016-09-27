@@ -29,7 +29,10 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               <td>
                 <Tubes.Input />
               </td>
-              <td>TODO</td>
+              <td>
+                <Tubes.Input liquid={'water'} />
+                <Tubes.Input liquid={'hotwater'} />
+              </td>
             </tr>
             <tr>
               <td>Tube Straight</td>
@@ -37,8 +40,8 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Straight />
               </td>
               <td>
-                <Tubes.Straight flow={'We'} />
-                <Tubes.Straight flow={'wE'} />
+                <Tubes.Straight flow={'We'} liquid={'beer'} />
+                <Tubes.Straight flow={'wE'} liquid={'water'} />
               </td>
             </tr>
             <tr>
@@ -47,8 +50,8 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Elbow />
               </td>
               <td>
-                <Tubes.Elbow flow={'Ne'} />
-                <Tubes.Elbow flow={'nE'} />
+                <Tubes.Elbow flow={'Ne'} liquid={'hotwater'} />
+                <Tubes.Elbow flow={'nE'} liquid={'water'} />
               </td>
             </tr>
             <tr>
