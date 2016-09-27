@@ -1,3 +1,5 @@
 .flowArrows {
-  color: #FFF;
+  fill: none;
+  stroke-width: 2px;
+  stroke: #FFF;
 }

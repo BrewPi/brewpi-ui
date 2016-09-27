@@ -7,6 +7,7 @@
       <path d="M21,50V30a1,1,0,0,0-1-1H0"/>
     </g>
 
-    <rect class="solid" y="12.5" width="8" height="25"/>
+    <rect class="solid" y="12.5" width="8" height="8"/>
+    <rect class="solid" y="30" width="8" height="8"/>
 
 </svg>
