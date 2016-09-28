@@ -15,8 +15,7 @@ import React from 'react';
 
 // Import react-bootstrap components for Navbar
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
-import { Link } from 'react-router';
-
+import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
 import styles from './styles.css';
 
 export default class App extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -27,18 +26,18 @@ export default class App extends React.Component { // eslint-disable-line react/
         <Navbar inverse>
           <Navbar.Header>
             <Navbar.Brand>
-              <Link to={'/'}>BrewPi</Link>
+              <a href={'/'}>BrewPi</a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav>
-              <NavItem>
-                <Link to={'/process-view'}>Process View</Link>
-              </NavItem>
-              <NavItem>
-                <Link to={'/catalog'}>Catalog</Link>
-              </NavItem>
+              <IndexLinkContainer to={'/process-view'} >
+                <NavItem>Process View</NavItem>
+              </IndexLinkContainer>
+              <IndexLinkContainer to={'/catalog'} >
+                <NavItem>Catalog</NavItem>
+              </IndexLinkContainer>
             </Nav>
             <Nav pullRight>
               <NavItem eventKey={1} href="#">Settings</NavItem>
