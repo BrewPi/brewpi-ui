@@ -1,7 +1,6 @@
 /* eslint no-unused-vars: ["error", { "argsIgnorePattern": "props" }] */
 import React from 'react';
 import styles from './styles.css';
-const classNames = require('classnames');
 
 const SvgTubeInput = require('./svg/tube_input.svg?tag=g');
 const SvgTubeOutput = require('./svg/tube_output.svg?tag=g');
@@ -27,8 +26,8 @@ import { Liquids } from 'components/Liquids';
 
 const Input = (props) => (
   <SvgParent>
-    <SvgTubeInput className={styles.tube} />
     <SvgLiquidInput className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
+    <SvgTubeInput className={styles.tube} />
   </SvgParent>
 );
 Input.propTypes = {
@@ -38,8 +37,8 @@ Input.propTypes = {
 
 const Output = (props) => (
   <SvgParent>
-    <SvgTubeOutput className={styles.tube} />
     <SvgLiquidOutput className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
+    <SvgTubeOutput className={styles.tube} />
   </SvgParent>
 );
 Output.propTypes = {
@@ -49,8 +48,8 @@ Output.propTypes = {
 
 const Straight = (props) => (
   <SvgParent>
-    <SvgTubeStraight className={styles.tube} />
     <SvgLiquidStraight className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
+    <SvgTubeStraight className={styles.tube} />
     <FlowArrows flow={props.flow} />
   </SvgParent>
 );
@@ -59,10 +58,10 @@ Straight.propTypes = {
   liquid: React.PropTypes.string,
 };
 
-const Elbow = (props) => ( 
+const Elbow = (props) => (
   <SvgParent>
-    <SvgTubeElbow className={styles.tube} />
     <SvgLiquidElbow className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
+    <SvgTubeElbow className={styles.tube} />
     <FlowArrows flow={props.flow} />
   </SvgParent>
 );
@@ -73,8 +72,8 @@ Elbow.propTypes = {
 
 const Tee = (props) => (
   <SvgParent>
-    <SvgTubeTee className={styles.tube} />
     <SvgLiquidTee className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
+    <SvgTubeTee className={styles.tube} />
     <FlowArrows flow={props.flow} />
   </SvgParent>
 );
@@ -83,10 +82,10 @@ Tee.propTypes = {
   liquid: React.PropTypes.string,
 };
 
-const Cross = (props) => ( 
+const Cross = (props) => (
   <SvgParent>
-    <SvgTubeCross className={styles.tube} />
     <SvgLiquidCross className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
+    <SvgTubeCross className={styles.tube} />
     <FlowArrows flow={props.flow} />
   </SvgParent>
 );
@@ -109,8 +108,8 @@ Bridge.propTypes = {
 
 const Inlet = (props) => (
   <SvgParent>
-    <SvgTubeInlet className={styles.tube} />
     <SvgLiquidInlet className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
+    <SvgTubeInlet className={styles.tube} />
     <FlowArrows flow={props.flow} />
   </SvgParent>
 );

@@ -10,6 +10,9 @@ import styles from './styles.css';
 import { Table } from 'react-bootstrap';
 import { Valves } from 'components/Valves';
 import { Tubes } from 'components/Tubes';
+import { Pump } from 'components/Pump';
+import { TempSensor } from 'components/TempSensor';
+import { Cfc } from 'components/Cfc';
 
 class CatalogPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -148,6 +151,38 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Valves.Check />
               </td>
               <td>TODO</td>
+            </tr>
+            <tr>
+              <td>Pump</td>
+              <td>
+                <Pump />
+              </td>
+              <td>
+                <Pump powered={'on'} liquid={'water'} />
+                <Pump powered={'slow'} liquid={'hotwater'} />
+                <Pump powered={'fast'} liquid={'beer'} />
+              </td>
+            </tr>
+            <tr>
+              <td>Inline temperature sensor</td>
+              <td>
+                <TempSensor />
+              </td>
+              <td>
+                <TempSensor liquid={'water'} />
+                <TempSensor liquid={'hotwater'} />
+                <TempSensor liquid={'beer'} />
+              </td>
+            </tr>
+            <tr>
+              <td>Counter flow chiller</td>
+              <td>
+                <Cfc />
+              </td>
+              <td>
+                <Cfc liquid={'water'} />
+                <Cfc liquid={'hotwater'} />
+              </td>
             </tr>
           </tbody>
         </Table>
