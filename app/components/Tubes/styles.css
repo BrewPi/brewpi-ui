@@ -8,6 +8,7 @@
 .liquid {
   fill: none;
   stroke-width: 5pt;
+  stroke-linecap: round;
 }
 
 .rotate_90 {

@@ -115,9 +115,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.InletWhirlpool />
               </td>
               <td>
-                <Tubes.Inlet flow={'Sw'} liquid={'water'} />
-                <Tubes.Inlet flow={'Sw'} liquid={'hotwater'} />
-                <Tubes.Inlet flow={'Sw'} liquid={'beer'} />
+                <Tubes.InletWhirlpool flow={'Sw'} liquid={'water'} />
+                <Tubes.InletWhirlpool flow={'Sw'} liquid={'hotwater'} />
+                <Tubes.InletWhirlpool flow={'Sw'} liquid={'beer'} />
               </td>
             </tr>
             <tr>

@@ -149,9 +149,9 @@ Inlet.propTypes = {
 const InletWhirlpool = (props) => {
   const liquidClass = liquids[props.liquid];
   return (
-    <SvgParent>
-      <SvgTubeInletWhirlpool className={styles.tube} />
+    <SvgParent viewbox={'0 0 50 100'}>
       <SvgLiquidInletWhirlpool className={classNames(styles.liquid, liquidClass)} />
+      <SvgTubeInletWhirlpool className={styles.tube} />
       <FlowArrows flow={props.flow} />
     </SvgParent>
   );
