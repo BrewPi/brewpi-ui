@@ -36,15 +36,15 @@ export default function createRoutes(store) {
     }, {
       path: '/process-view',
       name: 'processview',
-      getComponent(location, cb) {
+      getComponent(nextState, cb) {
         System.import('containers/ProcessViewPage')
           .then(loadModule(cb))
           .catch(errorLoading);
       },
     }, {
       path: '/catalog',
-      name: 'catalogPage',
-      getComponent(location, cb) {
+      name: 'catalog',
+      getComponent(nextState, cb) {
         System.import('components/CatalogPage')
           .then(loadModule(cb))
           .catch(errorLoading);
