@@ -1,0 +1,49 @@
+.blades {
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.ball{
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.motor{
+  fill: #FFF;
+}
+
+.powerOff{
+  color:#222;
+}
+
+.powerOn{
+  color: #E1AC00;
+}
+
+@keyframes rotating
+{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotateOff{
+  transform-origin: 25px 25px;
+}
+
+.rotateFast{
+  animation: rotating 1s linear infinite;
+  transform-origin: 25px 25px;
+}
+
+.rotateSlow{
+  animation: rotating 2s linear infinite;
+  transform-origin: 25px 25px;
+}

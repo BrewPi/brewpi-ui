@@ -1,0 +1,21 @@
+.display {
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.splitTube{
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.value{
+  text-anchor: middle;
+  font-size: 14px;
+  fill: #fff;
+  font-family: Roboto;
+  font-weight: 700;
+}

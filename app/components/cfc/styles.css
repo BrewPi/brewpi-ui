@@ -1,0 +1,19 @@
+.tubes {
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.liquidTubes {
+  stroke: #FFF;
+  stroke-width: 5pt;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.liquidBody{
+  stroke-width: 17pt;
+  stroke-linecap: round;
+  fill: none; 
+}
