@@ -5,45 +5,45 @@
   fill: none;
 }
 
-.ball{
+.ball {
   stroke: #FFF;
   stroke-width: 2pt;
   stroke-linecap: round;
   fill: none;
 }
 
-.motor{
+.motor {
   fill: #FFF;
 }
 
-.powerOff{
-  color:#222;
+.powerOff {
+  color: #222;
 }
 
-.powerOn{
+.powerOn {
   color: #E1AC00;
 }
 
-@keyframes rotating
-{
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.rotateOff{
+.rotateOff {
   transform-origin: 25px 25px;
 }
 
-.rotateFast{
+.rotateFast {
   animation: rotating 1s linear infinite;
   transform-origin: 25px 25px;
 }
 
-.rotateSlow{
+.rotateSlow {
   animation: rotating 2s linear infinite;
   transform-origin: 25px 25px;
 }

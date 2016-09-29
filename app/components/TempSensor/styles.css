@@ -5,17 +5,17 @@
   fill: none;
 }
 
-.splitTube{
+.splitTube {
   stroke: #FFF;
   stroke-width: 2pt;
   stroke-linecap: round;
   fill: none;
 }
 
-.value{
+.value {
   text-anchor: middle;
   font-size: 14px;
-  fill: #fff;
+  fill: #FFF;
   font-family: Roboto;
   font-weight: 700;
 }
