@@ -45,7 +45,7 @@ export default function createRoutes(store) {
       path: '/catalog',
       name: 'catalog',
       getComponent(nextState, cb) {
-        System.import('components/CatalogPage')
+        System.import('containers/ProcessViewPage/components/CatalogPage')
           .then(loadModule(cb))
           .catch(errorLoading);
       },

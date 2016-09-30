@@ -8,11 +8,11 @@ import React from 'react';
 
 import styles from './styles.css';
 import { Table } from 'react-bootstrap';
-import { Valves } from 'components/Valves';
-import { Tubes } from 'components/Tubes';
-import { Pump } from 'components/Pump';
-import { TempSensor } from 'components/TempSensor';
-import { Cfc } from 'components/Cfc';
+import { Valves } from '../Valves';
+import { Tubes } from '../Tubes';
+import { Pump } from '../Pump';
+import { TempSensor } from '../TempSensor';
+import { Cfc } from '../Cfc';
 
 class CatalogPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {

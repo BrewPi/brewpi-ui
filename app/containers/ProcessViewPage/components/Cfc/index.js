@@ -1,7 +1,7 @@
 /* eslint no-unused-vars: ["error", { "argsIgnorePattern": "props" }] */
 import React from 'react';
 import styles from './styles.css';
-import { Liquids } from 'components/Liquids';
+import { Liquids } from '../Liquids';
 
 const SvgCfc = require('./svg/tubes_cfc.svg?tag=g');
 const SvgLiquidCfcTop = require('./svg/liquid_cfc_top.svg?tag=g');
@@ -9,7 +9,7 @@ const SvgLiquidCfcBottom = require('./svg/liquid_cfc_bottom.svg?tag=g');
 const SvgLiquidTubesTop = require('./svg/liquid_tubes_top.svg?tag=g');
 const SvgLiquidTubesBottom = require('./svg/liquid_tubes_bottom.svg?tag=g');
 
-import { SvgParent } from 'components/SvgParent';
+import { SvgParent } from '../SvgParent';
 
 export const Cfc = (props) => (
   <SvgParent viewBox={'0 0 150 100'}>

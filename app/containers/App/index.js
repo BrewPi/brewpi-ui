@@ -15,7 +15,7 @@ import React from 'react';
 
 // Import react-bootstrap components for Navbar
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
-import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
+import { IndexLinkContainer } from 'react-router-bootstrap';
 import styles from './styles.css';
 
 export default class App extends React.Component { // eslint-disable-line react/prefer-stateless-function

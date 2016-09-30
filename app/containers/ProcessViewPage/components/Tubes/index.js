@@ -20,14 +20,15 @@ const SvgTubeInlet = require('./svg/tube_inlet.svg?tag=g');
 const SvgLiquidInlet = require('./svg/liquid_inlet.svg?tag=g');
 const SvgTubeInletWhirlpool = require('./svg/tube_inlet-whirlpool.svg?tag=g');
 const SvgLiquidInletWhirlpool = require('./svg/liquid_inlet-whirlpool.svg?tag=g');
-import { SvgParent } from 'components/SvgParent';
-import { FlowArrows, FlowArrowsBridge } from 'components/FlowArrows';
-import { Liquids } from 'components/Liquids';
+import { SvgParent } from '../SvgParent';
+import { FlowArrows, FlowArrowsBridge } from '../FlowArrows';
+import { Liquids } from '../Liquids';
 
 const Input = (props) => (
   <SvgParent>
     <SvgLiquidInput className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
     <SvgTubeInput className={styles.tube} />
+    <FlowArrows flow={props.flow} />
   </SvgParent>
 );
 Input.propTypes = {
@@ -39,6 +40,7 @@ const Output = (props) => (
   <SvgParent>
     <SvgLiquidOutput className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
     <SvgTubeOutput className={styles.tube} />
+    <FlowArrows flow={props.flow} />
   </SvgParent>
 );
 Output.propTypes = {

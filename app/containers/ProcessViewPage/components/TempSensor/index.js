@@ -1,13 +1,13 @@
 /* eslint no-unused-vars: ["error", { "argsIgnorePattern": "props" }] */
 import React from 'react';
 import styles from './styles.css';
-import { Liquids } from 'components/Liquids';
+import { Liquids } from '../Liquids';
 
 const SvgSplitTube = require('./svg/split-tube.svg?tag=g');
 const SvgDisplay = require('./svg/display.svg?tag=g');
 const SvgValue = require('./svg/value.svg?tag=g');
 
-import { SvgParent } from 'components/SvgParent';
+import { SvgParent } from '../SvgParent';
 
 export const TempSensor = (props) => (
   <SvgParent>

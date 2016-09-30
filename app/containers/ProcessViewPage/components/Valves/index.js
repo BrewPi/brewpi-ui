@@ -9,7 +9,7 @@ const SvgCheck = require('./svg/check-arrow.svg?tag=g');
 const SvgTube = require('./svg/split-tube.svg?tag=g');
 const SvgMotorPower = require('./svg/motor-power.svg?tag=g');
 
-import { SvgParent } from 'components/SvgParent';
+import { SvgParent } from '../SvgParent';
 
 const powerClasses = {
   opening: styles.powerOpening,
