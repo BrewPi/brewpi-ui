@@ -43,7 +43,11 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               <td>
                 <Tubes.Output />
               </td>
-              <td>TODO</td>
+              <td>
+                <Tubes.Output liquid={'water'} />
+                <Tubes.Output liquid={'hotwater'} />
+                <Tubes.Output liquid={'beer'} />
+              </td>
             </tr>
             <tr>
               <td>Tube Straight</td>

@@ -13,8 +13,21 @@ import styles from './styles.css';
 import ProcessView from './components/ProcessView';
 import { makeViewSelector } from './selectors.js';
 import Tile from './components/Tile';
-import { Valves } from './components/Valves';
-import { Tubes } from './components/Tubes';
+import { Part } from './components/Part';
+const sampleViews = require('services/mockApi/sample-data/sample-process-views.json');
+import { Table } from 'immutable-table';
+
+function readLayoutToTable(layout) {
+  let table = new Table(20, 15);
+  layout.forEach((item) => {
+    table = table.setCell(item.x, item.y, {
+      type: item.part.type,
+      rotate: item.part.rotate,
+    });
+  });
+  return table;
+}
+
 
 export class ProcessViewPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
@@ -28,9 +41,10 @@ export class ProcessViewPage extends React.Component { // eslint-disable-line re
       row = [];
       for (let x = 0; x < cols; x += 1) {
         const key = `tile-${x}-${y}`;
+        const partData = layout.getCell(x, y);
         row.push(
           <Tile key={key} x={x} y={y}>
-            <Valves.Manual />
+            <Part data={partData} />
           </Tile>
         );
       }
@@ -40,7 +54,9 @@ export class ProcessViewPage extends React.Component { // eslint-disable-line re
   }
 
   render() {
-    const tiles = this.renderTiles(this.props.view.currentLayout);
+    const activeTiles = sampleViews.layouts[0].tiles;
+    const parts = readLayoutToTable(activeTiles);
+    const tiles = this.renderTiles(parts);
     return (
       <div className={styles.ProcessViewPage}>
         <Helmet

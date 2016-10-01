@@ -27,7 +27,7 @@ const Tile = (props) => {
 Tile.propTypes = {
   x: React.PropTypes.number,
   y: React.PropTypes.number,
-  showCoordinates: React.PropTypes.boolean,
+  showCoordinates: React.PropTypes.bool,
   children: React.PropTypes.node,
 };
 
