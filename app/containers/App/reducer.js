@@ -4,7 +4,7 @@
  *
  */
 
-import sampleProcessViews from 'services/mockApi/sample-data/sample-process-views.json';
+import sampleProcessViews from 'services/mockApi/sample-data/sample-processviews.json';
 import { combineReducers } from 'redux';
 
 const sampleDataReducer = combineReducers({

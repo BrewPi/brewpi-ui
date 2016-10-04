@@ -4,14 +4,13 @@
  *
  */
 
-import { fromJS } from 'immutable';
-const sampleViews = require('services/mockApi/sample-data/sample-process-views.json');
+import { api } from '../../services/mockApi';
 
 import {
   VIEW_RECEIVED,
   LAYOUT_CHOOSEN,
 } from './constants';
-export const initialState = fromJS(sampleViews);
+export const initialState = api.getProcessViews();
 
 function updateView(state, payload) {
   return state.setIn(['processViews', payload.index], payload.view);

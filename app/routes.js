@@ -34,7 +34,7 @@ export default function createRoutes(store) {
         importModules.catch(errorLoading);
       },
     }, {
-      path: '/process-view',
+      path: '/processview/:viewId',
       name: 'processview',
       getComponent(nextState, cb) {
         System.import('containers/ProcessViewPage')

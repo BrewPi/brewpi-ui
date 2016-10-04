@@ -18,7 +18,7 @@ const defaultProcessView = fromJS({
  * Get settings for a specific processView
  */
 const viewSelector = (state, props) => {
-  const id = props.viewId;
+  const id = fromJS(props).getIn(['params', 'viewId']); // id passed in by react-router
   const view = state.getIn(['processViews', id]);
   return view || defaultProcessView;
 };

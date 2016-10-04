@@ -60,7 +60,7 @@ export class ProcessViewPage extends React.Component { // eslint-disable-line re
         <ProcessView>
           { tiles }
         </ProcessView>
-        <span>viewId: {JSON.stringify(this.props.viewId) }</span><br />
+        <span>viewId: {JSON.stringify(this.props.params.viewId) }</span><br />
         <span>view: {JSON.stringify(this.props.view) }</span><br />
         <span>layout: {JSON.stringify(this.props.layout) }</span><br />
       </div>
@@ -69,12 +69,9 @@ export class ProcessViewPage extends React.Component { // eslint-disable-line re
 }
 
 ProcessViewPage.propTypes = {
-  viewId: React.PropTypes.string.isRequired,
   layout: React.PropTypes.instanceOf(Table),
   view: React.PropTypes.object,
-};
-ProcessViewPage.defaultProps = {
-  viewId: '0',
+  params: React.PropTypes.object,
 };
 
 const makeMapStateToProps = () => {
