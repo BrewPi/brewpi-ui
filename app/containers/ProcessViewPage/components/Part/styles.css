@@ -1,3 +1,15 @@
 .part { /* stylelint-disable */
 
 }
+
+.rotate90 {
+    transform: rotate(90deg);
+}
+
+.rotate180 {
+    transform: rotate(90deg);
+}
+
+.rotate270 {
+    transform: rotate(90deg);
+}

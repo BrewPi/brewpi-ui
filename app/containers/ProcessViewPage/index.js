@@ -56,13 +56,10 @@ export class ProcessViewPage extends React.Component { // eslint-disable-line re
             { name: 'description', content: 'Description of ProcessViewPage' },
           ]}
         />
-        <h2><FormattedMessage {...messages.header} /></h2>
+        <h2>{this.props.params.viewId}</h2><h3><FormattedMessage {...messages.header} /></h3>
         <ProcessView>
           { tiles }
         </ProcessView>
-        <span>viewId: {JSON.stringify(this.props.params.viewId) }</span><br />
-        <span>view: {JSON.stringify(this.props.view) }</span><br />
-        <span>layout: {JSON.stringify(this.props.layout) }</span><br />
       </div>
     );
   }
@@ -70,7 +67,7 @@ export class ProcessViewPage extends React.Component { // eslint-disable-line re
 
 ProcessViewPage.propTypes = {
   layout: React.PropTypes.instanceOf(Table),
-  view: React.PropTypes.object,
+  // view: React.PropTypes.object,
   params: React.PropTypes.object,
 };
 
