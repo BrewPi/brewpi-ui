@@ -5,21 +5,29 @@
  */
 
 import {
-  RECEIVE_LAYOUTS,
-  RECEIVE_PROCESS_VIEWS,
+  VIEW_RECEIVED,
+  LAYOUT_CHOOSEN,
+  COMPONENT_LOADED,
 } from './constants';
 
-export function receiveLayouts(layouts) {
+export function viewReceived(view) {
   return {
-    type: RECEIVE_LAYOUTS,
-    layouts,
+    type: VIEW_RECEIVED,
+    view,
   };
 }
 
 
-export function receiveProcessViews(processViews) {
+export function layoutChoosen(layoutId) {
   return {
-    type: RECEIVE_PROCESS_VIEWS,
-    processViews,
+    type: LAYOUT_CHOOSEN,
+    layoutId,
+  };
+}
+
+export function componentLoaded(id) {
+  return {
+    type: COMPONENT_LOADED,
+    id,
   };
 }

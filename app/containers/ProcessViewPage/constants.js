@@ -4,6 +4,6 @@
  *
  */
 
-export const RECEIVE_LAYOUTS = 'app/ProcessView/RECEIVE_LAYOUTS';
-export const RECEIVE_PROCESS_VIEWS = 'app/ProcessView/RECEIVE_PROCESS_VIEWS';
-
+export const COMPONENT_LOADED = 'app/ProcessView/COMPONENT_LOADED';
+export const VIEW_RECEIVED = 'app/ProcessView/VIEW_RECEIVED';
+export const LAYOUT_CHOOSEN = 'app/ProcessView/LAYOUT_CHOOSEN';

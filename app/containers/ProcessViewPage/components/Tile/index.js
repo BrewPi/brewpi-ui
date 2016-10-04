@@ -7,7 +7,6 @@
 import React from 'react';
 import styles from './styles.css';
 
-
 const Tile = (props) => {
   const x = props.x;
   const y = props.y;
@@ -25,8 +24,8 @@ const Tile = (props) => {
 };
 
 Tile.propTypes = {
-  x: React.PropTypes.number,
-  y: React.PropTypes.number,
+  x: React.PropTypes.number.isRequired,
+  y: React.PropTypes.number.isRequired,
   showCoordinates: React.PropTypes.bool,
   children: React.PropTypes.node,
 };

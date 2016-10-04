@@ -36,7 +36,7 @@ export const Part = (props) => {
   );
 };
 Part.propTypes = {
-  data: React.propTypes.object,
+  data: React.PropTypes.object,
 };
 
 export default Part;

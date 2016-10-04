@@ -5,25 +5,24 @@
  */
 
 import { fromJS } from 'immutable';
+const sampleViews = require('services/mockApi/sample-data/sample-process-views.json');
 
 import {
-  // RECEIVE_LAYOUTS,
-  // RECEIVE_PROCESS_VIEWS,
+  VIEW_RECEIVED,
+  LAYOUT_CHOOSEN,
 } from './constants';
+export const initialState = fromJS(sampleViews);
 
-const initialState = fromJS({
-  procesviews: [],
-});
+function updateView(state, payload) {
+  return state.setIn(['processViews', payload.index], payload.view);
+}
 
-
-function processViewReducer(state = initialState, action) {
+export function processViewReducer(state = initialState, action) {
   switch (action.type) {
-    /*
-    case RECEIVE_PROCESS_VIEWS:
-      return state.set('settings', action.settings);
-    case RECEIVE_LAYOUTS:
-      return state.set('layouts', action.layouts);
-      */
+    case VIEW_RECEIVED:
+      return updateView(state, action.payload);
+    case LAYOUT_CHOOSEN:
+      return state.setIn('layouts', action.payload);
     default:
       return state;
   }

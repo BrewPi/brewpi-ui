@@ -1,37 +1,72 @@
 import expect from 'expect';
-import makeprocessViewSelector from '../selectors';
-// import { fromJS } from 'immutable';
+import {
+  makeViewSelector,
+  activeLayoutIdSelector,
+  activeLayoutPartsSelector,
+  dimensionsSelector,
+  layoutTableSelector,
+} from '../selectors';
+import chai from 'chai';
+import chaiImmutable from 'chai-immutable';
+chai.use(chaiImmutable);
+import { fromJS } from 'immutable';
+import { Table } from 'immutable-table';
+import { processView1, testState } from './testData.js';
 
-
-// const selector = selectprocessViewDomain();
-
-const processView1 = {
-  id: 0,
-  rows: 0,
-  cols: 1,
-  showCoordinates: true,
-  layoutId: 1,
-};
-const processView2 = {
-  id: 1,
-  rows: 0,
-  cols: 1,
-  showCoordinates: true,
-  layoutId: 1,
-};
-
-
-const exampleState = {
-  processViews: [
-    processView1,
-    processView2,
-  ],
-};
-
-describe('getprocessViewSettings', () => {
-  it('will extract settings for a specific processView', () => {
-    const processViewSelector = makeprocessViewSelector();
-    expect(processViewSelector(exampleState, { processViewId: 1 }).toEqual(processView1));
+describe('ProcessViewPage', () => {
+  describe('makeViewSelector', () => {
+    const viewSelector = makeViewSelector();
+    it('will return the default view when the id cannot be found', () => {
+      expect(viewSelector(testState, { viewId: '5' }).get('name')).toEqual('');
+    });
+    it('will extract settings for a specific processView', () => {
+      expect(viewSelector(testState, { viewId: '0' })).toEqual(processView1);
+    });
+  });
+  describe('activeLayoutIdSelector', () => {
+    it('will return currently active layout name', () => {
+      expect(activeLayoutIdSelector(testState, { viewId: '0' })).toEqual('0');
+    });
+  });
+  describe('activeLayoutPartsSelector', () => {
+    it('will return currently active layout', () => {
+      expect(activeLayoutPartsSelector(testState, { viewId: '0' }))
+      .toEqual(processView1.getIn(['layouts', '0', 'parts']));
+    });
+  });
+  describe('dimensionsSelector', () => {
+    it('will return an object containing dimensions as width and height property', () => {
+      expect(dimensionsSelector(testState, { viewId: '0' })).toEqual({ width: 3, height: 2 });
+    });
+  });
+  describe('layoutTableSelector', () => {
+    const table = layoutTableSelector(testState, { viewId: '0' });
+    it('will have the dimensions defined in the view settings', () => {
+      expect(table.width).toEqual(processView1.get('width'));
+      expect(table.height).toEqual(processView1.get('height'));
+    });
+    it('will contain the parts in the right positions', () => {
+      expect(table.getCell(0, 1)).toEqual(
+        fromJS({
+          type: 'TUBE_ELBOW',
+          rotate: 90,
+        })
+      );
+      expect(table.getCell(2, 1)).toEqual(
+        fromJS({
+          type: 'TUBE_STRAIGHT',
+          rotate: 90,
+        }),
+      );
+    });
+    const table2 = layoutTableSelector(testState, { viewId: '5' });
+    it('will return a 0x0 empty table when the view is not found', () => {
+      expect(table2).toEqual(new Table());
+    });
+    const missingLayoutsState = testState.setIn(['processViews', '0', 'layouts'], {});
+    const table3 = layoutTableSelector(missingLayoutsState, { viewId: '0' });
+    it('will return a correct size empty table when the layout is not found', () => {
+      expect(table3).toEqual(new Table(3, 2));
+    });
   });
 });
-

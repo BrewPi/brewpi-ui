@@ -11,25 +11,17 @@ import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 import styles from './styles.css';
 import ProcessView from './components/ProcessView';
-import { makeViewSelector } from './selectors.js';
+import { makeViewSelector, layoutTableSelector } from './selectors.js';
 import Tile from './components/Tile';
 import { Part } from './components/Part';
-const sampleViews = require('services/mockApi/sample-data/sample-process-views.json');
 import { Table } from 'immutable-table';
-
-function readLayoutToTable(layout) {
-  let table = new Table(20, 15);
-  layout.forEach((item) => {
-    table = table.setCell(item.x, item.y, {
-      type: item.part.type,
-      rotate: item.part.rotate,
-    });
-  });
-  return table;
-}
+import * as actions from './actions';
 
 
 export class ProcessViewPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  componendDidMount() {
+    this.dispatch(actions.componentLoaded, { viewId: '1' });
+  }
 
   renderTiles(layout) {
     const tiles = [];
@@ -54,8 +46,7 @@ export class ProcessViewPage extends React.Component { // eslint-disable-line re
   }
 
   render() {
-    const activeTiles = sampleViews.layouts[0].tiles;
-    const parts = readLayoutToTable(activeTiles);
+    const parts = this.props.layout;
     const tiles = this.renderTiles(parts);
     return (
       <div className={styles.ProcessViewPage}>
@@ -67,22 +58,30 @@ export class ProcessViewPage extends React.Component { // eslint-disable-line re
         />
         <h2><FormattedMessage {...messages.header} /></h2>
         <ProcessView>
-          {tiles}
+          { tiles }
         </ProcessView>
-        <span>view: {JSON.stringify(this.props.view) }</span>
+        <span>viewId: {JSON.stringify(this.props.viewId) }</span><br />
+        <span>view: {JSON.stringify(this.props.view) }</span><br />
+        <span>layout: {JSON.stringify(this.props.layout) }</span><br />
       </div>
     );
   }
 }
 
 ProcessViewPage.propTypes = {
-  view: React.PropTypes.object.isRequired,
+  viewId: React.PropTypes.string.isRequired,
+  layout: React.PropTypes.instanceOf(Table),
+  view: React.PropTypes.object,
+};
+ProcessViewPage.defaultProps = {
+  viewId: '0',
 };
 
 const makeMapStateToProps = () => {
   const viewSelector = makeViewSelector();
   const mapStateToProps = (state, props) => ({
     view: viewSelector(state, props),
+    layout: layoutTableSelector(state, props),
   });
   return mapStateToProps;
 };
