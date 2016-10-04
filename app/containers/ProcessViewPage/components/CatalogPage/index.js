@@ -13,6 +13,15 @@ import { Tubes } from '../Tubes';
 import { Pump } from '../Pump';
 import { TempSensor } from '../TempSensor';
 import { Cfc } from '../Cfc';
+import { Filter } from '../Filter';
+import { Lauterhexe } from '../Lauterhexe';
+import { Heater } from '../Heater';
+import { Coil } from '../Coil';
+import { Kettle } from '../Kettle';
+import { Bottle } from '../Bottle';
+import { Keg } from '../Keg';
+import { GlycolReservoir } from '../GlycolReservoir';
+import { FridgeTall } from '../FridgeTall';
 
 class CatalogPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -182,6 +191,96 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               <td>
                 <Cfc liquid={'water'} />
                 <Cfc liquid={'hotwater'} />
+                <Cfc liquid={'beer'} />
+              </td>
+            </tr>
+            <tr>
+              <td>Filter</td>
+              <td>
+                <Filter />
+              </td>
+              <td>
+                <Filter liquid={'water'} />
+              </td>
+            </tr>
+            <tr>
+              <td>Lauterhexe</td>
+              <td>
+                <Lauterhexe />
+              </td>
+              <td>
+                <Lauterhexe liquid={'water'} />
+              </td>
+            </tr>
+            <tr>
+              <td>Heater</td>
+              <td>
+                <Heater />
+              </td>
+              <td>
+                <Heater liquid={'water'} />
+                <Heater liquid={'hotwater'} />
+              </td>
+            </tr>
+            <tr>
+              <td>Coil</td>
+              <td>
+                <Coil />
+              </td>
+              <td>
+                <Coil liquid={'water'} />
+                <Coil liquid={'hotwater'} />
+              </td>
+            </tr>
+            <tr>
+              <td>Kettle</td>
+              <td>
+                <Kettle />
+              </td>
+              <td>
+                <Kettle liquid={'water'} />
+                <Kettle liquid={'hotwater'} />
+                <Kettle liquid={'beer'} />
+              </td>
+            </tr>
+            <tr>
+              <td>Bottle</td>
+              <td>
+                <Bottle />
+              </td>
+              <td>
+                <Bottle liquid={'water'} />
+                <Bottle liquid={'hotwater'} />
+                <Bottle liquid={'beer'} />
+              </td>
+            </tr>
+            <tr>
+              <td>Keg</td>
+              <td>
+                <Keg />
+              </td>
+              <td>
+                <Keg liquid={'water'} />
+                <Keg liquid={'hotwater'} />
+                <Keg liquid={'beer'} />
+              </td>
+            </tr>
+            <tr>
+              <td>Glycol Reservoir</td>
+              <td>
+                <GlycolReservoir />
+              </td>
+              <td>
+                <GlycolReservoir />
+              </td>
+            </tr>
+            <tr>
+              <td>Fridge Tall</td>
+              <td>
+                <FridgeTall />
+              </td>
+              <td>
+                <FridgeTall />
               </td>
             </tr>
           </tbody>

@@ -4,6 +4,7 @@ import styles from './styles.css';
 
 // load svg's and inline them wigh g tag instead of svg tag, because they are used nested
 const SvgBall = require('./svg/ball.svg?tag=g');
+const SvgShell = require('./svg/shell.svg?tag=g');
 const SvgMotor = require('./svg/motor.svg?tag=g');
 const SvgCheck = require('./svg/check-arrow.svg?tag=g');
 const SvgTube = require('./svg/split-tube.svg?tag=g');
@@ -29,6 +30,7 @@ const Manual = (props) => {
     <SvgParent>
       <SvgTube className={styles.tube} />
       <SvgBall className={posClass} />
+      <SvgShell className={styles.tube} />
     </SvgParent>
   );
 };
@@ -45,6 +47,7 @@ const Motor = (props) => {
     <SvgParent>
       <SvgTube className={styles.tube} />
       <SvgBall className={posClass} />
+      <SvgShell className={styles.tube} />
       <SvgMotor className={powerClass} />
       <SvgMotorPower className={styles.powerIcon} />
     </SvgParent>

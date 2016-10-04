@@ -1,0 +1,19 @@
+
+.element, .display {
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.element{
+  stroke-width: 4pt;
+}
+
+.value {
+  text-anchor: middle;
+  font-size: 14px;
+  fill: #FFF;
+  font-family: Roboto;
+  font-weight: 700;
+}

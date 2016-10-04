@@ -1,0 +1,6 @@
+<svg viewBox="0 0 50 50" width="50" height="50">
+    <path d="M171,40v-10a9,9,0,0,1,9-9h20"/>
+    <path d="M179,40v-10a1,1,0,0,1,1-1h20"/>
+    <rect x="194" y="12.5" width="8" height="8" fill="#fff"/>
+    <rect x="194" y="31" width="8" height="8" fill="#fff"/>
+</svg>

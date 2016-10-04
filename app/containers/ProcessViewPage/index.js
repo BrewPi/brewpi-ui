@@ -14,7 +14,6 @@ import ProcessView from './components/ProcessView';
 import { makeViewSelector } from './selectors.js';
 import Tile from './components/Tile';
 import { Valves } from './components/Valves';
-import { Tubes } from './components/Tubes';
 
 export class ProcessViewPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
