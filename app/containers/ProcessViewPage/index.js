@@ -20,7 +20,7 @@ import * as actions from './actions';
 
 export class ProcessViewPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   componendDidMount() {
-    this.dispatch(actions.componentLoaded, { viewId: '1' });
+    this.dispatch(actions.componentLoaded, { viewId: this.props.params.viewId });
   }
 
   renderTiles(layout) {
@@ -33,10 +33,18 @@ export class ProcessViewPage extends React.Component { // eslint-disable-line re
       row = [];
       for (let x = 0; x < cols; x += 1) {
         const key = `tile-${x}-${y}`;
-        const partData = layout.getCell(x, y);
+        const partsInCell = layout.getCell(x, y);
+        const partComponents = [];
+        let keyVal = 0;
+        if (partsInCell !== undefined) {
+          for (const part of partsInCell) {
+            partComponents.push(<Part data={part} key={keyVal} />);
+            keyVal += 1;
+          }
+        }
         row.push(
           <Tile key={key} x={x} y={y}>
-            <Part data={partData} />
+            {partComponents}
           </Tile>
         );
       }

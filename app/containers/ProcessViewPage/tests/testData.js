@@ -30,6 +30,7 @@ export const processView1 = fromJS({
     },
   },
 });
+
 export const processView2 = fromJS({
   name: 'view2',
   width: 5,
@@ -43,17 +44,17 @@ export const processView2 = fromJS({
       parts: [
         {
           x: 2,
-          y: 3,
+          y: 1,
           part: {
             type: 'TUBE_STRAIGHT',
             rotate: 90,
           },
         },
         {
-          x: 4,
-          y: 5,
+          x: 2,
+          y: 1,
           part: {
-            type: 'TUBE_ELBOW',
+            type: 'TUBE_BRIDGE',
             rotate: 0,
           },
         },
@@ -62,10 +63,50 @@ export const processView2 = fromJS({
   },
 });
 
+export const processView3 = fromJS({
+  name: 'view3',
+  width: 1,
+  height: 1,
+  showCoordinates: true,
+  currentLayoutId: '0',
+  layouts: {
+    0: {
+      id: 0,
+      name: 'layout1',
+      parts: [
+        {
+          x: 0,
+          y: 0,
+          part: {
+            type: 'TUBE_STRAIGHT',
+            rotate: 90,
+          },
+        },
+        {
+          x: 1, // out of bounds
+          y: 0,
+          part: {
+            type: 'TUBE_BRIDGE',
+            rotate: 0,
+          },
+        },
+        {
+          x: 0,
+          y: 1, // out of bounds
+          part: {
+            type: 'TUBE_BRIDGE',
+            rotate: 0,
+          },
+        },
+      ],
+    },
+  },
+});
 
 export const testState = fromJS({
   processViews: {
-    0: processView1,
-    1: processView2,
+    view1: processView1,
+    view2: processView2,
+    view3: processView3,
   },
 });
