@@ -17,6 +17,7 @@ const SvgLiquidCross = require('./svg/liquid_cross.svg?tag=g');
 const SvgTubeBridge = require('./svg/tube_bridge.svg?tag=g');
 const SvgLiquidBridge = require('./svg/liquid_bridge.svg?tag=g');
 const SvgTubeInlet = require('./svg/tube_inlet.svg?tag=g');
+const SvgTubeDip = require('./svg/tube_dip.svg?tag=g');
 const SvgLiquidInlet = require('./svg/liquid_inlet.svg?tag=g');
 const SvgTubeInletWhirlpool = require('./svg/tube_inlet-whirlpool.svg?tag=g');
 const SvgLiquidInletWhirlpool = require('./svg/liquid_inlet-whirlpool.svg?tag=g');
@@ -120,6 +121,17 @@ Inlet.propTypes = {
   liquid: React.PropTypes.string,
 };
 
+const Dip = (props) => (
+  <SvgParent>
+    <SvgTubeDip className={styles.tube} />
+    <FlowArrows flow={props.flow} />
+  </SvgParent>
+);
+Dip.propTypes = {
+  flow: React.PropTypes.string,
+  // liquid not needed, because it is submerged in the kettle
+};
+
 const InletWhirlpool = (props) => (
   <SvgParent viewBox={'0 0 50 100'}>
     <SvgLiquidInletWhirlpool className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
@@ -135,6 +147,7 @@ InletWhirlpool.propTypes = {
 export const Tubes = {
   Input,
   Output,
+  Dip,
   Straight,
   Elbow,
   Tee,
