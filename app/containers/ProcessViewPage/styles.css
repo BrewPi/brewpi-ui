@@ -4,9 +4,8 @@
 
 .tiles {
   text-align: center;
-  vertical-align: center;
-  height: 60vh;
-  display: flex;
+  min-height: 60vh;
+  display: block;
   flex-direction: column;
   justify-content: center;
 }
