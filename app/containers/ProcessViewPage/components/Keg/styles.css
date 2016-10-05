@@ -6,28 +6,28 @@
   fill: none;
 }
 
-.bottlename{
-  font-size: 12px;
+.temp,
+.setpoint,
+.bottlename {
+  fill: #FFF;
+  stroke-width: 8;
+  stroke: #24333D;
+  paint-order: stroke;
+  text-align: right;
+  stroke-linejoin: round;
 }
 
-.temp, .setpoint, .bottlename{
-    fill: #fff;
-    stroke-width: 8;
-    stroke: #24333D;
-    paint-order: stroke;
-    text-align: right;
-    stroke-linejoin: round;
-}
 .temp {
-    font-weight: bold;
-    font-size: 40px;
-}
-.setpoint {
-font-size: 20px;
-    font-weight: normal;
+  font-weight: bold;
+  font-size: 40px;
 }
 
-.kegfill{
-  transform-origin: 0px 210px;
-  transform: translate(0px, 27px) scaleY(0.9);
+.setpoint {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.kegFill {
+  transform-origin: 0 210px;
+  transform: translate(0, 27px) scaleY(0.9);
 }

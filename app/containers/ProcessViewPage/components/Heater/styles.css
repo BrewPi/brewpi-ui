@@ -1,12 +1,12 @@
-
-.element, .display {
+.element,
+.display {
   stroke: #FFF;
   stroke-width: 2pt;
   stroke-linecap: round;
   fill: none;
 }
 
-.element{
+.element {
   stroke-width: 4pt;
 }
 

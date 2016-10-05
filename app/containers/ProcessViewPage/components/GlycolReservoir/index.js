@@ -9,8 +9,8 @@ import { SvgParent } from '../SvgParent';
 
 export const GlycolReservoir = (props) => (
   <SvgParent viewBox={'0 0 100 150'}>
-    <SvgGlycolReservoir className={styles.glycolreservoir} />
-    <SvgIconCool className={styles.glycolreservoir} />
+    <SvgGlycolReservoir className={styles.glycolReservoir} />
+    <SvgIconCool className={styles.glycolReservoir} />
   </SvgParent>
 );
 GlycolReservoir.propTypes = {

@@ -13,7 +13,7 @@ import { SvgParent } from '../SvgParent';
 
 export const Keg = (props) => (
   <SvgParent viewBox={'0 0 100 250'}>
-    <SvgLiquidKeg className={styles.kegfill} style={Liquids.fillStyle(props.liquid)} />
+    <SvgLiquidKeg className={styles.kegFill} style={Liquids.fillStyle(props.liquid)} />
     <SvgKeg className={styles.keg} />
     <SvgSetpoint className={styles.setpoint} />
     <SvgTemp className={styles.temp} />

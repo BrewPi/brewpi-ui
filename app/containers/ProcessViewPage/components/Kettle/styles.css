@@ -4,24 +4,30 @@
   stroke-linecap: round;
   fill: none;
 }
-.kettlefill{
-  transform: scaley(0.5);
+
+.kettleFill {
+  transform: scaleY(0.5);
   transform-origin: 0 300px;
 }
 
-.temp, .liters, .fridgetext, .bottlename{
-    fill: #fff;
-    stroke-width: 8;
-    stroke: #24333D;
-    paint-order: stroke;
-    text-align: right;
-    stroke-linejoin: round;
+.temp,
+.liters,
+.fridgetext,
+.bottlename {
+  fill: #FFF;
+  stroke-width: 8;
+  stroke: #24333D;
+  paint-order: stroke;
+  text-align: right;
+  stroke-linejoin: round;
 }
+
 .temp {
-    font-weight: bold;
-    font-size: 40px;
+  font-weight: bold;
+  font-size: 40px;
 }
-.liters {
-    font-size: 30px;
-    font-weight: normal;
+
+.volume {
+  font-size: 30px;
+  font-weight: normal;
 }

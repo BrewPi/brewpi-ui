@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './styles.css';
 import { Liquids } from '../Liquids';
 const classNames = require('classnames');
-import { getPowerClass, getRotateClass } from '../sharedCss';
+import { getRotateClass } from '../sharedCss';
 
 const SvgTubes = require('./svg/tubes.svg?tag=g');
 const SvgBall = require('./svg/ball.svg?tag=g');
@@ -14,11 +14,9 @@ import { SvgParent } from '../SvgParent';
 
 
 export const Pump = (props) => {
-  const powerClass = getPowerClass(props.powered);
   const rotateClass = getRotateClass(props.powered);
   return (
     <SvgParent>
-
       <SvgBall className={styles.ball} style={Liquids.fillStyle(props.liquid)} />
       <g className={styles.bladesWrapper}>
         <SvgBlades className={classNames(styles.blades, rotateClass)} />

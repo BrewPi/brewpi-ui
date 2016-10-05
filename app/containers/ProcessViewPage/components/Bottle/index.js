@@ -13,11 +13,11 @@ import { SvgParent } from '../SvgParent';
 
 export const Bottle = (props) => (
   <SvgParent viewBox={'0 0 100 200'}>
-    <SvgLiquidBottle className={styles.bottlefill} style={Liquids.fillStyle(props.liquid)} />
+    <SvgLiquidBottle className={styles.bottleFill} style={Liquids.fillStyle(props.liquid)} />
     <SvgBottle className={styles.bottle} />
     <SvgSetpoint className={styles.setpoint} />
     <SvgTemp className={styles.temp} />
-    <SvgName className={styles.bottlename} />
+    <SvgName className={styles.bottleName} />
   </SvgParent>
 );
 Bottle.propTypes = {
