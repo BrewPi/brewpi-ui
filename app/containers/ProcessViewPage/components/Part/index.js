@@ -9,6 +9,12 @@ import styles from './styles.css';
 import { Valves } from '../Valves';
 import { Tubes } from '../Tubes';
 import { Kettle } from '../Kettle';
+import { Coil } from '../Coil';
+import { HeatingElement } from '../HeatingElement';
+import { Lauterhexe } from '../Lauterhexe';
+import { Pump } from '../Pump';
+import { Cfc } from '../Cfc';
+import { TempSensors } from '../TempSensors';
 const classNames = require('classnames');
 
 const NoPart = () => <div />;
@@ -16,13 +22,24 @@ const NoPart = () => <div />;
 const componentTable = {
   TUBE_STRAIGHT: Tubes.Straight,
   TUBE_ELBOW: Tubes.Elbow,
-  TUBE_BRIDGE: Tubes.Bridge,
+  TUBE_TEE: Tubes.Tee,
   TUBE_CROSS: Tubes.Cross,
+  TUBE_BRIDGE: Tubes.Bridge,
   TUBE_INLET: Tubes.Inlet,
+  TUBE_WHIRLPOOL: Tubes.InletWhirlpool,
+  TUBE_INPUT: Tubes.Input,
+  TUBE_OUTPUT: Tubes.Output,
+  TUBE_DIP: Tubes.Dip,
   VALVE_MOTOR: Valves.Motor,
   VALVE_MANUAL: Valves.Manual,
   VALVE_CHECK: Valves.Check,
   KETTLE: Kettle,
+  COIL: Coil,
+  HEATING_ELEMENT: HeatingElement,
+  LAUTERHEXE: Lauterhexe,
+  PUMP: Pump,
+  CFC: Cfc,
+  TEMP_SENSOR_INLINE: TempSensors.Inline,
   DEFAULT: NoPart,
 };
 
@@ -51,7 +68,6 @@ export const Part = (props) => {
   const rotateClassName = rotateClassNames[rotate];
   const componentFunction = componentTable[type] || NoPart;
   const zIndex = zIndices[type] || zIndices.DEFAULT;
-  console.log(zIndex);
   const partStyle = {
     zIndex,
   };
