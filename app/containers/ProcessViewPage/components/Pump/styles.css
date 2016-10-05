@@ -5,6 +5,10 @@
   fill: none;
 }
 
+.bladesWrapper {
+  transform: translateY(5px);
+}
+
 .ball {
   stroke: #FFF;
   stroke-width: 2pt;
@@ -14,4 +18,19 @@
 
 .motor {
   fill: #FFF;
+}
+
+.tubes {
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.liquid {
+  fill: none;
+  stroke: black;
+  stroke-width: 5pt;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }

@@ -5,10 +5,10 @@ import { Liquids } from '../Liquids';
 const classNames = require('classnames');
 import { getPowerClass, getRotateClass } from '../sharedCss';
 
+const SvgTubes = require('./svg/tubes.svg?tag=g');
 const SvgBall = require('./svg/ball.svg?tag=g');
 const SvgBlades = require('./svg/blades.svg?tag=g');
-const SvgMotor = require('./svg/motor.svg?tag=g');
-const SvgMotorPower = require('./svg/motor-power.svg?tag=g');
+const SvgLiquidPump = require('./svg/liquid_pump.svg?tag=g');
 
 import { SvgParent } from '../SvgParent';
 
@@ -18,10 +18,13 @@ export const Pump = (props) => {
   const rotateClass = getRotateClass(props.powered);
   return (
     <SvgParent>
+
       <SvgBall className={styles.ball} style={Liquids.fillStyle(props.liquid)} />
-      <SvgBlades className={classNames(styles.blades, rotateClass)} />
-      <SvgMotor className={styles.motor} />
-      <SvgMotorPower className={classNames(styles.motorPower, powerClass)} />
+      <g className={styles.bladesWrapper}>
+        <SvgBlades className={classNames(styles.blades, rotateClass)} />
+      </g>
+      <SvgLiquidPump className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
+      <SvgTubes className={classNames(styles.tubes)} />
     </SvgParent>
   );
 };
