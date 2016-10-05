@@ -15,7 +15,7 @@ import { TempSensor } from '../TempSensor';
 import { Cfc } from '../Cfc';
 import { Filter } from '../Filter';
 import { Lauterhexe } from '../Lauterhexe';
-import { Heater } from '../Heater';
+import { HeatingElement } from '../HeatingElement';
 import { Coil } from '../Coil';
 import { Kettle } from '../Kettle';
 import { Bottle } from '../Bottle';
@@ -223,11 +223,11 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
             <tr>
               <td>Heater</td>
               <td>
-                <Heater />
+                <HeatingElement />
               </td>
               <td>
-                <Heater liquid={'water'} />
-                <Heater liquid={'hotwater'} />
+                <HeatingElement liquid={'water'} />
+                <HeatingElement liquid={'hotwater'} />
               </td>
             </tr>
             <tr>
