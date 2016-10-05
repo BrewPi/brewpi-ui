@@ -1,7 +1,7 @@
 /* eslint no-unused-vars: ["error", { "argsIgnorePattern": "props" }] */
 
 import { createSelector } from 'reselect';
-import { fromJS } from 'immutable';
+import { fromJS, List } from 'immutable';
 import { Table } from 'immutable-table';
 
 
@@ -71,7 +71,16 @@ const layoutTableSelector = createSelector(
     let table = new Table(dims.width, dims.height);
     if (layout != null) {
       layout.forEach((item) => {
-        table = table.setCell(item.get('x'), item.get('y'), item.get('part'));
+        const xx = item.get('x'); // can be list
+        const yy = item.get('y'); // can be list
+        const iterx = List.isList(xx) ? xx : new List().push(xx);
+        const itery = List.isList(yy) ? yy : new List().push(yy);
+        const part = item.get('part');
+        for (const x of iterx) {
+          for (const y of itery) {
+            table = table.setCell(x, y, part);
+          }
+        }
       });
     }
     return table;
