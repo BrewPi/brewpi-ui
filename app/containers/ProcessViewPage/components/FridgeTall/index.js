@@ -28,20 +28,20 @@ FridgeFan.propTypes = {
 };
 
 export const FridgeTall = (props) => (
-  <div className={styles.container}>
-    <div className={styles.top}>
-      <span className={styles.fridgename}>Fridge #1</span>
+  <div className={styles.fridgeContainer}>
+    <div className={classNames(styles.fridgeTop, styles.fridgeCompartment)}>
+      <span className={styles.fridgeName}>Fridge #1</span>
       <span className={styles.setpoint}>20°</span>
     </div>
-    <div className={styles.middle}>
+    <div className={classNames(styles.fridgeMiddle, styles.fridgeCompartment)}>
       <FridgeFan powered={'slow'} />
       <span className={styles.temp}>20°</span>
     </div>
-    <div className={styles.bottom}>
-      <div className={styles.divcooler}>
+    <div className={classNames(styles.fridgeBottom, styles.fridgeCompartment)}>
+      <div className={styles.divCooler}>
         <span className={styles.cooler}>22%</span>
       </div>
-      <div className={styles.divheater}>
+      <div className={styles.divHeater}>
         <span className={styles.heater}>0%</span>
       </div>
     </div>

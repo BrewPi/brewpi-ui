@@ -6,90 +6,90 @@
   fill: none;
 }
 
-.container {
+.fridgeContainer {
   position: relative;
   width: 250px;
   height: 600px;
 }
 
-div{
-  border: solid 1pt #fff;
+.fridgeCompartment {
+  border: solid 1pt #FFF;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.fridgename, .setpoint{
-    fill: #fff;
-    stroke-width: 8;
-    stroke: #24333D;
-    paint-order: stroke;
-    text-align: right;
-    stroke-linejoin: round;
+.fridgeName,
+.setpoint {
+  fill: #FFF;
+  stroke-width: 8;
+  stroke: #24333D;
+  paint-order: stroke;
+  text-align: right;
+  stroke-linejoin: round;
 }
 
-.fanbase, .fanblades {
+.fanHousing,
+.fanBlades {
   fill: white;
 }
 
-.fridgename, .setpoint, .cooler, .heater{
+.fridgeName,
+.setpoint,
+.cooler,
+.heater {
   font-size: 20px;
 }
 
-
-
-.top{
+.fridgeTop {
   height: 50px;
 }
 
-.middle{
+.fridgeMiddle {
   height: 475px;
 }
 
-.bottom{
+.fridgeBottom {
   position: relative;
   height: 75px;
-  border: none;
 }
 
-.fridgename {
+.fridgeName {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   padding: 8px;
 }
 
-.setpoint{
+.setpoint {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   padding: 8px;
 }
 
 .temp {
-    position: absolute;
-    font-weight: bold;
-    font-size: 40px;
-    right: 10px;
+  position: absolute;
+  font-weight: bold;
+  font-size: 40px;
+  right: 10px;
 }
 
-.cooler {
-
+.divCooler,
+.divHeater {
+  padding: 10px;
 }
 
-.divcooler, .divheater{
-  padding:10px;
-}
-
-.divcooler{
+.divCooler {
   position: absolute;
   width: 50%;
   height: 75px;
   left: 0;
   bottom: 0;
+  border-right: solid 1px;
 }
 
-.divheater{
+.divHeater {
   position: absolute;
   width: 50%;
   height: 75px;
