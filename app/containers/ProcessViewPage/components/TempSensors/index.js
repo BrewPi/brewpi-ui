@@ -9,13 +9,17 @@ const SvgValue = require('./svg/value.svg?tag=g');
 
 import { SvgParent } from '../SvgParent';
 
-export const TempSensor = (props) => (
+const Inline = (props) => (
   <SvgParent>
     <SvgSplitTube className={styles.splitTube} />
     <SvgDisplay className={styles.display} style={Liquids.fillStyle(props.liquid)} />
     <SvgValue className={styles.value} />
   </SvgParent>
 );
-TempSensor.propTypes = {
+Inline.propTypes = {
   liquid: React.PropTypes.string,
+};
+
+export const TempSensors = {
+  Inline,
 };

@@ -11,7 +11,7 @@ import { Table } from 'react-bootstrap';
 import { Valves } from '../Valves';
 import { Tubes } from '../Tubes';
 import { Pump } from '../Pump';
-import { TempSensor } from '../TempSensor';
+import { TempSensors } from '../TempSensors';
 import { Cfc } from '../Cfc';
 import { Filter } from '../Filter';
 import { Lauterhexe } from '../Lauterhexe';
@@ -183,12 +183,12 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
             <tr>
               <td>Inline temperature sensor</td>
               <td>
-                <TempSensor />
+                <TempSensors.Inline />
               </td>
               <td>
-                <TempSensor liquid={'water'} />
-                <TempSensor liquid={'hotwater'} />
-                <TempSensor liquid={'beer'} />
+                <TempSensors.Inline liquid={'water'} />
+                <TempSensors.Inline liquid={'hotwater'} />
+                <TempSensors.Inline liquid={'beer'} />
               </td>
             </tr>
             <tr>
