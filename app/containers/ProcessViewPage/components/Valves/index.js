@@ -9,8 +9,12 @@ const SvgMotor = require('./svg/motor.svg?tag=g');
 const SvgCheck = require('./svg/check-arrow.svg?tag=g');
 const SvgTube = require('./svg/split-tube.svg?tag=g');
 const SvgMotorPower = require('./svg/motor-power.svg?tag=g');
+const SvgLiquidStraight = require('./svg/liquid_straight.svg?tag=g');
+const SvgLiquidStraightSplit = require('./svg/liquid_straight_split.svg?tag=g');
+const SvgLiquidBall = require('./svg/liquid_ball.svg?tag=g');
 
 import { SvgParent } from '../SvgParent';
+import { Liquids } from '../Liquids';
 
 const powerClasses = {
   opening: styles.powerOpening,
@@ -28,6 +32,7 @@ const Manual = (props) => {
   const posClass = posClasses[props.position] || posClasses.default;
   return (
     <SvgParent>
+      <SvgLiquidStraightSplit className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
       <SvgTube className={styles.tube} />
       <SvgBall className={posClass} />
       <SvgShell className={styles.tube} />
@@ -36,6 +41,7 @@ const Manual = (props) => {
 };
 Manual.propTypes = {
   position: React.PropTypes.string,
+  liquid: React.PropTypes.string,
 };
 
 
@@ -45,6 +51,7 @@ const Motor = (props) => {
 
   return (
     <SvgParent>
+      <SvgLiquidStraightSplit className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
       <SvgTube className={styles.tube} />
       <SvgBall className={posClass} />
       <SvgShell className={styles.tube} />
@@ -56,14 +63,20 @@ const Motor = (props) => {
 Motor.propTypes = {
   powered: React.PropTypes.string,
   position: React.PropTypes.string,
+  liquid: React.PropTypes.string,
 };
 
 const Check = (props) => (
   <SvgParent>
+    <SvgLiquidBall className={styles.ball} style={Liquids.fillStyle(props.liquid)} />
+    <SvgLiquidStraight className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
     <SvgTube className={styles.tube} />
     <SvgCheck />
   </SvgParent>
 );
+Check.propTypes = {
+  liquid: React.PropTypes.string,
+};
 
 export const Valves = {
   Manual,

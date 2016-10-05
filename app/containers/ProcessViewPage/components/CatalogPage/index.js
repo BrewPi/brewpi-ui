@@ -135,10 +135,10 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
             <tr>
               <td>Valve</td>
               <td>
-                <Valves.Manual />
+                <Valves.Manual liquid={'water'} />
               </td>
               <td>
-                <Valves.Manual position={'closed'} />
+                <Valves.Manual position={'closed'} liquid={'water'} />
                 <Valves.Manual position={'midway'} />
               </td>
             </tr>
@@ -151,7 +151,7 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Valves.Motor powered={'opening'} />
                 <Valves.Motor powered={'closing'} />
                 <Valves.Motor powered={'opening'} position={'midway'} />
-                <Valves.Motor powered={'idle'} position={'midway'} />
+                <Valves.Motor powered={'idle'} position={'closed'} />
               </td>
             </tr>
             <tr>
@@ -159,7 +159,11 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               <td>
                 <Valves.Check />
               </td>
-              <td>TODO</td>
+              <td>
+                <Valves.Check liquid={'water'} />
+                <Valves.Check liquid={'hotwater'} />
+                <Valves.Check liquid={'beer'} />
+              </td>
             </tr>
             <tr>
               <td>Pump</td>
