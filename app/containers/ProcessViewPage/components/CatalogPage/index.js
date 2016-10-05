@@ -105,8 +105,8 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Bridge />
               </td>
               <td>
-                <Tubes.Bridge flow={'NEsw'} liquid={'water'} />
-                <Tubes.Bridge flow={'neSW'} liquid={'hotwater'} />
+                <Tubes.Bridge flow={'Ew'} liquid={'water'} />
+                <Tubes.Bridge flow={'eW'} liquid={'hotwater'} />
                 <Tubes.Bridge flow={'Ew'} liquid={'beer'} />
               </td>
             </tr>
