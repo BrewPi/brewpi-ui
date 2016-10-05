@@ -5,6 +5,10 @@
   fill: none;
 }
 
+.bladesWrapper {
+  transform: translateY(5px);
+}
+
 .ball {
   stroke: #FFF;
   stroke-width: 2pt;
@@ -16,34 +20,17 @@
   fill: #FFF;
 }
 
-.powerOff {
-  color: #222;
+.tubes {
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  fill: none;
 }
 
-.powerOn {
-  color: #E1AC00;
-}
-
-@keyframes rotating {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.rotateOff {
-  transform-origin: 25px 25px;
-}
-
-.rotateFast {
-  animation: rotating 1s linear infinite;
-  transform-origin: 25px 25px;
-}
-
-.rotateSlow {
-  animation: rotating 2s linear infinite;
-  transform-origin: 25px 25px;
+.liquid {
+  fill: none;
+  stroke: black;
+  stroke-width: 5pt;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }

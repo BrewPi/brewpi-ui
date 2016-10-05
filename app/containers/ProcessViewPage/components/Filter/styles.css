@@ -1,0 +1,19 @@
+.lines {
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.filter{
+    fill: none;
+    stroke: #fff;
+    stroke-width: 4;
+    stroke-dasharray: 20 2;
+}
+
+.liquid {
+  fill: none;
+  stroke-width: 5pt;
+  stroke-linecap: round;
+}

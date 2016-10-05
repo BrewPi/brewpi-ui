@@ -5,6 +5,16 @@
   fill: none;
 }
 
+.liquid {
+  fill: none;
+  stroke-width: 5pt;
+  stroke-linecap: round;
+}
+
+.ball {
+  fill: #FFF;
+}
+
 .rotate_90 {
   transform: rotate(90deg);
 }

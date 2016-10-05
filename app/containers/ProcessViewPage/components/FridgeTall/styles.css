@@ -1,0 +1,135 @@
+.lines {
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.container {
+  position: relative;
+  width: 250px;
+  height: 600px;
+}
+
+div{
+  border: solid 1pt #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.fridgename, .setpoint{
+    fill: #fff;
+    stroke-width: 8;
+    stroke: #24333D;
+    paint-order: stroke;
+    text-align: right;
+    stroke-linejoin: round;
+}
+
+.fanbase, .fanblades {
+  fill: white;
+}
+
+.fridgename, .setpoint, .cooler, .heater{
+  font-size: 20px;
+}
+
+
+
+.top{
+  height: 50px;
+}
+
+.middle{
+  height: 475px;
+}
+
+.bottom{
+  position: relative;
+  height: 75px;
+  border: none;
+}
+
+.fridgename {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 8px;
+}
+
+.setpoint{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 8px;
+}
+
+.temp {
+    position: absolute;
+    font-weight: bold;
+    font-size: 40px;
+    right: 10px;
+}
+
+.cooler {
+
+}
+
+.divcooler, .divheater{
+  padding:10px;
+}
+
+.divcooler{
+  position: absolute;
+  width: 50%;
+  height: 75px;
+  left: 0;
+  bottom: 0;
+}
+
+.divheater{
+  position: absolute;
+  width: 50%;
+  height: 75px;
+  right: 0;
+  bottom: 0;
+}
+
+.motor {
+  fill: #FFF;
+}
+
+.powerOff {
+  color: #222;
+}
+
+.powerOn {
+  color: #E1AC00;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotateOff {
+  transform-origin: 25px 25px;
+}
+
+.rotateFast {
+  animation: rotating 1s linear infinite;
+  transform-origin: 25px 25px;
+}
+
+.rotateSlow {
+  animation: rotating 2s linear infinite;
+  transform-origin: 25px 25px;
+}
+

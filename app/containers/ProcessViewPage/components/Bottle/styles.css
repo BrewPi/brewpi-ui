@@ -1,0 +1,34 @@
+.bottle {
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.bottlename{
+  font-size: 12px;
+}
+
+.temp, .setpoint, .bottlename{
+    fill: #fff;
+    stroke-width: 8;
+    stroke: #24333D;
+    paint-order: stroke;
+    text-align: right;
+    stroke-linejoin: round;
+}
+.temp {
+    font-weight: bold;
+    font-size: 40px;
+}
+.setpoint {
+font-size: 20px;
+    font-weight: normal;
+}
+
+.bottlefill{
+  transform: scaley(0.7);
+  transform-origin: 0px 200px;
+  border-radius: 10px 20px 30px 10;
+}
