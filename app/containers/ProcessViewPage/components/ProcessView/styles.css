@@ -3,8 +3,8 @@
   font-family: sans-serif;
   font-size: 12px;
   color: #FFF;
-  width: inherit;
-  overflow: auto;
+  width: 100%;
+  overflow: scroll;
 }
 
 span {
