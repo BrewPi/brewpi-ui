@@ -1,11 +1,12 @@
 import { fromJS } from 'immutable';
 
-const sampleprocessViews = require('./sample-data/sample-processviews.json');
-
+const sampleView = require('./sample-data/view-herms.json');
+const sampleLayout = require('./sample-data/layout-herms.json');
 
 export const api = {
   getProcessViews() {
-    const views = sampleprocessViews;
+    const views = { demo: sampleView };
+    views.demo.layouts = { 0: sampleLayout };
     return fromJS(views);
   },
 

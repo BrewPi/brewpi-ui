@@ -1,0 +1,747 @@
+{
+  "id": 0,
+  "name": "herms",
+  "parts": [
+    {
+      "x": 0,
+      "y": 1,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 0,
+      "y": [2,3,4,5,6,7,8],
+      "part": {
+        "type": "TUBE_STRAIGHT",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "part": {
+        "type": "TUBE_ELBOW"
+      }
+    },
+    {
+      "x": 1,
+      "y": 11,
+      "part": {
+        "type": "TUBE_INPUT"
+      }
+    },
+    {
+      "x": [2,3],
+      "y": 11,
+      "part": {
+        "type": "TUBE_STRAIGHT"
+      }
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "part": {
+        "type": "TUBE_STRAIGHT"
+      }
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "part": {
+        "type": "TUBE_ELBOW"
+      }
+    },
+    {
+      "x": [1,2,6],
+      "y": 9,
+      "part": {
+        "type": "TUBE_STRAIGHT"
+      }
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "part": {
+        "type": "VALVE_MANUAL",
+        "id": 1
+      }
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "part": {
+        "type": "VALVE_MANUAL",
+        "id": 2
+      }
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "part": {
+        "type": "PUMP"
+      }
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "part": {
+        "type": "KETTLE"
+      }
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "part": {
+        "type": "TUBE_INLET"
+      }
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "part": {
+        "type": "COIL"
+      }
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "part": {
+        "type": "HEATING_ELEMENT"
+      }
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "part": {
+        "type": "TUBE_DIP"
+      }
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "part": {
+        "type": "TUBE_STRAIGHT"
+      }
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "part": {
+        "type": "VALVE_MOTOR",
+        "id": 1
+      }
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 180
+      }
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "part": {
+        "type": "VALVE_CHECK",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "part": {
+        "type": "TUBE_CROSS"
+      }
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "part": {
+        "type": "VALVE_MANUAL",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 4,
+      "y": 11,
+      "part": {
+        "type": "TUBE_TEE"
+      }
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "part": {
+        "type": "VALVE_MOTOR",
+        "id": 2
+      }
+    },
+    {
+      "x": 5,
+      "y": 11,
+      "part": {
+        "type": "VALVE_MANUAL"
+      }
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 6,
+      "y": 11,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 270
+      }
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "part": {
+        "type": "TUBE_BRIDGE"
+      }
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "part": {
+        "type": "VALVE_MANUAL"
+      }
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "part": {
+        "type": "VALVE_MANUAL"
+      }
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "part": {
+        "type": "TUBE_STRAIGHT"
+      }
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 180
+      }
+    },
+    {
+      "x": 8,
+      "y": [5,6],
+      "part": {
+        "type": "TUBE_STRAIGHT",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 270
+      }
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "part": {
+        "type": "TUBE_BRIDGE"
+      }
+    },
+    {
+      "x": 7,
+      "y": [8,9,10],
+      "part": {
+        "type": "TUBE_STRAIGHT",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 7,
+      "y": 11, 
+      "part": {
+        "type": "TUBE_ELBOW"
+      }
+    },
+    {
+      "x": [8,9,10,11,12,13,14,15],
+      "y": 10,
+      "part": {
+        "type": "TUBE_STRAIGHT"
+      }
+    },
+    {
+      "x": [8,9,10,11,12,13,14,15,16,17,18],
+      "y": 11,
+      "part": {
+        "type": "TUBE_STRAIGHT"
+      }
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "part": {
+        "type": "VALVE_CHECK"
+      }
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 9,
+      "y": [2,3,4,5,6,7],
+      "part": {
+        "type": "TUBE_STRAIGHT",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "part": {
+        "type": "TUBE_BRIDGE"
+      }
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "part": {
+        "type": "VALVE_MOTOR",
+        "rotate": 90,
+        "id": 3
+      }
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 180
+      }
+    },
+    {
+      "x": 10,
+      "y": [4,5,6],
+      "part": {
+        "type": "TUBE_STRAIGHT",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "part": {
+        "type": "TUBE_ELBOW"
+      }
+    },
+    {
+      "x": 11,
+      "y": 7,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 180
+      }
+    },
+    {
+      "x": 11,
+      "y": 1,
+      "part": {
+        "type": "KETTLE"
+      }
+    },
+    {
+      "x": 11,
+      "y": 1,
+      "part": {
+        "type": "TUBE_INLET"
+      }
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "part": {
+        "type": "VALVE_MANUAL"
+      }
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "part": {
+        "type": "VALVE_MOTOR",
+        "id": 4
+      }
+    },
+    {
+      "x": 11,
+      "y": 8,
+      "part": {
+        "type": "VALVE_MOTOR",
+        "rotate": 90,
+        "id": 5
+      }
+    },
+    {
+      "x": 12,
+      "y": 9,
+      "part": {
+        "type": "VALVE_MOTOR",
+        "id": 6
+      }
+    },
+    {
+      "x": 13,
+      "y": 8,
+      "part": {
+        "type": "VALVE_MOTOR",
+        "rotate": 90,
+        "id": 7
+      }
+    },
+    {
+      "x": 13,
+      "y": 7,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 14,
+      "y": 7,
+      "part": {
+        "type": "TUBE_STRAIGHT"
+      }
+    },
+    {
+      "x": 14,
+      "y": 9,
+      "part": {
+        "type": "VALVE_MOTOR",
+        "id": 8
+      }
+    },
+    {
+      "x": [9,11,13],
+      "y": 9,
+      "part": {
+        "type": "TUBE_TEE"
+      }
+    },
+    {
+      "x": 11,
+      "y": 6,
+      "part": {
+        "type": "LAUTERHEXE"
+      }
+    },
+    {
+      "x": 15,
+      "y": 6,
+      "part": {
+        "type": "TEMP_SENSOR_INLINE"
+      }
+    },
+    {
+      "x": [15,16],
+      "y": 7,
+      "part": {
+        "type": "TUBE_STRAIGHT"
+      }
+    },
+    {
+      "x": 15,
+      "y": 9,
+      "part": {
+        "type": "TUBE_STRAIGHT"
+      }
+    },
+    {
+      "x": 16,
+      "y": 6,
+      "part": {
+        "type": "VALVE_MANUAL"
+      }
+    },
+    {
+      "x": 18,
+      "y": 6,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 180
+      }
+    },
+    {
+      "x": 17,
+      "y": 6,
+      "part": {
+        "type": "TUBE_BRIDGE"
+      }
+    },
+    {
+      "x": 17,
+      "y": 7,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 270
+      }
+    },
+    {
+      "x": 18,
+      "y": 7,
+      "part": {
+        "type": "TUBE_ELBOW"
+      }
+    },
+    {
+      "x": 17,
+      "y": [6,5,4,3,2],
+      "part": {
+        "type": "TUBE_STRAIGHT",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 17,
+      "y": 1,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 18,
+      "y": 1,
+      "part": {
+        "type": "VALVE_MANUAL"
+      }
+    },
+    {
+      "x": 19,
+      "y": 1,
+      "part": {
+        "type": "KETTLE"
+      }
+    },
+    {
+      "x": 19,
+      "y": 1,
+      "part": {
+        "type": "TUBE_WHIRLPOOL"
+      }
+    },
+    {
+      "x": 19,
+      "y": 5,
+      "part": {
+        "type": "HEATING_ELEMENT"
+      }
+    },
+    {
+      "x": 19,
+      "y": 6,
+      "part": {
+        "type": "LAUTERHEXE"
+      }
+    },
+    {
+      "x": 19,
+      "y": 7,
+      "part": {
+        "type": "TUBE_STRAIGHT"
+      }
+    }, {
+      "x": 19,
+      "y": 9,
+      "part": {
+        "type": "TUBE_STRAIGHT"
+      }
+    },  
+    {
+      "x": 20,
+      "y": 7,
+      "part": {
+        "type": "VALVE_MOTOR",
+        "id": 9
+      }
+    },
+    {
+      "x": 20,
+      "y": 11,
+      "part": {
+        "type": "TUBE_STRAIGHT"
+      }
+    },
+    {
+      "x": 22,
+      "y": 7,
+      "part": {
+        "type": "VALVE_MOTOR",
+        "id": 10
+      }
+    },
+    {
+      "x": 20,
+      "y": 9,
+      "part": {
+        "type": "VALVE_MOTOR",
+        "id": 11
+      }
+    },
+    {
+      "x": 21,
+      "y": 10,
+      "part": {
+        "type": "VALVE_MOTOR",
+        "rotate": 90,
+        "id": 12
+      }
+    },
+    {
+      "x": 21,
+      "y": 8,
+      "part": {
+        "type": "PUMP",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 21,
+      "y": 9,
+      "part": {
+        "type": "TUBE_CROSS"
+      }
+    },
+    {
+      "x": 21,
+      "y": 7,
+      "part": {
+        "type": "TUBE_TEE",
+        "rotate": 180
+      }
+    },
+    {
+      "x": [22,23],
+      "y": 7,
+      "part": {
+        "type": "TUBE_STRAIGHT"
+      }
+    },
+    {
+      "x": 24,
+      "y": 7,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 270
+      }
+    },
+    {
+      "x": 24,
+      "y": 6,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 180
+      }
+    },
+    {
+      "x": 23,
+      "y": 6,
+      "part": {
+        "type": "VALVE_MANUAL"
+      }
+    },
+    {
+      "x": 16,
+      "y": 9,
+      "part": {
+        "type": "CFC"
+      }
+    },
+    {
+      "x": 19,
+      "y": 10,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 180
+      }
+    },
+    {
+      "x": 19,
+      "y": 11,
+      "part": {
+        "type": "TUBE_BRIDGE"
+      }
+    },
+    {
+      "x": 21,
+      "y": 11,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 270
+      }
+    },
+    {
+      "x": 23,
+      "y": 9,
+      "part": {
+        "type": "TUBE_OUTPUT"
+      }
+    },
+    {
+      "x": 22,
+      "y": 9,
+      "part": {
+        "type": "VALVE_MANUAL"
+      }
+    },
+    {
+      "x": 19,
+      "y": 11,
+      "part": {
+        "type": "TUBE_STRAIGHT",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 19,
+      "y": 12,
+      "part": {
+        "type": "TUBE_OUTPUT",
+        "rotate": 90
+      }
+    }
+  ]
+}

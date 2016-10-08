@@ -33,7 +33,7 @@ Tile.propTypes = {
 Tile.defaultProps = {
   x: -1,
   y: -1,
-  showCoordinates: true,
+  showCoordinates: false,
 };
 
 export default Tile;

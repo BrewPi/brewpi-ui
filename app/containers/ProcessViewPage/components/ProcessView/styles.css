@@ -7,6 +7,14 @@
   overflow: scroll;
 }
 
-span {
-  margin: 5px;
+.tiles {
+  text-align: center;
+  min-height: 60vh;
+  display: block;
+}
+
+.row {
+  float: left;
+  clear: left;
+  display: table;
 }

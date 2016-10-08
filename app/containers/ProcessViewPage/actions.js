@@ -25,7 +25,7 @@ export function layoutChoosen(layoutId) {
   };
 }
 
-export function componentLoaded(id) {
+export function pageLoaded(id) {
   return {
     type: COMPONENT_LOADED,
     id,

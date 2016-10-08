@@ -4,11 +4,10 @@
  *
  */
 
-import sampleProcessViews from 'services/mockApi/sample-data/sample-processviews.json';
 import { combineReducers } from 'redux';
-
+import { processViewReducer } from '../ProcessViewPage/reducer';
 const sampleDataReducer = combineReducers({
-  processViews: sampleProcessViews,
+  processViews: processViewReducer,
 });
 
 export default sampleDataReducer;

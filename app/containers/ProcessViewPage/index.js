@@ -11,51 +11,17 @@ import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 import styles from './styles.css';
 import ProcessView from './components/ProcessView';
-import { makeViewSelector, layoutTableSelector } from './selectors.js';
-import Tile from './components/Tile';
-import { Part } from './components/Part';
 import { Table } from 'immutable-table';
+import { makeViewSelector, layoutTableSelector, showCoordinatesSelector } from './selectors.js';
 import * as actions from './actions';
 
 
 export class ProcessViewPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   componendDidMount() {
-    this.dispatch(actions.componentLoaded, { viewId: this.props.params.viewId });
-  }
-
-  renderTiles(layout) {
-    const tiles = [];
-    let row = [];
-
-    const cols = layout.width;
-    const rows = layout.height;
-    for (let y = 0; y < rows; y += 1) {
-      row = [];
-      for (let x = 0; x < cols; x += 1) {
-        const key = `tile-${x}-${y}`;
-        const partsInCell = layout.getCell(x, y);
-        const partComponents = [];
-        let keyVal = 0;
-        if (partsInCell !== undefined) {
-          for (const part of partsInCell) {
-            partComponents.push(<Part data={part} key={keyVal} />);
-            keyVal += 1;
-          }
-        }
-        row.push(
-          <Tile key={key} x={x} y={y}>
-            {partComponents}
-          </Tile>
-        );
-      }
-      tiles.push(<div className={styles.row} key={`row-${y}`}>{row}</div>);
-    }
-    return <div className={styles.tiles}>{tiles}</div>;
+    this.dispatch(actions.pageLoaded, { viewId: this.props.params.viewId });
   }
 
   render() {
-    const parts = this.props.layout;
-    const tiles = this.renderTiles(parts);
     return (
       <div className={styles.ProcessViewPage}>
         <Helmet
@@ -65,9 +31,7 @@ export class ProcessViewPage extends React.Component { // eslint-disable-line re
           ]}
         />
         <h2>{this.props.params.viewId}</h2><h3><FormattedMessage {...messages.header} /></h3>
-        <ProcessView>
-          { tiles }
-        </ProcessView>
+        <ProcessView layout={this.props.layout} showCoordinates={this.props.showCoordinates} />
       </div>
     );
   }
@@ -76,7 +40,22 @@ export class ProcessViewPage extends React.Component { // eslint-disable-line re
 ProcessViewPage.propTypes = {
   layout: React.PropTypes.instanceOf(Table),
   // view: React.PropTypes.object,
-  params: React.PropTypes.object,
+  params: React.PropTypes.shape({
+    viewId: React.PropTypes.string,
+  }),
+  showCoordinates: React.PropTypes.bool,
+  steps: React.PropTypes.arrayOf(
+    React.PropTypes.shape({
+      id: React.PropTypes.number,
+      name: React.PropTypes.string,
+      settings: React.PropTypes.arrayOf(
+        React.PropTypes.shape({
+          id: React.PropTypes.string,
+          settings: React.PropTypes.object,
+        })
+      ),
+    })
+  ),
 };
 
 const makeMapStateToProps = () => {
@@ -84,6 +63,19 @@ const makeMapStateToProps = () => {
   const mapStateToProps = (state, props) => ({
     view: viewSelector(state, props),
     layout: layoutTableSelector(state, props),
+    showCoordinates: showCoordinatesSelector(state, props),
+    steps: [{
+      id: 0,
+      name: 'valves_closed',
+      settings: [
+        {
+          id: '0',
+          settings: {
+            pos: closed,
+          },
+        },
+      ],
+    }],
   });
   return mapStateToProps;
 };

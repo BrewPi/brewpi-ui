@@ -38,6 +38,14 @@ const activeLayoutIdSelector = createSelector(
 );
 
 /**
+ * Get showCoordinates setting for specific view
+ */
+const showCoordinatesSelector = createSelector(
+  viewSelector,
+  (view) => view.get('showCoordinates')
+);
+
+/**
  * Get the active layout (list of parts)
  */
 const activeLayoutPartsSelector = createSelector(
@@ -102,6 +110,7 @@ export {
   makeViewSelector,
   activeLayoutIdSelector,
   activeLayoutPartsSelector,
+  showCoordinatesSelector,
   dimensionsSelector,
   layoutTableSelector,
 };

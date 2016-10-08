@@ -1,20 +1,5 @@
-.ProcessViewPage { /* stylelint-disable */
-
-}
-
-.tiles {
-  text-align: center;
-  min-height: 60vh;
-  display: block;
-}
-
-.row{
-  float: left;
-  clear: left;
-  display: table;
- }
-
-h2, h3 {
-  padding: 0px 10px;
+h2,
+h3 {
+  padding: 0 10px;
   display: inline-block;
 }
