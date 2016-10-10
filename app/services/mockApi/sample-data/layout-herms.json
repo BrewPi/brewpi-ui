@@ -599,10 +599,11 @@
       }
     },
     {
-      "x": 20,
-      "y": 11,
+      "x": 21,
+      "y": 10,
       "part": {
-        "type": "TUBE_STRAIGHT"
+        "type": "TUBE_TEE",
+        "rotate": 270
       }
     },
     {
@@ -622,12 +623,19 @@
       }
     },
     {
-      "x": 21,
+      "x": 20,
+      "y": 11,
+      "part": {
+        "type": "VALVE_MOTOR",
+        "id": 12
+      }
+    },
+    {
+      "x": 20,
       "y": 10,
       "part": {
         "type": "VALVE_MOTOR",
-        "rotate": 90,
-        "id": 12
+        "id": 13
       }
     },
     {
@@ -694,7 +702,7 @@
       "x": 19,
       "y": 10,
       "part": {
-        "type": "TUBE_ELBOW",
+        "type": "TUBE_TEE",
         "rotate": 180
       }
     },
