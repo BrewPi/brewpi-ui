@@ -19,6 +19,12 @@ export default function configureStore(initialState = {}, history) {
     sagaMiddleware,
     routerMiddleware(history),
   ];
+  // When in development, add logger middleware
+  if (process.env.NODE_ENV === 'development') {
+    const createLogger = require('redux-logger'); // eslint-disable-line global-require
+    const logger = createLogger();
+    middlewares.push(logger);
+  }
 
   const enhancers = [
     applyMiddleware(...middlewares),

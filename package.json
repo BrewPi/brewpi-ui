@@ -150,7 +150,9 @@
       "react/jsx-no-target-blank": 0,
       "react/require-extension": 0,
       "react/self-closing-comp": 0,
-      "require-yield": 0
+      "require-yield": 0,
+      "no-unused-vars": 1,
+      "react/no-unused-prop-types": 1
     },
     "settings": {
       "import/resolver": {
@@ -233,6 +235,7 @@
     "react-router-scroll": "0.3.2",
     "redux": "3.6.0",
     "redux-immutable": "3.0.8",
+    "redux-logger": "^2.7.0",
     "redux-saga": "0.11.1",
     "reselect": "2.5.3",
     "sanitize.css": "4.1.0",
