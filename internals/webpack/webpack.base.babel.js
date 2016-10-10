@@ -55,8 +55,13 @@ module.exports = (options) => ({
       test: /\.(mp4|webm)$/,
       loader: 'url-loader?limit=10000',
     }, {
-      test: /\.svg$/,
+      test: /\.svg$/, // inline svg files in our own app
+      exclude: /node_modules/,
       loader: 'babel!svg-react',
+    },
+    { test: /\.svg$/, // load svg files in node modules normally
+      include: /node_modules/,
+      loader: 'file-loader',
     },
     ],
   },
