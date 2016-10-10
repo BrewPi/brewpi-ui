@@ -15,8 +15,7 @@ import { Table } from 'immutable-table';
 import { makeViewSelector, layoutTableSelector, showCoordinatesSelector } from './selectors.js';
 import * as actions from './actions';
 
-
-export class ProcessViewPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
+class ProcessViewPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   componendDidMount() {
     this.dispatch(actions.pageLoaded, { viewId: this.props.params.viewId });
   }
@@ -30,8 +29,10 @@ export class ProcessViewPage extends React.Component { // eslint-disable-line re
             { name: 'description', content: 'Description of ProcessViewPage' },
           ]}
         />
+        <div className={styles.header}>
         <h2>{this.props.params.viewId}</h2><h3><FormattedMessage {...messages.header} /></h3>
-        <ProcessView layout={this.props.layout} showCoordinates={this.props.showCoordinates} />
+      </div>
+        <ProcessView className={styles.processview} layout={this.props.layout} showCoordinates={this.props.showCoordinates} />
       </div>
     );
   }

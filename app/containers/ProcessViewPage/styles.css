@@ -1,5 +1,18 @@
-h2,
-h3 {
-  padding: 0 10px;
+.header > * {
+  padding: 10px;
+  display: block;
+  float: left;
+  margin: 0;
+}
+
+.stepSelect {
+  padding: 10px;
+  display: block;
+  float: right;
+  clear: none;
+}
+
+.processview {
+  margin: auto;
   display: inline-block;
 }

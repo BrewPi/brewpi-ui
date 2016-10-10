@@ -43,7 +43,7 @@ class ProcessView extends React.Component { // eslint-disable-line react/prefer-
     }
     return (
       <div className={styles.ProcessView}>
-        <div className={styles.tiles}>{tiles}</div>;
+        <div className={styles.tiles}>{tiles}</div>
       </div>
     );
   }
