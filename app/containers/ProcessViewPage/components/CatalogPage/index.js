@@ -16,12 +16,16 @@ import { Cfc } from '../Cfc';
 import { Filter } from '../Filter';
 import { Lauterhexe } from '../Lauterhexe';
 import { HeatingElement } from '../HeatingElement';
+import { TubularHeater } from '../TubularHeater';
 import { Coil } from '../Coil';
 import { Kettle } from '../Kettle';
-import { Bottle } from '../Bottle';
+import { Carboy } from '../Carboy';
 import { Keg } from '../Keg';
 import { GlycolReservoir } from '../GlycolReservoir';
 import { FridgeTall } from '../FridgeTall';
+import { Conical } from '../Conical';
+import { BeerBottle } from '../BeerBottle';
+
 
 class CatalogPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -242,6 +246,16 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               </td>
             </tr>
             <tr>
+              <td>Tubular Heater</td>
+              <td>
+                <TubularHeater />
+              </td>
+              <td>
+                <TubularHeater />
+                <TubularHeater />
+              </td>
+            </tr>
+            <tr>
               <td>Coil</td>
               <td>
                 <Coil />
@@ -263,14 +277,14 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               </td>
             </tr>
             <tr>
-              <td>Bottle</td>
+              <td>Carboy</td>
               <td>
-                <Bottle />
+                <Carboy />
               </td>
               <td>
-                <Bottle liquid={'water'} />
-                <Bottle liquid={'hotwater'} />
-                <Bottle liquid={'beer'} />
+                <Carboy liquid={'water'} />
+                <Carboy liquid={'hotwater'} />
+                <Carboy liquid={'beer'} />
               </td>
             </tr>
             <tr>
@@ -300,6 +314,28 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               </td>
               <td>
                 <FridgeTall />
+              </td>
+            </tr>
+            <tr>
+              <td>Conical</td>
+              <td>
+                <Conical />
+              </td>
+              <td>
+                <Conical liquid={'water'} />
+                <Conical liquid={'hotwater'} />
+                <Conical liquid={'beer'} />
+              </td>
+            </tr>
+            <tr>
+              <td>Beer Bottle</td>
+              <td>
+                <BeerBottle />
+              </td>
+              <td>
+                <BeerBottle liquid={'water'} />
+                <BeerBottle liquid={'hotwater'} />
+                <BeerBottle liquid={'beer'} />
               </td>
             </tr>
           </tbody>

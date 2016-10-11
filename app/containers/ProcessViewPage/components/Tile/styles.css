@@ -7,6 +7,15 @@
   position: relative;
 }
 
+.tile {
+  border-top: dotted 1px rgba(255, 255, 255, 0.2);
+  border-left: dotted 1px rgba(255, 255, 255, 0.2);
+}
+
+.tile:last-child {
+  border-right: dotted 1px rgba(255, 255, 255, 0.2);
+}
+
 .content {
   display: block;
   position: absolute;

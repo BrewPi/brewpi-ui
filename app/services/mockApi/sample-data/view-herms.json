@@ -2,7 +2,7 @@
   "name": "HERMS",
   "width": 25,
   "height": 13,
-  "showCoordinates": true,
+  "showCoordinates": false,
   "currentLayoutId": "0",
   "layouts": {} 
 }

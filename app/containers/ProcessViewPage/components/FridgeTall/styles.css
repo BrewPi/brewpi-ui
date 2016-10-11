@@ -1,10 +1,4 @@
-.lines {
-  stroke: #FFF;
-  stroke-width: 2pt;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
-}
+
 
 .fridgeContainer {
   position: relative;
@@ -13,7 +7,7 @@
 }
 
 .fridgeCompartment {
-  border: solid 1pt #FFF;
+  border: solid 2pt #FFF;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -36,9 +30,10 @@
 
 .fridgeName,
 .setpoint,
-.cooler,
-.heater {
+.coolingPercentage,
+.heatingPercentage {
   font-size: 20px;
+  vertical-align: middle;
 }
 
 .fridgeTop {
@@ -54,18 +49,19 @@
   height: 75px;
 }
 
-.fridgeName {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 8px;
-}
-
+.fridgeName,
 .setpoint {
   position: absolute;
   top: 0;
+  padding: 10px;
+}
+
+.fridgeName {
+  left: 0;
+}
+
+.setpoint {
   right: 0;
-  padding: 8px;
 }
 
 .temp {
@@ -75,26 +71,33 @@
   right: 10px;
 }
 
-.divCooler,
-.divHeater {
+.divCooling,
+.divHeating {
+  width: 50%;
+  height: 100%;
+  position: relative;
   padding: 10px;
+  float: left;
 }
 
-.divCooler {
-  position: absolute;
-  width: 50%;
-  height: 75px;
-  left: 0;
-  bottom: 0;
-  border-right: solid 1px;
+.divCooling {
+  border-right: solid 2px;
 }
 
-.divHeater {
-  position: absolute;
-  width: 50%;
-  height: 75px;
-  right: 0;
-  bottom: 0;
+.iconCooling,
+.iconHeating,
+.iconDefrost {
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.iconHeating path,
+.iconDefrost path {
+  stroke:none;
+  fill: #fff;
 }
 
 .motor {

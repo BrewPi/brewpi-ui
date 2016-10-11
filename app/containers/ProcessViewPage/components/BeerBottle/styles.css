@@ -1,0 +1,13 @@
+.beerBottle {
+  stroke: #FFF;
+  fill: none;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+}
+
+.beerBottleFill {
+  stroke: none;
+}
+
+
+

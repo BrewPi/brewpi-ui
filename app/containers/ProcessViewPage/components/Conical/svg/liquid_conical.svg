@@ -1,0 +1,14 @@
+<svg x="0px" y="0px" viewBox="0 0 150 450" width="150" height="450">
+
+	<defs>
+		<polygon id="MASKCNC" points="1,50 1,250 67.5,363 82,363 149,250 149,50 		"/>
+	</defs>
+	
+	<clipPath id="MASKCNC">
+		<use xlink:href="#MASKCNC"  overflow="visible"/>
+	</clipPath>
+	
+	<g clip-path="url(#MASKCNC)">
+		<rect class="maskedFill" y="50" width="150" height="313"/>
+	</g>
+</svg>

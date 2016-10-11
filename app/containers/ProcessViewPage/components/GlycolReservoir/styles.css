@@ -5,3 +5,11 @@
   stroke-linejoin: round;
   fill: none;
 }
+
+.iconCooling {
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}

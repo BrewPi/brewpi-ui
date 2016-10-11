@@ -113,7 +113,7 @@
       }
     },
     {
-      "x": 3,
+      "x": 2,
       "y": 5,
       "part": {
         "type": "HEATING_ELEMENT"
@@ -564,7 +564,7 @@
       }
     },
     {
-      "x": 19,
+      "x": 18,
       "y": 5,
       "part": {
         "type": "HEATING_ELEMENT"

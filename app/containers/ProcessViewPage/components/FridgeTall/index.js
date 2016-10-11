@@ -8,6 +8,8 @@ const SvgFanbase = require('./svg/fanbase.svg?tag=g');
 const SvgFanblades = require('./svg/fanblades.svg?tag=g');
 const SvgMotor = require('./svg/motor.svg?tag=g');
 const SvgMotorPower = require('./svg/motor-power.svg?tag=g');
+const SvgIconDefrost = require('../Icons/svg/defrost.svg');
+const SvgIconHeating = require('../Icons/svg/heating.svg');
 
 import { SvgParent } from '../SvgParent';
 
@@ -23,6 +25,7 @@ const FridgeFan = (props) => {
     </SvgParent>
   );
 };
+
 FridgeFan.propTypes = {
   powered: React.PropTypes.string,
 };
@@ -38,11 +41,13 @@ export const FridgeTall = (props) => (
       <span className={styles.temp}>20°</span>
     </div>
     <div className={classNames(styles.fridgeBottom, styles.fridgeCompartment)}>
-      <div className={styles.divCooler}>
-        <span className={styles.cooler}>22%</span>
+      <div className={styles.divCooling}>
+        <span className={styles.coolingPercentage}>22%</span>
+        <SvgIconDefrost className={classNames(styles.iconDefrost)} />
       </div>
-      <div className={styles.divHeater}>
-        <span className={styles.heater}>0%</span>
+      <div className={styles.divHeating}>
+        <span className={styles.heatingPercentage}>0%</span>
+        <SvgIconHeating className={classNames(styles.iconHeating)} />
       </div>
     </div>
   </div>
