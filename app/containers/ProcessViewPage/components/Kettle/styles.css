@@ -6,7 +6,7 @@
 }
 
 .kettleFill {
-  transform: scaleY(0.5);
+  transform: scaleY(0.99) translateX(3px) translateY(3px);
   transform-origin: 0 300px;
 }
 
