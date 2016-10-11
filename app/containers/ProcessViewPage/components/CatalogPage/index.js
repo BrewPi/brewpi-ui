@@ -23,6 +23,9 @@ import { Carboy } from '../Carboy';
 import { Keg } from '../Keg';
 import { GlycolReservoir } from '../GlycolReservoir';
 import { FridgeTall } from '../FridgeTall';
+import { Conical } from '../Conical';
+import { BeerBottle } from '../BeerBottle';
+
 
 class CatalogPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -311,6 +314,28 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               </td>
               <td>
                 <FridgeTall />
+              </td>
+            </tr>
+            <tr>
+              <td>Conical</td>
+              <td>
+                <Conical />
+              </td>
+              <td>
+                <Conical liquid={'water'} />
+                <Conical liquid={'hotwater'} />
+                <Conical liquid={'beer'} />
+              </td>
+            </tr>
+            <tr>
+              <td>Beer Bottle</td>
+              <td>
+                <BeerBottle />
+              </td>
+              <td>
+                <BeerBottle liquid={'water'} />
+                <BeerBottle liquid={'hotwater'} />
+                <BeerBottle liquid={'beer'} />
               </td>
             </tr>
           </tbody>
