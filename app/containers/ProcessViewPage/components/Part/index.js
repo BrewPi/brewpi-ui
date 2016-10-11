@@ -15,6 +15,14 @@ import { Lauterhexe } from '../Lauterhexe';
 import { Pump } from '../Pump';
 import { Cfc } from '../Cfc';
 import { TempSensors } from '../TempSensors';
+import { BeerBotte } from '../BeerBottle';
+import { Carboy } from '../Carboy';
+import { Conical } from '../Conical';
+import { FridgeTall } from '../FridgeTall';
+import { GlycolReservoir } from '../GlycolReservoir';
+import { Keg } from '../Keg';
+import { TubularHeater } from '../TubularHeater';
+
 const classNames = require('classnames');
 
 const NoPart = () => <div />;
@@ -40,6 +48,13 @@ const componentTable = {
   PUMP: Pump,
   CFC: Cfc,
   TEMP_SENSOR_INLINE: TempSensors.Inline,
+  BEER_BOTTLE: BeerBotte,
+  CONICAL: Conical,
+  FRIDGE_TALL: FridgeTall,
+  GLYCOL_RESERVOIR: GlycolReservoir,
+  CORNEY_KEG: Keg,
+  TUBULAR_HEATER: TubularHeater,
+  CARBOY: Carboy,
   DEFAULT: NoPart,
 };
 
@@ -49,6 +64,8 @@ const zIndices = {
   TUBE_BRIDGE: 3,
   KETTLE: 1,
   DEFAULT: 2,
+  FRIDGE_TALL: 1,
+  GLYCOL_RESERVOIR: 1,
 };
 
 const rotateClassNames = {
