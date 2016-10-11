@@ -1,3 +1,3 @@
 <svg viewBox="0 0 200 300" width="200" height="300">
-    <rect x="2" y="2" class="lines kettle" width="195" height="295" rx="5" ry="5"/>
+    <rect x="2" y="2" width="195" height="295" rx="5" ry="5"/>
 </svg>
