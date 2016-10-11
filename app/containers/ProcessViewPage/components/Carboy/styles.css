@@ -1,4 +1,4 @@
-.bottle {
+.carboy {
   stroke: #FFF;
   stroke-width: 2pt;
   stroke-linecap: round;
@@ -6,13 +6,13 @@
   fill: none;
 }
 
-.bottleName {
+.carboyName {
   font-size: 12px;
 }
 
 .temp,
 .setpoint,
-.bottleName {
+.carboyName {
   fill: #FFF;
   stroke-width: 8;
   stroke: #24333D;
@@ -31,7 +31,7 @@
   font-weight: normal;
 }
 
-.bottleFill {
+.carboyFill {
   transform: scaleY(0.7);
   transform-origin: 0 200px;
   border-radius: 10px 20px 30px 10;

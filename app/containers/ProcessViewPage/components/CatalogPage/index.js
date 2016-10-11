@@ -18,7 +18,7 @@ import { Lauterhexe } from '../Lauterhexe';
 import { HeatingElement } from '../HeatingElement';
 import { Coil } from '../Coil';
 import { Kettle } from '../Kettle';
-import { Bottle } from '../Bottle';
+import { Carboy } from '../Carboy';
 import { Keg } from '../Keg';
 import { GlycolReservoir } from '../GlycolReservoir';
 import { FridgeTall } from '../FridgeTall';
@@ -263,14 +263,14 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               </td>
             </tr>
             <tr>
-              <td>Bottle</td>
+              <td>Carboy</td>
               <td>
-                <Bottle />
+                <Carboy />
               </td>
               <td>
-                <Bottle liquid={'water'} />
-                <Bottle liquid={'hotwater'} />
-                <Bottle liquid={'beer'} />
+                <Carboy liquid={'water'} />
+                <Carboy liquid={'hotwater'} />
+                <Carboy liquid={'beer'} />
               </td>
             </tr>
             <tr>
