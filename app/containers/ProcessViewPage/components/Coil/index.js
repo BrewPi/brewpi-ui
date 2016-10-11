@@ -9,7 +9,7 @@ const SvgLiquidCoil = require('./svg/liquid_coil.svg?tag=g');
 import { SvgParent } from '../SvgParent';
 
 export const Coil = (props) => (
-  <SvgParent viewBox={'0 0 200 100'}>
+  <SvgParent viewBox={'0 0 150 100'}>
     <SvgLiquidCoil className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
     <SvgCoil className={styles.coil} />
 
