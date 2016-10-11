@@ -1,10 +1,10 @@
 .ProcessView {
-  background: #24333D;
   font-family: sans-serif;
   font-size: 12px;
   color: #FFF;
   width: 100%;
   overflow: auto;
+  padding: 50px;
 }
 
 .tiles {
@@ -14,7 +14,11 @@
 }
 
 .row {
-  float: left;
+  margin: auto;
   clear: left;
   display: table;
+}
+
+.row:last-child {
+  border-bottom: dotted 1px rgba(255, 255, 255, 0.2);
 }

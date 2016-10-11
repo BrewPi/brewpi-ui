@@ -4,6 +4,11 @@
  * App container styles
  */
 
+body {
+  background: #24333D;
+  color: #fff;
+}
+
 .container {
   display: block;
 }
