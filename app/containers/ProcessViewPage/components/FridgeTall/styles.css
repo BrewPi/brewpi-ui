@@ -44,6 +44,11 @@
   height: 475px;
 }
 
+.fridgeShelf {
+  height: 50px;
+  border-bottom: solid 3px #fff;
+}
+
 .fridgeBottom {
   position: relative;
   height: 75px;

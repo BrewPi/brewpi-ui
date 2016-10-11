@@ -39,6 +39,9 @@ export const FridgeTall = (props) => (
     <div className={classNames(styles.fridgeMiddle, styles.fridgeCompartment)}>
       <FridgeFan powered={'slow'} />
       <span className={styles.temp}>20°</span>
+      <div className={styles.fridgeShelf}></div>
+      <div className={styles.fridgeShelf}></div>
+      <div className={styles.fridgeShelf}></div>
     </div>
     <div className={classNames(styles.fridgeBottom, styles.fridgeCompartment)}>
       <div className={styles.divCooling}>
