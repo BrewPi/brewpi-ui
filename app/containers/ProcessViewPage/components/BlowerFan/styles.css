@@ -1,0 +1,47 @@
+.blades {
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.blades circle:first-child {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: butt;
+  stroke-dasharray: 4, 5;
+}
+
+.blades circle {
+  fill: #FFF;
+}
+
+.bladesWrapper {
+  transform: translateY(1px);
+}
+
+.ball {
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.motor {
+  fill: #FFF;
+}
+
+.tubes {
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.liquid {
+  fill: none;
+  stroke: black;
+  stroke-width: 5pt;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

@@ -1,4 +1,5 @@
 import styles from './styles.css';
+const classNames = require('classnames');
 
 const powerClasses = {
   off: styles.powerOff,
@@ -17,4 +18,8 @@ const rotateClasses = {
 };
 
 export const getPowerClass = (powered) => powerClasses[powered] || powerClasses.default;
-export const getRotateClass = (powered) => rotateClasses[powered] || rotateClasses.default;
+export const getRotateClass = (powered, clockwise = true) => {
+  const rotate = rotateClasses[powered] || rotateClasses.default;
+  const dir = (clockwise) ? styles.clockwise : styles.counterClockwise;
+  return classNames(rotate, dir);
+};
