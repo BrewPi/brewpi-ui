@@ -1,18 +1,18 @@
 .tube {
   stroke: #FFF;
   stroke-width: 2pt;
-  stroke-linecap: round;
   fill: none;
 }
 
 .liquid {
   fill: none;
   stroke-width: 5pt;
-  stroke-linecap: round;
 }
 
 .ball {
   fill: #FFF;
+  stroke: #FFF;
+  stroke-width: 2pt;
 }
 
 .rotate_90 {
