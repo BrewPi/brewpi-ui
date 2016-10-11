@@ -46,5 +46,5 @@
 
 .conicalFill rect {
   transform-origin: 0 363px;
-  transform: scaleY(0.3);
+  transform: scaleY(0.99);
 }
