@@ -16,6 +16,7 @@ import { Cfc } from '../Cfc';
 import { Filter } from '../Filter';
 import { Lauterhexe } from '../Lauterhexe';
 import { HeatingElement } from '../HeatingElement';
+import { TubularHeater } from '../TubularHeater';
 import { Coil } from '../Coil';
 import { Kettle } from '../Kettle';
 import { Carboy } from '../Carboy';
@@ -239,6 +240,16 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               <td>
                 <HeatingElement liquid={'water'} />
                 <HeatingElement liquid={'hotwater'} />
+              </td>
+            </tr>
+            <tr>
+              <td>Tubular Heater</td>
+              <td>
+                <TubularHeater />
+              </td>
+              <td>
+                <TubularHeater />
+                <TubularHeater />
               </td>
             </tr>
             <tr>
