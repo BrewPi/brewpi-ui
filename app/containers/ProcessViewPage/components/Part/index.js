@@ -13,12 +13,14 @@ import { Coil } from '../Coil';
 import { HeatingElement } from '../HeatingElement';
 import { Lauterhexe } from '../Lauterhexe';
 import { Pump } from '../Pump';
+import { SubmersiblePump } from '../SubmersiblePump';
+import { BlowerFan } from '../BlowerFan';
 import { Cfc } from '../Cfc';
 import { TempSensors } from '../TempSensors';
-import { BeerBotte } from '../BeerBottle';
+import { BeerBottle } from '../BeerBottle';
 import { Carboy } from '../Carboy';
 import { Conical } from '../Conical';
-import { FridgeTall } from '../FridgeTall';
+import { FridgeTall, FridgeFan, FridgeShelf } from '../FridgeTall';
 import { GlycolReservoir } from '../GlycolReservoir';
 import { Keg } from '../Keg';
 import { TubularHeater } from '../TubularHeater';
@@ -46,11 +48,15 @@ const componentTable = {
   HEATING_ELEMENT: HeatingElement,
   LAUTERHEXE: Lauterhexe,
   PUMP: Pump,
+  SUBMERSIBLE_PUMP: SubmersiblePump,
   CFC: Cfc,
   TEMP_SENSOR_INLINE: TempSensors.Inline,
-  BEER_BOTTLE: BeerBotte,
+  BEER_BOTTLE: BeerBottle,
   CONICAL: Conical,
   FRIDGE_TALL: FridgeTall,
+  FRIDGE_FAN: FridgeFan,
+  BLOWER_FAN: BlowerFan,
+  FRIDGE_SHELF: FridgeShelf,
   GLYCOL_RESERVOIR: GlycolReservoir,
   CORNEY_KEG: Keg,
   TUBULAR_HEATER: TubularHeater,

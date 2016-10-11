@@ -9,5 +9,10 @@
   stroke: none;
 }
 
+.beerBottle,
+.beerBottleFill {
+  transform: translateY(24px); /* TODO: modify SVG */
+}
+
 
 

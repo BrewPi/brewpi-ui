@@ -2,7 +2,7 @@
 
 .fridgeContainer {
   position: relative;
-  width: 250px;
+  width: 200px;
   height: 600px;
 }
 
@@ -41,17 +41,18 @@
 }
 
 .fridgeMiddle {
-  height: 475px;
+  height: 500px;
 }
 
 .fridgeShelf {
   height: 50px;
-  border-bottom: solid 3px #fff;
+  width: 200px;
+  border-top: solid 3px #FFF;
 }
 
 .fridgeBottom {
   position: relative;
-  height: 75px;
+  height: 50px;
 }
 
 .fridgeName,
@@ -81,7 +82,7 @@
   width: 50%;
   height: 100%;
   position: relative;
-  padding: 10px;
+  /*padding: 10px;*/
   float: left;
 }
 
@@ -97,6 +98,7 @@
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
+  transform: scale(0.6);
 }
 
 .iconHeating path,

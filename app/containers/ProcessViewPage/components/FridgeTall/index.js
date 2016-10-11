@@ -12,7 +12,7 @@ const SvgIconHeating = require('../Icons/svg/heating.svg');
 
 import { SvgParent } from '../SvgParent';
 
-const FridgeFan = (props) => {
+export const FridgeFan = (props) => {
   const powerClass = getPowerClass(props.powered);
   const rotateClass = getRotateClass(props.powered);
   return (
@@ -24,23 +24,38 @@ const FridgeFan = (props) => {
     </SvgParent>
   );
 };
-
 FridgeFan.propTypes = {
   powered: React.PropTypes.string,
 };
 
-export const FridgeTall = (props) => (
+export const BlowerFan = (props) => {
+  const rotateClass = getRotateClass(props.powered);
+  return (
+    <SvgParent>
+      <SvgFanbase className={styles.fanbase} />
+      <SvgFanblades className={classNames(styles.blades, rotateClass)} />
+    </SvgParent>
+  );
+};
+BlowerFan.propTypes = {
+  powered: React.PropTypes.string,
+};
+
+
+export const FridgeShelf = () => (
+  <div>
+    <div className={styles.fridgeShelf}></div>
+  </div>
+);
+
+export const FridgeTall = () => (
   <div className={styles.fridgeContainer}>
     <div className={classNames(styles.fridgeTop, styles.fridgeCompartment)}>
       <span className={styles.fridgeName}>Fridge #1</span>
       <span className={styles.setpoint}>20°</span>
     </div>
     <div className={classNames(styles.fridgeMiddle, styles.fridgeCompartment)}>
-      <FridgeFan powered={'slow'} />
       <span className={styles.temp}>20°</span>
-      <div className={styles.fridgeShelf}></div>
-      <div className={styles.fridgeShelf}></div>
-      <div className={styles.fridgeShelf}></div>
     </div>
     <div className={classNames(styles.fridgeBottom, styles.fridgeCompartment)}>
       <div className={styles.divCooling}>
@@ -54,6 +69,3 @@ export const FridgeTall = (props) => (
     </div>
   </div>
 );
-FridgeTall.propTypes = {
-  liquid: React.PropTypes.string,
-};

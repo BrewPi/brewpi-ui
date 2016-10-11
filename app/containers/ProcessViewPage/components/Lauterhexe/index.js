@@ -5,11 +5,8 @@ const SvgLauterhexe = require('./svg/lauterhexe.svg?tag=g');
 
 import { SvgParent } from '../SvgParent';
 
-export const Lauterhexe = (props) => (
+export const Lauterhexe = () => (
   <SvgParent viewBox={'0 0 200 50'}>
     <SvgLauterhexe className={styles.lauterhexe} />
   </SvgParent>
 );
-Lauterhexe.propTypes = {
-  liquid: React.PropTypes.string,
-};
