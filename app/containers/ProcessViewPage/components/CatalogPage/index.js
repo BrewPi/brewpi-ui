@@ -11,6 +11,7 @@ import { Table } from 'react-bootstrap';
 import { Valves } from '../Valves';
 import { Tubes } from '../Tubes';
 import { Pump } from '../Pump';
+import { SubmersiblePump } from '../SubmersiblePump';
 import { BlowerFan } from '../BlowerFan';
 import { TempSensors } from '../TempSensors';
 import { Cfc } from '../Cfc';
@@ -194,6 +195,17 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Pump powered={'on'} liquid={'water'} />
                 <Pump powered={'slow'} liquid={'hotwater'} />
                 <Pump powered={'fast'} liquid={'beer'} />
+              </td>
+            </tr>
+            <tr>
+              <td>Submersible pump</td>
+              <td>
+                <SubmersiblePump />
+              </td>
+              <td>
+                <SubmersiblePump powered={'on'} liquid={'water'} />
+                <SubmersiblePump powered={'slow'} liquid={'hotwater'} />
+                <SubmersiblePump powered={'fast'} liquid={'beer'} />
               </td>
             </tr>
             <tr>
