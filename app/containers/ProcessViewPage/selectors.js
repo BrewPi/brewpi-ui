@@ -1,5 +1,3 @@
-/* eslint no-unused-vars: ["error", { "argsIgnorePattern": "props" }] */
-
 import { createSelector } from 'reselect';
 import { fromJS, List } from 'immutable';
 import { Table } from 'immutable-table';

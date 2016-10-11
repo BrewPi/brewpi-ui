@@ -1,4 +1,3 @@
-/* eslint no-unused-vars: ["error", { "argsIgnorePattern": "props" }] */
 /* eslint-disable react/no-multi-comp */
 /* eslint-disable react/prefer-stateless-function */
 

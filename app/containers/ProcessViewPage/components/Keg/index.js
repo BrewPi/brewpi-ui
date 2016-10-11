@@ -1,4 +1,3 @@
-/* eslint no-unused-vars: ["error", { "argsIgnorePattern": "props" }] */
 import React from 'react';
 import styles from './styles.css';
 import { Liquids } from '../Liquids';

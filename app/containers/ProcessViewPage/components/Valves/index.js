@@ -1,4 +1,3 @@
-/* eslint no-unused-vars: ["error", { "argsIgnorePattern": "props" }] */
 import React from 'react';
 const classNames = require('classnames');
 import styles from './styles.css';
