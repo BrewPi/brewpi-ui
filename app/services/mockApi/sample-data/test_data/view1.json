@@ -1,5 +1,5 @@
 {
-  "name": "view1",
+  "name": "View 1",
   "width": 3,
   "height": 2,
   "showCoordinates": true,
@@ -7,7 +7,7 @@
   "layouts": {
     "0": {
       "id": 0,
-      "name": "layout1",
+      "name": "Layout 1",
       "parts": [
         {
           "x": 0,
@@ -31,7 +31,7 @@
   "steps": [
     {
       "id": "0",
-      "name": "step1",
+      "name": "Step 1",
       "partSettings": [
         {
           "id": "0",
@@ -43,7 +43,7 @@
     },
     {
       "id": "1",
-      "name": "step2",
+      "name": "Step 2",
       "partSettings": [
         {
           "id": "0",

@@ -1,5 +1,5 @@
 {
-  "name": "view3",
+  "name": "View 3",
   "width": 1,
   "height": 1,
   "showCoordinates": true,
@@ -7,7 +7,7 @@
   "layouts": {
     "0": {
       "id": 0,
-      "name": "layout1",
+      "name": "Layout 1",
       "parts": [
         {
           "x": 0,

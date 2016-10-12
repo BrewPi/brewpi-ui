@@ -1,6 +1,8 @@
 import expect from 'expect';
 import {
   viewSelector,
+  viewNameSelector,
+  viewSlugSelector,
   activeLayoutIdSelector,
   activeLayoutPartsSelector,
   dimensionsSelector,
@@ -22,6 +24,11 @@ const stateView2 = fromJS({ processView: { view: api.getProcessView('view2') } }
 const stateView3 = fromJS({ processView: { view: api.getProcessView('view3') } }); // has out of bound indices in layout
 
 describe('ProcessViewPage', () => {
+  describe('viewSlugSelector', () => {
+    it('will return the slug from the URL parameters', () => {
+      expect(viewSlugSelector({}, { params: { viewName: 'testslug' } })).toEqual('testslug');
+    });
+  });
   describe('viewSelector', () => {
     it('will return the default view when the id cannot be found', () => {
       const state = fromJS({ view: api.getProcessView('non-existing') });
@@ -33,7 +40,12 @@ describe('ProcessViewPage', () => {
     it('will return the loaded view settings', () => {
       const view = viewSelector(stateView1);
       expect(view.get('width')).toEqual(3);
-      expect(view.get('name')).toEqual('view1');
+      expect(view.get('name')).toEqual('View 1');
+    });
+  });
+  describe('viewNameSelector', () => {
+    it('will return the view name', () => {
+      expect(viewNameSelector(stateView1)).toEqual('View 1');
     });
   });
   describe('activeLayoutIdSelector', () => {
@@ -108,7 +120,7 @@ describe('ProcessViewPage', () => {
   describe('stepsSelector', () => {
     it('will return a list of id\'s and names', () => {
       const steps = stepsSelector(stateView1);
-      expect(steps).toEqual(fromJS({ 0: 'step1', 1: 'step2' }));
+      expect(steps).toEqual(fromJS({ 0: 'Step 1', 1: 'Step 2' }));
     });
   });
   describe('activeStepIdSelector', () => {

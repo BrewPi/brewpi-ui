@@ -12,14 +12,22 @@ import messages from './messages';
 import styles from './styles.css';
 import ProcessView from './components/ProcessView';
 import { Table } from 'immutable-table';
-import { viewSlugSelector, viewSelector, layoutTableSelector, showCoordinatesSelector } from './selectors.js';
+import { viewNameSelector, viewSlugSelector, viewSelector, layoutTableSelector, showCoordinatesSelector } from './selectors.js';
 import * as actions from './actions';
 import SelectAndApply from 'components/SelectAndApply';
 
 class ProcessViewPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   componentDidMount() {
-    const { dispatch } = this.props;
-    dispatch(actions.componentMounted(this.props.viewName));
+    this.props.dispatch(actions.viewFetchRequested(viewSlugSelector(null, this.props)));
+  }
+
+  componentDidUpdate(prevProps) {
+    // respond to parameter in url slug
+    const oldViewSlug = viewSlugSelector(null, prevProps);
+    const newViewSlug = viewSlugSelector(null, this.props);
+    if (oldViewSlug !== newViewSlug) {
+      this.props.dispatch(actions.viewFetchRequested(newViewSlug));
+    }
   }
 
   render() {
@@ -49,7 +57,6 @@ class ProcessViewPage extends React.Component { // eslint-disable-line react/pre
     );
   }
 }
-
 ProcessViewPage.propTypes = {
   layout: React.PropTypes.instanceOf(Table),
   viewName: React.PropTypes.string,
@@ -71,9 +78,16 @@ ProcessViewPage.propTypes = {
   ),
   dispatch: React.PropTypes.func.isRequired,
 };
+ProcessViewPage.defaultProps = {
+  params: {
+    viewName: '',
+  },
+};
+
 
 const mapStateToProps = (state, props) => ({
-  viewName: viewSlugSelector(state, props),
+  viewSlug: viewSlugSelector(state, props),
+  viewName: viewNameSelector(state, props),
   view: viewSelector(state, props),
   layout: layoutTableSelector(state, props),
   showCoordinates: showCoordinatesSelector(state, props),

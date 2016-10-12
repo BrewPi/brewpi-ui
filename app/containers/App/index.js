@@ -32,8 +32,11 @@ export default class App extends React.Component { // eslint-disable-line react/
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav>
-              <IndexLinkContainer to={'/processview/demo'} >
-                <NavItem>Process View</NavItem>
+              <IndexLinkContainer to={'/processview/herms'} >
+                <NavItem>HERMS demo</NavItem>
+              </IndexLinkContainer>
+              <IndexLinkContainer to={'/processview/fermentation'} >
+                <NavItem>Fermentation demo</NavItem>
               </IndexLinkContainer>
               <IndexLinkContainer to={'/catalog'} >
                 <NavItem>Catalog</NavItem>

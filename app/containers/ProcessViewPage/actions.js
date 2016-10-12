@@ -6,25 +6,24 @@
 
 import * as constants from './constants';
 
-export function viewReceived(view) {
+export function viewFetchRequested(viewName) {
   return {
-    type: constants.VIEW_RECEIVED,
+    type: constants.VIEW_FETCH_REQUESTED,
+    viewName,
+  };
+}
+
+export function viewFetchSuccess(view) {
+  return {
+    type: constants.VIEW_FETCH_SUCCESS,
     view,
   };
 }
 
-
-export function layoutChoosen(layoutId) {
+export function viewFetchFailed(error) {
   return {
-    type: constants.LAYOUT_CHOSEN,
-    layoutId,
-  };
-}
-
-export function componentMounted(viewName) {
-  return {
-    type: constants.COMPONENT_MOUNTED,
-    viewName,
+    type: constants.VIEW_FETCH_FAILED,
+    error,
   };
 }
 
@@ -35,9 +34,10 @@ export function stepChosen(stepId) {
   };
 }
 
-export function viewFetchFailed(error) {
+
+export function layoutChoosen(layoutId) {
   return {
-    type: constants.VIEW_FETCH_FAILED,
-    error,
+    type: constants.LAYOUT_CHOSEN,
+    layoutId,
   };
 }

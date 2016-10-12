@@ -12,7 +12,7 @@ export const initialState = api.getProcessView('demo');
 
 function viewReducer(view = fromJS({}), action) {
   switch (action.type) {
-    case constants.VIEW_RECEIVED:
+    case constants.VIEW_FETCH_SUCCESS:
       return action.view || view;
     default:
       return view;

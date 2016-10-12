@@ -30,6 +30,15 @@ const viewSelector = createSelector(
 );
 
 /**
+ * Get the view name
+ */
+const viewNameSelector = createSelector(
+  viewSelector,
+  (view) => view.get('name')
+);
+
+
+/**
  * Get the active layout id
  */
 const activeLayoutIdSelector = createSelector(
@@ -137,6 +146,7 @@ const activeStepSettingsSelector = createSelector(
 
 export {
   viewSlugSelector,
+  viewNameSelector,
   viewSelector,
   activeLayoutIdSelector,
   activeLayoutPartsSelector,
