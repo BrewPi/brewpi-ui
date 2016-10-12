@@ -1,0 +1,12 @@
+{
+  "id": 0,
+  "name": "All valves closed",
+  "settings": [
+    {
+      "id": "0",
+      "settings": {
+        "pos": "open"
+      }
+    }
+  ]
+}

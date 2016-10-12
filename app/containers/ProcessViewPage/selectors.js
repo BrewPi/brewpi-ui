@@ -1,30 +1,32 @@
 import { createSelector } from 'reselect';
-import { fromJS, List } from 'immutable';
+import { fromJS, List, Map } from 'immutable';
 import { Table } from 'immutable-table';
-
 
 const defaultProcessView = fromJS({
   name: '',
-  rows: 20,
-  cols: 10,
-  showCoordinates: false,
+  width: 20,
+  height: 10,
+  showCoordinates: true,
   layouts: [],
   currentLayout: new Table(20, 10), // immutable table
 });
 
+const processViewSelector = (state) => state.get('processView') || fromJS({});
+
 /**
- * Get settings for a specific processView
+ * Get the url slug of the current view name
  */
-const viewSelector = (state, props) => {
-  const id = fromJS(props).getIn(['params', 'viewId']); // id passed in by react-router
-  const view = state.getIn(['processViews', id]);
-  return view || defaultProcessView;
-};
+const viewSlugSelector = (state, props) => props.params.viewName;
 
-
-const makeViewSelector = (state, props) => createSelector(
-  viewSelector,
-  (view) => view
+/**
+ * Get the current view
+ */
+const viewSelector = createSelector(
+  processViewSelector,
+  (pview) => {
+    const view = pview.get('view');
+    return view || defaultProcessView;
+  }
 );
 
 /**
@@ -36,7 +38,7 @@ const activeLayoutIdSelector = createSelector(
 );
 
 /**
- * Get showCoordinates setting for specific view
+ * Get showCoordinates setting for the view
  */
 const showCoordinatesSelector = createSelector(
   viewSelector,
@@ -104,11 +106,44 @@ const layoutTableSelector = createSelector(
   }
 );
 
+/*
+ * Get a map of step names with id's as key.
+ */
+const stepsSelector = createSelector(
+  viewSelector,
+  (view) => new Map(view.get('steps').map((step) => [step.get('id'), step.get('name')]))
+);
+
+/*
+ * Get active step id
+ */
+const activeStepIdSelector = createSelector(
+  viewSelector,
+  (view) => view.get('activeStepId')
+);
+
+/*
+ * Get step settings for he active step id
+ */
+const activeStepSettingsSelector = createSelector(
+  viewSelector,
+  activeStepIdSelector,
+  (view, id) => {
+    const step = view.get('steps').find((obj) => obj.get('id') === id); // find first step with matching id
+    const settings = (step) ? step.get('partSettings') : undefined;
+    return settings || new List();// return settings that it contains or empty list when not found
+  }
+);
+
 export {
-  makeViewSelector,
+  viewSlugSelector,
+  viewSelector,
   activeLayoutIdSelector,
   activeLayoutPartsSelector,
   showCoordinatesSelector,
   dimensionsSelector,
   layoutTableSelector,
+  stepsSelector,
+  activeStepIdSelector,
+  activeStepSettingsSelector,
 };

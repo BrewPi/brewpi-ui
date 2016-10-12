@@ -1,21 +1,29 @@
-import { call, put, takeEvery } from 'redux-saga/effects';
+import { takeEvery, takeLatest } from 'redux-saga';
+import { put } from 'redux-saga/effects';
 import * as actions from './actions';
-import {
-  COMPONENT_LOADED,
-} from './constants';
+import * as constants from './constants';
 import { api } from '../../services/mockApi';
 
-function* fetchProcessView(fetchData) {
-  const view = yield call(api.getprocessView(fetchData.viewId));
-  yield put(actions.viewReceived(view));
+function* fetchProcessView(action) {
+  try {
+    const view = api.getProcessView(action.viewName);
+    yield put(actions.viewReceived(view));
+  } catch (e) {
+    yield put(actions.viewFetchFailed(e));
+  }
 }
 
-export function* watchProcessViewLoading() {
-  yield takeEvery(COMPONENT_LOADED, fetchProcessView);
+function* watchComponentMounted() {
+  yield* takeLatest(constants.COMPONENT_MOUNTED, fetchProcessView);
+}
+
+function* watchFetchProcessView() {
+  yield* takeEvery(constants.FETCH_VIEW_REQUESTED, fetchProcessView);
 }
 
 // All sagas to be loaded
 export default [
   fetchProcessView,
-  watchProcessViewLoading,
+  watchFetchProcessView,
+  watchComponentMounted,
 ];

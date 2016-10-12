@@ -12,12 +12,14 @@ import messages from './messages';
 import styles from './styles.css';
 import ProcessView from './components/ProcessView';
 import { Table } from 'immutable-table';
-import { makeViewSelector, layoutTableSelector, showCoordinatesSelector } from './selectors.js';
+import { viewSlugSelector, viewSelector, layoutTableSelector, showCoordinatesSelector } from './selectors.js';
 import * as actions from './actions';
+import SelectAndApply from 'components/SelectAndApply';
 
 class ProcessViewPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
-  componendDidMount() {
-    this.dispatch(actions.pageLoaded, { viewId: this.props.params.viewId });
+  componentDidMount() {
+    const { dispatch } = this.props;
+    dispatch(actions.componentMounted(this.props.viewName));
   }
 
   render() {
@@ -30,9 +32,19 @@ class ProcessViewPage extends React.Component { // eslint-disable-line react/pre
           ]}
         />
         <div className={styles.header}>
-        <h2>{this.props.params.viewId}</h2><h3><FormattedMessage {...messages.header} /></h3>
-      </div>
-        <ProcessView className={styles.processview} layout={this.props.layout} showCoordinates={this.props.showCoordinates} />
+          <h2>{this.props.viewName}</h2><h3><FormattedMessage {...messages.header} /></h3>
+        </div>
+        <div className={styles.stepSelect}>
+          <SelectAndApply
+            options={[
+              { id: 1, value: 'option1' },
+              { id: 2, value: 'option2' },
+            ]}
+            selected={1}
+            modified
+          />
+        </div>
+        <ProcessView className={styles.processView} layout={this.props.layout} showCoordinates={this.props.showCoordinates} />
       </div>
     );
   }
@@ -40,9 +52,9 @@ class ProcessViewPage extends React.Component { // eslint-disable-line react/pre
 
 ProcessViewPage.propTypes = {
   layout: React.PropTypes.instanceOf(Table),
-  // view: React.PropTypes.object,
+  viewName: React.PropTypes.string,
   params: React.PropTypes.shape({
-    viewId: React.PropTypes.string,
+    viewName: React.PropTypes.string,
   }),
   showCoordinates: React.PropTypes.bool,
   steps: React.PropTypes.arrayOf(
@@ -57,29 +69,27 @@ ProcessViewPage.propTypes = {
       ),
     })
   ),
+  dispatch: React.PropTypes.func.isRequired,
 };
 
-const makeMapStateToProps = () => {
-  const viewSelector = makeViewSelector();
-  const mapStateToProps = (state, props) => ({
-    view: viewSelector(state, props),
-    layout: layoutTableSelector(state, props),
-    showCoordinates: showCoordinatesSelector(state, props),
-    steps: [{
-      id: 0,
-      name: 'valves_closed',
-      settings: [
-        {
-          id: '0',
-          settings: {
-            pos: closed,
-          },
+const mapStateToProps = (state, props) => ({
+  viewName: viewSlugSelector(state, props),
+  view: viewSelector(state, props),
+  layout: layoutTableSelector(state, props),
+  showCoordinates: showCoordinatesSelector(state, props),
+  steps: [{
+    id: 0,
+    name: 'valves_closed',
+    partSettings: [
+      {
+        id: '0',
+        settings: {
+          pos: closed,
         },
-      ],
-    }],
-  });
-  return mapStateToProps;
-};
+      },
+    ],
+  }],
+});
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -87,4 +97,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(makeMapStateToProps, mapDispatchToProps)(ProcessViewPage);
+export default connect(mapStateToProps, mapDispatchToProps)(ProcessViewPage);

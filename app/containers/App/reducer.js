@@ -5,9 +5,8 @@
  */
 
 import { combineReducers } from 'redux';
-import { processViewReducer } from '../ProcessViewPage/reducer';
-const sampleDataReducer = combineReducers({
-  processViews: processViewReducer,
+const appReducer = combineReducers({
+  // empty, because ProcessView is injected async
 });
 
-export default sampleDataReducer;
+export default appReducer;

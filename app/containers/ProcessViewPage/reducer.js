@@ -6,25 +6,22 @@
 
 import { api } from '../../services/mockApi';
 import { fromJS } from 'immutable';
+import { combineReducers } from 'redux-immutable';
+import * as constants from './constants';
+export const initialState = api.getProcessView('demo');
 
-import {
-  VIEW_RECEIVED,
-  LAYOUT_CHOOSEN,
-} from './constants';
-export const initialState = fromJS({
-  demo: api.getProcessView('demo'),
-});
-
-/*
-function updateView(state, payload) {
-  return state.setIn(['processViews', payload.index], payload.view);
-}*/
-
-export function processViewReducer(state = initialState, action) {
+function viewReducer(view = fromJS({}), action) {
   switch (action.type) {
+    case constants.VIEW_RECEIVED:
+      return action.view || view;
     default:
-      return state;
+      return view;
   }
 }
 
-export default processViewReducer;
+const processViewPageReducer = combineReducers({
+  view: viewReducer,
+});
+
+export default processViewPageReducer;
+

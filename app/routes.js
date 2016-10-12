@@ -34,12 +34,25 @@ export default function createRoutes(store) {
         importModules.catch(errorLoading);
       },
     }, {
-      path: '/processview/:viewId',
+      path: '/processview/:viewName',
       name: 'processview',
       getComponent(nextState, cb) {
-        System.import('containers/ProcessViewPage')
-          .then(loadModule(cb))
-          .catch(errorLoading);
+        const importModules = Promise.all([
+          System.import('containers/ProcessViewPage/reducer'),
+          System.import('containers/ProcessViewPage/sagas'),
+          System.import('containers/ProcessViewPage'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, sagas, component]) => {
+          injectReducer('processView', reducer.default);
+          injectSagas(sagas.default);
+
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
       },
     }, {
       path: '/catalog',

@@ -4,15 +4,11 @@
  *
  */
 
-import {
-  VIEW_RECEIVED,
-  LAYOUT_CHOOSEN,
-  COMPONENT_LOADED,
-} from './constants';
+import * as constants from './constants';
 
 export function viewReceived(view) {
   return {
-    type: VIEW_RECEIVED,
+    type: constants.VIEW_RECEIVED,
     view,
   };
 }
@@ -20,14 +16,28 @@ export function viewReceived(view) {
 
 export function layoutChoosen(layoutId) {
   return {
-    type: LAYOUT_CHOOSEN,
+    type: constants.LAYOUT_CHOSEN,
     layoutId,
   };
 }
 
-export function pageLoaded(id) {
+export function componentMounted(viewName) {
   return {
-    type: COMPONENT_LOADED,
-    id,
+    type: constants.COMPONENT_MOUNTED,
+    viewName,
+  };
+}
+
+export function stepChosen(stepId) {
+  return {
+    type: constants.STEP_CHOSEN,
+    stepId,
+  };
+}
+
+export function viewFetchFailed(error) {
+  return {
+    type: constants.VIEW_FETCH_FAILED,
+    error,
   };
 }

@@ -87,6 +87,7 @@ export const Part = (props) => {
     return <NoPart />;
   }
   const type = data.get('type') || 'DEFAULT';
+  const id = data.get('id');
   const rotate = data.get('rotate') || '0';
   const rotateClassName = rotateClassNames[rotate];
   const component = componentTable[type] || NoPart;
@@ -95,7 +96,7 @@ export const Part = (props) => {
     zIndex,
   };
   const liquid = (typeof component.isSource === 'function') ? 'water' : undefined;
-  const renderedComponent = React.createElement(component, { powered: 'on', liquid, rotate: data.rotate });
+  const renderedComponent = React.createElement(component, { powered: 'on', id, liquid, rotate: data.rotate });
   return (
     <div rotate={rotate} style={partStyle} className={classNames(styles.part, rotateClassName)}>
       {renderedComponent}
