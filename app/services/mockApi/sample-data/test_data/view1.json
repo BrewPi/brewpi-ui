@@ -30,27 +30,29 @@
   },
   "steps": [
     {
-      "id": "0",
+      "id": 1,
       "name": "Step 1",
       "partSettings": [
         {
-          "id": "0",
+          "id": "v0",
           "settings": {
-            "pos": false
+            "pos": "closed" 
           }
         }
       ]
     },
     {
-      "id": "1",
+      "id": 2,
       "name": "Step 2",
       "partSettings": [
         {
-          "id": "0",
-          "settings": {}
+          "id": "v0",
+          "settings": {
+            "pos": "open" 
+          }
         }
       ]
     }
   ],
-  "activeStepId": "0"
+  "activeStepId": 1
 }

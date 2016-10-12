@@ -7,7 +7,7 @@ import {
   activeLayoutPartsSelector,
   dimensionsSelector,
   layoutTableSelector,
-  stepNamesSelector,
+  stepsSelector,
   activeStepIdSelector,
   activeStepSettingsSelector,
 } from '../selectors';
@@ -118,25 +118,43 @@ describe('ProcessViewPage', () => {
     });
   });
   describe('stepsSelector', () => {
-    it('will return a list of id\'s and names', () => {
-      const steps = stepsSelector(stateView1);
-      expect(steps).toEqual(fromJS({ 0: 'Step 1', 1: 'Step 2' }));
+    it('will return a list of {id, name} objects, sorted by id', () => {
+      const steps = stepsSelector(fromJS({ processView: { steps: [
+        { id: 2, name: 'Step 2', settings: [] },
+        { id: 1, name: 'Step 1', settings: [] },
+      ] } }));
+      expect(steps).toEqual(fromJS([
+        { id: 1, name: 'Step 1', settings: [] },
+        { id: 2, name: 'Step 2', settings: [] },
+      ]));
+    });
+    it('will return an empty list when steps is not set', () => {
+      expect(stepsSelector(fromJS({}))).toEqual(fromJS([]));
     });
   });
   describe('activeStepIdSelector', () => {
+    it('will return undefined when activeStepId is not set', () => {
+      const stepId = activeStepIdSelector(stateView1.deleteIn(['processView', 'activeStepId']));
+      expect(stepId).toEqual(undefined);
+    });
+    it('will return undefined when the step doesn\'t exist', () => {
+      const stepId = activeStepIdSelector(stateView1.setIn(['processView', 'activeStepId'], 99));
+      expect(stepId).toEqual(undefined);
+    });
     it('will return the id of the currently active step', () => {
-      expect(activeStepIdSelector(stateView1)).toEqual(0);
+      const stepId = activeStepIdSelector(stateView1.setIn(['processView', 'activeStepId'], 2));
+      expect(stepId).toEqual(2);
     });
   });
   describe('activeStepSettingsSelector', () => {
-    it('will return the settings for the currently active step', () => {
+    it('will return a list of settings for the currently active step', () => {
       const settings = activeStepSettingsSelector(stateView1);
-      expect(settings).toEqual(fromJS(
-        [
+      expect(settings).toEqual(
+        fromJS([
           {
-            id: '0',
+            id: 'v0',
             settings: {
-              pos: closed,
+              pos: 'closed',
             },
           },
         ])

@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import { fromJS, List, Map } from 'immutable';
+import { fromJS, List } from 'immutable';
 import { Table } from 'immutable-table';
 
 const defaultProcessView = fromJS({
@@ -105,29 +105,41 @@ const layoutTableSelector = createSelector(
 );
 
 /*
- * Get a map of step names with id's as key.
+ * Get a list of steps (id and name) sorted by id
  */
 const stepsSelector = createSelector(
   processViewSelector,
-  (view) => new Map(view.get('steps').map((step) => [step.get('id'), step.get('name')]))
+  (view) => {
+    const steps = view.get('steps');
+    if (steps) {
+      return steps.sortBy((step) => step.get('id'));
+    }
+    return new List();
+  }
 );
 
 /*
- * Get active step id
+ * Get active step id. Return undefined when the step does not exist.
  */
+
 const activeStepIdSelector = createSelector(
   processViewSelector,
-  (view) => view.get('activeStepId')
+  (view) => {
+    const id = view.get('activeStepId');
+    const steps = view.get('steps');
+    const match = steps.find((obj) => obj.get('id') === id);
+    return (typeof match !== 'undefined') ? id : undefined;
+  }
 );
 
 /*
  * Get step settings for he active step id
  */
 const activeStepSettingsSelector = createSelector(
-  processViewSelector,
+  stepsSelector,
   activeStepIdSelector,
-  (view, id) => {
-    const step = view.get('steps').find((obj) => obj.get('id') === id); // find first step with matching id
+  (steps, id) => {
+    const step = steps.find((obj) => obj.get('id') === id); // find first step with matching id
     const settings = (step) ? step.get('partSettings') : undefined;
     return settings || new List();// return settings that it contains or empty list when not found
   }

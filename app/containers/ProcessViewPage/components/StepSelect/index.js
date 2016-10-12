@@ -12,19 +12,19 @@ import messages from './messages';
 import styles from './styles.css';
 import { Button, DropdownButton, Glyphicon, ButtonGroup, MenuItem } from 'react-bootstrap';
 
-const SelectAndApply = (props) => {
-  const { options, selected, modified } = props;
-  const selectedOption = options.find((obj) => obj.id === selected) || { id: -1, value: 'new' };
+const StepSelect = (props) => {
+  const { steps, selected, modified } = props;
+  const selectedOption = steps.find((obj) => obj.get('id') === selected) || { id: -1, value: 'new' };
   let title = selectedOption.value;
 
-  const renderedOptions = options.map((opt) => (
+  const renderedOptions = steps.map((step) => (
     <MenuItem
       className={styles.options}
-      key={opt.id}
-      eventKey={opt.id}
+      key={step.get('id')}
+      eventKey={step.get('id')}
       onSelect={function (eventKey) { alert(eventKey); }}
     >
-      {opt.value}
+      {step.get('name')}
     </MenuItem>
   ));
   if (modified) {
@@ -65,20 +65,15 @@ const SelectAndApply = (props) => {
   );
 };
 
-SelectAndApply.propTypes = {
-  options: React.PropTypes.arrayOf(
-    React.PropTypes.shape({
-      id: React.PropTypes.number,
-      value: React.PropTypes.string,
-    }),
-  ),
+StepSelect.propTypes = {
+  steps: React.PropTypes.object,
   selected: React.PropTypes.number,
   modified: React.PropTypes.bool,
 };
-SelectAndApply.defaultProps = {
-  options: [],
+StepSelect.defaultProps = {
+  steps: [],
   selected: 0,
   modified: false,
 };
 
-export default SelectAndApply;
+export default StepSelect;

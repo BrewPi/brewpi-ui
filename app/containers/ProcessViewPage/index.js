@@ -12,9 +12,15 @@ import messages from './messages';
 import styles from './styles.css';
 import ProcessView from './components/ProcessView';
 import { Table } from 'immutable-table';
-import { viewNameSelector, viewSlugSelector, layoutTableSelector, showCoordinatesSelector } from './selectors.js';
+import {
+  viewNameSelector,
+  viewSlugSelector,
+  layoutTableSelector,
+  showCoordinatesSelector,
+  stepsSelector,
+} from './selectors.js';
 import * as actions from './actions';
-import SelectAndApply from 'components/SelectAndApply';
+import StepSelect from './components/StepSelect';
 
 class ProcessViewPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   componentDidMount() {
@@ -43,13 +49,10 @@ class ProcessViewPage extends React.Component { // eslint-disable-line react/pre
           <h2>{this.props.viewName}</h2><h3><FormattedMessage {...messages.header} /></h3>
         </div>
         <div className={styles.stepSelect}>
-          <SelectAndApply
-            options={[
-              { id: 1, value: 'option1' },
-              { id: 2, value: 'option2' },
-            ]}
-            selected={1}
-            modified
+          <StepSelect
+            steps={this.props.steps}
+            selected={this.props.activeStep}
+            modified={this.props.stepModified}
           />
         </div>
         <ProcessView className={styles.processView} layout={this.props.layout} showCoordinates={this.props.showCoordinates} />
@@ -64,18 +67,9 @@ ProcessViewPage.propTypes = {
     viewName: React.PropTypes.string,
   }),
   showCoordinates: React.PropTypes.bool,
-  steps: React.PropTypes.arrayOf(
-    React.PropTypes.shape({
-      id: React.PropTypes.number,
-      name: React.PropTypes.string,
-      settings: React.PropTypes.arrayOf(
-        React.PropTypes.shape({
-          id: React.PropTypes.string,
-          settings: React.PropTypes.object,
-        })
-      ),
-    })
-  ),
+  steps: React.PropTypes.object,
+  stepModified: React.PropTypes.bool,
+  activeStep: React.PropTypes.number,
   dispatch: React.PropTypes.func.isRequired,
 };
 ProcessViewPage.defaultProps = {
@@ -90,18 +84,7 @@ const mapStateToProps = (state, props) => ({
   viewName: viewNameSelector(state, props),
   layout: layoutTableSelector(state, props),
   showCoordinates: showCoordinatesSelector(state, props),
-  steps: [{
-    id: 0,
-    name: 'valves_closed',
-    partSettings: [
-      {
-        id: '0',
-        settings: {
-          pos: closed,
-        },
-      },
-    ],
-  }],
+  steps: stepsSelector(state, props),
 });
 
 function mapDispatchToProps(dispatch) {
