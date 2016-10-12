@@ -1,13 +1,13 @@
 import expect from 'expect';
 import {
-  viewSelector,
+  processViewSelector,
   viewNameSelector,
   viewSlugSelector,
   activeLayoutIdSelector,
   activeLayoutPartsSelector,
   dimensionsSelector,
   layoutTableSelector,
-  stepsSelector,
+  stepNamesSelector,
   activeStepIdSelector,
   activeStepSettingsSelector,
 } from '../selectors';
@@ -19,9 +19,9 @@ import { Table } from 'immutable-table';
 const processView1 = fromJS(require('services/mockApi/sample-data/test_data/view1.json'));
 import { api } from 'services/mockApi';
 
-const stateView1 = fromJS({ processView: { view: api.getProcessView('view1') } }); // demo state with steps
-const stateView2 = fromJS({ processView: { view: api.getProcessView('view2') } }); // demo state with overlapping parts in layout
-const stateView3 = fromJS({ processView: { view: api.getProcessView('view3') } }); // has out of bound indices in layout
+const stateView1 = fromJS({ processView: api.getProcessView('view1') }); // demo state with steps
+const stateView2 = fromJS({ processView: api.getProcessView('view2') }); // demo state with overlapping parts in layout
+const stateView3 = fromJS({ processView: api.getProcessView('view3') }); // has out of bound indices in layout
 
 describe('ProcessViewPage', () => {
   describe('viewSlugSelector', () => {
@@ -29,16 +29,16 @@ describe('ProcessViewPage', () => {
       expect(viewSlugSelector({}, { params: { viewName: 'testslug' } })).toEqual('testslug');
     });
   });
-  describe('viewSelector', () => {
-    it('will return the default view when the id cannot be found', () => {
-      const state = fromJS({ view: api.getProcessView('non-existing') });
-      const view = viewSelector(state);
+  describe('processViewSelector', () => {
+    it('will return the default view when the view id cannot be found', () => {
+      const state = fromJS(api.getProcessView('non-existing')); // state will be undefined
+      const view = processViewSelector(state);
       expect(view.get('name')).toEqual('');
       expect(view.get('height')).toEqual(10);
       expect(view.get('width')).toEqual(20);
     });
     it('will return the loaded view settings', () => {
-      const view = viewSelector(stateView1);
+      const view = processViewSelector(stateView1);
       expect(view.get('width')).toEqual(3);
       expect(view.get('name')).toEqual('View 1');
     });
@@ -111,7 +111,7 @@ describe('ProcessViewPage', () => {
         )
       );
     });
-    const missingLayoutsState = stateView1.setIn(['processView', 'view', 'layouts'], {});
+    const missingLayoutsState = stateView1.setIn(['processView', 'layouts'], {});
     const table4 = layoutTableSelector(missingLayoutsState);
     it('will return a correct size empty table when the layout is not found', () => {
       expect(table4).toEqual(new Table(3, 2));
@@ -143,7 +143,7 @@ describe('ProcessViewPage', () => {
       );
     });
     it('will return an empty list when the settings id cannot be found', () => {
-      const stateInvalidStepId = stateView1.setIn(['processView', 'view', 'activeStepId'], -1);
+      const stateInvalidStepId = stateView1.setIn(['processView', 'activeStepId'], -1);
       const settings = activeStepSettingsSelector(stateInvalidStepId);
       expect(settings).toEqual(fromJS([]));
     });

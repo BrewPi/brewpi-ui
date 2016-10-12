@@ -11,7 +11,7 @@ const defaultProcessView = fromJS({
   currentLayout: new Table(20, 10), // immutable table
 });
 
-const processViewSelector = (state) => state.get('processView') || fromJS({});
+const processViewSelector = (state) => state.get('processView') || defaultProcessView;
 
 /**
  * Get the url slug of the current view name
@@ -19,21 +19,10 @@ const processViewSelector = (state) => state.get('processView') || fromJS({});
 const viewSlugSelector = (state, props) => props.params.viewName;
 
 /**
- * Get the current view
- */
-const viewSelector = createSelector(
-  processViewSelector,
-  (pview) => {
-    const view = pview.get('view');
-    return view || defaultProcessView;
-  }
-);
-
-/**
  * Get the view name
  */
 const viewNameSelector = createSelector(
-  viewSelector,
+  processViewSelector,
   (view) => view.get('name')
 );
 
@@ -42,7 +31,7 @@ const viewNameSelector = createSelector(
  * Get the active layout id
  */
 const activeLayoutIdSelector = createSelector(
-  viewSelector,
+  processViewSelector,
   (view) => view.get('currentLayoutId')
 );
 
@@ -50,7 +39,7 @@ const activeLayoutIdSelector = createSelector(
  * Get showCoordinates setting for the view
  */
 const showCoordinatesSelector = createSelector(
-  viewSelector,
+  processViewSelector,
   (view) => view.get('showCoordinates')
 );
 
@@ -58,7 +47,7 @@ const showCoordinatesSelector = createSelector(
  * Get the active layout (list of parts)
  */
 const activeLayoutPartsSelector = createSelector(
-  viewSelector,
+  processViewSelector,
   activeLayoutIdSelector,
   (view, layoutId) => view.getIn(['layouts', layoutId, 'parts'])
 );
@@ -67,7 +56,7 @@ const activeLayoutPartsSelector = createSelector(
  * get the view dimensions
  */
 const dimensionsSelector = createSelector(
-  viewSelector,
+  processViewSelector,
   (view) => {
     const dims = {};
     dims.width = view.get('width');
@@ -81,7 +70,7 @@ const dimensionsSelector = createSelector(
  * get layout as an immutable table. Each cell contains a list of parts rendered at that coordinate (x,y).
  */
 const layoutTableSelector = createSelector(
-  viewSelector,
+  processViewSelector,
   dimensionsSelector,
   activeLayoutPartsSelector,
   (view, dims, layout) => {
@@ -119,7 +108,7 @@ const layoutTableSelector = createSelector(
  * Get a map of step names with id's as key.
  */
 const stepsSelector = createSelector(
-  viewSelector,
+  processViewSelector,
   (view) => new Map(view.get('steps').map((step) => [step.get('id'), step.get('name')]))
 );
 
@@ -127,7 +116,7 @@ const stepsSelector = createSelector(
  * Get active step id
  */
 const activeStepIdSelector = createSelector(
-  viewSelector,
+  processViewSelector,
   (view) => view.get('activeStepId')
 );
 
@@ -135,7 +124,7 @@ const activeStepIdSelector = createSelector(
  * Get step settings for he active step id
  */
 const activeStepSettingsSelector = createSelector(
-  viewSelector,
+  processViewSelector,
   activeStepIdSelector,
   (view, id) => {
     const step = view.get('steps').find((obj) => obj.get('id') === id); // find first step with matching id
@@ -145,9 +134,9 @@ const activeStepSettingsSelector = createSelector(
 );
 
 export {
+  processViewSelector,
   viewSlugSelector,
   viewNameSelector,
-  viewSelector,
   activeLayoutIdSelector,
   activeLayoutPartsSelector,
   showCoordinatesSelector,

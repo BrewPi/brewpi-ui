@@ -35,6 +35,6 @@ export const api = {
 
   getProcessView(viewName) {
     const view = views.get(viewName);
-    return view;
+    return view || fromJS({});
   },
 };

@@ -12,7 +12,7 @@ import messages from './messages';
 import styles from './styles.css';
 import ProcessView from './components/ProcessView';
 import { Table } from 'immutable-table';
-import { viewNameSelector, viewSlugSelector, viewSelector, layoutTableSelector, showCoordinatesSelector } from './selectors.js';
+import { viewNameSelector, viewSlugSelector, layoutTableSelector, showCoordinatesSelector } from './selectors.js';
 import * as actions from './actions';
 import SelectAndApply from 'components/SelectAndApply';
 
@@ -88,7 +88,6 @@ ProcessViewPage.defaultProps = {
 const mapStateToProps = (state, props) => ({
   viewSlug: viewSlugSelector(state, props),
   viewName: viewNameSelector(state, props),
-  view: viewSelector(state, props),
   layout: layoutTableSelector(state, props),
   showCoordinates: showCoordinatesSelector(state, props),
   steps: [{

@@ -6,22 +6,19 @@
 
 import { api } from '../../services/mockApi';
 import { fromJS } from 'immutable';
-import { combineReducers } from 'redux-immutable';
 import * as constants from './constants';
 export const initialState = api.getProcessView('demo');
 
-function viewReducer(view = fromJS({}), action) {
+function viewReducer(state = fromJS({}), action) {
   switch (action.type) {
     case constants.VIEW_FETCH_SUCCESS:
-      return action.view || view;
+      return action.view || state; // replace entire view with new data if not undefined
     default:
-      return view;
+      return state;
   }
 }
 
-const processViewPageReducer = combineReducers({
-  view: viewReducer,
-});
+const processViewPageReducer = viewReducer;
 
 export default processViewPageReducer;
 
