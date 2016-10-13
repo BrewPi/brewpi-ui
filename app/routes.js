@@ -34,7 +34,7 @@ export default function createRoutes(store) {
         importModules.catch(errorLoading);
       },
     }, {
-      path: '/processview/:viewName',
+      path: '/processview/:viewId',
       name: 'processview',
       getComponent(nextState, cb) {
         const importModules = Promise.all([

@@ -6,6 +6,7 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import Helmet from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
@@ -14,7 +15,7 @@ import ProcessView from './components/ProcessView';
 import { Table } from 'immutable-table';
 import {
   viewNameSelector,
-  viewSlugSelector,
+  viewIdSelector,
   layoutTableSelector,
   showCoordinatesSelector,
   stepsSelector,
@@ -23,16 +24,14 @@ import * as actions from './actions';
 import StepSelect from './components/StepSelect';
 
 class ProcessViewPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
-  componentDidMount() {
-    this.props.dispatch(actions.viewFetchRequested(viewSlugSelector(null, this.props)));
+  componentWillMount() {
+    this.props.fetchView(this.props.params.viewId);
   }
 
-  componentDidUpdate(prevProps) {
+  componentWillReceiveProps(nextProps) {
     // respond to parameter in url slug
-    const oldViewSlug = viewSlugSelector(null, prevProps);
-    const newViewSlug = viewSlugSelector(null, this.props);
-    if (oldViewSlug !== newViewSlug) {
-      this.props.dispatch(actions.viewFetchRequested(newViewSlug));
+    if (this.props.params.viewId !== nextProps.params.viewId) {
+      this.props.fetchView(nextProps.params.viewId);
     }
   }
 
@@ -53,6 +52,7 @@ class ProcessViewPage extends React.Component { // eslint-disable-line react/pre
             steps={this.props.steps}
             selected={this.props.activeStep}
             modified={this.props.stepModified}
+            onSelect={this.props.onStepSelected}
           />
         </div>
         <ProcessView className={styles.processView} layout={this.props.layout} showCoordinates={this.props.showCoordinates} />
@@ -61,26 +61,30 @@ class ProcessViewPage extends React.Component { // eslint-disable-line react/pre
   }
 }
 ProcessViewPage.propTypes = {
-  layout: React.PropTypes.instanceOf(Table),
+  viewId: React.PropTypes.string,
   viewName: React.PropTypes.string,
+  layout: React.PropTypes.instanceOf(Table),
   params: React.PropTypes.shape({
-    viewName: React.PropTypes.string,
+    viewId: React.PropTypes.string,
   }),
   showCoordinates: React.PropTypes.bool,
   steps: React.PropTypes.object,
   stepModified: React.PropTypes.bool,
   activeStep: React.PropTypes.number,
-  dispatch: React.PropTypes.func.isRequired,
+  // actions
+  onStepSelected: React.PropTypes.func,
+  fetchView: React.PropTypes.func,
 };
 ProcessViewPage.defaultProps = {
   params: {
-    viewName: '',
+    viewId: '',
   },
+  viewId: '',
 };
 
 
 const mapStateToProps = (state, props) => ({
-  viewSlug: viewSlugSelector(state, props),
+  viewId: viewIdSelector(state, props),
   viewName: viewNameSelector(state, props),
   layout: layoutTableSelector(state, props),
   showCoordinates: showCoordinatesSelector(state, props),
@@ -88,9 +92,10 @@ const mapStateToProps = (state, props) => ({
 });
 
 function mapDispatchToProps(dispatch) {
-  return {
-    dispatch,
-  };
+  return bindActionCreators({
+    fetchView: (viewId) => dispatch(actions.viewFetchRequested(viewId)),
+    onStepSelected: (stepId) => dispatch(actions.stepSelected(stepId)),
+  }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProcessViewPage);

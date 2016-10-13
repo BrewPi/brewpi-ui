@@ -16,7 +16,7 @@ const processViewSelector = (state) => state.get('processView') || defaultProces
 /**
  * Get the url slug of the current view name
  */
-const viewSlugSelector = (state, props) => props.params.viewName;
+const viewIdSelector = (state, props) => props.params.viewId;
 
 /**
  * Get the view name
@@ -111,8 +111,9 @@ const stepsSelector = createSelector(
   processViewSelector,
   (view) => {
     const steps = view.get('steps');
-    if (steps) {
-      return steps.sortBy((step) => step.get('id'));
+    if (typeof steps !== 'undefined') {
+      const sortedSteps = steps.sortBy((step) => step.get('id'));
+      return sortedSteps;
     }
     return new List();
   }
@@ -140,14 +141,14 @@ const activeStepSettingsSelector = createSelector(
   activeStepIdSelector,
   (steps, id) => {
     const step = steps.find((obj) => obj.get('id') === id); // find first step with matching id
-    const settings = (step) ? step.get('partSettings') : undefined;
+    const settings = (typeof step !== 'undefined') ? step.get('settings') : undefined;
     return settings || new List();// return settings that it contains or empty list when not found
   }
 );
 
 export {
   processViewSelector,
-  viewSlugSelector,
+  viewIdSelector,
   viewNameSelector,
   activeLayoutIdSelector,
   activeLayoutPartsSelector,

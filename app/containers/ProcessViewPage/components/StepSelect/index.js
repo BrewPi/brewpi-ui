@@ -22,7 +22,7 @@ const StepSelect = (props) => {
       className={styles.options}
       key={step.get('id')}
       eventKey={step.get('id')}
-      onSelect={function (eventKey) { alert(eventKey); }}
+      onSelect={props.onSelect}
     >
       {step.get('name')}
     </MenuItem>
@@ -35,7 +35,7 @@ const StepSelect = (props) => {
         className={styles.options}
         key={'save'}
         eventKey={'save'}
-        onSelect={function (eventKey) { alert('create new'); }}
+        onSelect={props.onNew}
       >
         <i>Save (overwrite)</i>
       </MenuItem>
@@ -45,7 +45,7 @@ const StepSelect = (props) => {
         className={styles.options}
         key={'new'}
         eventKey={'new'}
-        onSelect={function (eventKey) { alert('create new'); }}
+        onSelect={props.onSave}
       >
         <i>Save as...</i>
       </MenuItem>
@@ -69,6 +69,9 @@ StepSelect.propTypes = {
   steps: React.PropTypes.object,
   selected: React.PropTypes.number,
   modified: React.PropTypes.bool,
+  onSelect: React.PropTypes.func,
+  onSave: React.PropTypes.func,
+  onNew: React.PropTypes.func,
 };
 StepSelect.defaultProps = {
   steps: [],
