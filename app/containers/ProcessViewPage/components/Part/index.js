@@ -82,31 +82,128 @@ const rotateClassNames = {
   270: styles.rotate270,
 };
 
-export const Part = (props) => {
-  const data = props.data;
-  if (!data) {
-    return <NoPart />;
+/*
+ * Rotates each character of a string by a multiple of 90 degrees
+ * for the characters rtlb: right, top, left, bottom.
+ * For 90 degrees, left will become top, top will become right, etc.
+ */
+const rotateString = (oldString, angle) => {
+  let newString = '';
+  const lookup = { l: 't', t: 'r', r: 'b', b: 'l', s: 's' };
+  for (const ch of oldString) {
+    let newCh = ch;
+    let angleRemaining = angle;
+    while (angleRemaining > 0) {
+      newCh = lookup[newCh];
+      angleRemaining -= 90;
+    }
+    newString += newCh;
   }
-  const type = data.get('type') || 'DEFAULT';
-  const id = data.get('id');
-  const settings = data.get('settings');
-  const rotate = data.get('rotate') || '0';
-  const rotateClassName = rotateClassNames[rotate];
-  const flip = data.get('flip');
-  const flipClassName = (flip) ? styles.flipped : undefined;
-  const component = componentTable[type] || NoPart;
-  const zIndex = zIndices[type] || zIndices.DEFAULT;
-  const partStyle = {
-    zIndex,
-  };
-  const liquid = (typeof component.isSource === 'function') ? 'water' : undefined;
-  const renderedComponent = React.createElement(component, { powered: 'on', id, settings, liquid, flip, rotate });
-  return (
-    <div style={partStyle} className={classNames(styles.part, rotateClassName, flipClassName)}>
-      {renderedComponent}
-    </div>
-  );
+  return newString;
 };
+
+/*
+ * For a dictionary of keys and string values representing flow..
+ * example: {l:'r', r:'l'} represents a simple tube:
+ * flow from left to right or right to left.
+ * This function will update the flows as if the block was rotated.
+ */
+export const rotateFlows = (oldFlows, angle) => {
+  const newFlows = {};
+  for (const [key, value] of Object.entries(oldFlows)) {
+    const newKey = rotateString(key, angle);
+    const newValue = rotateString(value, angle);
+    newFlows[newKey] = newValue;
+  }
+  return newFlows;
+};
+
+
+export class Part extends React.Component {
+  // static functions to get component info without instantiating
+  static component(data) {
+    return componentTable[data.get('type')] || NoPart;
+  }
+  /**
+   * A source creates a flow from nothing, indicated with they key 's' in flows
+   *
+   * @static
+   * @param {any} data: object containing the key type
+   * @returns true if part is a source
+   *
+   * @memberOf Part
+   */
+  static isSource(data) {
+    return Part.acceptsFlow(data, 's');
+  }
+
+  /**
+   * Calculates whether this part can accept flow on a certain edge
+   *
+   * @param {string} edge single character string (l,r,t,b,s) for left, right, top, bottom, source
+   * A source creates a flow from nothing.
+   * @returns {string} a multi character string from characters (l,r,t,b,s).
+   * (l,r,t,b) means: I can accept this flow, if it can continue to my neighbour on this edge.
+   * (s) means: I can sink this flow.
+   *
+   * @memberOf Part
+   */
+  static acceptsFlow(data, edge) {
+    const flows = Part.component(data).flows;
+    if (typeof flows === 'undefined') {
+      return '';
+    }
+    if (typeof flows[edge] === 'undefined') {
+      return '';
+    }
+    return flows[edge];
+  }
+
+  static acceptsFlows(data) {
+    const flows = Part.component(data).flows;
+    if (typeof flows === 'undefined') {
+      return {};
+    }
+    const rotate = data.get('rotate');
+    return (rotate) ? rotateFlows(flows, rotate) : flows;
+  }
+
+  type() {
+    return this.props.data.get('type') || 'DEFAULT';
+  }
+  component() {
+    return componentTable[this.type()] || NoPart;
+  }
+  zIndex() {
+    return zIndices[this.type()] || zIndices.DEFAULT;
+  }
+
+
+  render() {
+    const data = this.props.data;
+    if (!data) {
+      return <NoPart />;
+    }
+    const id = data.get('id');
+    const settings = data.get('settings');
+
+    const rotate = data.get('rotate') || '0';
+    const rotateClassName = rotateClassNames[rotate];
+
+    const flip = data.get('flip');
+    const flipClassName = (flip) ? styles.flipped : undefined;
+
+    const partStyle = { zIndex: this.zIndex() };
+    const liquid = Part.isSource(data) ? 'water' : undefined;
+
+    const renderedComponent = React.createElement(Part.component(data), { powered: 'on', id, settings, liquid, flip, rotate });
+    return (
+      <div style={partStyle} className={classNames(styles.part, rotateClassName, flipClassName)}>
+        {renderedComponent}
+      </div>
+    );
+  }
+}
 Part.propTypes = {
   data: React.PropTypes.object,
 };

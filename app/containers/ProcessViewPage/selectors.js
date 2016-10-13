@@ -1,6 +1,7 @@
 import { createSelector } from 'reselect';
 import { fromJS, List } from 'immutable';
 import { Table } from 'immutable-table';
+import { Part } from './components/Part';
 
 const defaultProcessView = fromJS({
   name: '',
@@ -46,7 +47,7 @@ const showCoordinatesSelector = createSelector(
 /**
  * Get the active layout (list of parts)
  */
-const activeLayoutPartsSelector = createSelector(
+const layoutPartsSelector = createSelector(
   processViewSelector,
   activeLayoutIdSelector,
   (view, layoutId) => view.getIn(['layouts', layoutId, 'parts'])
@@ -63,8 +64,8 @@ const partSettingsSelector = createSelector(
 /**
  * Get the active layout merged with the parts settings
  */
-const activeLayoutPartsAndSettingsSelector = createSelector(
-  activeLayoutPartsSelector,
+const layoutPartsAndSettingsSelector = createSelector(
+  layoutPartsSelector,
   partSettingsSelector,
   (layout, partSettings) => {
     if (!layout) {
@@ -105,7 +106,7 @@ const dimensionsSelector = createSelector(
 const layoutTableSelector = createSelector(
   processViewSelector,
   dimensionsSelector,
-  activeLayoutPartsAndSettingsSelector,
+  layoutPartsAndSettingsSelector,
   (view, dims, layout) => {
     let table = new Table(dims.width, dims.height);
     if (layout) {
@@ -136,6 +137,44 @@ const layoutTableSelector = createSelector(
     return table;
   }
 );
+
+/**
+ * get a table of flows for each tile.
+ */
+const flowTableSelector = createSelector(
+  layoutTableSelector,
+  (layoutTable) => {
+    const width = layoutTable.width;
+    const height = layoutTable.height;
+    let flowTable = new Table(width, height);
+    for (let x = 0; x < width; x += 1) {
+      for (let y = 0; y < height; y += 1) {
+        const parts = layoutTable.getCell(x, y);
+        const tileFlow = {};
+        if (parts) {
+          for (const part of parts) {
+            Object.assign(tileFlow, Part.acceptsFlows(part));
+          }
+        }
+        flowTable = flowTable.setCell(x, y, tileFlow);
+      }
+    }
+    return flowTable;
+  }
+);
+
+const recursiveAcceptFlow = (x, y, part, edge) => {
+  const thisAcceptsFlow = Part.acceptsFlow(part, edge);
+  if (thisAcceptsFlow === 's') {
+    return true; // this part is a sink itself
+  }
+  // this part is not a sink, it will have to ask its neighbours
+  console.log(JSON.stringify([part, thisAcceptsFlow]));
+  for (const neighbour of thisAcceptsFlow) {
+    console.log(neighbour);
+  }
+  return false;
+};
 
 /*
  * Get a list of steps (id and name) sorted by id
@@ -184,10 +223,11 @@ export {
   viewIdSelector,
   viewNameSelector,
   activeLayoutIdSelector,
-  activeLayoutPartsSelector,
+  layoutPartsSelector,
   showCoordinatesSelector,
   dimensionsSelector,
   layoutTableSelector,
+  flowTableSelector,
   stepsSelector,
   activeStepIdSelector,
   activeStepSettingsSelector,

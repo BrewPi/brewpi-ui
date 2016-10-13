@@ -28,9 +28,7 @@ import { FlowArrows, FlowArrowsBridge } from '../FlowArrows';
 import { Liquids } from '../Liquids';
 
 class Input extends React.Component {
-  static isSource(edge) {
-    return edge === 'r';
-  }
+  static flows = { s: 'r' }; // source on the right edge
 
   render() {
     return (
@@ -48,9 +46,7 @@ Input.propTypes = {
 };
 
 class Output extends React.Component {
-  isSink(edge) {
-    return (edge === 'l'); // sink on the left edge
-  }
+  static flows = { l: 's' }; // sink on the left edge
   render() {
     return (
       <SvgParent>
@@ -68,6 +64,8 @@ Output.propTypes = {
 
 
 class Straight extends React.Component {
+  static flows = { r: 'l', l: 'r' };
+
   render() {
     return (
       <SvgParent>
@@ -84,6 +82,8 @@ Straight.propTypes = {
 };
 
 class Elbow extends React.Component {
+  static flows = { t: 'r', r: 't' };
+
   render() {
     return (
       <SvgParent>

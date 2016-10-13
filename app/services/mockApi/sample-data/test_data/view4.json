@@ -1,0 +1,46 @@
+{
+  "name": "View 4",
+  "width": 3,
+  "height": 2,
+  "showCoordinates": true,
+  "currentLayoutId": "0",
+  "layouts": {
+    "0": {
+      "id": 0,
+      "name": "Layout 1",
+      "parts": [
+        {
+          "x": 0,
+          "y": 0,
+          "part": {
+            "type": "TUBE_INPUT"
+          }
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "part": {
+            "type": "TUBE_ELBOW",
+            "rotate": 0
+          }
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "part": {
+            "type": "TUBE_STRAIGHT",
+            "rotate": 90
+          }
+        }
+      ]
+    }
+  }
+}

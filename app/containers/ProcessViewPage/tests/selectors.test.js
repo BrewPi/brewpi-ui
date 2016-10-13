@@ -2,11 +2,12 @@ import expect from 'expect';
 import {
   processViewSelector,
   viewNameSelector,
-  viewSlugSelector,
+  viewIdSelector,
   activeLayoutIdSelector,
-  activeLayoutPartsSelector,
+  layoutPartsSelector,
   dimensionsSelector,
   layoutTableSelector,
+  flowTableSelector,
   stepsSelector,
   activeStepIdSelector,
   activeStepSettingsSelector,
@@ -22,11 +23,12 @@ import { api } from 'services/mockApi';
 const stateView1 = fromJS({ processView: api.getProcessView('view1') }); // demo state with steps
 const stateView2 = fromJS({ processView: api.getProcessView('view2') }); // demo state with overlapping parts in layout
 const stateView3 = fromJS({ processView: api.getProcessView('view3') }); // has out of bound indices in layout
+const stateView4 = fromJS({ processView: api.getProcessView('view4') }); // has an input and output to test flows
 
 describe('ProcessViewPage', () => {
-  describe('viewSlugSelector', () => {
+  describe('viewIdSelector', () => {
     it('will return the slug from the URL parameters', () => {
-      expect(viewSlugSelector({}, { params: { viewName: 'testslug' } })).toEqual('testslug');
+      expect(viewIdSelector({}, { params: { viewId: 'testslug' } })).toEqual('testslug');
     });
   });
   describe('processViewSelector', () => {
@@ -55,7 +57,7 @@ describe('ProcessViewPage', () => {
   });
   describe('activeLayoutPartsSelector', () => {
     it('will return currently active layout', () => {
-      expect(activeLayoutPartsSelector(stateView1))
+      expect(layoutPartsSelector(stateView1))
       .toEqual(processView1.getIn(['layouts', '0', 'parts']));
     });
   });
@@ -115,6 +117,15 @@ describe('ProcessViewPage', () => {
     const table4 = layoutTableSelector(missingLayoutsState);
     it('will return a correct size empty table when the layout is not found', () => {
       expect(table4).toEqual(new Table(3, 2));
+    });
+  });
+  describe('flowTableSelector', () => {
+    it('will calculate flows for each tile', () => {
+      const flowTable = flowTableSelector(stateView4);
+      expect(flowTable.getCell(0, 0)).toEqual({ s: 'r' }); // input == source
+      expect(flowTable.getCell(1, 0)).toEqual({ r: 'l', l: 'r' }); // straight
+      expect(flowTable.getCell(2, 0)).toEqual({ t: 'r', r: 't' }); // elbow
+      expect(flowTable.getCell(2, 1)).toEqual({ b: 't', t: 'b' }); // straight, rotated 90deg
     });
   });
   describe('stepsSelector', () => {
