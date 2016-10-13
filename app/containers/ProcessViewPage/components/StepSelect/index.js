@@ -14,8 +14,8 @@ import { Button, DropdownButton, Glyphicon, ButtonGroup, MenuItem } from 'react-
 
 const StepSelect = (props) => {
   const { steps, selected, modified } = props;
-  const selectedOption = steps.find((obj) => obj.get('id') === selected) || { id: -1, value: 'new' };
-  let title = selectedOption.value;
+  const selectedOption = steps.find((obj) => obj.get('id') === selected);
+  let title = selectedOption ? selectedOption.get('name') : 'new';
 
   const renderedOptions = steps.map((step) => (
     <MenuItem

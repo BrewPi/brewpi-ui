@@ -19,6 +19,7 @@ import {
   layoutTableSelector,
   showCoordinatesSelector,
   stepsSelector,
+  activeStepIdSelector,
 } from './selectors.js';
 import * as actions from './actions';
 import StepSelect from './components/StepSelect';
@@ -50,7 +51,7 @@ class ProcessViewPage extends React.Component { // eslint-disable-line react/pre
         <div className={styles.stepSelect}>
           <StepSelect
             steps={this.props.steps}
-            selected={this.props.activeStep}
+            selected={this.props.activeStepId}
             modified={this.props.stepModified}
             onSelect={this.props.onStepSelected}
           />
@@ -61,16 +62,16 @@ class ProcessViewPage extends React.Component { // eslint-disable-line react/pre
   }
 }
 ProcessViewPage.propTypes = {
-  viewId: React.PropTypes.string,
-  viewName: React.PropTypes.string,
-  layout: React.PropTypes.instanceOf(Table),
   params: React.PropTypes.shape({
     viewId: React.PropTypes.string,
   }),
+  viewId: React.PropTypes.string,
+  viewName: React.PropTypes.string,
+  layout: React.PropTypes.instanceOf(Table),
   showCoordinates: React.PropTypes.bool,
   steps: React.PropTypes.object,
   stepModified: React.PropTypes.bool,
-  activeStep: React.PropTypes.number,
+  activeStepId: React.PropTypes.number,
   // actions
   onStepSelected: React.PropTypes.func,
   fetchView: React.PropTypes.func,
@@ -89,6 +90,7 @@ const mapStateToProps = (state, props) => ({
   layout: layoutTableSelector(state, props),
   showCoordinates: showCoordinatesSelector(state, props),
   steps: stepsSelector(state, props),
+  activeStepId: activeStepIdSelector(state, props),
 });
 
 function mapDispatchToProps(dispatch) {

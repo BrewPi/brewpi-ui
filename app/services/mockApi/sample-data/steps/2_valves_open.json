@@ -3,7 +3,79 @@
   "name": "All valves open",
   "settings": [
     {
-      "id": "0",
+      "id": "v1",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "v2",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "v3",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "v4",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "v5",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "v6",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "v7",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "v8",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "v9",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "v10",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "v11",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "v12",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "v13",
       "settings": {
         "pos": "open"
       }

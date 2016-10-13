@@ -52,6 +52,39 @@ const activeLayoutPartsSelector = createSelector(
   (view, layoutId) => view.getIn(['layouts', layoutId, 'parts'])
 );
 
+/*
+ * Get currently active part settings
+ */
+const partSettingsSelector = createSelector(
+  processViewSelector,
+  (view) => view.get('partSettings')
+);
+
+/**
+ * Get the active layout merged with the parts settings
+ */
+const activeLayoutPartsAndSettingsSelector = createSelector(
+  activeLayoutPartsSelector,
+  partSettingsSelector,
+  (layout, partSettings) => {
+    if (!layout) {
+      return undefined;
+    }
+    if (!partSettings) {
+      return layout;
+    }
+    const partsWithSettings = layout.map((entry) => {
+      const partId = entry.getIn(['part', 'id']);
+      if (typeof partId === 'undefined') {
+        return entry;
+      }
+      const match = partSettings.find((obj) => obj.get('id') === partId);
+      return (match) ? entry.setIn(['part', 'settings'], match.get('settings')) : entry;
+    });
+    return partsWithSettings;
+  }
+);
+
 /**
  * get the view dimensions
  */
@@ -72,10 +105,10 @@ const dimensionsSelector = createSelector(
 const layoutTableSelector = createSelector(
   processViewSelector,
   dimensionsSelector,
-  activeLayoutPartsSelector,
+  activeLayoutPartsAndSettingsSelector,
   (view, dims, layout) => {
     let table = new Table(dims.width, dims.height);
-    if (layout != null) {
+    if (layout) {
       layout.forEach((item) => {
         const xx = item.get('x'); // can be a list
         const yy = item.get('y'); // can be a list
@@ -125,9 +158,9 @@ const stepsSelector = createSelector(
 
 const activeStepIdSelector = createSelector(
   processViewSelector,
-  (view) => {
+  stepsSelector,
+  (view, steps) => {
     const id = view.get('activeStepId');
-    const steps = view.get('steps');
     const match = steps.find((obj) => obj.get('id') === id);
     return (typeof match !== 'undefined') ? id : undefined;
   }

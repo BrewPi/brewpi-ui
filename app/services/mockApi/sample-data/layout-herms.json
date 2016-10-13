@@ -1,5 +1,5 @@
 {
-  "id": 0,
+  "id": "v0",
   "name": "HERMS layout",
   "parts": [
     {
@@ -73,7 +73,7 @@
       "y": 1,
       "part": {
         "type": "VALVE_MANUAL",
-        "id": 1
+        "id": "m1"
       }
     },
     {
@@ -81,7 +81,7 @@
       "y": 6,
       "part": {
         "type": "VALVE_MANUAL",
-        "id": 2
+        "id": "m2"
       }
     },
     {
@@ -138,7 +138,7 @@
       "y": 9,
       "part": {
         "type": "VALVE_MOTOR",
-        "id": 1
+        "id": "v1"
       }
     },
     {
@@ -184,7 +184,7 @@
       "y": 9,
       "part": {
         "type": "VALVE_MOTOR",
-        "id": 2
+        "id": "v2"
       }
     },
     {
@@ -342,7 +342,7 @@
       "part": {
         "type": "VALVE_MOTOR",
         "rotate": 90,
-        "id": 3
+        "id": "v3"
       }
     },
     {
@@ -402,7 +402,7 @@
       "y": 9,
       "part": {
         "type": "VALVE_MOTOR",
-        "id": 4
+        "id": "v4"
       }
     },
     {
@@ -411,7 +411,7 @@
       "part": {
         "type": "VALVE_MOTOR",
         "rotate": 90,
-        "id": 5
+        "id": "v5"
       }
     },
     {
@@ -419,7 +419,7 @@
       "y": 9,
       "part": {
         "type": "VALVE_MOTOR",
-        "id": 6
+        "id": "v6"
       }
     },
     {
@@ -428,7 +428,7 @@
       "part": {
         "type": "VALVE_MOTOR",
         "rotate": 90,
-        "id": 7
+        "id": "v7"
       }
     },
     {
@@ -451,7 +451,7 @@
       "y": 9,
       "part": {
         "type": "VALVE_MOTOR",
-        "id": 8
+        "id": "v8"
       }
     },
     {
@@ -595,7 +595,7 @@
       "y": 7,
       "part": {
         "type": "VALVE_MOTOR",
-        "id": 9
+        "id": "v9"
       }
     },
     {
@@ -611,7 +611,7 @@
       "y": 7,
       "part": {
         "type": "VALVE_MOTOR",
-        "id": 10
+        "id": "v10"
       }
     },
     {
@@ -619,7 +619,7 @@
       "y": 9,
       "part": {
         "type": "VALVE_MOTOR",
-        "id": 11
+        "id": "v11"
       }
     },
     {
@@ -627,7 +627,7 @@
       "y": 11,
       "part": {
         "type": "VALVE_MOTOR",
-        "id": 12
+        "id": "v12"
       }
     },
     {
@@ -635,7 +635,7 @@
       "y": 10,
       "part": {
         "type": "VALVE_MOTOR",
-        "id": 13
+        "id": "v13"
       }
     },
     {

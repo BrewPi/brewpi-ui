@@ -1,6 +1,7 @@
 import React from 'react';
 const classNames = require('classnames');
 import styles from './styles.css';
+import { Map } from 'immutable';
 
 // load svg's and inline them wigh g tag instead of svg tag, because they are used nested
 const SvgBall = require('./svg/ball.svg?tag=g');
@@ -28,7 +29,7 @@ const posClasses = {
 };
 
 const Manual = (props) => {
-  const posClass = posClasses[props.position] || posClasses.default;
+  const posClass = posClasses[props.settings.get('pos')] || posClasses.default;
   return (
     <SvgParent>
       <SvgLiquidStraightSplit className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
@@ -38,14 +39,17 @@ const Manual = (props) => {
   );
 };
 Manual.propTypes = {
-  position: React.PropTypes.string,
+  settings: React.PropTypes.object,
   liquid: React.PropTypes.string,
+};
+Manual.defaultProps = {
+  settings: new Map(),
 };
 
 
 const Motor = (props) => {
   const powerClass = powerClasses[props.powered] || powerClasses.default;
-  const posClass = posClasses[props.position] || posClasses.default;
+  const posClass = posClasses[props.settings.get('pos')] || posClasses.default;
 
   return (
     <SvgParent>
@@ -58,9 +62,12 @@ const Motor = (props) => {
   );
 };
 Motor.propTypes = {
+  settings: React.PropTypes.object,
   powered: React.PropTypes.string,
-  position: React.PropTypes.string,
   liquid: React.PropTypes.string,
+};
+Motor.defaultProps = {
+  settings: new Map(),
 };
 
 const Check = (props) => (
