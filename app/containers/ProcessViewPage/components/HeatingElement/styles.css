@@ -10,10 +10,23 @@
   stroke-width: 4pt;
 }
 
+.root {
+  position: relative;
+}
+
 .value {
-  text-anchor: middle;
+  text-align: center;
   font-size: 14px;
-  fill: #FFF;
   font-family: Roboto;
   font-weight: 700;
+  width: 40px;
+  height: 35px;
+  top: 17px;
+  left: 10px;
+  position: absolute;
+  display: block;
+}
+
+.unflip {
+  transform: scaleX(-1);
 }

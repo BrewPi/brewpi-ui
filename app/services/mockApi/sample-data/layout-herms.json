@@ -467,7 +467,8 @@
       "x": 11,
       "y": 6,
       "part": {
-        "type": "LAUTERHEXE"
+        "type": "LAUTERHEXE",
+        "flip": true
       }
     },
     {
@@ -577,7 +578,8 @@
       "x": 19,
       "y": 6,
       "part": {
-        "type": "LAUTERHEXE"
+        "type": "LAUTERHEXE",
+        "flip": true
       }
     },
     {

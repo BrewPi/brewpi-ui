@@ -17,6 +17,6 @@
   transform: rotate(270deg);
 }
 
-.flipped {
+.flipped > * {
   transform: scaleX(-1);
 }
