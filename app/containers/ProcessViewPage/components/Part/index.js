@@ -91,15 +91,17 @@ export const Part = (props) => {
   const settings = data.get('settings');
   const rotate = data.get('rotate') || '0';
   const rotateClassName = rotateClassNames[rotate];
+  const flip = data.get('flip');
+  const flipClassName = (flip) ? styles.flipped : undefined;
   const component = componentTable[type] || NoPart;
   const zIndex = zIndices[type] || zIndices.DEFAULT;
   const partStyle = {
     zIndex,
   };
   const liquid = (typeof component.isSource === 'function') ? 'water' : undefined;
-  const renderedComponent = React.createElement(component, { powered: 'on', id, settings, liquid, rotate: data.rotate });
+  const renderedComponent = React.createElement(component, { powered: 'on', id, settings, liquid, flip, rotate });
   return (
-    <div rotate={rotate} style={partStyle} className={classNames(styles.part, rotateClassName)}>
+    <div style={partStyle} className={classNames(styles.part, rotateClassName, flipClassName)}>
       {renderedComponent}
     </div>
   );

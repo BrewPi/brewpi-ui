@@ -106,17 +106,19 @@
       }
     },
     {
-      "x": 3,
+      "x": 4,
       "y": 3,
       "part": {
-        "type": "COIL"
+        "type": "COIL",
+        "flip": true
       }
     },
     {
-      "x": 2,
+      "x": 3,
       "y": 5,
       "part": {
-        "type": "HEATING_ELEMENT"
+        "type": "HEATING_ELEMENT",
+        "flip": true
       }
     },
     {
@@ -564,10 +566,11 @@
       }
     },
     {
-      "x": 18,
+      "x": 19,
       "y": 5,
       "part": {
-        "type": "HEATING_ELEMENT"
+        "type": "HEATING_ELEMENT",
+        "flip": true
       }
     },
     {

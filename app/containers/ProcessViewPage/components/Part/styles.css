@@ -16,3 +16,7 @@
 .rotate270 {
   transform: rotate(270deg);
 }
+
+.flipped {
+  transform: scaleX(-1);
+}
