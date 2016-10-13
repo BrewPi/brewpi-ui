@@ -72,6 +72,7 @@ const zIndices = {
   DEFAULT: 2,
   FRIDGE_TALL: 1,
   GLYCOL_RESERVOIR: 1,
+  TEMP_SENSOR_INLINE: 4,
 };
 
 const rotateClassNames = {
