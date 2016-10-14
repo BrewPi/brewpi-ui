@@ -12,7 +12,7 @@
     },
     {
       "x": 0,
-      "y": [2,3,4,5,6,7,8],
+      "y": [2,3,4,5,6,7,8,9],
       "part": {
         "type": "TUBE_STRAIGHT",
         "rotate": 90
@@ -20,17 +20,9 @@
     },
     {
       "x": 0,
-      "y": 9,
+      "y": 10,
       "part": {
         "type": "TUBE_ELBOW"
-      }
-    },
-    {
-      "x": 11,
-      "y": 11,
-      "part": {
-        "type": "TUBE_BRIDGE",
-        "rotate": 90
       }
     },
     {
@@ -64,8 +56,8 @@
       }
     },
     {
-      "x": [1,2,6],
-      "y": 9,
+      "x": [1,2],
+      "y": 10,
       "part": {
         "type": "TUBE_STRAIGHT"
       }
@@ -87,10 +79,11 @@
       }
     },
     {
-      "x": 2,
-      "y": 7,
+      "x": 4,
+      "y": 8,
       "part": {
-        "type": "PUMP"
+        "type": "PUMP",
+        "rotate": 90
       }
     },
     {
@@ -131,7 +124,7 @@
       }
     },
     {
-      "x": 3,
+      "x": [2,3],
       "y": 7,
       "part": {
         "type": "TUBE_STRAIGHT"
@@ -139,7 +132,7 @@
     },
     {
       "x": 3,
-      "y": 9,
+      "y": 10,
       "part": {
         "type": "VALVE_MOTOR",
         "id": "v1"
@@ -155,7 +148,7 @@
     },
     {
       "x": 4,
-      "y": 8,
+      "y": 9,
       "part": {
         "type": "VALVE_CHECK",
         "rotate": 90
@@ -163,37 +156,35 @@
     },
     {
       "x": 4,
-      "y": 9,
+      "y": 10,
       "part": {
         "type": "TUBE_CROSS"
       }
     },
     {
       "x": 4,
-      "y": 10,
+      "y": 11,
       "part": {
-        "type": "TUBE_TEE",
-        "rotate": 90
+        "type": "TUBE_TEE"
       }
     },
     {
-      "x": 4,
+      "x": 3,
       "y": 11,
       "part": {
-        "type": "VALVE_MANUAL",
-        "rotate": 90
+        "type": "VALVE_MANUAL"
       }
     },
     {
       "x": 5,
-      "y": 9,
+      "y": 10,
       "part": {
         "type": "VALVE_MOTOR",
         "id": "v2"
       }
     },
     {
-      "x": 4,
+      "x": 2,
       "y": 12,
       "part": {
         "type": "TUBE_OUTPUT",
@@ -201,10 +192,18 @@
       }
     },
     {
-      "x": 7,
+      "x": 2,
+      "y": 11,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 90
+      }
+    },
+    {
+      "x": [6,7],
       "y": 10,
       "part": {
-        "type": "TUBE_BRIDGE"
+        "type": "TUBE_STRAIGHT"
       }
     },
     {
@@ -219,14 +218,6 @@
       "y": 4,
       "part": {
         "type": "VALVE_MANUAL"
-      }
-    },
-    {
-      "x": 7,
-      "y": 7,
-      "part": {
-        "type": "TUBE_ELBOW",
-        "rotate": 90
       }
     },
     {
@@ -246,7 +237,7 @@
     },
     {
       "x": 8,
-      "y": [5,6],
+      "y": [5,6,7],
       "part": {
         "type": "TUBE_STRAIGHT",
         "rotate": 90
@@ -254,51 +245,36 @@
     },
     {
       "x": 8,
-      "y": 7,
-      "part": {
-        "type": "TUBE_ELBOW",
-        "rotate": 270
-      }
-    },
-    {
-      "x": 7,
-      "y": 9,
-      "part": {
-        "type": "TUBE_BRIDGE"
-      }
-    },
-    {
-      "x": 7,
-      "y": [8,9,10],
-      "part": {
-        "type": "TUBE_STRAIGHT",
-        "rotate": 90
-      }
-    },
-    {
-      "x": 7,
-      "y": 11, 
+      "y": 8,
       "part": {
         "type": "TUBE_ELBOW"
       }
     },
     {
-      "x": [5,6,8,9,13,14,15],
-      "y": 10,
+      "x": [9,11,13],
+      "y": 8,
       "part": {
-        "type": "TUBE_STRAIGHT"
+        "type": "TUBE_BRIDGE",
+        "rotate": 0
       }
     },
     {
-      "x": [8,9,10,11,12,13,14,15,16,17,18],
+      "x": [5,6,7,8,9,13,14,15],
       "y": 11,
       "part": {
         "type": "TUBE_STRAIGHT"
       }
     },
     {
+      "x": [10,12,14,15,16,17,18],
+      "y": 8,
+      "part": {
+        "type": "TUBE_STRAIGHT"
+      }
+    },
+    {
       "x": 8,
-      "y": 9,
+      "y": 10,
       "part": {
         "type": "VALVE_CHECK"
       }
@@ -313,7 +289,7 @@
     },
     {
       "x": 9,
-      "y": [2,3,4,5,6,7],
+      "y": [2,3,4,5,6,7,8],
       "part": {
         "type": "TUBE_STRAIGHT",
         "rotate": 90
@@ -328,7 +304,7 @@
     },
     {
       "x": 9,
-      "y": 8,
+      "y": 9,
       "part": {
         "type": "VALVE_MOTOR",
         "rotate": 90,
@@ -389,7 +365,7 @@
     },
     {
       "x": 10,
-      "y": 9,
+      "y": 10,
       "part": {
         "type": "VALVE_MOTOR",
         "id": "v4"
@@ -397,7 +373,7 @@
     },
     {
       "x": 10,
-      "y": 10,
+      "y": 11,
       "part": {
         "type": "VALVE_MANUAL"
       }
@@ -405,6 +381,14 @@
     {
       "x": 11,
       "y": 8,
+      "part": {
+        "type": "TUBE_STRAIGHT",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 11,
+      "y": 9,
       "part": {
         "type": "VALVE_MOTOR",
         "rotate": 90,
@@ -413,7 +397,7 @@
     },
     {
       "x": 11,
-      "y": 10,
+      "y": 11,
       "part": {
         "type": "TUBE_TEE",
         "rotate": 180
@@ -421,7 +405,7 @@
     },
     {
       "x": 12,
-      "y": 9,
+      "y": 10,
       "part": {
         "type": "VALVE_MOTOR",
         "id": "v6"
@@ -429,7 +413,7 @@
     },
     {
       "x": 12,
-      "y": 10,
+      "y": 11,
       "part": {
         "type": "VALVE_MANUAL"
       }
@@ -437,6 +421,14 @@
     {
       "x": 13,
       "y": 8,
+      "part": {
+        "type": "TUBE_STRAIGHT",
+        "rotate": 90
+      }
+    },
+    {
+      "x": 13,
+      "y": 9,
       "part": {
         "type": "VALVE_MOTOR",
         "rotate": 90,
@@ -460,7 +452,7 @@
     },
     {
       "x": 14,
-      "y": 9,
+      "y": 10,
       "part": {
         "type": "VALVE_MOTOR",
         "id": "v8"
@@ -468,7 +460,7 @@
     },
     {
       "x": [9,11,13],
-      "y": 9,
+      "y": 10,
       "part": {
         "type": "TUBE_TEE"
       }
@@ -504,7 +496,7 @@
     },
     {
       "x": 15,
-      "y": 9,
+      "y": 10,
       "part": {
         "type": "TUBE_STRAIGHT"
       }
@@ -548,10 +540,17 @@
     },
     {
       "x": 17,
-      "y": [6,5,4,3,2],
+      "y": [2,3,4,5,6],
       "part": {
         "type": "TUBE_STRAIGHT",
         "rotate": 90
+      }
+    },
+    {
+      "x": 19,
+      "y": 9, 
+      "part": {
+        "type": "TUBE_ELBOW"
       }
     },
     {
@@ -567,6 +566,14 @@
       "y": 1,
       "part": {
         "type": "VALVE_MANUAL"
+      }
+    },
+    {
+      "x": 19,
+      "y": 8,
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 180
       }
     },
     {
@@ -605,9 +612,10 @@
       "part": {
         "type": "TUBE_STRAIGHT"
       }
-    }, {
+    },
+    {
       "x": 19,
-      "y": 9,
+      "y": 10,
       "part": {
         "type": "TUBE_STRAIGHT"
       }
@@ -715,24 +723,17 @@
     },
     {
       "x": 16,
-      "y": 9,
+      "y": 10,
       "part": {
         "type": "CFC"
       }
     },
     {
       "x": 19,
-      "y": 10,
+      "y": 11,
       "part": {
         "type": "TUBE_TEE",
         "rotate": 180
-      }
-    },
-    {
-      "x": 19,
-      "y": 11,
-      "part": {
-        "type": "TUBE_BRIDGE"
       }
     },
     {
@@ -747,7 +748,24 @@
       "x": 23,
       "y": 9,
       "part": {
-        "type": "TUBE_OUTPUT"
+        "type": "TUBE_ELBOW",
+        "rotate": 180
+      }
+    },
+    {
+      "x": 23,
+      "y": [10,11],
+      "part": {
+        "type": "TUBE_STRAIGHT",
+        "rotate": 90
+      }
+    },    
+    {
+      "x": 23,
+      "y": 12,
+      "part": {
+        "type": "TUBE_OUTPUT",
+        "rotate": 90
       }
     },
     {
@@ -755,14 +773,6 @@
       "y": 9,
       "part": {
         "type": "VALVE_MANUAL"
-      }
-    },
-    {
-      "x": 19,
-      "y": 11,
-      "part": {
-        "type": "TUBE_STRAIGHT",
-        "rotate": 90
       }
     },
     {
