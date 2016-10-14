@@ -26,17 +26,19 @@
       }
     },
     {
-      "x": 1,
+      "x": 11,
       "y": 11,
       "part": {
-        "type": "TUBE_INPUT"
+        "type": "TUBE_BRIDGE",
+        "rotate": 90
       }
     },
     {
-      "x": [2,3],
-      "y": 11,
+      "x": 11,
+      "y": 12,
       "part": {
-        "type": "TUBE_STRAIGHT"
+        "type": "TUBE_INPUT",
+        "rotate": 270
       }
     },
     {
@@ -170,7 +172,7 @@
       "x": 4,
       "y": 10,
       "part": {
-        "type": "VALVE_MANUAL",
+        "type": "TUBE_TEE",
         "rotate": 90
       }
     },
@@ -178,7 +180,8 @@
       "x": 4,
       "y": 11,
       "part": {
-        "type": "TUBE_TEE"
+        "type": "VALVE_MANUAL",
+        "rotate": 90
       }
     },
     {
@@ -190,26 +193,11 @@
       }
     },
     {
-      "x": 5,
-      "y": 11,
+      "x": 4,
+      "y": 12,
       "part": {
-        "type": "VALVE_MANUAL"
-      }
-    },
-    {
-      "x": 6,
-      "y": 10,
-      "part": {
-        "type": "TUBE_ELBOW",
+        "type": "TUBE_OUTPUT",
         "rotate": 90
-      }
-    },
-    {
-      "x": 6,
-      "y": 11,
-      "part": {
-        "type": "TUBE_ELBOW",
-        "rotate": 270
       }
     },
     {
@@ -295,7 +283,7 @@
       }
     },
     {
-      "x": [8,9,10,11,12,13,14,15],
+      "x": [5,6,8,9,13,14,15],
       "y": 10,
       "part": {
         "type": "TUBE_STRAIGHT"
@@ -408,6 +396,13 @@
       }
     },
     {
+      "x": 10,
+      "y": 10,
+      "part": {
+        "type": "VALVE_MANUAL"
+      }
+    },
+    {
       "x": 11,
       "y": 8,
       "part": {
@@ -417,11 +412,26 @@
       }
     },
     {
+      "x": 11,
+      "y": 10,
+      "part": {
+        "type": "TUBE_TEE",
+        "rotate": 180
+      }
+    },
+    {
       "x": 12,
       "y": 9,
       "part": {
         "type": "VALVE_MOTOR",
         "id": "v6"
+      }
+    },
+    {
+      "x": 12,
+      "y": 10,
+      "part": {
+        "type": "VALVE_MANUAL"
       }
     },
     {
@@ -674,7 +684,7 @@
       }
     },
     {
-      "x": [22,23],
+      "x": 23,
       "y": 7,
       "part": {
         "type": "TUBE_STRAIGHT"
