@@ -66,15 +66,14 @@
       "x": 2,
       "y": 1,
       "part": {
-        "type": "VALVE_MANUAL",
-        "id": "m1"
+        "type": "TUBE_STRAIGHT"
       }
     },
     {
       "x": 2,
       "y": 6,
       "part": {
-        "type": "VALVE_MANUAL",
+        "type": "TUBE_STRAIGHT",
         "id": "m2"
       }
     },
@@ -210,14 +209,14 @@
       "x": 7,
       "y": 3,
       "part": {
-        "type": "VALVE_MANUAL"
+        "type": "TUBE_STRAIGHT"
       }
     },
     {
       "x": 7,
       "y": 4,
       "part": {
-        "type": "VALVE_MANUAL"
+        "type": "TUBE_STRAIGHT"
       }
     },
     {
@@ -360,7 +359,7 @@
       "x": 10,
       "y": 1,
       "part": {
-        "type": "VALVE_MANUAL"
+        "type": "TUBE_STRAIGHT"
       }
     },
     {
@@ -505,7 +504,7 @@
       "x": 16,
       "y": 6,
       "part": {
-        "type": "VALVE_MANUAL"
+        "type": "TUBE_STRAIGHT"
       }
     },
     {
@@ -565,7 +564,7 @@
       "x": 18,
       "y": 1,
       "part": {
-        "type": "VALVE_MANUAL"
+        "type": "TUBE_STRAIGHT"
       }
     },
     {
@@ -718,7 +717,7 @@
       "x": 23,
       "y": 6,
       "part": {
-        "type": "VALVE_MANUAL"
+        "type": "TUBE_STRAIGHT"
       }
     },
     {
