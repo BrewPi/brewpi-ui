@@ -17,6 +17,7 @@ import {
   viewNameSelector,
   viewIdSelector,
   layoutTableSelector,
+  actualFlowTableSelector,
   showCoordinatesSelector,
   stepsSelector,
   activeStepIdSelector,
@@ -56,7 +57,12 @@ class ProcessViewPage extends React.Component { // eslint-disable-line react/pre
             onSelect={this.props.onStepSelected}
           />
         </div>
-        <ProcessView className={styles.processView} layout={this.props.layout} showCoordinates={this.props.showCoordinates} />
+        <ProcessView
+          className={styles.processView}
+          layout={this.props.layout}
+          flows={this.props.flows}
+          showCoordinates={this.props.showCoordinates}
+        />
       </div>
     );
   }
@@ -68,6 +74,7 @@ ProcessViewPage.propTypes = {
   viewId: React.PropTypes.string,
   viewName: React.PropTypes.string,
   layout: React.PropTypes.instanceOf(Table),
+  flows: React.PropTypes.instanceOf(Table),
   showCoordinates: React.PropTypes.bool,
   steps: React.PropTypes.object,
   stepModified: React.PropTypes.bool,
@@ -88,6 +95,7 @@ const mapStateToProps = (state, props) => ({
   viewId: viewIdSelector(state, props),
   viewName: viewNameSelector(state, props),
   layout: layoutTableSelector(state, props),
+  flows: actualFlowTableSelector(state, props),
   showCoordinates: showCoordinatesSelector(state, props),
   steps: stepsSelector(state, props),
   activeStepId: activeStepIdSelector(state, props),

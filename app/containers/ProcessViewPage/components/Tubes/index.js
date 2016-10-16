@@ -100,6 +100,7 @@ Elbow.propTypes = {
 };
 
 class Tee extends React.Component {
+  static flows = { l: 'tr', r: 'tl', t: 'rl' };
   render() {
     return (
       <SvgParent>

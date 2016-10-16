@@ -124,40 +124,6 @@ export class Part extends React.Component {
   static component(data) {
     return componentTable[data.get('type')] || NoPart;
   }
-  /**
-   * A source creates a flow from nothing, indicated with they key 's' in flows
-   *
-   * @static
-   * @param {any} data: object containing the key type
-   * @returns true if part is a source
-   *
-   * @memberOf Part
-   */
-  static isSource(data) {
-    return Part.acceptsFlow(data, 's');
-  }
-
-  /**
-   * Calculates whether this part can accept flow on a certain edge
-   *
-   * @param {string} edge single character string (l,r,t,b,s) for left, right, top, bottom, source
-   * A source creates a flow from nothing.
-   * @returns {string} a multi character string from characters (l,r,t,b,s).
-   * (l,r,t,b) means: I can accept this flow, if it can continue to my neighbour on this edge.
-   * (s) means: I can sink this flow.
-   *
-   * @memberOf Part
-   */
-  static acceptsFlow(data, edge) {
-    const flows = Part.component(data).flows;
-    if (typeof flows === 'undefined') {
-      return '';
-    }
-    if (typeof flows[edge] === 'undefined') {
-      return '';
-    }
-    return flows[edge];
-  }
 
   static acceptsFlows(data) {
     const flows = Part.component(data).flows;
@@ -181,6 +147,7 @@ export class Part extends React.Component {
 
   render() {
     const data = this.props.data;
+    const flow = this.props.flow;
     if (!data) {
       return <NoPart />;
     }
@@ -194,7 +161,16 @@ export class Part extends React.Component {
     const flipClassName = (flip) ? styles.flipped : undefined;
 
     const partStyle = { zIndex: this.zIndex() };
-    const liquid = Part.isSource(data) ? 'water' : undefined;
+    let liquid;
+    if (typeof flow !== 'undefined') {
+      // find the flow in this tile that flows through this part
+      for (const inEdge of Object.getOwnPropertyNames(flow.liquid)) {
+        if (typeof Part.acceptsFlows(data)[inEdge] !== 'undefined') {
+          liquid = flow.liquid[inEdge];
+          break;
+        }
+      }
+    }
 
     const renderedComponent = React.createElement(Part.component(data), { powered: 'on', id, settings, liquid, flip, rotate });
     return (
@@ -206,6 +182,7 @@ export class Part extends React.Component {
 }
 Part.propTypes = {
   data: React.PropTypes.object,
+  flow: React.PropTypes.object,
 };
 
 export default Part;

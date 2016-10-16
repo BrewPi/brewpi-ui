@@ -15,6 +15,7 @@ import { Table } from 'immutable-table';
 class ProcessView extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     const layout = this.props.layout;
+    const flows = this.props.flows;
     const tiles = [];
     let row = [];
 
@@ -25,11 +26,12 @@ class ProcessView extends React.Component { // eslint-disable-line react/prefer-
       for (let x = 0; x < cols; x += 1) {
         const key = `tile-${x}-${y}`;
         const partsInCell = layout.getCell(x, y);
+        const flowInCell = flows.getCell(x, y);
         const partComponents = [];
         let keyVal = 0;
         if (partsInCell !== undefined) {
           for (const part of partsInCell) {
-            partComponents.push(<Part data={part} key={keyVal} />);
+            partComponents.push(<Part data={part} key={keyVal} flow={flowInCell} />);
             keyVal += 1;
           }
         }
@@ -51,6 +53,7 @@ class ProcessView extends React.Component { // eslint-disable-line react/prefer-
 
 ProcessView.propTypes = {
   layout: React.PropTypes.instanceOf(Table),
+  flows: React.PropTypes.instanceOf(Table),
   showCoordinates: React.PropTypes.bool,
 };
 

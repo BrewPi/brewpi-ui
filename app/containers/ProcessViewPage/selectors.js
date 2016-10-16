@@ -139,7 +139,7 @@ const layoutTableSelector = createSelector(
 );
 
 /**
- * get a table of flows for each tile.
+ * get a table of possible flows for each tile.
  */
 const flowTableSelector = createSelector(
   layoutTableSelector,
@@ -163,17 +163,70 @@ const flowTableSelector = createSelector(
   }
 );
 
-const recursiveAcceptFlow = (x, y, part, edge) => {
-  const thisAcceptsFlow = Part.acceptsFlow(part, edge);
-  if (thisAcceptsFlow === 's') {
-    return true; // this part is a sink itself
+const getNeighbour = (x, y, edge, width, height) => {
+  let returnVal;
+  switch (edge) {
+    case 'l':
+      returnVal = { x: x - 1, y, edge: 'r' };
+      break;
+    case 'r':
+      returnVal = { x: x + 1, y, edge: 'l' };
+      break;
+    case 't':
+      returnVal = { x, y: y - 1, edge: 'b' };
+      break;
+    case 'b':
+      returnVal = { x, y: y + 1, edge: 't' };
+      break;
+    default:
+      returnVal = false;
   }
-  // this part is not a sink, it will have to ask its neighbours
-  console.log(JSON.stringify([part, thisAcceptsFlow]));
-  for (const neighbour of thisAcceptsFlow) {
-    console.log(neighbour);
+  if (returnVal.x < 0 || returnVal.x >= width || returnVal.y < 0 || returnVal.y > height) {
+    return false;
   }
-  return false;
+  return returnVal;
+};
+
+/**
+ * get a table of actual flows for each tile by recursively following possible flows,
+ * starting at each source, ending in a sink.
+ */
+const actualFlowTableSelector = createSelector(
+  flowTableSelector,
+  (possibleFlowTable) => {
+    const width = possibleFlowTable.width;
+    const height = possibleFlowTable.height;
+    let actualFlowTable = new Table(width, height);
+    for (let x = 0; x < width; x += 1) {
+      for (let y = 0; y < height; y += 1) {
+        const tileFlow = possibleFlowTable.getCell(x, y);
+        if (typeof tileFlow.s !== 'undefined') { // this tile is a source, start an expanding flow path from here
+          actualFlowTable = expandFlow(x, y, 's', possibleFlowTable, actualFlowTable);
+        }
+      }
+    }
+    return actualFlowTable;
+  }
+);
+
+const expandFlow = (x, y, inEdge, possibleFlowTable, actualFlowTable) => {
+  const possibleFlow = possibleFlowTable.getCell(x, y);
+  const outEdges = possibleFlow[inEdge];
+  if (typeof outEdges === 'undefined') {
+    return actualFlowTable; // no flow possible, leave actual flow table unchanged
+  }
+  const flow = {};
+  flow[inEdge] = outEdges;
+  const liquid = {};
+  liquid[inEdge] = 'water';
+  let newActualFlowTable = actualFlowTable.setCell(x, y, { flow, liquid });
+  for (const edge of outEdges) {
+    const neighbour = getNeighbour(x, y, edge, possibleFlowTable.width, possibleFlowTable.height);
+    if (neighbour) {
+      newActualFlowTable = expandFlow(neighbour.x, neighbour.y, neighbour.edge, possibleFlowTable, newActualFlowTable);
+    }
+  }
+  return newActualFlowTable;
 };
 
 /*
@@ -228,6 +281,7 @@ export {
   dimensionsSelector,
   layoutTableSelector,
   flowTableSelector,
+  actualFlowTableSelector,
   stepsSelector,
   activeStepIdSelector,
   activeStepSettingsSelector,

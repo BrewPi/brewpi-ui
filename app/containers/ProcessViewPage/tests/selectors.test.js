@@ -11,6 +11,7 @@ import {
   stepsSelector,
   activeStepIdSelector,
   activeStepSettingsSelector,
+  actualFlowTableSelector,
 } from '../selectors';
 import chai from 'chai';
 import chaiImmutable from 'chai-immutable';
@@ -120,12 +121,27 @@ describe('ProcessViewPage', () => {
     });
   });
   describe('flowTableSelector', () => {
-    it('will calculate flows for each tile', () => {
+    it('will calculate possible flows for each tile', () => {
       const flowTable = flowTableSelector(stateView4);
       expect(flowTable.getCell(0, 0)).toEqual({ s: 'r' }); // input == source
       expect(flowTable.getCell(1, 0)).toEqual({ r: 'l', l: 'r' }); // straight
-      expect(flowTable.getCell(2, 0)).toEqual({ t: 'r', r: 't' }); // elbow
-      expect(flowTable.getCell(2, 1)).toEqual({ b: 't', t: 'b' }); // straight, rotated 90deg
+      expect(flowTable.getCell(2, 0)).toEqual({ l: 'b', b: 'l' }); // elbow, rotated 180deg
+      expect(flowTable.getCell(2, 1)).toEqual({ b: 'lt', t: 'lb', l: 'tb' }); // tee, rotated 270deg
+      expect(flowTable.getCell(2, 2)).toEqual({ t: 's' }); // output, rotated 90deg
+      expect(flowTable.getCell(1, 1)).toEqual({ r: 's' }); // output, rotated 180deg
+    });
+  });
+  describe('actualFlowTableSelector', () => {
+    it('will calculate the actual flows for each tile', () => {
+      const flowTable = actualFlowTableSelector(stateView4);
+      /*
+      expect(flowTable.getCell(0, 0)).toEqual({ s: 'r' }); // input == source
+      expect(flowTable.getCell(1, 0)).toEqual({ r: 'l', l: 'r' }); // straight
+      expect(flowTable.getCell(2, 0)).toEqual({ l: 'b', b: 'l' }); // elbow, rotated 180deg
+      expect(flowTable.getCell(2, 1)).toEqual({ b: 'lt', t: 'lb', l: 'tb' }); // tee, rotated 270deg
+      expect(flowTable.getCell(2, 2)).toEqual({ t: 's' }); // output, rotated 90deg
+      expect(flowTable.getCell(1, 1)).toEqual({ r: 's' }); // output, rotated 180deg
+      */
     });
   });
   describe('stepsSelector', () => {
