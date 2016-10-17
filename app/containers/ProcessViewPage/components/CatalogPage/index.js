@@ -15,6 +15,7 @@ import { SubmersiblePump } from '../SubmersiblePump';
 import { BlowerFan } from '../BlowerFan';
 import { TempSensors } from '../TempSensors';
 import { Cfc } from '../Cfc';
+import { GlycolChiller } from '../GlycolChiller';
 import { Filter } from '../Filter';
 import { Lauterhexe } from '../Lauterhexe';
 import { HeatingElement } from '../HeatingElement';
@@ -70,9 +71,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Dip />
               </td>
               <td>
-                <Tubes.Dip liquid={'water'} flow={'Ws'} />
-                <Tubes.Dip liquid={'hotwater'} flow={'Ws'} />
-                <Tubes.Dip liquid={'beer'} flow={'Ws'} />
+                <Tubes.Dip liquid={'water'} flow={'wS'} />
+                <Tubes.Dip liquid={'hotwater'} flow={'wS'} />
+                <Tubes.Dip liquid={'beer'} flow={'wS'} />
               </td>
             </tr>
             <tr>
@@ -140,6 +141,17 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Inlet flow={'Sw'} liquid={'water'} />
                 <Tubes.Inlet flow={'Sw'} liquid={'hotwater'} />
                 <Tubes.Inlet flow={'Sw'} liquid={'beer'} />
+              </td>
+            </tr>
+            <tr>
+              <td>Tube Inlet Straight</td>
+              <td>
+                <Tubes.InletStraight />
+              </td>
+              <td>
+                <Tubes.InletStraight flow={'wE'} liquid={'water'} />
+                <Tubes.InletStraight flow={'wE'} liquid={'hotwater'} />
+                <Tubes.InletStraight flow={'wE'} liquid={'beer'} />
               </td>
             </tr>
             <tr>
@@ -239,6 +251,17 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Cfc liquid={'water'} />
                 <Cfc liquid={'hotwater'} />
                 <Cfc liquid={'beer'} />
+              </td>
+            </tr>
+            <tr>
+              <td>Glycol Chiller</td>
+              <td>
+                <GlycolChiller />
+              </td>
+              <td>
+                <GlycolChiller liquid={'water'} />
+                <GlycolChiller liquid={'hotwater'} />
+                <GlycolChiller liquid={'beer'} />
               </td>
             </tr>
             <tr>
