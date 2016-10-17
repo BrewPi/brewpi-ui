@@ -99,6 +99,28 @@ const dimensionsSelector = createSelector(
   }
 );
 
+const mergeWithCell = (x, y, table, newCell) => {
+  let cell = table.getCell(x, y);
+  if (typeof cell === 'undefined') {
+    cell = newCell; // cell was empty, just copy content
+  } else {
+    Object.assign(cell, newCell); // cell was not empty, merge with previous content
+  }
+  return table.setCell(x, y, cell);
+};
+
+// adds content to a cell which is a List. Creates the list if the cell is undefined
+const pushToCell = (x, y, table, content) => {
+  const oldCell = table.getCell(x, y);
+  let newCell;
+  if (!List.isList(oldCell)) {
+    newCell = new List().push(content); // cell was empty, start new list of parts
+  } else {
+    newCell = oldCell.push(content); // cell was not empty, append to list
+  }
+  return table.setCell(x, y, newCell);
+};
+
 
 /**
  * get layout as an immutable table. Each cell contains a list of parts rendered at that coordinate (x,y).
@@ -120,14 +142,7 @@ const layoutTableSelector = createSelector(
           if ((x >= 0 && x < dims.width)) {
             for (const y of itery) {
               if ((y >= 0 && y < dims.height)) {
-                const oldCell = table.getCell(x, y);
-                let newCell;
-                if (!List.isList(oldCell)) {
-                  newCell = new List().push(part); // cell was empty, start new list of parts
-                } else {
-                  newCell = oldCell.push(part); // cell was not empty, append to list
-                }
-                table = table.setCell(x, y, newCell);
+                table = pushToCell(x, y, table, part);
               }
             }
           }
@@ -150,13 +165,44 @@ const flowTableSelector = createSelector(
     for (let x = 0; x < width; x += 1) {
       for (let y = 0; y < height; y += 1) {
         const parts = layoutTable.getCell(x, y);
-        const tileFlow = {};
         if (parts) {
           for (const part of parts) {
-            Object.assign(tileFlow, Part.acceptsFlows(part));
+            const flows = Part.acceptsFlows(part);
+            if (flows.constructor === Array) {
+              // flows can be an Array[] or Array[][]
+              // for components that span multiple blocks
+              let dy = 0;
+              let dx = 0;
+              for (const obj of flows) {
+                if (obj.constructor === Array) {
+                  // flows is Array[][]
+                  for (const innerObj of obj) {
+                    flowTable = mergeWithCell(x + dx, y + dy, flowTable, innerObj);
+                    dx += 1;
+                    if (x + dx >= width) {
+                      break;
+                    }
+                  }
+                  dy += 1;
+                  dx = 0;
+                  if (y + dy >= height) {
+                    break;
+                  }
+                } else {
+                  // flows is Array[]
+                  flowTable = mergeWithCell(x + dx, y, flowTable, obj);
+                  dx += 1;
+                  if (x + dx >= width) {
+                    break;
+                  }
+                }
+              }
+            } else {
+              // flows is a single object
+              flowTable = mergeWithCell(x, y, flowTable, flows);
+            }
           }
         }
-        flowTable = flowTable.setCell(x, y, tileFlow);
       }
     }
     return flowTable;
@@ -200,7 +246,7 @@ const actualFlowTableSelector = createSelector(
     for (let x = 0; x < width; x += 1) {
       for (let y = 0; y < height; y += 1) {
         const tileFlow = possibleFlowTable.getCell(x, y);
-        if (typeof tileFlow.s !== 'undefined') { // this tile is a source, start an expanding flow path from here
+        if (typeof tileFlow !== 'undefined' && typeof tileFlow.s !== 'undefined') { // this tile is a source, start an expanding flow path from here
           actualFlowTable = expandFlow(x, y, 's', possibleFlowTable, actualFlowTable);
         }
       }
@@ -210,32 +256,44 @@ const actualFlowTableSelector = createSelector(
 );
 
 const expandFlow = (x, y, inEdge, possibleFlowTable, actualFlowTable) => {
-  const possibleFlow = possibleFlowTable.getCell(x, y);
+  const possibleFlow = possibleFlowTable.getCell(x, y) || {};
   const outEdges = possibleFlow[inEdge];
+
   if (typeof outEdges === 'undefined') {
     return actualFlowTable; // no flow possible, leave actual flow table unchanged
   }
-  const flow = {};
-  flow[inEdge] = outEdges;
-  const liquid = {};
-  liquid[inEdge] = 'water';
-  const oldCell = actualFlowTable.getCell(x, y);
-  let newCell;
-  if (typeof oldCell === 'undefined') {
-    // no existing flows
-    newCell = { flow, liquid };
-  } else {
-    // merge with existing flows
-    newCell = {
-      flow: Object.assign(oldCell.flow, flow),
-      liquid: Object.assign(oldCell.liquid, liquid),
-    };
+  // check for conflicts (existing outflows match this inflow)
+  // this prevents loops
+  let conflict = false;
+  const currentCell = actualFlowTable.getCell(x, y);
+  if (typeof currentCell !== 'undefined') {
+    for (const key of Object.keys(currentCell.flow)) {
+      const usedOutEdges = currentCell.flow[key];
+      for (const edge of usedOutEdges) {
+        if (edge === inEdge) {
+          console.log('Conflict at ', x, y, inEdge);
+          conflict = true;
+        }
+      }
+    }
+    // use val
   }
-  let newActualFlowTable = actualFlowTable.setCell(x, y, newCell);
-  for (const edge of outEdges) {
-    const neighbour = getNeighbour(x, y, edge, possibleFlowTable.width, possibleFlowTable.height);
-    if (neighbour) {
-      newActualFlowTable = expandFlow(neighbour.x, neighbour.y, neighbour.edge, possibleFlowTable, newActualFlowTable);
+  const flow = {};
+  const liquid = {};
+  if (conflict) {
+    flow[inEdge] = 'x';
+  } else {
+    flow[inEdge] = outEdges;
+    liquid[inEdge] = 'water';
+  }
+  const newCell = { flow, liquid };
+  let newActualFlowTable = mergeWithCell(x, y, actualFlowTable, newCell);
+  if (!conflict) { // only continue recursion when there are no conflicts
+    for (const edge of outEdges) {
+      const neighbour = getNeighbour(x, y, edge, possibleFlowTable.width, possibleFlowTable.height);
+      if (neighbour) {
+        newActualFlowTable = expandFlow(neighbour.x, neighbour.y, neighbour.edge, possibleFlowTable, newActualFlowTable);
+      }
     }
   }
   return newActualFlowTable;

@@ -10,15 +10,23 @@ const SvgLiquidTubesBottom = require('./svg/liquid_tubes_bottom.svg?tag=g');
 
 import { SvgParent } from '../SvgParent';
 
-export const Cfc = (props) => (
-  <SvgParent viewBox={'0 0 150 100'}>
-    <SvgLiquidTubesTop className={styles.liquidTubes} style={Liquids.strokeStyle(props.liquid)} />
-    <SvgLiquidTubesBottom className={styles.liquidTubes} style={Liquids.strokeStyle(props.liquid)} />
-    <SvgLiquidCfcTop className={styles.liquidBody} style={Liquids.strokeStyle(props.liquid)} />
-    <SvgLiquidCfcBottom className={styles.liquidBody} style={Liquids.strokeStyle(props.liquid)} />
-    <SvgCfc className={styles.tubes} />
-  </SvgParent>
-);
+export class Cfc extends React.Component {
+  static flows = () => ([
+    [{ l: 'r', r: 'l' }, { l: 'r', r: 'l' }, { l: 'r', r: 'l' }],
+    [{ l: 'r', r: 'l' }, { l: 'r', r: 'l' }, { l: 'r', r: 'l' }],
+  ]);
+  render() {
+    return (
+      <SvgParent viewBox={'0 0 150 100'}>
+        <SvgLiquidTubesTop className={styles.liquidTubes} style={Liquids.strokeStyle(this.props.liquid)} />
+        <SvgLiquidTubesBottom className={styles.liquidTubes} style={Liquids.strokeStyle(this.props.liquid)} />
+        <SvgLiquidCfcTop className={styles.liquidBody} style={Liquids.strokeStyle(this.props.liquid)} />
+        <SvgLiquidCfcBottom className={styles.liquidBody} style={Liquids.strokeStyle(this.props.liquid)} />
+        <SvgCfc className={styles.tubes} />
+      </SvgParent>
+    );
+  }
+}
 Cfc.propTypes = {
   liquid: React.PropTypes.string,
 };

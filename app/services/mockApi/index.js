@@ -19,6 +19,7 @@ const view1 = require('./sample-data/test_data/view1.json');
 const view2 = require('./sample-data/test_data/view2.json');
 const view3 = require('./sample-data/test_data/view3.json');
 const view4 = require('./sample-data/test_data/view4.json');
+const coilTest = require('./sample-data/test_data/coil_test.json');
 
 const views = fromJS({
   herms: hermsView,
@@ -27,6 +28,7 @@ const views = fromJS({
   view2,
   view3,
   view4,
+  coilTest,
 });
 
 

@@ -108,12 +108,50 @@ const rotateString = (oldString, angle) => {
  * flow from left to right or right to left.
  * This function will update the flows as if the block was rotated.
  */
-export const rotateFlows = (oldFlows, angle) => {
+const rotateFlowTile = (oldFlows, angle) => {
   const newFlows = {};
   for (const [key, value] of Object.entries(oldFlows)) {
     const newKey = rotateString(key, angle);
     const newValue = rotateString(value, angle);
     newFlows[newKey] = newValue;
+  }
+  return newFlows;
+};
+
+export const rotateArray = (m) => {
+  const result = [];
+  const width = m[0].length;
+  const height = m.length;
+  for (let i = 0; i < width; i += 1) {
+    result[i] = [];
+    for (let j = 0; j < height; j += 1) {
+      result[i].push(m[height - 1 - j][i]);
+    }
+  }
+  return result;
+};
+
+export const rotateFlows = (oldFlows, angle) => {
+  let newFlows;
+  // flows can be an Array[] or Array[][]
+  // for components that span multiple blocks
+  if (oldFlows.constructor === Array) {
+    let toRotate = oldFlows;
+    if (oldFlows[0].constructor !== Array) {
+      toRotate = [oldFlows]; // ensure it is a two-dimensional array
+    }
+    newFlows = toRotate;
+    // transpose entire array
+    let angleRemaining = angle;
+    while (angleRemaining > 0) {
+      newFlows = rotateArray(newFlows);
+      angleRemaining -= 90;
+    }
+    // rotate each tile
+    newFlows = newFlows.map((y) => y.map((x) => rotateFlowTile(x, angle)));
+  } else {
+    // flows is a single tile
+    newFlows = rotateFlowTile(oldFlows, angle);
   }
   return newFlows;
 };
@@ -126,12 +164,13 @@ export class Part extends React.Component {
   }
 
   static acceptsFlows(data) {
-    const flows = Part.component(data).flows;
-    if (typeof flows !== 'function') {
+    const flowFunction = Part.component(data).flows;
+    if (typeof flowFunction !== 'function') {
       return {};
     }
+    const flows = flowFunction(data);
     const rotate = data.get('rotate');
-    return (rotate) ? rotateFlows(flows(data), rotate) : flows(data);
+    return (rotate) ? rotateFlows(flows, rotate) : flows;
   }
 
   type() {

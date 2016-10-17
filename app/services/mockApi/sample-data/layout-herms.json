@@ -89,7 +89,7 @@
       "y": 3,
       "part": {
         "type": "COIL",
-        "flip": true
+        "rotate": 180
       }
     },
     {
@@ -453,13 +453,6 @@
       "y": 6,
       "part": {
         "type": "TEMP_SENSOR_INLINE"
-      }
-    },
-    {
-      "x": 11,
-      "y": 7,
-      "part": {
-        "type": "TUBE_STRAIGHT"
       }
     },
     {
