@@ -29,5 +29,5 @@
 
 .kegFill {
   transform-origin: 0 210px;
-  transform: translate(0, 27px) scaleY(0.99);
+  transform: translate(0, 27px) scaleY(0.9);
 }
