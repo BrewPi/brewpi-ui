@@ -134,14 +134,12 @@ describe('ProcessViewPage', () => {
   describe('actualFlowTableSelector', () => {
     it('will calculate the actual flows for each tile', () => {
       const flowTable = actualFlowTableSelector(stateView4);
-      /*
-      expect(flowTable.getCell(0, 0)).toEqual({ s: 'r' }); // input == source
-      expect(flowTable.getCell(1, 0)).toEqual({ r: 'l', l: 'r' }); // straight
-      expect(flowTable.getCell(2, 0)).toEqual({ l: 'b', b: 'l' }); // elbow, rotated 180deg
-      expect(flowTable.getCell(2, 1)).toEqual({ b: 'lt', t: 'lb', l: 'tb' }); // tee, rotated 270deg
-      expect(flowTable.getCell(2, 2)).toEqual({ t: 's' }); // output, rotated 90deg
-      expect(flowTable.getCell(1, 1)).toEqual({ r: 's' }); // output, rotated 180deg
-      */
+      expect(flowTable.getCell(0, 0)).toEqual({ flow: { s: 'r' }, liquid: { s: 'water' } }); // input == source
+      expect(flowTable.getCell(1, 0)).toEqual({ flow: { l: 'r' }, liquid: { l: 'water' } }); // straight
+      expect(flowTable.getCell(2, 0)).toEqual({ flow: { l: 'b' }, liquid: { l: 'water' } }); // elbow, rotated 180deg
+      expect(flowTable.getCell(2, 1)).toEqual({ flow: { t: 'lb' }, liquid: { t: 'water' } }); // tee, rotated 270deg
+      expect(flowTable.getCell(2, 2)).toEqual({ flow: { t: 's' }, liquid: { t: 'water' } }); // output, rotated 90deg
+      expect(flowTable.getCell(1, 1)).toEqual({ flow: { r: 's' }, liquid: { r: 'water' } }); // output, rotated 180deg
     });
   });
   describe('stepsSelector', () => {

@@ -1,3 +1,5 @@
+/* eslint-disable react/no-multi-comp */
+
 import React from 'react';
 const classNames = require('classnames');
 import styles from './styles.css';
@@ -28,16 +30,24 @@ const posClasses = {
   default: styles.ballOpen,
 };
 
-const Manual = (props) => {
-  const posClass = posClasses[props.settings.get('pos')] || posClasses.default;
-  return (
-    <SvgParent>
-      <SvgLiquidStraightSplit className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
-      <SvgTube className={styles.tube} />
-      <SvgBall className={classNames(styles.ball, posClass)} />
-    </SvgParent>
-  );
-};
+class Manual extends React.Component {
+  static flows = (data) => {
+    const pos = data.getIn(['settings', 'pos']);
+    return (pos !== 'closed') ? { r: 'l', l: 'r' } : {};
+  };
+
+  render() {
+    const posClass = posClasses[this.props.settings.get('pos')] || posClasses.default;
+    return (
+      <SvgParent>
+        <SvgLiquidStraightSplit className={styles.liquid} style={Liquids.strokeStyle(this.props.liquid)} />
+        <SvgTube className={styles.tube} />
+        <SvgBall className={classNames(styles.ball, posClass)} />
+      </SvgParent>
+    );
+  }
+}
+
 Manual.propTypes = {
   settings: React.PropTypes.object,
   liquid: React.PropTypes.string,
@@ -47,20 +57,26 @@ Manual.defaultProps = {
 };
 
 
-const Motor = (props) => {
-  const powerClass = powerClasses[props.powered] || powerClasses.default;
-  const posClass = posClasses[props.settings.get('pos')] || posClasses.default;
+class Motor extends React.Component {
+  static flows = (data) => {
+    const pos = data.getIn(['settings', 'pos']);
+    return (pos !== 'closed') ? { r: 'l', l: 'r' } : {};
+  };
+  render() {
+    const powerClass = powerClasses[this.props.powered] || powerClasses.default;
+    const posClass = posClasses[this.props.settings.get('pos')] || posClasses.default;
 
-  return (
-    <SvgParent>
-      <SvgLiquidStraightSplit className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
-      <SvgTube className={styles.tube} />
-      <SvgBall className={classNames(styles.ball, posClass)} />
-      <SvgMotor className={powerClass} />
-      <SvgMotorPower className={styles.powerIcon} />
-    </SvgParent>
-  );
-};
+    return (
+      <SvgParent>
+        <SvgLiquidStraightSplit className={styles.liquid} style={Liquids.strokeStyle(this.props.liquid)} />
+        <SvgTube className={styles.tube} />
+        <SvgBall className={classNames(styles.ball, posClass)} />
+        <SvgMotor className={powerClass} />
+        <SvgMotorPower className={styles.powerIcon} />
+      </SvgParent>
+    );
+  }
+}
 Motor.propTypes = {
   settings: React.PropTypes.object,
   powered: React.PropTypes.string,
@@ -70,14 +86,19 @@ Motor.defaultProps = {
   settings: new Map(),
 };
 
-const Check = (props) => (
-  <SvgParent>
-    <SvgLiquidBall className={styles.ball} style={Liquids.fillStyle(props.liquid)} />
-    <SvgLiquidStraight className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
-    <SvgTube className={styles.tube} />
-    <SvgCheck />
-  </SvgParent>
-);
+class Check extends React.Component {
+  static flows = () => ({ l: 'r' });
+  render() {
+    return (
+      <SvgParent>
+        <SvgLiquidBall className={styles.ball} style={Liquids.fillStyle(this.props.liquid)} />
+        <SvgLiquidStraight className={styles.liquid} style={Liquids.strokeStyle(this.props.liquid)} />
+        <SvgTube className={styles.tube} />
+        <SvgCheck />
+      </SvgParent>
+    );
+  }
+}
 Check.propTypes = {
   liquid: React.PropTypes.string,
 };

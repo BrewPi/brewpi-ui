@@ -127,11 +127,11 @@ export class Part extends React.Component {
 
   static acceptsFlows(data) {
     const flows = Part.component(data).flows;
-    if (typeof flows === 'undefined') {
+    if (typeof flows !== 'function') {
       return {};
     }
     const rotate = data.get('rotate');
-    return (rotate) ? rotateFlows(flows, rotate) : flows;
+    return (rotate) ? rotateFlows(flows(data), rotate) : flows(data);
   }
 
   type() {

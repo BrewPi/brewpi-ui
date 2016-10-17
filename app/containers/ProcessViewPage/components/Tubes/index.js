@@ -28,7 +28,7 @@ import { FlowArrows, FlowArrowsBridge } from '../FlowArrows';
 import { Liquids } from '../Liquids';
 
 class Input extends React.Component {
-  static flows = { s: 'r' }; // source on the right edge
+  static flows = () => ({ s: 'r' }); // source on the right edge
 
   render() {
     return (
@@ -46,7 +46,7 @@ Input.propTypes = {
 };
 
 class Output extends React.Component {
-  static flows = { l: 's' }; // sink on the left edge
+  static flows = () => ({ l: 's' }); // sink on the left edge
   render() {
     return (
       <SvgParent>
@@ -64,7 +64,7 @@ Output.propTypes = {
 
 
 class Straight extends React.Component {
-  static flows = { r: 'l', l: 'r' };
+  static flows = () => ({ r: 'l', l: 'r' });
 
   render() {
     return (
@@ -82,7 +82,7 @@ Straight.propTypes = {
 };
 
 class Elbow extends React.Component {
-  static flows = { t: 'r', r: 't' };
+  static flows = () => ({ t: 'r', r: 't' });
 
   render() {
     return (
@@ -100,7 +100,7 @@ Elbow.propTypes = {
 };
 
 class Tee extends React.Component {
-  static flows = { l: 'tr', r: 'tl', t: 'rl' };
+  static flows = () => ({ l: 'tr', r: 'tl', t: 'rl' });
   render() {
     return (
       <SvgParent>
@@ -117,6 +117,7 @@ Tee.propTypes = {
 };
 
 class Cross extends React.Component {
+  static flows = () => ({ l: 'rtb', r: 'ltb', t: 'brl', b: 'tlr' });
   render() {
     return (
       <SvgParent>
@@ -133,6 +134,7 @@ Cross.propTypes = {
 };
 
 class Bridge extends React.Component {
+  static flows = () => ({ r: 'l', l: 'r' });
   render() {
     return (
       <SvgParent>
@@ -149,9 +151,7 @@ Bridge.propTypes = {
 };
 
 class Inlet extends React.Component {
-  isSink(edge) {
-    return (edge === 'l');
-  }
+  static flows = () => ({ l: 's' });
   render() {
     return (
       <SvgParent>
@@ -168,9 +168,7 @@ Inlet.propTypes = {
 };
 
 class Dip extends React.Component {
-  isSource(edge) {
-    return (edge === 'r');
-  }
+  static flows = () => ({ l: 's' });
   render() {
     return (
       <SvgParent>
@@ -186,9 +184,7 @@ Dip.propTypes = {
 };
 
 class InletWhirlpool extends React.Component {
-  isSink(edge) {
-    return (edge === 'l');
-  }
+  static flows = () => ({ l: 's' });
   render() {
     return (
       <SvgParent viewBox={'0 0 50 100'}>

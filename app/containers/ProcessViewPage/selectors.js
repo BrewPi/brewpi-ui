@@ -219,7 +219,19 @@ const expandFlow = (x, y, inEdge, possibleFlowTable, actualFlowTable) => {
   flow[inEdge] = outEdges;
   const liquid = {};
   liquid[inEdge] = 'water';
-  let newActualFlowTable = actualFlowTable.setCell(x, y, { flow, liquid });
+  const oldCell = actualFlowTable.getCell(x, y);
+  let newCell;
+  if (typeof oldCell === 'undefined') {
+    // no existing flows
+    newCell = { flow, liquid };
+  } else {
+    // merge with existing flows
+    newCell = {
+      flow: Object.assign(oldCell.flow, flow),
+      liquid: Object.assign(oldCell.liquid, liquid),
+    };
+  }
+  let newActualFlowTable = actualFlowTable.setCell(x, y, newCell);
   for (const edge of outEdges) {
     const neighbour = getNeighbour(x, y, edge, possibleFlowTable.width, possibleFlowTable.height);
     if (neighbour) {
