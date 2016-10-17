@@ -30,8 +30,9 @@
 .setpoint,
 .coolingPercentage,
 .heatingPercentage {
-  font-size: 20px;
+  font-size: 16px;
   vertical-align: middle;
+  padding-left: 18px;
 }
 
 .fridgeTop {
@@ -95,7 +96,8 @@
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
-  transform: scale(0.6);
+  width: 30px;
+  padding-bottom: 3px;
 }
 
 .iconHeating path,
