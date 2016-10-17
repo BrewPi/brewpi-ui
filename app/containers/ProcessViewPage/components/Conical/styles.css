@@ -46,5 +46,20 @@
 
 .conicalFill rect {
   transform-origin: 0 363px;
-  transform: scaleY(0.99);
+  transform: scaleY(0.9);
+}
+
+.iconHeating {
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  width: 30px;
+  transform: translateX(170px) translateY(150px) scaleX(-1);
+}
+
+.iconHeating path {
+  stroke: none;
+  fill: #FFF;
 }
