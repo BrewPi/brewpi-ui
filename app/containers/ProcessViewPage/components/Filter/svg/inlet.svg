@@ -1,7 +1,0 @@
-<svg viewBox="0 0 50 50" width="50" height="50">
-
-    <path d="M0,21h20c5,0,9,4,9,9v10"/>
-    <path d="M0,29h20c0.6,0,1,0.4,1,1v10"/>
-    <rect x="0" y="12.5" width="8" height="8" fill="#fff"/>
-    <rect x="0" y="31" width="8" height="8" fill="#fff"/>
-</svg>
