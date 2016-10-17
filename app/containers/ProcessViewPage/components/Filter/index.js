@@ -3,8 +3,8 @@ import styles from './styles.css';
 import { Liquids } from '../Liquids';
 
 const SvgFilter = require('./svg/filter.svg?tag=g');
-const SvgInlet = require('./svg/inlet.svg?tag=g');
-const SvgLiquidInlet = require('./svg/liquid_inlet.svg?tag=g');
+const SvgInlet = require('../Tubes/svg/tube_dip.svg?tag=g');
+const SvgLiquidInlet = require('../Tubes/svg/liquid_dip.svg?tag=g');
 
 import { SvgParent } from '../SvgParent';
 
