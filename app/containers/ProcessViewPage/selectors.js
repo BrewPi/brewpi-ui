@@ -264,30 +264,31 @@ const expandFlow = (x, y, inEdge, possibleFlowTable, actualFlowTable) => {
   }
   // check for conflicts (existing outflows match this inflow)
   // this prevents loops
-  let conflict = false;
+  let conflict = '';
   const currentCell = actualFlowTable.getCell(x, y);
   if (typeof currentCell !== 'undefined') {
-    for (const key of Object.keys(currentCell.flow)) {
-      const usedOutEdges = currentCell.flow[key];
-      for (const edge of usedOutEdges) {
-        if (edge === inEdge) {
-          console.log('Conflict at ', x, y, inEdge);
-          conflict = true;
+    for (const existingFlow of currentCell) {
+      for (const [existingInEdge, exitingOutEdges] of Object.entries(existingFlow.dir)) {
+        if (existingInEdge === inEdge) {
+          conflict += inEdge;
+        }
+        for (const outEdge of exitingOutEdges) {
+          if (outEdge === inEdge) {
+            conflict += outEdge;
+          }
         }
       }
     }
-    // use val
   }
-  const flow = {};
-  const liquid = {};
-  if (conflict) {
-    flow[inEdge] = 'x';
+  const newCell = { dir: {}, liquid: {} };
+  if (conflict !== '') {
+    newCell.dir[inEdge] = conflict;
+    newCell.liquid = 'conflict';
   } else {
-    flow[inEdge] = outEdges;
-    liquid[inEdge] = 'water';
+    newCell.dir[inEdge] = outEdges;
+    newCell.liquid = 'water';
   }
-  const newCell = { flow, liquid };
-  let newActualFlowTable = mergeWithCell(x, y, actualFlowTable, newCell);
+  let newActualFlowTable = pushToCell(x, y, actualFlowTable, newCell);
   if (!conflict) { // only continue recursion when there are no conflicts
     for (const edge of outEdges) {
       const neighbour = getNeighbour(x, y, edge, possibleFlowTable.width, possibleFlowTable.height);

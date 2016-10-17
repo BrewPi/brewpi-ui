@@ -8,26 +8,38 @@ import React from 'react';
 import styles from './styles.css';
 
 const SvgArrows = {
-  n: <polyline key="n" points="21 10.5 25 14.5 29 10.5" />,
-  w: <polyline key="w" points="10.5 21 14.5 25 10.5 29" />,
-  s: <polyline key="s" points="29 39.5 25 35.5 21 39.5" />,
-  e: <polyline key="e" points="39.5 21 35.5 25 39.5 29" />,
-  N: <polyline key="N" points="21 14.5 25 10.5 29 14.5" />,
-  W: <polyline key="W" points="14.5 21 10.5 25 14.5 29" />,
-  S: <polyline key="S" points="29 35.5 25 39.5 21 35.5" />,
-  E: <polyline key="E" points="35.5 21 39.5 25 35.5 29" />,
+  t: <polyline key="t" points="21 10.5 25 14.5 29 10.5" />,
+  l: <polyline key="l" points="10.5 21 14.5 25 10.5 29" />,
+  b: <polyline key="b" points="29 39.5 25 35.5 21 39.5" />,
+  r: <polyline key="r" points="39.5 21 35.5 25 39.5 29" />,
+  T: <polyline key="T" points="21 14.5 25 10.5 29 14.5" />,
+  L: <polyline key="L" points="14.5 21 10.5 25 14.5 29" />,
+  B: <polyline key="B" points="29 35.5 25 39.5 21 35.5" />,
+  R: <polyline key="R" points="35.5 21 39.5 25 35.5 29" />,
 };
 
 const SvgArrowsBridge = {
-  e: <polyline key="e" points="43.5 21 39.5 25 43.5 29" />,
-  E: <polyline key="E" points="39.5 21 43.5 25 39.5 29" />,
-  W: <polyline key="w" points="10.5 21 6.5 25 10.5 29" />,
-  w: <polyline key="W" points="6.5 21 10.5 25 6.5 29" />,
+  l: <polyline key="l" points="6.5 21 10.5 25 6.5 29" />,
+  r: <polyline key="r" points="43.5 21 39.5 25 43.5 29" />,
+  L: <polyline key="L" points="10.5 21 6.5 25 10.5 29" />,
+  R: <polyline key="R" points="39.5 21 43.5 25 39.5 29" />,
 };
 
-function pickArrows(flow, arrows) {
+function pickArrows(flows, arrows) {
+  if (typeof flows === 'undefined') {
+    return undefined;
+  }
+  let combinedAsString = '';
+  for (const flow of flows.values()) {
+    if (flow.liquid !== 'conflict') {
+      for (const [inEdge, outEdges] of Object.entries(flow.dir)) {
+        combinedAsString += inEdge;
+        combinedAsString += outEdges.toUpperCase();
+      }
+    }
+  }
   const picked = [];
-  for (const ch of flow) {
+  for (const ch of combinedAsString) {
     picked.push(arrows[ch]);
   }
   return picked;
@@ -38,8 +50,7 @@ function pickArrows(flow, arrows) {
  * lowercase is inflow, uppercase is outflow
  */
 export const FlowArrows = (props) => {
-  const flow = props.flow || '';
-  const arrows = pickArrows(flow, SvgArrows);
+  const arrows = pickArrows(props.flows, SvgArrows);
   return (
     <g className={styles.flowArrows}>
       {arrows}
@@ -47,7 +58,7 @@ export const FlowArrows = (props) => {
   );
 };
 FlowArrows.propTypes = {
-  flow: React.PropTypes.string,
+  flows: React.PropTypes.object,
 };
 
 /* Renders flow arrows, to be used inside an svg tag
@@ -55,8 +66,7 @@ FlowArrows.propTypes = {
  * lowercase is inflow, uppercase is outflow
  */
 export const FlowArrowsBridge = (props) => {
-  const flow = props.flow || '';
-  const arrows = pickArrows(flow, SvgArrowsBridge);
+  const arrows = pickArrows(props.flows, SvgArrowsBridge);
   return (
     <g className={styles.flowArrows}>
       {arrows}
@@ -64,7 +74,7 @@ export const FlowArrowsBridge = (props) => {
   );
 };
 FlowArrowsBridge.propTypes = {
-  flow: React.PropTypes.string,
+  flows: React.PropTypes.object,
 };
 
 export default {

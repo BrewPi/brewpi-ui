@@ -186,7 +186,6 @@ export class Part extends React.Component {
 
   render() {
     const data = this.props.data;
-    const flow = this.props.flow;
     if (!data) {
       return <NoPart />;
     }
@@ -199,19 +198,15 @@ export class Part extends React.Component {
     const flip = data.get('flip');
     const flipClassName = (flip) ? styles.flipped : undefined;
 
-    const partStyle = { zIndex: this.zIndex() };
-    let liquid;
-    if (typeof flow !== 'undefined') {
-      // find the flow in this tile that flows through this part
-      for (const inEdge of Object.getOwnPropertyNames(flow.liquid)) {
-        if (typeof Part.acceptsFlows(data)[inEdge] !== 'undefined') {
-          liquid = flow.liquid[inEdge];
-          break;
-        }
-      }
+    let flows = this.props.flows;
+    if (flows && rotate) {
+      // flows are tile flows, rotate back for part flows
+      flows = flows.map((flow) => ({ dir: rotateFlows(flow.dir, 360 - rotate), liquid: flow.liquid }));
     }
 
-    const renderedComponent = React.createElement(Part.component(data), { powered: 'on', id, settings, liquid, flip, rotate });
+    const partStyle = { zIndex: this.zIndex() };
+
+    const renderedComponent = React.createElement(Part.component(data), { powered: 'on', id, settings, flows, flip, rotate });
     return (
       <div style={partStyle} className={classNames(styles.part, rotateClassName, flipClassName)}>
         {renderedComponent}
@@ -221,7 +216,7 @@ export class Part extends React.Component {
 }
 Part.propTypes = {
   data: React.PropTypes.object,
-  flow: React.PropTypes.object,
+  flows: React.PropTypes.object,
 };
 
 export default Part;

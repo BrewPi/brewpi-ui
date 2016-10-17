@@ -1,12 +1,13 @@
-const colors = {
+const fills = {
   water: '#1A8AAB',
   beer: '#E1AC00',
   hotwater: '#DB0023',
   background: '#24333D',
+  conflict: 'orange',
 };
 
 function fillStyle(liquid) {
-  const fill = liquid ? colors[liquid] : colors.background;
+  const fill = liquid ? fills[liquid] : fills.background;
   return (
     {
       fill,
@@ -15,7 +16,7 @@ function fillStyle(liquid) {
 }
 
 function strokeStyle(liquid) {
-  const stroke = liquid ? colors[liquid] : colors.background;
+  const stroke = liquid ? fills[liquid] : fills.background;
   return (
     {
       stroke,

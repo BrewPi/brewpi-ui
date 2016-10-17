@@ -27,22 +27,31 @@ import { SvgParent } from '../SvgParent';
 import { FlowArrows, FlowArrowsBridge } from '../FlowArrows';
 import { Liquids } from '../Liquids';
 
+// tubes can only have 1 liquid. Each flow that goes in goes out on all other possible edges.
+// we can simply extract the liquid from the first flow
+const getLiquid = (flows) => {
+  if (typeof flows !== 'undefined') {
+    const liquid = flows.first().liquid;
+    return liquid;
+  }
+  return undefined;
+};
+
 class Input extends React.Component {
   static flows = () => ({ s: 'r' }); // source on the right edge
 
   render() {
     return (
       <SvgParent>
-        <SvgLiquidInput className={styles.liquid} style={Liquids.strokeStyle(this.props.liquid)} />
+        <SvgLiquidInput className={styles.liquid} style={Liquids.strokeStyle(getLiquid(this.props.flows))} />
         <SvgTubeInput className={styles.tube} />
-        <FlowArrows flow={this.props.flow} />
+        <FlowArrows flows={this.props.flows} />
       </SvgParent>
     );
   }
 }
 Input.propTypes = {
-  flow: React.PropTypes.string,
-  liquid: React.PropTypes.string,
+  flows: React.PropTypes.object,
 };
 
 class Output extends React.Component {
@@ -50,16 +59,15 @@ class Output extends React.Component {
   render() {
     return (
       <SvgParent>
-        <SvgLiquidOutput className={styles.liquid} style={Liquids.strokeStyle(this.props.liquid)} />
+        <SvgLiquidOutput className={styles.liquid} style={Liquids.strokeStyle(getLiquid(this.props.flows))} />
         <SvgTubeOutput className={styles.tube} />
-        <FlowArrows flow={this.props.flow} />
+        <FlowArrows flows={this.props.flows} />
       </SvgParent>
     );
   }
 }
 Output.propTypes = {
-  flow: React.PropTypes.string,
-  liquid: React.PropTypes.string,
+  flows: React.PropTypes.object,
 };
 
 
@@ -69,16 +77,15 @@ class Straight extends React.Component {
   render() {
     return (
       <SvgParent>
-        <SvgLiquidStraight className={styles.liquid} style={Liquids.strokeStyle(this.props.liquid)} />
+        <SvgLiquidStraight className={styles.liquid} style={Liquids.strokeStyle(getLiquid(this.props.flows))} />
         <SvgTubeStraight className={styles.tube} />
-        <FlowArrows flow={this.props.flow} />
+        <FlowArrows flows={this.props.flows} />
       </SvgParent>
     );
   }
 }
 Straight.propTypes = {
-  flow: React.PropTypes.string,
-  liquid: React.PropTypes.string,
+  flows: React.PropTypes.object,
 };
 
 class Elbow extends React.Component {
@@ -87,16 +94,15 @@ class Elbow extends React.Component {
   render() {
     return (
       <SvgParent>
-        <SvgLiquidElbow className={styles.liquid} style={Liquids.strokeStyle(this.props.liquid)} />
+        <SvgLiquidElbow className={styles.liquid} style={Liquids.strokeStyle(getLiquid(this.props.flows))} />
         <SvgTubeElbow className={styles.tube} />
-        <FlowArrows flow={this.props.flow} />
+        <FlowArrows flows={this.props.flows} />
       </SvgParent>
     );
   }
 }
 Elbow.propTypes = {
-  flow: React.PropTypes.string,
-  liquid: React.PropTypes.string,
+  flows: React.PropTypes.object,
 };
 
 class Tee extends React.Component {
@@ -104,16 +110,15 @@ class Tee extends React.Component {
   render() {
     return (
       <SvgParent>
-        <SvgLiquidTee className={styles.liquid} style={Liquids.strokeStyle(this.props.liquid)} />
+        <SvgLiquidTee className={styles.liquid} style={Liquids.strokeStyle(getLiquid(this.props.flows))} />
         <SvgTubeTee className={styles.tube} />
-        <FlowArrows flow={this.props.flow} />
+        <FlowArrows flows={this.props.flows} />
       </SvgParent>
     );
   }
 }
 Tee.propTypes = {
-  flow: React.PropTypes.string,
-  liquid: React.PropTypes.string,
+  flows: React.PropTypes.object,
 };
 
 class Cross extends React.Component {
@@ -121,16 +126,15 @@ class Cross extends React.Component {
   render() {
     return (
       <SvgParent>
-        <SvgLiquidCross className={styles.liquid} style={Liquids.strokeStyle(this.props.liquid)} />
+        <SvgLiquidCross className={styles.liquid} style={Liquids.strokeStyle(getLiquid(this.props.flows))} />
         <SvgTubeCross className={styles.tube} />
-        <FlowArrows flow={this.props.flow} />
+        <FlowArrows flows={this.props.flows} />
       </SvgParent>
     );
   }
 }
 Cross.propTypes = {
-  flow: React.PropTypes.string,
-  liquid: React.PropTypes.string,
+  flows: React.PropTypes.object,
 };
 
 class Bridge extends React.Component {
@@ -138,16 +142,15 @@ class Bridge extends React.Component {
   render() {
     return (
       <SvgParent>
-        <SvgLiquidBridge className={styles.liquid} style={Liquids.strokeStyle(this.props.liquid)} />
+        <SvgLiquidBridge className={styles.liquid} style={Liquids.strokeStyle(getLiquid(this.props.flows))} />
         <SvgTubeBridge className={styles.tube} />
-        <FlowArrowsBridge flow={this.props.flow} />
+        <FlowArrowsBridge flows={this.props.flows} />
       </SvgParent>
     );
   }
 }
 Bridge.propTypes = {
-  flow: React.PropTypes.string,
-  liquid: React.PropTypes.string,
+  flows: React.PropTypes.object,
 };
 
 class Inlet extends React.Component {
@@ -155,16 +158,15 @@ class Inlet extends React.Component {
   render() {
     return (
       <SvgParent>
-        <SvgLiquidInlet className={styles.liquid} style={Liquids.strokeStyle(this.props.liquid)} />
+        <SvgLiquidInlet className={styles.liquid} style={Liquids.strokeStyle(getLiquid(this.props.flows))} />
         <SvgTubeInlet className={styles.tube} />
-        <FlowArrows flow={this.props.flow} />
+        <FlowArrows flows={this.props.flows} />
       </SvgParent>
     );
   }
 }
 Inlet.propTypes = {
-  flow: React.PropTypes.string,
-  liquid: React.PropTypes.string,
+  flows: React.PropTypes.object,
 };
 
 class Dip extends React.Component {
@@ -173,14 +175,13 @@ class Dip extends React.Component {
     return (
       <SvgParent>
         <SvgTubeDip className={styles.tube} />
-        <FlowArrows flow={this.props.flow} />
+        <FlowArrows flows={this.props.flows} />
       </SvgParent>
     );
   }
 }
 Dip.propTypes = {
-  flow: React.PropTypes.string,
-  // liquid not needed, because it is submerged in the kettle
+  flows: React.PropTypes.object,
 };
 
 class InletWhirlpool extends React.Component {
@@ -188,16 +189,15 @@ class InletWhirlpool extends React.Component {
   render() {
     return (
       <SvgParent viewBox={'0 0 50 100'}>
-        <SvgLiquidInletWhirlpool className={styles.liquid} style={Liquids.strokeStyle(this.props.liquid)} />
+        <SvgLiquidInletWhirlpool className={styles.liquid} style={Liquids.strokeStyle(getLiquid(this.props.flows))} />
         <SvgTubeInletWhirlpool className={styles.tube} />
-        <FlowArrows flow={this.props.flow} />
+        <FlowArrows flows={this.props.flows} />
       </SvgParent>
     );
   }
 }
 InletWhirlpool.propTypes = {
-  flow: React.PropTypes.string,
-  liquid: React.PropTypes.string,
+  flows: React.PropTypes.object,
 };
 
 export const Tubes = {
