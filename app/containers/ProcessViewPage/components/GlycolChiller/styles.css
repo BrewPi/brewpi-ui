@@ -1,0 +1,54 @@
+.glycolContainer {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 150px;
+}
+
+.glycolCompartment {
+  height: 100%;
+  border: solid 2pt #FFF;
+  border-radius: 3px;
+}
+
+.fridgeName,
+.setpoint {
+  fill: #FFF;
+  stroke-width: 8;
+  stroke: #24333D;
+  paint-order: stroke;
+  text-align: right;
+  stroke-linejoin: round;
+}
+
+.fridgeName,
+.setpoint {
+  position: absolute;
+  padding: 10px;
+}
+
+.fridgeName {
+  left: 0;
+  top: 40px;
+}
+
+.setpoint {
+  right: 0;
+  font-size: 20px;
+  line-height: 50px;
+  padding: 0 10px;
+}
+
+.iconDefrost {
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  width: 30px;
+}
+
+.iconDefrost path {
+  stroke: none;
+  fill: #FFF;
+}

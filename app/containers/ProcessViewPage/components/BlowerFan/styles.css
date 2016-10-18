@@ -7,9 +7,9 @@
 
 .blades circle:first-child {
   fill: none;
-  stroke-width: 6;
+  stroke-width: 9;
   stroke-linecap: butt;
-  stroke-dasharray: 4, 5;
+  stroke-dasharray: 2, 3.3;
 }
 
 .blades circle {
@@ -17,7 +17,7 @@
 }
 
 .bladesWrapper {
-  transform: translateY(1px);
+  transform: translateX(-5px);
 }
 
 .ball {

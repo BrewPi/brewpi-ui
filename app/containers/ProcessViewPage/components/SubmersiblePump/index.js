@@ -7,6 +7,7 @@ import { getRotateClass } from '../sharedCss';
 const SvgTubes = require('./svg/tubes.svg?tag=g');
 const SvgBall = require('./svg/ball.svg?tag=g');
 const SvgBlades = require('./svg/blades.svg?tag=g');
+const SvgLiquidPump = require('./svg/liquid_pump.svg?tag=g');
 
 import { SvgParent } from '../SvgParent';
 
@@ -15,6 +16,7 @@ export const SubmersiblePump = (props) => {
   const rotateClass = getRotateClass(props.powered);
   return (
     <SvgParent>
+      <SvgLiquidPump className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
       <SvgBall className={styles.ball} style={Liquids.fillStyle(props.liquid)} />
       <g className={styles.bladesWrapper}>
         <SvgBlades className={classNames(styles.blades, rotateClass)} />

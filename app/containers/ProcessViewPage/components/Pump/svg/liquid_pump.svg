@@ -1,3 +1,4 @@
 <svg viewBox="0 0 50 50" width="50" height="50">
 	<polyline points="0,25 25,25 25,33"/>
+	<line x1="40" y1="25" x2="50" y2="25"/>
 </svg>
