@@ -784,6 +784,27 @@
       },
       "x": 16,
       "y": 13
+    },
+    {
+      "part": {
+        "type": "SETPOINT"
+      },
+      "x": 3,
+      "y": 1
+    },
+    {
+      "part": {
+        "type": "SETPOINT"
+      },
+      "x": 10,
+      "y": 1
+    },
+    {
+      "part": {
+        "type": "SETPOINT"
+      },
+      "x": 17,
+      "y": 1
     }
   ]
 }

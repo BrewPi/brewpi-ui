@@ -1,0 +1,45 @@
+.setPointRoot {
+  width: 100px;
+  height: 30px;
+  padding-top: 10px;
+}
+
+.temp {
+  width: 45px;
+  background: #FFF;
+  color: #24333D;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.setPoint::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 6px solid #FFF;
+  position: absolute;
+  top: 0;
+  right: 45px;
+  z-index: 1;
+}
+
+.setPoint {
+  width: 55px;
+  position: relative;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background: #24333D;
+  cursor: pointer;
+}
+
+.temp,
+.setPoint {
+  display: inline-block;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  border: solid 2px #FFF;
+  padding: 2px 0 2px 6px;
+}

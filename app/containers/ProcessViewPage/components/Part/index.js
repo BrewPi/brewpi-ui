@@ -24,6 +24,7 @@ import { FridgeTall, FridgeFan, FridgeShelf } from '../FridgeTall';
 import { GlycolReservoir } from '../GlycolReservoir';
 import { Keg } from '../Keg';
 import { TubularHeater } from '../TubularHeater';
+import { SetPoint } from '../SetPoint';
 import { List, Map } from 'immutable';
 
 const classNames = require('classnames');
@@ -62,6 +63,7 @@ const componentTable = {
   CORNEY_KEG: Keg,
   TUBULAR_HEATER: TubularHeater,
   CARBOY: Carboy,
+  SETPOINT: SetPoint,
   DEFAULT: NoPart,
 };
 

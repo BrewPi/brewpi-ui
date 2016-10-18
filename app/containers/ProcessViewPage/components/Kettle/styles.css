@@ -1,33 +1,40 @@
+.kettleContainer {
+  position: relative;
+  width: 200px;
+  height: 300px;
+}
+
 .kettle {
+  position: absolute;
+  display: block;
+  width: 200px;
+  height: 300px;
   stroke: #FFF;
-  stroke-width: 4pt;
-  stroke-linecap: round;
-  fill: none;
+  border: solid 4px #FFF;
+  border-radius: 3px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 999;
 }
 
 .kettleFill {
-  transform: scaleY(0.9) translateX(3px) translateY(3px);
-  transform-origin: 0 300px;
-}
-
-.temp,
-.liters,
-.fridgetext,
-.bottlename {
-  fill: #FFF;
-  stroke-width: 8;
-  stroke: #24333D;
-  paint-order: stroke;
-  text-align: right;
-  stroke-linejoin: round;
-}
-
-.temp {
-  font-weight: bold;
-  font-size: 40px;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  background: gray;
+  z-index: 9;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 .volume {
-  font-size: 30px;
-  font-weight: normal;
+  text-shadow: 0 0 1px #24333D, 0 0 2px #24333D, 0 0 3px #24333D, 0 0 4px #24333D;
+  position: absolute;
+  font-size: 40px;
+  font-weight: bold;
+  top: 10px;
+  right: 15px;
 }
+
+
