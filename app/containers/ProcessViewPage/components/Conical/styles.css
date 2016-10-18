@@ -56,7 +56,7 @@
   stroke-linejoin: round;
   fill: none;
   width: 30px;
-  transform: translateX(170px) translateY(150px) scaleX(-1);
+  transform: translateX(50px) translateY(260px);
 }
 
 .iconHeating path {

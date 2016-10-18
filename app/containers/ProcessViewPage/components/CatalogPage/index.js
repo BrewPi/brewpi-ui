@@ -49,9 +49,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Input />
               </td>
               <td>
-                <Tubes.Input liquid={'water'} />
-                <Tubes.Input liquid={'hotwater'} />
-                <Tubes.Input liquid={'beer'} />
+                <Tubes.Input flows={[{ dir: { s: 'r' }, liquid: 'water' }]} />
+                <Tubes.Input flows={[{ dir: { s: 'r' }, liquid: 'hotwater' }]} />
+                <Tubes.Input flows={[{ dir: { s: 'r' }, liquid: 'beer' }]} />
               </td>
             </tr>
             <tr>
@@ -60,9 +60,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Output />
               </td>
               <td>
-                <Tubes.Output liquid={'water'} />
-                <Tubes.Output liquid={'hotwater'} />
-                <Tubes.Output liquid={'beer'} />
+                <Tubes.Output flows={[{ dir: { l: 's' }, liquid: 'water' }]} />
+                <Tubes.Output flows={[{ dir: { l: 's' }, liquid: 'hotwater' }]} />
+                <Tubes.Output flows={[{ dir: { l: 's' }, liquid: 'beer' }]} />
               </td>
             </tr>
             <tr>
@@ -71,9 +71,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Dip />
               </td>
               <td>
-                <Tubes.Dip liquid={'water'} flow={'wS'} />
-                <Tubes.Dip liquid={'hotwater'} flow={'wS'} />
-                <Tubes.Dip liquid={'beer'} flow={'wS'} />
+                <Tubes.Dip flows={[{ dir: { l: 'b' }, liquid: 'water' }]} />
+                <Tubes.Dip flows={[{ dir: { l: 'b' }, liquid: 'hotwater' }]} />
+                <Tubes.Dip flows={[{ dir: { l: 'b' }, liquid: 'beer' }]} />
               </td>
             </tr>
             <tr>
@@ -82,9 +82,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Straight />
               </td>
               <td>
-                <Tubes.Straight flow={'wE'} liquid={'water'} />
-                <Tubes.Straight flow={'wE'} liquid={'hotwater'} />
-                <Tubes.Straight flow={'We'} liquid={'beer'} />
+                <Tubes.Straight flows={[{ dir: { l: 'r' }, liquid: 'water' }]} />
+                <Tubes.Straight flows={[{ dir: { l: 'r' }, liquid: 'hotwater' }]} />
+                <Tubes.Straight flows={[{ dir: { l: 'r' }, liquid: 'beer' }]} />
 
               </td>
             </tr>
@@ -94,9 +94,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Elbow />
               </td>
               <td>
-                <Tubes.Elbow flow={'nE'} liquid={'water'} />
-                <Tubes.Elbow flow={'Ne'} liquid={'hotwater'} />
-                <Tubes.Elbow flow={'nE'} liquid={'beer'} />
+                <Tubes.Elbow flows={[{ dir: { t: 'r' }, liquid: 'water' }]} />
+                <Tubes.Elbow flows={[{ dir: { t: 'r' }, liquid: 'hotwater' }]} />
+                <Tubes.Elbow flows={[{ dir: { t: 'r' }, liquid: 'beer' }]} />
               </td>
             </tr>
             <tr>
@@ -105,9 +105,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Tee />
               </td>
               <td>
-                <Tubes.Tee flow={'wNE'} liquid={'water'} />
-                <Tubes.Tee flow={'wNE'} liquid={'hotwater'} />
-                <Tubes.Tee flow={'wNE'} liquid={'beer'} />
+                <Tubes.Tee flows={[{ dir: { l: 'tr' }, liquid: 'water' }]} />
+                <Tubes.Tee flows={[{ dir: { t: 'lr' }, liquid: 'hotwater' }]} />
+                <Tubes.Tee flows={[{ dir: { t: 'lr' }, liquid: 'beer' }]} />
               </td>
             </tr>
             <tr>
@@ -116,9 +116,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Cross />
               </td>
               <td>
-                <Tubes.Cross flow={'NEsw'} liquid={'water'} />
-                <Tubes.Cross flow={'NEsw'} liquid={'hotwater'} />
-                <Tubes.Cross flow={'NEsw'} liquid={'beer'} />
+                <Tubes.Cross flows={[{ dir: { l: 'trb' }, liquid: 'water' }]} />
+                <Tubes.Cross flows={[{ dir: { l: 'trb' }, liquid: 'hotwater' }]} />
+                <Tubes.Cross flows={[{ dir: { l: 'trb' }, liquid: 'beer' }]} />
               </td>
             </tr>
             <tr>
@@ -127,9 +127,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Bridge />
               </td>
               <td>
-                <Tubes.Bridge flow={'Ew'} liquid={'water'} />
-                <Tubes.Bridge flow={'eW'} liquid={'hotwater'} />
-                <Tubes.Bridge flow={'Ew'} liquid={'beer'} />
+                <Tubes.Bridge flows={[{ dir: { l: 'r' }, liquid: 'water' }]} />
+                <Tubes.Bridge flows={[{ dir: { l: 'r' }, liquid: 'hotwater' }]} />
+                <Tubes.Bridge flows={[{ dir: { l: 'r' }, liquid: 'beer' }]} />
               </td>
             </tr>
             <tr>
@@ -138,9 +138,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Inlet />
               </td>
               <td>
-                <Tubes.Inlet flow={'Sw'} liquid={'water'} />
-                <Tubes.Inlet flow={'Sw'} liquid={'hotwater'} />
-                <Tubes.Inlet flow={'Sw'} liquid={'beer'} />
+                <Tubes.Inlet flows={[{ dir: { l: 'k' }, liquid: 'water' }]} />
+                <Tubes.Inlet flows={[{ dir: { l: 'k' }, liquid: 'hotwater' }]} />
+                <Tubes.Inlet flows={[{ dir: { l: 'k' }, liquid: 'beer' }]} />
               </td>
             </tr>
             <tr>
@@ -149,9 +149,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.InletStraight />
               </td>
               <td>
-                <Tubes.InletStraight flow={'wE'} liquid={'water'} />
-                <Tubes.InletStraight flow={'wE'} liquid={'hotwater'} />
-                <Tubes.InletStraight flow={'wE'} liquid={'beer'} />
+                <Tubes.InletStraight flows={[{ dir: { l: 'k' }, liquid: 'water' }]} />
+                <Tubes.InletStraight flows={[{ dir: { l: 'k' }, liquid: 'hotwater' }]} />
+                <Tubes.InletStraight flows={[{ dir: { l: 'k' }, liquid: 'beer' }]} />
               </td>
             </tr>
             <tr>
@@ -160,9 +160,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.InletWhirlpool />
               </td>
               <td>
-                <Tubes.InletWhirlpool flow={'Sw'} liquid={'water'} />
-                <Tubes.InletWhirlpool flow={'Sw'} liquid={'hotwater'} />
-                <Tubes.InletWhirlpool flow={'Sw'} liquid={'beer'} />
+                <Tubes.InletWhirlpool flows={[{ dir: { l: 'k' }, liquid: 'water' }]} />
+                <Tubes.InletWhirlpool flows={[{ dir: { l: 'k' }, liquid: 'hotwater' }]} />
+                <Tubes.InletWhirlpool flows={[{ dir: { l: 'k' }, liquid: 'beer' }]} />
               </td>
             </tr>
             <tr>
@@ -171,8 +171,18 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Valves.Manual liquid={'water'} />
               </td>
               <td>
-                <Valves.Manual position={'closed'} liquid={'water'} />
-                <Valves.Manual position={'midway'} />
+                <Valves.Manual
+                  settings={{ pos: 'open' }}
+                  flows={[{ dir: { l: 'r' }, liquid: 'water' }]}
+                />
+                <Valves.Manual
+                  settings={{ pos: 'closed' }}
+                  flows={[{ dir: { l: '' }, liquid: 'water' }]}
+                />
+                <Valves.Manual
+                  settings={{ pos: 'midway' }}
+                  flows={[{ dir: { l: 'r' }, liquid: 'water' }]}
+                />
               </td>
             </tr>
             <tr>
@@ -181,10 +191,39 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Valves.Motor />
               </td>
               <td>
-                <Valves.Motor powered={'opening'} />
-                <Valves.Motor powered={'closing'} />
-                <Valves.Motor powered={'opening'} position={'midway'} />
-                <Valves.Motor powered={'idle'} position={'closed'} />
+                <Valves.Motor
+                  settings={{ pos: 'open' }}
+                  flows={[{ dir: { l: 'r' }, liquid: 'water' }]}
+                />
+                <Valves.Motor
+                  settings={{ powered: 'opening', pos: 'midway' }}
+                  flows={[{ dir: { l: 'r' }, liquid: 'water' }]}
+                />
+                <Valves.Motor
+                  settings={{ pos: 'closed' }}
+                  flows={[
+                    { dir: { l: '' }, liquid: 'water' },
+                    { dir: { r: '' }, liquid: 'beer' },
+                  ]}
+                />
+                <Valves.Motor
+                  settings={{ powered: 'closing', pos: 'midway' }}
+                  flows={[
+                    { dir: { l: 'r' }, liquid: 'water' },
+                  ]}
+                />
+                <Valves.Motor
+                  settings={{ pos: 'closed' }}
+                  flows={[
+                    { dir: { l: '' }, liquid: 'water' },
+                  ]}
+                />
+                <Valves.Motor
+                  settings={{ pos: 'closed' }}
+                  flows={[
+                    { dir: { r: '' }, liquid: 'beer' },
+                  ]}
+                />
               </td>
             </tr>
             <tr>
@@ -193,9 +232,21 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Valves.Check />
               </td>
               <td>
-                <Valves.Check liquid={'water'} />
-                <Valves.Check liquid={'hotwater'} />
-                <Valves.Check liquid={'beer'} />
+                <Valves.Check
+                  flows={[
+                    { dir: { l: 'r' }, liquid: 'water' },
+                  ]}
+                />
+                <Valves.Check
+                  flows={[
+                    { dir: { r: '' }, liquid: 'hotwater' },
+                  ]}
+                />
+                <Valves.Check
+                  flows={[
+                    { dir: { l: 'r' }, liquid: 'beer' },
+                  ]}
+                />
               </td>
             </tr>
             <tr>

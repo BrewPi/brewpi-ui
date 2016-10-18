@@ -10,7 +10,7 @@ const SvgConicalLegs = require('./svg/conical_legs.svg?tag=g');
 const SvgSetpoint = require('./svg/setpoint.svg?tag=g');
 const SvgTemp = require('./svg/temp.svg?tag=g');
 const SvgCoil = require('../Coil/svg/coil.svg?tag=g');
-const SvgIconHeating = require('../Icons/svg/heating.svg');
+const SvgIconHeating = require('../Icons/svg/heating.svg?tag=g');
 
 
 import { SvgParent } from '../SvgParent';
@@ -22,7 +22,7 @@ export const Conical = (props) => (
     <SvgSetpoint className={styles.setpoint} />
     <SvgTemp className={styles.temp} />
     <SvgCoil className={styles.coil} />
-    <SvgConicalLegs className={styles.conicalLegs} />
+    <SvgConicalLegs className={styles.conicalLegs} style={{ zIndex: 10 }} />
     <SvgIconHeating className={styles.iconHeating} />
   </SvgParent>
 );

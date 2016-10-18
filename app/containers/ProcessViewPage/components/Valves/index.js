@@ -37,7 +37,9 @@ const renderLiquid = (flows) => {
     for (const flow of flows.values()) {
       for (const [inEdge, outEdges] of Object.entries(flow.dir)) {
         if (outEdges !== '') {
-          middle = flow.liquid; // flow from one side to the other side, middle is filled
+          middle = flow.liquid; // flow from one side to the other side, everything is filled
+          left = flow.liquid;
+          right = flow.liquid;
         } else {
           // blocked flow on an edge, render up to ball
           switch (inEdge) {
@@ -58,9 +60,9 @@ const renderLiquid = (flows) => {
   }
   return (
     <g className={styles.liquid}>
-      {(left) ? <g key={'l'} style={Liquids.strokeStyle(left)}><line x1="0" y1="25" x2="8" y2="25" /></g> : null }
-      {(middle) ? <g key={'m'} style={Liquids.strokeStyle(middle)}><line x1="0" y1="25" x2="50" y2="25" /></g> : null }
-      {(right) ? <g key={'r'} style={Liquids.strokeStyle(right)}><line x1="42" y1="25" x2="50" y2="25" /></g> : null }
+      {(left) ? <g key={'l'} style={Liquids.strokeStyle(left)}><line x1="0" y1="25" x2="10" y2="25" /></g> : null }
+      {(middle) ? <g key={'m'} style={Liquids.fillStyle(middle)}><circle cx="25" cy="25" r="16" /></g> : null }
+      {(right) ? <g key={'r'} style={Liquids.strokeStyle(right)}><line x1="40" y1="25" x2="50" y2="25" /></g> : null }
     </g>
   );
 };
@@ -73,7 +75,7 @@ class Manual extends React.Component {
   };
 
   render() {
-    const posClass = posClasses[this.props.settings.get('pos')] || posClasses.default;
+    const posClass = posClasses[this.props.settings.pos] || posClasses.default;
     const renderedLiquid = renderLiquid(this.props.flows);
     return (
       <SvgParent>
