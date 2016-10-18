@@ -96,8 +96,8 @@ class Motor extends React.Component {
     return (pos !== 'closed') ? { r: 'l', l: 'r' } : { r: '', l: '' };
   };
   render() {
-    const powerClass = powerClasses[this.props.settings.get('powered')] || powerClasses.default;
-    const posClass = posClasses[this.props.settings.get('pos')] || posClasses.default;
+    const powerClass = powerClasses[this.props.settings.powered] || powerClasses.default;
+    const posClass = posClasses[this.props.settings.pos] || posClasses.default;
     const renderedLiquid = renderLiquid(this.props.flows);
     return (
       <SvgParent>

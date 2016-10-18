@@ -190,7 +190,7 @@ export class Part extends React.Component {
       return <NoPart />;
     }
     const id = data.get('id');
-    const settings = data.get('settings');
+    const partStyle = { zIndex: this.zIndex() };
 
     const rotate = data.get('rotate') || '0';
     const rotateClassName = rotateClassNames[rotate];
@@ -199,14 +199,20 @@ export class Part extends React.Component {
     const flipClassName = (flip) ? styles.flipped : undefined;
 
     let flows = this.props.flows;
-    if (flows && rotate) {
-      // flows are tile flows, rotate back for part flows
-      flows = flows.map((flow) => ({ dir: rotateFlows(flow.dir, 360 - rotate), liquid: flow.liquid }));
+    if (flows) {
+      if (rotate) {
+        // flows are tile flows, rotate back for part flows
+        flows = flows.map((flow) => ({ dir: rotateFlows(flow.dir, 360 - rotate), liquid: flow.liquid }));
+      }
+      flows = flows.toJS(); // pass props as non-immutable objects
     }
 
-    const partStyle = { zIndex: this.zIndex() };
+    let settings = data.get('settings');
+    if (settings) {
+      settings = settings.toJS();
+    }
 
-    const renderedComponent = React.createElement(Part.component(data), { powered: 'on', id, settings, flows, flip, rotate });
+    const renderedComponent = React.createElement(Part.component(data), { id, settings, flows, flip, rotate });
     return (
       <div style={partStyle} className={classNames(styles.part, rotateClassName, flipClassName)}>
         {renderedComponent}
