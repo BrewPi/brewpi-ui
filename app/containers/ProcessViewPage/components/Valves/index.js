@@ -96,7 +96,7 @@ class Motor extends React.Component {
     return (pos !== 'closed') ? { r: 'l', l: 'r' } : { r: '', l: '' };
   };
   render() {
-    const powerClass = powerClasses[this.props.powered] || powerClasses.default;
+    const powerClass = powerClasses[this.props.settings.get('powered')] || powerClasses.default;
     const posClass = posClasses[this.props.settings.get('pos')] || posClasses.default;
     const renderedLiquid = renderLiquid(this.props.flows);
     return (
@@ -113,7 +113,6 @@ class Motor extends React.Component {
 }
 Motor.propTypes = {
   settings: React.PropTypes.object,
-  powered: React.PropTypes.string,
   flows: React.PropTypes.object,
 };
 Motor.defaultProps = {
