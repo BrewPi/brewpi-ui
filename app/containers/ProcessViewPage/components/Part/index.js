@@ -24,6 +24,7 @@ import { FridgeTall, FridgeFan, FridgeShelf } from '../FridgeTall';
 import { GlycolReservoir } from '../GlycolReservoir';
 import { Keg } from '../Keg';
 import { TubularHeater } from '../TubularHeater';
+import { List, Map } from 'immutable';
 
 const classNames = require('classnames');
 
@@ -221,8 +222,8 @@ export class Part extends React.Component {
   }
 }
 Part.propTypes = {
-  data: React.PropTypes.object,
-  flows: React.PropTypes.object,
+  data: React.PropTypes.instanceOf(Map),
+  flows: React.PropTypes.instanceOf(List),
 };
 
 export default Part;

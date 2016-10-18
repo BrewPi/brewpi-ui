@@ -58,7 +58,7 @@ class Input extends React.Component {
   }
 }
 Input.propTypes = {
-  flows: React.PropTypes.object,
+  flows: React.PropTypes.array,
 };
 
 class Output extends React.Component {
@@ -74,7 +74,7 @@ class Output extends React.Component {
   }
 }
 Output.propTypes = {
-  flows: React.PropTypes.object,
+  flows: React.PropTypes.array,
 };
 
 
@@ -92,7 +92,7 @@ class Straight extends React.Component {
   }
 }
 Straight.propTypes = {
-  flows: React.PropTypes.object,
+  flows: React.PropTypes.array,
 };
 
 class Elbow extends React.Component {
@@ -109,7 +109,7 @@ class Elbow extends React.Component {
   }
 }
 Elbow.propTypes = {
-  flows: React.PropTypes.object,
+  flows: React.PropTypes.array,
 };
 
 class Tee extends React.Component {
@@ -125,7 +125,7 @@ class Tee extends React.Component {
   }
 }
 Tee.propTypes = {
-  flows: React.PropTypes.object,
+  flows: React.PropTypes.array,
 };
 
 class Cross extends React.Component {
@@ -141,7 +141,7 @@ class Cross extends React.Component {
   }
 }
 Cross.propTypes = {
-  flows: React.PropTypes.object,
+  flows: React.PropTypes.array,
 };
 
 class Bridge extends React.Component {
@@ -157,7 +157,7 @@ class Bridge extends React.Component {
   }
 }
 Bridge.propTypes = {
-  flows: React.PropTypes.object,
+  flows: React.PropTypes.array,
 };
 
 class Inlet extends React.Component {
@@ -173,7 +173,7 @@ class Inlet extends React.Component {
   }
 }
 Inlet.propTypes = {
-  flows: React.PropTypes.object,
+  flows: React.PropTypes.array,
 };
 
 class InletStraight extends React.Component {
@@ -189,7 +189,7 @@ class InletStraight extends React.Component {
   }
 }
 InletStraight.propTypes = {
-  flows: React.PropTypes.object,
+  flows: React.PropTypes.array,
 };
 
 
@@ -206,7 +206,7 @@ class Dip extends React.Component {
   }
 }
 Dip.propTypes = {
-  flows: React.PropTypes.object,
+  flows: React.PropTypes.array,
 };
 
 class InletWhirlpool extends React.Component {
@@ -222,7 +222,7 @@ class InletWhirlpool extends React.Component {
   }
 }
 InletWhirlpool.propTypes = {
-  flows: React.PropTypes.object,
+  flows: React.PropTypes.array,
 };
 
 export const Tubes = {

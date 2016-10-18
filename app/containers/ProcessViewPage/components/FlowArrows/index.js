@@ -58,7 +58,7 @@ export const FlowArrows = (props) => {
   );
 };
 FlowArrows.propTypes = {
-  flows: React.PropTypes.object,
+  flows: React.PropTypes.array,
 };
 
 /* Renders flow arrows, to be used inside an svg tag
@@ -74,7 +74,7 @@ export const FlowArrowsBridge = (props) => {
   );
 };
 FlowArrowsBridge.propTypes = {
-  flows: React.PropTypes.object,
+  flows: React.PropTypes.array,
 };
 
 export default {

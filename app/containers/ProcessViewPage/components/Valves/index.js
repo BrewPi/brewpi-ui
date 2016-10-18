@@ -30,25 +30,24 @@ const posClasses = {
 
 // Render liquid all the way through, or only up to the ball if the valve is closed, but there is inflow from a side.
 const renderLiquid = (flows) => {
-  let liquidSvgParts = [];
+  let left = false;
+  let middle = false;
+  let right = false;
   if (typeof flows !== 'undefined') {
     for (const flow of flows.values()) {
-      const liquid = flow.liquid;
       for (const [inEdge, outEdges] of Object.entries(flow.dir)) {
         if (outEdges !== '') {
-          // flow from one side to the other side, middle is filled
-          liquidSvgParts = <g key={'m'} style={Liquids.strokeStyle(liquid)}><line x1="0" y1="25" x2="50" y2="25" /></g>;
-          break; // we can return, because this will be the only flow
+          middle = flow.liquid; // flow from one side to the other side, middle is filled
         } else {
           // blocked flow on an edge, render up to ball
           switch (inEdge) {
             case 'l':
+              left = flow.liquid;
               // render liquid on the left side
-              liquidSvgParts.push(<g key={'l'} style={Liquids.strokeStyle(liquid)}><line x1="0" y1="25" x2="8" y2="25" /></g>);
               break;
             case 'r':
+              right = flow.liquid;
               // render liquid on the right side
-              liquidSvgParts.push(<g key={'r'} style={Liquids.strokeStyle(liquid)}><line x1="42" y1="25" x2="50" y2="25" /></g>);
               break;
             default:
               break;
@@ -57,7 +56,13 @@ const renderLiquid = (flows) => {
       }
     }
   }
-  return <g className={styles.liquid}>{liquidSvgParts}</g>;
+  return (
+    <g className={styles.liquid}>
+      {(left) ? <g key={'l'} style={Liquids.strokeStyle(left)}><line x1="0" y1="25" x2="8" y2="25" /></g> : null }
+      {(middle) ? <g key={'m'} style={Liquids.strokeStyle(middle)}><line x1="0" y1="25" x2="50" y2="25" /></g> : null }
+      {(right) ? <g key={'r'} style={Liquids.strokeStyle(right)}><line x1="42" y1="25" x2="50" y2="25" /></g> : null }
+    </g>
+  );
 };
 
 
@@ -83,7 +88,7 @@ class Manual extends React.Component {
 
 Manual.propTypes = {
   settings: React.PropTypes.object,
-  flows: React.PropTypes.object,
+  flows: React.PropTypes.array,
 };
 Manual.defaultProps = {
   settings: new Map(),
@@ -113,7 +118,7 @@ class Motor extends React.Component {
 }
 Motor.propTypes = {
   settings: React.PropTypes.object,
-  flows: React.PropTypes.object,
+  flows: React.PropTypes.array,
 };
 Motor.defaultProps = {
   settings: new Map(),
@@ -134,7 +139,7 @@ class Check extends React.Component {
   }
 }
 Check.propTypes = {
-  flows: React.PropTypes.object,
+  flows: React.PropTypes.array,
 };
 
 export const Valves = {
