@@ -103,6 +103,21 @@
       "settings": {
         "pos": "closed"
       }
+    },
+    {
+      "id": "hlt",
+      "settings": {
+        "volume": 60.0,
+        "liquid": "water"
+      }
+    },
+    {
+      "id": "bk",
+      "settings": {
+        "volume": 24.5,
+        "liquid": "water"
+      }
     }
+    
   ]
 }

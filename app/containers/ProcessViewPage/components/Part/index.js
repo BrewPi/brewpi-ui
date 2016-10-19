@@ -224,6 +224,15 @@ export class Part extends React.Component {
     const flip = data.get('flip');
     const flipClassName = (flip) ? styles.flipped : undefined;
 
+    let settings = data.get('settings');
+    if (settings) {
+      settings = settings.toJS();
+    }
+    let options = data.get('options');
+    if (options) {
+      options = options.toJS();
+    }
+
     // flows are in an immutable table. We want to get them back to normal JS objects
     let flows = this.props.flows;
     const width = flows.width;
@@ -257,12 +266,7 @@ export class Part extends React.Component {
       }
     }
 
-    let settings = data.get('settings');
-    if (settings) {
-      settings = settings.toJS();
-    }
-
-    const renderedComponent = React.createElement(Part.component(data), { id, settings, flows, flip, rotate });
+    const renderedComponent = React.createElement(Part.component(data), { id, settings, options, flows, flip, rotate });
     return (
       <div style={partStyle} className={classNames(styles.part, rotateClassName, flipClassName)}>
         {renderedComponent}

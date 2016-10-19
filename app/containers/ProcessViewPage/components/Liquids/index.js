@@ -5,26 +5,28 @@ const fills = {
   background: '#24333D',
   conflict: 'orange',
 };
+function color(liquid) {
+  return liquid ? fills[liquid] : fills.background;
+}
 
 function fillStyle(liquid) {
-  const fill = liquid ? fills[liquid] : fills.background;
   return (
     {
-      fill,
+      fill: color(liquid),
     }
   );
 }
 
 function strokeStyle(liquid) {
-  const stroke = liquid ? fills[liquid] : fills.background;
   return (
     {
-      stroke,
+      stroke: color(liquid),
     }
   );
 }
 
 export const Liquids = {
+  color,
   fillStyle,
   strokeStyle,
 };

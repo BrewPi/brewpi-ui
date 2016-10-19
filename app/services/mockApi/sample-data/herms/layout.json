@@ -82,7 +82,10 @@
     {
       "part": {
         "type": "KETTLE",
-        "id": "hlt"
+        "id": "hlt",
+        "options": {
+          "volume": 70
+        }
       },
       "x": 2,
       "y": 2
@@ -380,7 +383,10 @@
     {
       "part": {
         "type": "KETTLE",
-        "id": "mt"
+        "id": "mt",
+        "options": {
+          "volume": 70
+        }
       },
       "x": 9,
       "y": 2
@@ -597,7 +603,10 @@
     {
       "part": {
         "type": "KETTLE",
-        "id": "bk"
+        "id": "bk",
+        "options": {
+          "volume": 70
+        }
       },
       "x": 16,
       "y": 2

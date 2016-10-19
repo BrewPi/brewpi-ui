@@ -106,8 +106,9 @@
     },
     {
       "id": "hlt",
-      "settings":{
-        "vol": 58.0
+      "settings": {
+        "volume": 58.0,
+        "liquid": "water"
       }
     }
   ]
