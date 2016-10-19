@@ -77,7 +77,22 @@ FlowArrowsBridge.propTypes = {
   flows: React.PropTypes.array,
 };
 
+// Find the flow that maches this part/tile and extract which liquid it is
+export const pickLiquid = (flows, allowedFlows) => {
+  if (typeof flows !== 'undefined') {
+    for (const flow of flows.values()) {
+      for (const edge of Object.keys(flow.dir)) {
+        if (typeof allowedFlows[edge] !== 'undefined') {
+          return flow.liquid;
+        }
+      }
+    }
+  }
+  return undefined;
+};
+
 export default {
   FlowArrowsBridge,
   FlowArrows,
+  pickLiquid,
 };

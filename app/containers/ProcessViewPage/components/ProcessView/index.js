@@ -26,12 +26,13 @@ class ProcessView extends React.Component { // eslint-disable-line react/prefer-
       for (let x = 0; x < cols; x += 1) {
         const key = `tile-${x}-${y}`;
         const partsInCell = layout.getCell(x, y);
-        const flowsInCell = flows.getCell(x, y);
         const partComponents = [];
         let keyVal = 0;
         if (partsInCell !== undefined) {
           for (const part of partsInCell) {
-            partComponents.push(<Part data={part} key={keyVal} flows={flowsInCell} />);
+            const [flowsWidth, flowsHeight] = Part.flowDimensions(part);
+            const flowsInPart = flows.slice(x, y, flowsWidth, flowsHeight);
+            partComponents.push(<Part data={part} key={keyVal} flows={flowsInPart} />);
             keyVal += 1;
           }
         }

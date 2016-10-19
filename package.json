@@ -217,7 +217,7 @@
     "fontfaceobserver": "2.0.4",
     "immutable": "3.8.1",
     "immutable-devtools": "0.0.7",
-    "immutable-table": "1.0.0",
+    "immutable-table": "github:elcojacobs/immutable-table#master",
     "intl": "1.2.4",
     "invariant": "2.2.1",
     "ip": "1.1.3",

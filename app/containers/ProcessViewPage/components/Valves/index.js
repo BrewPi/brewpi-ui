@@ -4,7 +4,7 @@ import React from 'react';
 const classNames = require('classnames');
 import styles from './styles.css';
 import { Map } from 'immutable';
-import { FlowArrows } from '../FlowArrows';
+import { FlowArrows } from '../Flows';
 
 // load svg's and inline them wigh g tag instead of svg tag, because they are used nested
 const SvgBall = require('./svg/ball.svg?tag=g');

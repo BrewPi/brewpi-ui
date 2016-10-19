@@ -3,8 +3,11 @@ import expect from 'expect';
 
 describe('<Part />', () => {
   describe('rotateArray', () => {
-    it('should rotate a 2 dimensional array by 90 degrees', () => {
-      expect(rotateArray([[0, 1, 2], [3, 4, 5]])).toEqual([[3, 0], [4, 1], [5, 2]]);
+    it('should rotate a 2 dimensional array by 90/180/270 degrees', () => {
+      expect(rotateArray([[0, 1, 2], [3, 4, 5]], 0)).toEqual([[0, 1, 2], [3, 4, 5]]);
+      expect(rotateArray([[0, 1, 2], [3, 4, 5]], 90)).toEqual([[3, 0], [4, 1], [5, 2]]);
+      expect(rotateArray([[0, 1, 2], [3, 4, 5]], 180)).toEqual([[5, 4, 3], [2, 1, 0]]);
+      expect(rotateArray([[0, 1, 2], [3, 4, 5]], 270)).toEqual([[2, 5], [1, 4], [0, 3]]);
     });
   });
   describe('rotateFlows', () => {

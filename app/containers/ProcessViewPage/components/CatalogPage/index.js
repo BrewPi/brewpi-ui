@@ -299,9 +299,18 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Cfc />
               </td>
               <td>
-                <Cfc liquid={'water'} />
-                <Cfc liquid={'hotwater'} />
-                <Cfc liquid={'beer'} />
+                <Cfc
+                  flows={[
+                    [[{ dir: { l: 'r' }, liquid: 'water' }], [{ dir: { l: 'r' }, liquid: 'water' }], [{ dir: { l: 'r' }, liquid: 'water' }]],
+                    [[], [], []],
+                  ]}
+                />
+                <Cfc
+                  flows={[
+                    [[{ dir: { l: 'r' }, liquid: 'water' }], [{ dir: { l: 'r' }, liquid: 'water' }], [{ dir: { l: 'r' }, liquid: 'water' }]],
+                    [[{ dir: { r: 'l' }, liquid: 'beer' }], [{ dir: { r: 'l' }, liquid: 'beer' }], [{ dir: { r: 'l' }, liquid: 'beer' }]],
+                  ]}
+                />
               </td>
             </tr>
             <tr>
@@ -359,8 +368,18 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Coil />
               </td>
               <td>
-                <Coil liquid={'water'} />
-                <Coil liquid={'hotwater'} />
+                <Coil
+                  flows={[
+                    [[{ dir: { l: 'b' }, liquid: 'water' }], [], []],
+                    [[{ dir: { t: 'l' }, liquid: 'water' }], [], []],
+                  ]}
+                />
+                <Coil
+                  flows={[
+                    [[{ dir: { l: 'b' }, liquid: 'hotwater' }], [], []],
+                    [[{ dir: { t: 'l' }, liquid: 'hotwater' }], [], []],
+                  ]}
+                />
               </td>
             </tr>
             <tr>

@@ -25,7 +25,8 @@ import { GlycolReservoir } from '../GlycolReservoir';
 import { Keg } from '../Keg';
 import { TubularHeater } from '../TubularHeater';
 import { SetPoint } from '../SetPoint';
-import { List, Map } from 'immutable';
+import { Map } from 'immutable';
+import { Table } from 'immutable-table';
 
 const classNames = require('classnames');
 
@@ -121,7 +122,7 @@ const rotateFlowTile = (oldFlows, angle) => {
   return newFlows;
 };
 
-export const rotateArray = (m) => {
+const rotateArray90 = (m) => {
   const result = [];
   const width = m[0].length;
   const height = m.length;
@@ -134,6 +135,17 @@ export const rotateArray = (m) => {
   return result;
 };
 
+export const rotateArray = (m, angle) => {
+  // transpose entire array
+  let angleRemaining = angle || 0;
+  let m2 = m;
+  while (angleRemaining > 0) {
+    m2 = rotateArray90(m2);
+    angleRemaining -= 90;
+  }
+  return m2;
+};
+
 export const rotateFlows = (oldFlows, angle) => {
   let newFlows;
   // flows can be an Array[] or Array[][]
@@ -144,12 +156,8 @@ export const rotateFlows = (oldFlows, angle) => {
       toRotate = [oldFlows]; // ensure it is a two-dimensional array
     }
     newFlows = toRotate;
-    // transpose entire array
-    let angleRemaining = angle;
-    while (angleRemaining > 0) {
-      newFlows = rotateArray(newFlows);
-      angleRemaining -= 90;
-    }
+    // rotate entire array
+    newFlows = rotateArray(newFlows, angle);
     // rotate each tile
     newFlows = newFlows.map((y) => y.map((x) => rotateFlowTile(x, angle)));
   } else {
@@ -174,6 +182,21 @@ export class Part extends React.Component {
     const flows = flowFunction(data);
     const rotate = data.get('rotate');
     return (rotate) ? rotateFlows(flows, rotate) : flows;
+  }
+
+  static flowDimensions(data) {
+    const flows = Part.acceptsFlows(data);
+    let width = 1;
+    let height = 1;
+    if (flows.constructor === Array) {
+      if (flows[0].constructor === Array) {
+        width = flows[0].length;
+        height = flows.length;
+      } else {
+        width = flows.length;
+      }
+    }
+    return [width, height];
   }
 
   type() {
@@ -201,13 +224,37 @@ export class Part extends React.Component {
     const flip = data.get('flip');
     const flipClassName = (flip) ? styles.flipped : undefined;
 
+    // flows are in an immutable table. We want to get them back to normal JS objects
     let flows = this.props.flows;
+    const width = flows.width;
+    const height = flows.height;
     if (flows) {
-      if (rotate) {
-        // flows are tile flows, rotate back for part flows
-        flows = flows.map((flow) => ({ dir: rotateFlows(flow.dir, 360 - rotate), liquid: flow.liquid }));
+      const partFlows = [];
+      for (let y = 0; y < height; y += 1) {
+        const row = [];
+        for (let x = 0; x < width; x += 1) {
+          const flowTile = flows.getCell(x, y);
+          // to pass them to the part we convert them to a normal mutable object by reading the cells
+          const flowsInTile = [];
+          if (flowTile !== undefined) {
+            for (const flow of flowTile) {
+              if (flow.dir !== 'undefined') {
+                // We rotate each flow in the tile back to normal orientation
+                flowsInTile.push({ dir: rotateFlows(flow.dir, 360 - rotate), liquid: flow.liquid });
+              }
+            }
+          }
+          row.push(flowsInTile);
+        }
+        partFlows.push(row);
       }
-      flows = flows.toJS(); // pass props as non-immutable objects
+      if (width === 1 && height === 1) {
+        // unpack unnecessary 1x1 tables, because 1x1 parts do not expect an Array[][][], but an Array[] of flows
+        flows = partFlows[0][0];
+      } else {
+        // Then we rotate the entire table back to normal orientation
+        flows = rotateArray(partFlows, rotate);
+      }
     }
 
     let settings = data.get('settings');
@@ -225,7 +272,7 @@ export class Part extends React.Component {
 }
 Part.propTypes = {
   data: React.PropTypes.instanceOf(Map),
-  flows: React.PropTypes.instanceOf(List),
+  flows: React.PropTypes.instanceOf(Table),
 };
 
 export default Part;
