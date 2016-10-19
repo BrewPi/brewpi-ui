@@ -81,7 +81,8 @@
     },
     {
       "part": {
-        "type": "KETTLE"
+        "type": "KETTLE",
+        "id": "hlt"
       },
       "x": 2,
       "y": 2
@@ -162,7 +163,8 @@
     },
     {
       "part": {
-        "type": "VALVE_MANUAL"
+        "type": "VALVE_MANUAL",
+        "id": "m1"
       },
       "x": 2,
       "y": 12
@@ -311,7 +313,7 @@
     },
     {
       "part": {
-        "rotate": 90,
+        "rotate": 270,
         "type": "VALVE_MOTOR",
         "id": "v3"
       },
@@ -377,7 +379,8 @@
     },
     {
       "part": {
-        "type": "KETTLE"
+        "type": "KETTLE",
+        "id": "mt"
       },
       "x": 9,
       "y": 2
@@ -409,14 +412,15 @@
     },
     {
       "part": {
-        "type": "VALVE_MANUAL"
+        "type": "VALVE_MANUAL",
+        "id": "m2"
       },
       "x": 7,
       "y": 12
     },
     {
       "part": {
-        "rotate": 90,
+        "rotate": 270,
         "type": "VALVE_MOTOR",
         "id": "v5"
       },
@@ -441,7 +445,8 @@
     },
     {
       "part": {
-        "type": "VALVE_MANUAL"
+        "type": "VALVE_MANUAL",
+        "id": "m3"
       },
       "x": 9,
       "y": 12
@@ -456,7 +461,7 @@
     },
     {
       "part": {
-        "rotate": 90,
+        "rotate": 270,
         "type": "VALVE_MOTOR",
         "id": "v7"
       },
@@ -591,7 +596,8 @@
     },
     {
       "part": {
-        "type": "KETTLE"
+        "type": "KETTLE",
+        "id": "bk"
       },
       "x": 16,
       "y": 2
@@ -772,7 +778,8 @@
     },
     {
       "part": {
-        "type": "VALVE_MANUAL"
+        "type": "VALVE_MANUAL",
+        "id": "m4"
       },
       "x": 19,
       "y": 10

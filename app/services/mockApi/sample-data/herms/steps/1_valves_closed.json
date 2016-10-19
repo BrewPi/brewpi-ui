@@ -79,6 +79,30 @@
       "settings": {
         "pos": "closed"
       }
+    },
+    {
+      "id": "m1",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "m2",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "m3",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "m4",
+      "settings": {
+        "pos": "closed"
+      }
     }
   ]
 }
