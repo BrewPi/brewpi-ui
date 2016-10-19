@@ -48,3 +48,12 @@
   transform-origin: 25px 25px;
   transform: rotate(90deg);
 }
+
+.id {
+  position: absolute;
+  top: 39px;
+  left: 0;
+  width: 100%;
+  text-align: right;
+  font-size: 10px;
+}

@@ -78,12 +78,15 @@ class Manual extends React.Component {
     const posClass = posClasses[this.props.settings.pos] || posClasses.default;
     const renderedLiquid = renderLiquid(this.props.flows);
     return (
-      <SvgParent>
-        {renderedLiquid}
-        <SvgTube className={styles.tube} />
-        <SvgBall className={classNames(styles.ball, posClass)} />
-        <FlowArrows flows={this.props.flows} />
-      </SvgParent>
+      <div className={styles.Valve}>
+        <SvgParent>
+          {renderedLiquid}
+          <SvgTube className={styles.tube} />
+          <SvgBall className={classNames(styles.ball, posClass)} />
+          <FlowArrows flows={this.props.flows} />
+        </SvgParent>
+        <span className={styles.id}>{this.props.id}</span>
+      </div>
     );
   }
 }
@@ -91,6 +94,7 @@ class Manual extends React.Component {
 Manual.propTypes = {
   settings: React.PropTypes.object,
   flows: React.PropTypes.array,
+  id: React.PropTypes.string,
 };
 Manual.defaultProps = {
   settings: new Map(),
@@ -107,20 +111,24 @@ class Motor extends React.Component {
     const posClass = posClasses[this.props.settings.pos] || posClasses.default;
     const renderedLiquid = renderLiquid(this.props.flows);
     return (
-      <SvgParent>
-        {renderedLiquid}
-        <SvgTube className={styles.tube} />
-        <SvgBall className={classNames(styles.ball, posClass)} />
-        <SvgMotor className={powerClass} />
-        <SvgMotorPower className={styles.powerIcon} />
-        <FlowArrows flows={this.props.flows} />
-      </SvgParent>
+      <div className={styles.Valve}>
+        <SvgParent>
+          {renderedLiquid}
+          <SvgTube className={styles.tube} />
+          <SvgBall className={classNames(styles.ball, posClass)} />
+          <SvgMotor className={powerClass} />
+          <SvgMotorPower className={styles.powerIcon} />
+          <FlowArrows flows={this.props.flows} />
+        </SvgParent>
+        <span className={styles.id}>{this.props.id}</span>
+      </div>
     );
   }
 }
 Motor.propTypes = {
   settings: React.PropTypes.object,
   flows: React.PropTypes.array,
+  id: React.PropTypes.string,
 };
 Motor.defaultProps = {
   settings: new Map(),
