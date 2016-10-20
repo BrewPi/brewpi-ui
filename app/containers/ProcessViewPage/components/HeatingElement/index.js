@@ -1,27 +1,29 @@
 import React from 'react';
 import styles from './styles.css';
-import { Liquids } from '../Liquids';
 const classNames = require('classnames');
 
-const SvgElement = require('./svg/heater_element.svg?tag=g');
-const SvgDisplay = require('./svg/heater_display.svg?tag=g');
+const SvgElement = require('./svg/element.svg?tag=g');
 
 import { SvgParent } from '../SvgParent';
 
 export const HeatingElement = (props) => {
-  const { flip } = props; // is parent flipped?
-  const unflipStyle = flip ? styles.unflip : undefined;
+  const { flip, settings } = props;
+  const unflipStyle = flip ? styles.unflip : undefined; // is parent flipped?
+  const duty = (settings) ? settings.duty || 0 : 0;
+  const enclosureBgStyle = { height: `${duty}%` };
   return (
     <div className={styles.root}>
+      <div className={styles.enclosure}>
+        <div className={classNames(styles.value, unflipStyle)}>{duty}%</div>
+        <div className={styles.enclosureBg} style={enclosureBgStyle} />
+      </div>
       <SvgParent viewBox={'0 0 250 50'}>
         <SvgElement className={styles.element} />
-        <SvgDisplay className={styles.display} style={Liquids.fillStyle(props.liquid)} />
       </SvgParent>
-      <span className={classNames(styles.value, unflipStyle)}>0%</span>
     </div>
   );
 };
 HeatingElement.propTypes = {
   flip: React.PropTypes.bool,
-  liquid: React.PropTypes.string,
+  settings: React.PropTypes.object,
 };

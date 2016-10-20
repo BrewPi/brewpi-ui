@@ -37,7 +37,7 @@
       "part": {
         "type": "TUBE_STRAIGHT"
       },
-      "x": 1,
+      "x": [1,2],
       "y": 11
     },
     {
@@ -63,13 +63,6 @@
       },
       "x": 1,
       "y": 8
-    },
-    {
-      "part": {
-        "type": "TUBE_STRAIGHT"
-      },
-      "x": [2,3],
-      "y": 11
     },
     {
       "part": {
@@ -116,7 +109,8 @@
     },
     {
       "part": {
-        "type": "HEATING_ELEMENT"
+        "type": "HEATING_ELEMENT",
+        "id": "heat_hlt"
       },
       "x": 2,
       "y": 6
@@ -636,7 +630,8 @@
     {
       "part": {
         "type": "HEATING_ELEMENT",
-        "flip": true
+        "flip": true,
+        "id": "heat_bk"
       },
       "x": 17,
       "y": 6

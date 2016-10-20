@@ -9,6 +9,7 @@ view.steps = [
   require('./steps/2_valves_open.json'),
   require('./steps/3_fill_hlt.json'),
   require('./steps/4_fill_bk.json'),
+  require('./steps/5_heat_hlt_and_bk.json'),
 ];
 
 export default view;
