@@ -79,6 +79,24 @@
       "settings": {
         "pos": "open"
       }
+    },
+    {
+      "id": "m5",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "m6",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "m7",
+      "settings": {
+        "pos": "open"
+      }
     }
   ]
 }
