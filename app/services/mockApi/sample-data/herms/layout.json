@@ -37,7 +37,8 @@
     {
       "part": {
         "rotate": 270,
-        "type": "TUBE_INPUT"
+        "type": "TUBE_INPUT",
+        "id": "in1"
       },
       "x": 8,
       "y": 13

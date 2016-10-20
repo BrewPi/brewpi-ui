@@ -123,7 +123,7 @@ describe('ProcessViewPage', () => {
   describe('flowTableSelector', () => {
     it('will calculate possible flows for each tile', () => {
       const flowTable = flowTableSelector(stateView4);
-      expect(flowTable.getCell(0, 0)).toEqual({ s: 'r' }); // input == source
+      expect(flowTable.getCell(0, 0)).toEqual({ s: 'r', liquid: 'water' }); // input == source, set to water
       expect(flowTable.getCell(1, 0)).toEqual({ r: 'l', l: 'r' }); // straight
       expect(flowTable.getCell(2, 0)).toEqual({ l: 'b', b: 'l' }); // elbow, rotated 180deg
       expect(flowTable.getCell(2, 1)).toEqual({ b: 'lt', t: 'lb', l: 'tb' }); // tee, rotated 270deg

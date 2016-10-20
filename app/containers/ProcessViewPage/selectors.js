@@ -168,6 +168,7 @@ const flowTableSelector = createSelector(
         if (parts) {
           for (const part of parts) {
             const flows = Part.acceptsFlows(part);
+            const liquid = part.getIn(['settings', 'liquid']);
             if (flows.constructor === Array) {
               // flows can be an Array[] or Array[][]
               // for components that span multiple blocks
@@ -177,6 +178,9 @@ const flowTableSelector = createSelector(
                 if (obj.constructor === Array) {
                   // flows is Array[][]
                   for (const innerObj of obj) {
+                    if (innerObj.s !== undefined && liquid !== undefined) {
+                      innerObj.liquid = liquid;
+                    }
                     flowTable = mergeWithCell(x + dx, y + dy, flowTable, innerObj);
                     dx += 1;
                     if (x + dx >= width) {
@@ -190,6 +194,9 @@ const flowTableSelector = createSelector(
                   }
                 } else {
                   // flows is Array[]
+                  if (obj.s !== undefined && liquid !== undefined) {
+                    obj.liquid = liquid;
+                  }
                   flowTable = mergeWithCell(x + dx, y, flowTable, obj);
                   dx += 1;
                   if (x + dx >= width) {
@@ -199,6 +206,9 @@ const flowTableSelector = createSelector(
               }
             } else {
               // flows is a single object
+              if (flows.s !== undefined && liquid !== undefined) {
+                flows.liquid = liquid;
+              }
               flowTable = mergeWithCell(x, y, flowTable, flows);
             }
           }
@@ -246,8 +256,8 @@ const actualFlowTableSelector = createSelector(
     for (let x = 0; x < width; x += 1) {
       for (let y = 0; y < height; y += 1) {
         const tileFlow = possibleFlowTable.getCell(x, y);
-        if (typeof tileFlow !== 'undefined' && typeof tileFlow.s !== 'undefined') { // this tile is a source, start an expanding flow path from here
-          actualFlowTable = expandFlow(x, y, 's', possibleFlowTable, actualFlowTable);
+        if (tileFlow !== undefined && tileFlow.s !== undefined && tileFlow.liquid !== undefined) { // this tile is a source, start an expanding flow path from here
+          actualFlowTable = expandFlow(x, y, 's', tileFlow.liquid, possibleFlowTable, actualFlowTable);
         }
       }
     }
@@ -255,7 +265,7 @@ const actualFlowTableSelector = createSelector(
   }
 );
 
-const expandFlow = (x, y, inEdge, possibleFlowTable, actualFlowTable) => {
+const expandFlow = (x, y, inEdge, liquid, possibleFlowTable, actualFlowTable) => {
   const possibleFlow = possibleFlowTable.getCell(x, y) || {};
   const outEdges = possibleFlow[inEdge];
 
@@ -286,14 +296,14 @@ const expandFlow = (x, y, inEdge, possibleFlowTable, actualFlowTable) => {
     newCell.liquid = 'conflict';
   } else {
     newCell.dir[inEdge] = outEdges;
-    newCell.liquid = 'water';
+    newCell.liquid = liquid;
   }
   let newActualFlowTable = pushToCell(x, y, actualFlowTable, newCell);
   if (!conflict) { // only continue recursion when there are no conflicts
     for (const edge of outEdges) {
       const neighbour = getNeighbour(x, y, edge, possibleFlowTable.width, possibleFlowTable.height);
       if (neighbour) {
-        newActualFlowTable = expandFlow(neighbour.x, neighbour.y, neighbour.edge, possibleFlowTable, newActualFlowTable);
+        newActualFlowTable = expandFlow(neighbour.x, neighbour.y, neighbour.edge, liquid, possibleFlowTable, newActualFlowTable);
       }
     }
   }

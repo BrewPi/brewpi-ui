@@ -107,7 +107,13 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 58.0,
+        "volume": 60.0,
+        "liquid": "water"
+      }
+    },
+    {
+      "id": "in1",
+      "settings": {
         "liquid": "water"
       }
     }

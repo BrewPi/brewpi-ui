@@ -117,7 +117,12 @@
         "volume": 24.5,
         "liquid": "water"
       }
-    }
-    
+    },
+    {
+      "id": "in1",
+      "settings": {
+        "liquid": "water"
+      }
+    }    
   ]
 }

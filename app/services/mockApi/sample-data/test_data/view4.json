@@ -13,7 +13,8 @@
           "x": 0,
           "y": 0,
           "part": {
-            "type": "TUBE_INPUT"
+            "type": "TUBE_INPUT",
+            "id": "in1"          
           }
         },
         {
@@ -58,5 +59,13 @@
         }
       ]
     }
-  }
+  },
+  "partSettings": [
+      {
+        "id": "in1",
+        "settings": {
+          "liquid": "water"
+        }
+      }
+  ]
 }
