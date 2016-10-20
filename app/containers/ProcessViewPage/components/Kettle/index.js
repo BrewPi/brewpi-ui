@@ -20,6 +20,11 @@ export class Kettle extends React.Component {
     const total = this.props.options ? this.props.options.volume || 100 : 100;
     return `${(100 * vol) / total}%`;
   }
+  grainHeight() {
+    const vol = this.props.settings ? this.props.settings.grain || 0 : 0;
+    const total = this.props.options ? this.props.options.volume || 100 : 100;
+    return `${(100 * vol) / total}%`;
+  }
   render() {
     const [width, height] = Kettle.dims(this.props.options);
     const liquid = (this.props.settings) ? this.props.settings.liquid : undefined;
@@ -32,10 +37,14 @@ export class Kettle extends React.Component {
       height: this.liquidHeight(),
       background: Liquids.color(liquid),
     };
+    const grainStyle = {
+      height: this.grainHeight(),
+    };
 
     return (
       <div className={styles.kettleContainer} style={kettleStyle}>
         <div className={styles.kettleFill} style={liquidStyle} />
+        <div className={styles.grain} style={grainStyle} />
         <div className={styles.kettle} style={kettleStyle} />
         <span className={styles.volume}>{volume.toFixed(1)}L</span>
       </div>
@@ -46,6 +55,7 @@ Kettle.propTypes = {
   settings: React.PropTypes.shape({
     volume: React.PropTypes.number, // actual volume
     liquid: React.PropTypes.string,
+    grain: React.PropTypes.number, // grain in volume units
   }),
   options: React.PropTypes.shape({
     volume: React.PropTypes.number, // max volume
