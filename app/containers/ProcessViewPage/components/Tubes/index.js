@@ -147,7 +147,7 @@ Bridge.propTypes = {
 };
 
 class Inlet extends React.Component {
-  static flows = () => ({ l: 's' });
+  static flows = () => ({ l: 'k' });
   render() {
     return (
       <SvgParent>
@@ -163,7 +163,7 @@ Inlet.propTypes = {
 };
 
 class InletStraight extends React.Component {
-  static flows = () => ({ l: 's' });
+  static flows = () => ({ l: 'k' });
   render() {
     return (
       <SvgParent>
@@ -180,7 +180,7 @@ InletStraight.propTypes = {
 
 
 class Dip extends React.Component {
-  static flows = () => ({ l: 's' });
+  static flows = () => ({ k: 'l' });
   render() {
     return (
       <SvgParent>
@@ -196,7 +196,7 @@ Dip.propTypes = {
 };
 
 class InletWhirlpool extends React.Component {
-  static flows = () => ({ l: 's' });
+  static flows = () => ({ l: 'k' });
   render() {
     return (
       <SvgParent viewBox={'0 0 50 200'}>

@@ -85,7 +85,9 @@
         "type": "KETTLE",
         "id": "hlt",
         "options": {
-          "volume": 70
+          "volume": 70,
+          "width": 4,
+          "height": 6
         }
       },
       "x": 2,
@@ -386,7 +388,9 @@
         "type": "KETTLE",
         "id": "mt",
         "options": {
-          "volume": 70
+          "volume": 70,
+          "width": 4,
+          "height": 6
         }
       },
       "x": 9,
@@ -606,7 +610,9 @@
         "type": "KETTLE",
         "id": "bk",
         "options": {
-          "volume": 70
+          "volume": 70,
+          "width": 4,
+          "height": 6
         }
       },
       "x": 16,

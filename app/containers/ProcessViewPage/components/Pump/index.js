@@ -12,19 +12,22 @@ const SvgLiquidPump = require('./svg/liquid_pump.svg?tag=g');
 import { SvgParent } from '../SvgParent';
 
 
-export const Pump = (props) => {
-  const rotateClass = getRotateClass(props.powered);
-  return (
-    <SvgParent>
-      <SvgBall className={styles.ball} style={Liquids.fillStyle(props.liquid)} />
-      <g className={styles.bladesWrapper}>
-        <SvgBlades className={classNames(styles.blades, rotateClass)} />
-      </g>
-      <SvgLiquidPump className={styles.liquid} style={Liquids.strokeStyle(props.liquid)} />
-      <SvgTubes className={classNames(styles.tubes)} />
-    </SvgParent>
-  );
-};
+export class Pump extends React.Component {
+  static flows = () => ({ l: 'r' });
+  render() {
+    const rotateClass = getRotateClass(this.props.powered);
+    return (
+      <SvgParent>
+        <SvgBall className={styles.ball} style={Liquids.fillStyle(this.props.liquid)} />
+        <g className={styles.bladesWrapper}>
+          <SvgBlades className={classNames(styles.blades, rotateClass)} />
+        </g>
+        <SvgLiquidPump className={styles.liquid} style={Liquids.strokeStyle(this.props.liquid)} />
+        <SvgTubes className={classNames(styles.tubes)} />
+      </SvgParent>
+    );
+  }
+}
 Pump.propTypes = {
   powered: React.PropTypes.string,
   liquid: React.PropTypes.string,

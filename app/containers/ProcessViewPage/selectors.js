@@ -234,6 +234,9 @@ const getNeighbour = (x, y, edge, width, height) => {
     case 'b':
       returnVal = { x, y: y + 1, edge: 't' };
       break;
+    case 'k':
+      returnVal = { x, y, edge: 'k' };
+      break;
     default:
       returnVal = false;
   }
@@ -268,7 +271,6 @@ const actualFlowTableSelector = createSelector(
 const expandFlow = (x, y, inEdge, liquid, possibleFlowTable, actualFlowTable) => {
   const possibleFlow = possibleFlowTable.getCell(x, y) || {};
   const outEdges = possibleFlow[inEdge];
-
   if (typeof outEdges === 'undefined') {
     return actualFlowTable; // no flow possible, leave actual flow table unchanged
   }
@@ -279,11 +281,11 @@ const expandFlow = (x, y, inEdge, liquid, possibleFlowTable, actualFlowTable) =>
   if (typeof currentCell !== 'undefined') {
     for (const existingFlow of currentCell) {
       for (const [existingInEdge, exitingOutEdges] of Object.entries(existingFlow.dir)) {
-        if (existingInEdge === inEdge) {
+        if (existingInEdge === inEdge && inEdge !== 'k') { // kettle flow is an exception
           conflict += inEdge;
         }
         for (const outEdge of exitingOutEdges) {
-          if (outEdge === inEdge) {
+          if (outEdge === inEdge && inEdge !== 'k') {
             conflict += outEdge;
           }
         }
@@ -291,13 +293,8 @@ const expandFlow = (x, y, inEdge, liquid, possibleFlowTable, actualFlowTable) =>
     }
   }
   const newCell = { dir: {}, liquid: {} };
-  if (conflict !== '') {
-    newCell.dir[inEdge] = conflict;
-    newCell.liquid = 'conflict';
-  } else {
-    newCell.dir[inEdge] = outEdges;
-    newCell.liquid = liquid;
-  }
+  newCell.dir[inEdge] = outEdges;
+  newCell.liquid = liquid;
   let newActualFlowTable = pushToCell(x, y, actualFlowTable, newCell);
   if (!conflict) { // only continue recursion when there are no conflicts
     for (const edge of outEdges) {

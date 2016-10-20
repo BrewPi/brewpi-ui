@@ -3,36 +3,51 @@ import styles from './styles.css';
 import { Liquids } from '../Liquids';
 
 export class Kettle extends React.Component {
+  static flows = (settings, options) => {
+    const [width, height] = options ? Kettle.dims(options) : [4, 6];
+    const flows = Array.from(new Array(height), () => (
+      Array.from(new Array(width), () => ({ s: 'k' }))
+    ));
+    return flows;
+  }
+  static dims(options) {
+    const width = (options) ? options.width || 4 : 4;
+    const height = (options) ? options.height || 6 : 6;
+    return [width, height];
+  }
   liquidHeight() {
-    return `${(100 * this.props.settings.volume) / this.props.options.volume}%`;
+    const vol = this.props.settings ? this.props.settings.volume || 0 : 0;
+    const total = this.props.options ? this.props.options.volume || 100 : 100;
+    return `${(100 * vol) / total}%`;
   }
   render() {
-    const style = { height: this.liquidHeight() };
-    Object.assign(style, { background: Liquids.color(this.props.settings.liquid) });
+    const [width, height] = Kettle.dims(this.props.options);
+    const liquid = (this.props.settings) ? this.props.settings.liquid : undefined;
+    const volume = (this.props.settings) ? this.props.settings.volume || 0 : 0;
+    const kettleStyle = {
+      width: `${50 * width}px`,
+      height: `${50 * height}px`,
+    };
+    const liquidStyle = {
+      height: this.liquidHeight(),
+      background: Liquids.color(liquid),
+    };
+
     return (
-      <div className={styles.kettleContainer}>
-        <div className={styles.kettleFill} style={style} />
-        <div className={styles.kettle} />
-        <span className={styles.volume}>{this.props.settings.volume.toFixed(1)}L</span>
+      <div className={styles.kettleContainer} style={kettleStyle}>
+        <div className={styles.kettleFill} style={liquidStyle} />
+        <div className={styles.kettle} style={kettleStyle} />
+        <span className={styles.volume}>{volume.toFixed(1)}L</span>
       </div>
     );
   }
 }
 Kettle.propTypes = {
   settings: React.PropTypes.shape({
+    volume: React.PropTypes.number, // actual volume
     liquid: React.PropTypes.string,
-    volume: React.PropTypes.number,
   }),
   options: React.PropTypes.shape({
-    volume: React.PropTypes.number,
+    volume: React.PropTypes.number, // max volume
   }),
 };
-Kettle.defaultProps = {
-  settings: {
-    volume: 0,
-  },
-  options: {
-    volume: 100,
-  },
-};
-
