@@ -517,7 +517,7 @@
     {
       "part": {
         "type": "LAUTERHEXE",
-        "flip": true
+        "rotate": 180
       },
       "x": 10,
       "y": 7
@@ -639,7 +639,7 @@
     {
       "part": {
         "type": "LAUTERHEXE",
-        "flip": true
+        "rotate": 180
       },
       "x": 17,
       "y": 7
