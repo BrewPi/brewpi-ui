@@ -93,12 +93,12 @@ const rotateClassNames = {
  */
 const rotateString = (oldString, angle) => {
   let newString = '';
-  const lookup = { l: 't', t: 'r', r: 'b', b: 'l', s: 's' };
+  const lookup = { l: 't', t: 'r', r: 'b', b: 'l' };
   for (const ch of oldString) {
     let newCh = ch;
     let angleRemaining = angle;
     while (angleRemaining > 0) {
-      newCh = lookup[newCh];
+      newCh = lookup[newCh] || newCh; // leave unchanged when not in table;
       angleRemaining -= 90;
     }
     newString += newCh;
@@ -265,7 +265,6 @@ export class Part extends React.Component {
         flows = rotateArray(partFlows, rotate);
       }
     }
-
     const renderedComponent = React.createElement(Part.component(data), { id, settings, options, flows, flip, rotate });
     return (
       <div style={partStyle} className={classNames(styles.part, rotateClassName, flipClassName)}>

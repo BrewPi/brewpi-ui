@@ -167,7 +167,7 @@ class InletStraight extends React.Component {
   render() {
     return (
       <SvgParent>
-        <SvgLiquidInletStraight className={styles.liquid} style={Liquids.strokeStyle(pickLiquid(this.props.flows, Inlet.flows()))} />
+        <SvgLiquidInletStraight className={styles.liquid} style={Liquids.strokeStyle(pickLiquid(this.props.flows, InletStraight.flows()))} />
         <SvgTubeInletStraight className={styles.tube} />
         <FlowArrows flow={this.props.flows} />
       </SvgParent>
@@ -184,7 +184,7 @@ class Dip extends React.Component {
   render() {
     return (
       <SvgParent>
-        <SvgLiquidDip className={styles.liquid} style={Liquids.strokeStyle(pickLiquid(this.props.flows, Inlet.flows()))} />
+        <SvgLiquidDip className={styles.liquid} style={Liquids.strokeStyle(pickLiquid(this.props.flows, Dip.flows()))} />
         <SvgTubeDip className={styles.tube} />
         <FlowArrows flows={this.props.flows} />
       </SvgParent>
