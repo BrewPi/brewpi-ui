@@ -1,6 +1,6 @@
 {
   "id": 3,
-  "name": "Fill Hot Liquor Tun",
+  "name": "Fill hot liquor tun",
   "settings": [
     {
       "id": "v1",
@@ -125,7 +125,7 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 60.0,
+        "volume": 50.0,
         "liquid": "water"
       }
     },

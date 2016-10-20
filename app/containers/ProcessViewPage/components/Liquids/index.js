@@ -1,7 +1,9 @@
 const fills = {
   water: '#1A8AAB',
-  beer: '#E1AC00',
   hotwater: '#DB0023',
+  beer: '#E1AC00',
+  wort: '#c78a49',
+  runoff: '#d69d5f',
   background: '#24333D',
   conflict: 'orange',
 };

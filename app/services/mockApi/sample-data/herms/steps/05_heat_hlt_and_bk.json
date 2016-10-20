@@ -1,6 +1,6 @@
 {
-  "id": 4,
-  "name": "Fill Boil Kettle",
+  "id": 5,
+  "name": "Heat HLT and boil kettle",
   "settings": [
     {
       "id": "v1",
@@ -89,7 +89,7 @@
     {
       "id": "m2",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -125,15 +125,15 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 60.0,
-        "liquid": "water"
+        "volume": 50.0,
+        "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
         "volume": 24.5,
-        "liquid": "water"
+        "liquid": "hotwater"
       }
     },
     {
@@ -141,6 +141,18 @@
       "settings": {
         "liquid": "water"
       }
-    }    
+    },
+    {
+      "id": "heat_hlt",
+      "settings": {
+        "duty": 100
+      }
+    },
+    {
+      "id": "heat_bk",
+      "settings": {
+        "duty": 100
+      }
+    }
   ]
 }

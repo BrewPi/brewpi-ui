@@ -1,23 +1,23 @@
 {
-  "id": 5,
-  "name": "Heat HLT and BK",
+  "id": 10,
+  "name": "Mash out",
   "settings": [
     {
       "id": "v1",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v2",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v3",
+      "id": "v2",
       "settings": {
         "pos": "closed"
+      }
+    },
+    {
+      "id": "v3",
+      "settings": {
+        "pos": "open"
       }
     },
     {
@@ -29,31 +29,31 @@
     {
       "id": "v5",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "v6",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v7",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v8",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "v9",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -65,7 +65,7 @@
     {
       "id": "v11",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -107,13 +107,13 @@
     {
       "id": "m5",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "m6",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -125,15 +125,22 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 60.0,
+        "volume": 50.0,
         "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 24.5,
-        "liquid": "hotwater"
+        "volume": 0
+      }
+    },
+    {
+      "id": "mt",
+      "settings": {
+        "grain": 15,
+        "volume": 42,
+        "liquid": "wort"
       }
     },
     {
@@ -145,13 +152,13 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 100
+        "duty": 10
       }
     },
     {
       "id": "heat_bk",
       "settings": {
-        "duty": 100
+        "duty": 0
       }
     }
   ]
