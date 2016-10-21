@@ -74,7 +74,8 @@
     {
       "part": {
         "rotate": 90,
-        "type": "PUMP"
+        "type": "PUMP",
+        "id": "p1"
       },
       "x": 4,
       "y": 9
@@ -709,7 +710,8 @@
     {
       "part": {
         "rotate": 90,
-        "type": "PUMP"
+        "type": "PUMP",
+        "id": "p2"
       },
       "x": 19,
       "y": 9

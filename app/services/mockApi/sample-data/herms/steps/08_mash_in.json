@@ -160,6 +160,12 @@
       "settings": {
         "duty": 0
       }
+    },
+    {
+      "id": "p2",
+      "settings":{
+        "powered": "fast"
+      }
     }
   ]
 }

@@ -160,6 +160,18 @@
       "settings": {
         "duty": 0
       }
+    },
+    {
+      "id": "p1",
+      "settings":{
+        "powered": "slow"
+      }
+    },
+    {
+      "id": "p2",
+      "settings":{
+        "powered": "slow"
+      }
     }
   ]
 }
