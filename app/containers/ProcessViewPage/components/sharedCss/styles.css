@@ -41,10 +41,10 @@
 }
 
 .rotateSlow.clockwise {
-  animation: rotating 2s linear infinite;
+  animation: rotating 4s linear infinite;
 }
 
 .rotateSlow.counterClockwise {
-  animation: rotatingCC 2s linear infinite;
+  animation: rotatingCC 4s linear infinite;
 }
 

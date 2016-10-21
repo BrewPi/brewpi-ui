@@ -17,6 +17,7 @@ view.steps = [
   require('./steps/10_mash_recirc.json'),
   require('./steps/11_mash_out.json'),
   require('./steps/12_fly_sparge.json'),
+  require('./steps/13_sparge_out.json'),
 ];
 
 export default view;
