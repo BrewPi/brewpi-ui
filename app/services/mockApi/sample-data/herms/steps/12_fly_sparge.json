@@ -1,6 +1,6 @@
 {
-  "id": 6,
-  "name": "Add grain to mash tun",
+  "id": 12,
+  "name": "Fly sparge",
   "settings": [
     {
       "id": "v1",
@@ -17,19 +17,19 @@
     {
       "id": "v3",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "v4",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v5",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -53,7 +53,7 @@
     {
       "id": "v9",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -65,7 +65,7 @@
     {
       "id": "v11",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -107,13 +107,13 @@
     {
       "id": "m5",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "m6",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -125,39 +125,40 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 50.0,
+        "volume": 45.0,
         "liquid": "hotwater"
-      }
-    },
-    {
-      "id": "mt",
-      "settings": {
-        "grain": 15
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 24.5,
-        "liquid": "hotwater"
+        "volume": 40,
+        "liquid": "wort"
+      }
+    },
+    {
+      "id": "mt",
+      "settings": {
+        "grain": 15,
+        "volume": 17,
+        "liquid": "runoff"
       }
     },
     {
       "id": "in1",
       "settings": {
-        "liquid": "water"
       }
     },
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 100
+        "duty": 10
       }
     },
     {
       "id": "heat_bk",
       "settings": {
-        "duty": 100
+        "duty": 0
       }
     }
   ]

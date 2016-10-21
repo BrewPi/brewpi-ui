@@ -1,6 +1,6 @@
 {
-  "id": 11,
-  "name": "Fly sparge",
+  "id": 9,
+  "name": "Mash rest 10 min",
   "settings": [
     {
       "id": "v1",
@@ -11,7 +11,7 @@
     {
       "id": "v2",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -23,13 +23,13 @@
     {
       "id": "v4",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "v5",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -41,19 +41,19 @@
     {
       "id": "v7",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v8",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "v9",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -65,7 +65,7 @@
     {
       "id": "v11",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -107,13 +107,13 @@
     {
       "id": "m5",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "m6",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -125,29 +125,27 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 45.0,
+        "volume": 50.0,
         "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 40,
-        "liquid": "wort"
+        "volume": 0
       }
     },
     {
       "id": "mt",
       "settings": {
         "grain": 15,
-        "volume": 17,
-        "liquid": "runoff"
+        "volume": 42,
+        "liquid": "wort"
       }
     },
     {
       "id": "in1",
       "settings": {
-        "liquid": "water"
       }
     },
     {

@@ -1,6 +1,6 @@
 {
   "id": 8,
-  "name": "Mash rest 10 min",
+  "name": "Mash in from boil kettle",
   "settings": [
     {
       "id": "v1",
@@ -59,7 +59,7 @@
     {
       "id": "v10",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -71,7 +71,7 @@
     {
       "id": "v12",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -119,7 +119,7 @@
     {
       "id": "m7",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -130,23 +130,23 @@
       }
     },
     {
-      "id": "bk",
-      "settings": {
-        "volume": 0
-      }
-    },
-    {
       "id": "mt",
       "settings": {
         "grain": 15,
-        "volume": 42,
-        "liquid": "wort"
+        "volume": 29,
+        "liquid": "hotwater"
+      }
+    },
+    {
+      "id": "bk",
+      "settings": {
+        "volume": 10,
+        "liquid": "hotwater"
       }
     },
     {
       "id": "in1",
       "settings": {
-        "liquid": "water"
       }
     },
     {

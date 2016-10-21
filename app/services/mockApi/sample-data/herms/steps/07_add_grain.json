@@ -1,6 +1,6 @@
 {
   "id": 7,
-  "name": "Mash in from boil kettle",
+  "name": "Add grain to mash tun",
   "settings": [
     {
       "id": "v1",
@@ -11,13 +11,13 @@
     {
       "id": "v2",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "v3",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -41,13 +41,13 @@
     {
       "id": "v7",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "v8",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -59,7 +59,7 @@
     {
       "id": "v10",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -71,7 +71,7 @@
     {
       "id": "v12",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -119,7 +119,7 @@
     {
       "id": "m7",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -132,34 +132,31 @@
     {
       "id": "mt",
       "settings": {
-        "grain": 15,
-        "volume": 29,
-        "liquid": "hotwater"
+        "grain": 15
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 10,
+        "volume": 24.5,
         "liquid": "hotwater"
       }
     },
     {
       "id": "in1",
       "settings": {
-        "liquid": "water"
       }
     },
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 10
+        "duty": 100
       }
     },
     {
       "id": "heat_bk",
       "settings": {
-        "duty": 0
+        "duty": 100
       }
     }
   ]

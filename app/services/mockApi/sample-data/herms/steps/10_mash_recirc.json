@@ -1,6 +1,6 @@
 {
   "id": 10,
-  "name": "Mash out",
+  "name": "Mash recirculation",
   "settings": [
     {
       "id": "v1",
@@ -146,7 +146,6 @@
     {
       "id": "in1",
       "settings": {
-        "liquid": "water"
       }
     },
     {
