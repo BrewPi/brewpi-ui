@@ -17,6 +17,27 @@ const StepSelect = (props) => {
   const selectedOption = steps.find((obj) => obj.get('id') === selected);
   let title = selectedOption ? selectedOption.get('name') : '';
 
+  const onNext = () => {
+    for (let newSelected = selected + 1; newSelected <= steps.last().get('id'); newSelected += 1) {
+      if (steps.find((obj) => obj.get('id') === newSelected)) {
+        console.log(selected, newSelected);
+        props.onSelect(newSelected);
+        return;
+      }
+    }
+  };
+
+  const onPrevious = () => {
+    for (let newSelected = selected - 1; newSelected >= steps.first().get('id'); newSelected -= 1) {
+      if (steps.find((obj) => obj.get('id') === newSelected)) {
+        console.log(selected, newSelected);
+        props.onSelect(newSelected);
+        return;
+      }
+    }
+  };
+
+
   const renderedOptions = steps.map((step) => (
     <MenuItem
       className={styles.options}
@@ -54,11 +75,11 @@ const StepSelect = (props) => {
   return (
     <div className={styles.selectAndApply}>
       <ButtonGroup>
-        <Button className={styles.prevButton}><Glyphicon glyph="menu-left" /></Button>
+        <Button onClick={onPrevious} className={styles.prevButton}><Glyphicon glyph="menu-left" /></Button>
         <DropdownButton id={'step'} className={styles.selected} title={title}>
           {renderedOptions}
         </DropdownButton>
-        <Button className={styles.nextButton}><Glyphicon glyph="menu-right" /></Button>
+        <Button onClick={onNext} className={styles.nextButton}><Glyphicon glyph="menu-right" /></Button>
         <Button className={styles.applyButton}><FormattedMessage {...messages.apply} /></Button>
       </ButtonGroup>
     </div>
