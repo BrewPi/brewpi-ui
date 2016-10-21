@@ -4,6 +4,7 @@ const fills = {
   beer: '#E1AC00',
   wort: '#c78a49',
   runoff: '#d69d5f',
+  cleaner: '#89448a',
   background: '#24333D',
   conflict: 'orange',
 };

@@ -1,11 +1,11 @@
 {
-  "id": 10,
-  "name": "Mash recirculation",
+  "id": 16,
+  "name": "Pump wort to fermenter",
   "settings": [
     {
       "id": "v1",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -23,7 +23,7 @@
     {
       "id": "v4",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -41,7 +41,7 @@
     {
       "id": "v7",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -53,19 +53,19 @@
     {
       "id": "v9",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v10",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "v11",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -101,7 +101,7 @@
     {
       "id": "m4",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -119,39 +119,39 @@
     {
       "id": "m7",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "hlt",
       "settings": {
-        "volume": 50.0,
+        "volume": 20.0,
         "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 0
+        "volume": 10,
+        "liquid": "wort"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "grain": 15,
-        "volume": 30,
-        "liquid": "wort"
+        "grain": 15
       }
     },
     {
       "id": "in1",
       "settings": {
+        "liquid": "water"
       }
     },
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 10
+        "duty": 0
       }
     },
     {
@@ -163,7 +163,7 @@
     {
       "id": "p1",
       "settings":{
-        "powered": "fast"
+        "powered": "off"
       }
     },
     {

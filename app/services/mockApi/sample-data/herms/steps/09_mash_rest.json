@@ -139,7 +139,7 @@
       "id": "mt",
       "settings": {
         "grain": 15,
-        "volume": 42,
+        "volume": 30,
         "liquid": "wort"
       }
     },
