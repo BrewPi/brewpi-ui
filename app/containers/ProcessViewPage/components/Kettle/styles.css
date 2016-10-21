@@ -31,8 +31,8 @@
 .grain {
   background:
     url(
-      data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAMElEQVQYV2OcFiX339BAmwEGGI93ef4HcWTERBievHrDABc4f+EqA0glWAAmC1IJAGmuE2nQ/vzSAAAAAElFTkSuQmCC
-    ) repeat;
+      data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAQ0lEQVQYV2Pc3OT6//P7vwwgcOv8FQbGZYVO/6P694FpkCBjg4PYfzVDHYZnbx4xSInIMTBuzrIFy/hOO8y42Ff8PwC0iRmQwIgSJQAAAABJRU5ErkJggg==
+  ) repeat;
   height: 100px;
   z-index: 2;
 }
