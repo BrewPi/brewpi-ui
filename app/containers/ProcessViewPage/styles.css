@@ -1,18 +1,24 @@
-.header > * {
+.title {
+  display: table;
+  margin: auto;
+}
+
+.title > * {
+  display: inline-block;
   padding: 10px;
-  display: block;
-  float: left;
   margin: 0;
 }
 
 .stepSelect {
   padding: 10px;
-  display: block;
-  float: right;
-  clear: none;
+  text-align: center;
 }
 
 .processView {
   margin: auto;
   display: inline-block;
+}
+
+.viewName {
+  font-weight: bold;
 }

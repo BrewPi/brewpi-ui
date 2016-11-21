@@ -47,15 +47,18 @@ class ProcessViewPage extends React.Component { // eslint-disable-line react/pre
           ]}
         />
         <div className={styles.header}>
-          <h2>{this.props.viewName}</h2><h3><FormattedMessage {...messages.header} /></h3>
-        </div>
-        <div className={styles.stepSelect}>
-          <StepSelect
-            steps={this.props.steps}
-            selected={this.props.activeStepId}
-            modified={this.props.stepModified}
-            onSelect={this.props.onStepSelected}
-          />
+          <div className={styles.title}>
+            <h3 className={styles.processViewTitle}><FormattedMessage {...messages.header} />:</h3>
+            <h3 className={styles.viewName}>{this.props.viewName}</h3>
+          </div>
+          <div className={styles.stepSelect}>
+            <StepSelect
+              steps={this.props.steps}
+              selected={this.props.activeStepId}
+              modified={this.props.stepModified}
+              onSelect={this.props.onStepSelected}
+            />
+          </div>
         </div>
         <ProcessView
           className={styles.processView}

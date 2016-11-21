@@ -1,4 +1,17 @@
 .options,
 .selected {
-  min-width: 250px;
+  min-width: 500px;
+}
+
+.selected,
+.prevButton,
+.nextButton,
+.applyButton {
+  font-size: 20px;
+  height: 40px;
+}
+
+.prevButton > *,
+.nextButton > * {
+  line-height: inherit;
 }
