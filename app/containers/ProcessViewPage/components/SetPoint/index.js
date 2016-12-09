@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.css';
 
-export const SetPoint = (props) => (
+export const SetPoint = () => (
   <div className={styles.setPointRoot}>
     <span className={styles.temp}>20.0°</span>
     <span className={styles.setPoint}>21.0°</span>
