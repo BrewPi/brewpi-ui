@@ -81,7 +81,7 @@ class Manual extends React.Component {
     const posClass = posClasses[this.props.settings.pos] || posClasses.default;
     const renderedLiquid = renderLiquid(this.props.flows);
     return (
-      <div className={styles.Valve} onClick={() => this.props.onValveClicked(this.props.id, this.props.settings.pos)}>
+      <button className={styles.Valve} onClick={() => this.props.onValveClicked(this.props.id, this.props.settings.pos)}>
         <SvgParent>
           {renderedLiquid}
           <SvgTube className={styles.tube} />
@@ -89,7 +89,7 @@ class Manual extends React.Component {
           <FlowArrows flows={this.props.flows} />
         </SvgParent>
         <span className={styles.id}>{this.props.id}</span>
-      </div>
+      </button>
     );
   }
 }
@@ -115,7 +115,7 @@ class Motor extends React.Component {
     const posClass = posClasses[this.props.settings.pos] || posClasses.default;
     const renderedLiquid = renderLiquid(this.props.flows);
     return (
-      <div className={styles.Valve} onClick={() => this.props.onValveClicked(this.props.id, this.props.settings.pos)}>
+      <button className={styles.Valve} onClick={() => this.props.onValveClicked(this.props.id, this.props.settings.pos)}>
         <SvgParent>
           {renderedLiquid}
           <SvgTube className={styles.tube} />
@@ -125,7 +125,7 @@ class Motor extends React.Component {
           <FlowArrows flows={this.props.flows} />
         </SvgParent>
         <span className={styles.id}>{this.props.id}</span>
-      </div>
+      </button>
     );
   }
 }

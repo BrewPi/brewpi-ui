@@ -57,3 +57,10 @@
   text-align: right;
   font-size: 10px;
 }
+
+.Valve {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
