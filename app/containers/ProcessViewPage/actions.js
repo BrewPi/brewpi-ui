@@ -34,6 +34,14 @@ export function stepSelected(stepId) {
   };
 }
 
+export function valveClicked(valveId, oldPos) {
+  return {
+    type: constants.VALVE_CLICKED,
+    valveId,
+    oldPos,
+  };
+}
+
 export function activeStepChanged(stepId) {
   return {
     type: constants.ACTIVE_STEP_CHANGED,

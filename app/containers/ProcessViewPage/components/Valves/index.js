@@ -1,6 +1,9 @@
 /* eslint-disable react/no-multi-comp */
 
 import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actions from '../../actions';
 const classNames = require('classnames');
 import styles from './styles.css';
 import { Map } from 'immutable';
@@ -78,7 +81,7 @@ class Manual extends React.Component {
     const posClass = posClasses[this.props.settings.pos] || posClasses.default;
     const renderedLiquid = renderLiquid(this.props.flows);
     return (
-      <div className={styles.Valve}>
+      <div className={styles.Valve} onClick={() => this.props.onValveClicked(this.props.id)}>
         <SvgParent>
           {renderedLiquid}
           <SvgTube className={styles.tube} />
@@ -95,6 +98,7 @@ Manual.propTypes = {
   settings: React.PropTypes.object,
   flows: React.PropTypes.array,
   id: React.PropTypes.string,
+  onValveClicked: React.PropTypes.func,
 };
 Manual.defaultProps = {
   settings: new Map(),
@@ -111,7 +115,7 @@ class Motor extends React.Component {
     const posClass = posClasses[this.props.settings.pos] || posClasses.default;
     const renderedLiquid = renderLiquid(this.props.flows);
     return (
-      <div className={styles.Valve}>
+      <div className={styles.Valve} onClick={() => this.props.onValveClicked(this.props.id, this.props.settings.pos)}>
         <SvgParent>
           {renderedLiquid}
           <SvgTube className={styles.tube} />
@@ -129,6 +133,7 @@ Motor.propTypes = {
   settings: React.PropTypes.object,
   flows: React.PropTypes.array,
   id: React.PropTypes.string,
+  onValveClicked: React.PropTypes.func,
 };
 Motor.defaultProps = {
   settings: new Map(),
@@ -152,8 +157,14 @@ Check.propTypes = {
   flows: React.PropTypes.array,
 };
 
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    onValveClicked: (valveId, oldPos) => dispatch(actions.valveClicked(valveId, oldPos)),
+  }, dispatch);
+}
+
 export const Valves = {
-  Manual,
-  Motor,
+  Manual: connect(null, mapDispatchToProps)(Manual),
+  Motor: connect(null, mapDispatchToProps)(Motor),
   Check,
 };

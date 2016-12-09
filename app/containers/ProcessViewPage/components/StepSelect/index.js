@@ -20,7 +20,6 @@ const StepSelect = (props) => {
   const onNext = () => {
     for (let newSelected = selected + 1; newSelected <= steps.last().get('id'); newSelected += 1) {
       if (steps.find((obj) => obj.get('id') === newSelected)) {
-        console.log(selected, newSelected);
         props.onSelect(newSelected);
         return;
       }
@@ -30,7 +29,6 @@ const StepSelect = (props) => {
   const onPrevious = () => {
     for (let newSelected = selected - 1; newSelected >= steps.first().get('id'); newSelected -= 1) {
       if (steps.find((obj) => obj.get('id') === newSelected)) {
-        console.log(selected, newSelected);
         props.onSelect(newSelected);
         return;
       }

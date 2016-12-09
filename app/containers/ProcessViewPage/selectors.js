@@ -355,6 +355,7 @@ export {
   viewNameSelector,
   activeLayoutIdSelector,
   layoutPartsSelector,
+  partSettingsSelector,
   showCoordinatesSelector,
   dimensionsSelector,
   layoutTableSelector,
