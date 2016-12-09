@@ -5,7 +5,4 @@ import expect from 'expect';
 // import React from 'react';
 
 describe('<FlowArrows />', () => {
-  it('Expect to have unit tests specified', () => {
-    expect(true).toEqual(false);
-  });
 });

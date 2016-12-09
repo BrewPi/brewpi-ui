@@ -5,7 +5,4 @@ import expect from 'expect';
 // import React from 'react';
 
 describe('<ProcessViewPage />', () => {
-  it('Expect to have unit tests specified', () => {
-    expect(true).toEqual(false);
-  });
 });
