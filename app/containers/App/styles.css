@@ -4,11 +4,9 @@
  * App container styles
  */
 
-body {
+.App {
+  display: block;
   background: #24333D;
   color: #FFF;
-}
-
-.container {
-  display: block;
+  height: 100%;
 }

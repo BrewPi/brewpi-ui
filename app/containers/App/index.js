@@ -22,7 +22,7 @@ export default class App extends React.Component { // eslint-disable-line react/
 
   render() {
     return (
-      <div className={styles.container}>
+      <div className={styles.App}>
         <Navbar inverse>
           <Navbar.Header>
             <Navbar.Brand>
