@@ -10,6 +10,12 @@ function* fetchProcessView(action) {
   try {
     const view = api.getProcessView(action.viewId);
     yield put(actions.viewFetchSuccess(view));
+    if (view.get('activeStepId') === undefined) {
+      const firstStep = view.getIn(['steps', 0, 'id']);
+      if (firstStep !== undefined) {
+        yield put(actions.stepSelected(firstStep));
+      }
+    }
   } catch (e) {
     yield put(actions.viewFetchFailed(e));
   }
