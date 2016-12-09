@@ -32,7 +32,7 @@
     {
       "id": 1,
       "name": "Step 1",
-      "partSettings": [
+      "settings": [
         {
           "id": "v0",
           "settings": {
@@ -44,7 +44,7 @@
     {
       "id": 2,
       "name": "Step 2",
-      "partSettings": [
+      "settings": [
         {
           "id": "v0",
           "settings": {
