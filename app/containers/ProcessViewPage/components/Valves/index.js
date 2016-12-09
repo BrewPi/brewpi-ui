@@ -81,7 +81,7 @@ class Manual extends React.Component {
     const posClass = posClasses[this.props.settings.pos] || posClasses.default;
     const renderedLiquid = renderLiquid(this.props.flows);
     return (
-      <div className={styles.Valve} onClick={() => this.props.onValveClicked(this.props.id)}>
+      <div className={styles.Valve} onClick={() => this.props.onValveClicked(this.props.id, this.props.settings.pos)}>
         <SvgParent>
           {renderedLiquid}
           <SvgTube className={styles.tube} />
