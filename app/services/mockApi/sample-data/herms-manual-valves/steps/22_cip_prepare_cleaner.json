@@ -1,0 +1,175 @@
+{
+  "id": 22,
+  "name": "CIP: prepare cleaner in mash tun",
+  "settings": [
+    {
+      "id": "v1",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "v2",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "v3",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "v4",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "v5",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "v6",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "v7",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "v8",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "v9",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "v10",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "v11",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "v12",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "v13",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "m1",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "m2",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "m3",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "m4",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "m5",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "m6",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "m7",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "hlt",
+      "settings": {
+        "volume": 10.0,
+        "liquid": "hotwater"
+      }
+    },
+    {
+      "id": "bk",
+      "settings": {
+      }
+    },
+    {
+      "id": "mt",
+      "settings": {
+        "volume": 10,
+        "liquid": "cleaner"
+      }
+    },
+    {
+      "id": "in1",
+      "settings": {
+        "liquid": "water"
+      }
+    },
+    {
+      "id": "heat_hlt",
+      "settings": {
+        "duty": 0
+      }
+    },
+    {
+      "id": "heat_bk",
+      "settings": {
+        "duty": 0
+      }
+    },
+    {
+      "id": "p1",
+      "settings":{
+        "powered": "off"
+      }
+    },
+    {
+      "id": "p2",
+      "settings":{
+        "powered": "off"
+      }
+    }
+  ]
+}

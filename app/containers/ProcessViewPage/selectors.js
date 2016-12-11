@@ -29,11 +29,11 @@ const viewNameSelector = createSelector(
 
 
 /**
- * Get the active layout id
+ * Get the default layout id
  */
-const activeLayoutIdSelector = createSelector(
+const defaultLayoutIdSelector = createSelector(
   processViewSelector,
-  (view) => view.get('currentLayoutId')
+  (view) => view.get('defaultLayoutId') || 0
 );
 
 /**
@@ -42,6 +42,71 @@ const activeLayoutIdSelector = createSelector(
 const showCoordinatesSelector = createSelector(
   processViewSelector,
   (view) => view.get('showCoordinates')
+);
+
+/*
+ * Get a list of steps (id and name) sorted by id
+ */
+const stepsSelector = createSelector(
+  processViewSelector,
+  (view) => {
+    const steps = view.get('steps');
+    if (typeof steps !== 'undefined') {
+      const sortedSteps = steps.sortBy((step) => step.get('id'));
+      return sortedSteps;
+    }
+    return new List();
+  }
+);
+
+/*
+ * Get active step id. Return undefined when the step does not exist.
+ */
+
+const activeStepIdSelector = createSelector(
+  processViewSelector,
+  stepsSelector,
+  (view, steps) => {
+    const id = view.get('activeStepId');
+    const match = steps.find((obj) => obj.get('id') === id);
+    return (typeof match !== 'undefined') ? id : undefined;
+  }
+);
+
+/*
+ * Get data for the currently active step.
+ */
+
+const activeStepSelector = createSelector(
+  activeStepIdSelector,
+  stepsSelector,
+  (stepId, steps) => {
+    const match = steps.find((obj) => obj.get('id') === stepId);
+    return (typeof match !== 'undefined') ? match : undefined;
+  }
+);
+
+/*
+ * Get step settings for he active step id
+ */
+const activeStepSettingsSelector = createSelector(
+  activeStepSelector,
+  (step) => {
+    const settings = (typeof step !== 'undefined') ? step.get('settings') : undefined;
+    return settings || new List();// return settings that it contains or empty list when not found
+  }
+);
+
+/*
+ * Get step layout for he active step id
+ */
+const activeLayoutIdSelector = createSelector(
+  defaultLayoutIdSelector,
+  activeStepSelector,
+  (defaultLayoutId, step) => {
+    const layoutId = (typeof step !== 'undefined') ? step.get('layout') : undefined;
+    return layoutId || defaultLayoutId;// return settings that it contains or empty list when not found
+  }
 );
 
 /**
@@ -307,47 +372,6 @@ const expandFlow = (x, y, inEdge, liquid, possibleFlowTable, actualFlowTable) =>
   return newActualFlowTable;
 };
 
-/*
- * Get a list of steps (id and name) sorted by id
- */
-const stepsSelector = createSelector(
-  processViewSelector,
-  (view) => {
-    const steps = view.get('steps');
-    if (typeof steps !== 'undefined') {
-      const sortedSteps = steps.sortBy((step) => step.get('id'));
-      return sortedSteps;
-    }
-    return new List();
-  }
-);
-
-/*
- * Get active step id. Return undefined when the step does not exist.
- */
-
-const activeStepIdSelector = createSelector(
-  processViewSelector,
-  stepsSelector,
-  (view, steps) => {
-    const id = view.get('activeStepId');
-    const match = steps.find((obj) => obj.get('id') === id);
-    return (typeof match !== 'undefined') ? id : undefined;
-  }
-);
-
-/*
- * Get step settings for he active step id
- */
-const activeStepSettingsSelector = createSelector(
-  stepsSelector,
-  activeStepIdSelector,
-  (steps, id) => {
-    const step = steps.find((obj) => obj.get('id') === id); // find first step with matching id
-    const settings = (typeof step !== 'undefined') ? step.get('settings') : undefined;
-    return settings || new List();// return settings that it contains or empty list when not found
-  }
-);
 
 export {
   processViewSelector,

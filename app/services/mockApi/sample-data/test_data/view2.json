@@ -3,9 +3,8 @@
   "width": 5,
   "height": 3,
   "showCoordinates": true,
-  "currentLayoutId": "0",
-  "layouts": {
-    "0": {
+  "layouts": [
+    {
       "id": 0,
       "name": "Layout 1",
       "parts": [
@@ -27,5 +26,5 @@
         }
       ]
     }
-  }
+  ]
 }

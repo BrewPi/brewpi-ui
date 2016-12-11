@@ -55,6 +55,10 @@ describe('ProcessViewPage', () => {
     it('will return currently active layout id', () => {
       expect(activeLayoutIdSelector(stateView1)).toEqual('0');
     });
+    it('will return the layout ID in the active step', () => {
+      const stateViewModified = stateView1.setIn(['processView', 'activeStepId'], 2);
+      expect(activeLayoutIdSelector(stateViewModified)).toEqual('1');
+    });
   });
   describe('activeLayoutPartsSelector', () => {
     it('will return currently active layout', () => {

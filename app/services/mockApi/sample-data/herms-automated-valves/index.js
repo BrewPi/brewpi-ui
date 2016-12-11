@@ -1,9 +1,9 @@
 /* eslint-disable global-require */
 const view = require('./view.json');
 
-view.layouts = {
-  0: require('./layout.json'),
-};
+view.layouts = [
+  require('./layout.json'),
+];
 view.steps = [
   require('./steps/01_valves_closed.json'),
   require('./steps/02_valves_open.json'),
