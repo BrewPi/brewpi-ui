@@ -13,6 +13,8 @@
   fill: #FFF;
   stroke: #FFF;
   stroke-width: 2pt;
+  transform-origin: 25px 25px;
+  transition-duration: 1s;
 }
 
 .rotate_90 {
@@ -39,13 +41,15 @@
   fill: #000;
 }
 
+.ballOpen {
+  transform: rotate(0deg);
+}
+
 .ballMidway {
-  transform-origin: 25px 25px;
   transform: rotate(45deg);
 }
 
 .ballClosed {
-  transform-origin: 25px 25px;
   transform: rotate(90deg);
 }
 
