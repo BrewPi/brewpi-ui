@@ -305,7 +305,7 @@ const getNeighbour = (x, y, edge, width, height) => {
     default:
       returnVal = false;
   }
-  if (returnVal.x < 0 || returnVal.x >= width || returnVal.y < 0 || returnVal.y > height) {
+  if (returnVal.x < 0 || returnVal.x >= width || returnVal.y < 0 || returnVal.y >= height) {
     return false;
   }
   return returnVal;
