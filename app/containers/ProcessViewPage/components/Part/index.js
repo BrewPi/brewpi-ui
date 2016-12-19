@@ -45,6 +45,7 @@ const componentTable = {
   TUBE_DIP: Tubes.Dip,
   VALVE_MOTOR: Valves.Motor,
   VALVE_MANUAL: Valves.Manual,
+  VALVE_MANUAL_TEE: Valves.ManualTee,
   VALVE_CHECK: Valves.Check,
   KETTLE: Kettle,
   COIL: Coil,

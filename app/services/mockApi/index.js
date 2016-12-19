@@ -15,6 +15,7 @@ let views = {
   view3: require('./sample-data/test_data/view3.json'),
   view4: require('./sample-data/test_data/view4.json'),
   coilTest: require('./sample-data/test_data/coil_test.json'),
+  valveTeeTest: require('./sample-data/test_data/valve_tee_test.json'),
 };
 
 views = fromJS(views);

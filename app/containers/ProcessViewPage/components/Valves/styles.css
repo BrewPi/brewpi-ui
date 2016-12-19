@@ -64,3 +64,23 @@
   background: none;
   border: none;
 }
+
+.variant1 {
+  transform-origin: 25px 25px;
+  transform: rotate(0deg);
+}
+
+.variant2 {
+  transform-origin: 25px 25px;
+  transform: rotate(90deg);
+}
+
+.variant3 {
+  transform-origin: 25px 25px;
+  transform: rotate(180deg);
+}
+
+.variant4 {
+  transform-origin: 25px 25px;
+  transform: rotate(270deg);
+}
