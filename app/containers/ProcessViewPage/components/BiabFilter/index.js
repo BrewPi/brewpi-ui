@@ -25,9 +25,6 @@ export class BiabFilter extends React.Component {
     const grainStyle = {
       height: this.grainHeight(),
     };
-
-    console.log(this.grainHeight());
-    console.log(this.props);
     return (
       <div className={styles.biabFilterContainer} style={biabFilterContainerStyle}>
         <div className={styles.biabFilter} style={biabFilterStyle}>

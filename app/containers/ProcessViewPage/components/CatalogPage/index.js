@@ -65,7 +65,6 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Output flows={[{ dir: { l: 's' }, liquid: 'beer' }]} />
               </td>
             </tr>
-       
             <tr>
               <td>Tube Straight</td>
               <td>
@@ -122,7 +121,6 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Bridge flows={[{ dir: { l: 'r' }, liquid: 'beer' }]} />
               </td>
             </tr>
-          
             <tr>
               <td>Fitting</td>
               <td>
@@ -156,7 +154,6 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Dip flows={[{ dir: { k: 'l' }, liquid: 'beer' }]} />
               </td>
             </tr>
-
             <tr>
               <td>Tube Inlet</td>
               <td>

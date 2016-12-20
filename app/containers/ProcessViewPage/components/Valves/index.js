@@ -38,9 +38,7 @@ const renderLiquid = (flows) => {
   const liquid = { l: false, r: false, t: false, b: false, c: false };
   if (typeof flows !== 'undefined') {
     for (const flow of flows.values()) {
-      console.log(JSON.stringify(liquid));
       for (const [inEdge, outEdges] of Object.entries(flow.dir)) {
-        console.log(JSON.stringify([inEdge, outEdges]));
         for (const key of Object.keys(liquid)) {
           if (key === inEdge) {
             liquid[key] = flow.liquid;
@@ -53,7 +51,6 @@ const renderLiquid = (flows) => {
       }
     }
   }
-  console.log(liquid);
   return (
     <g className={styles.liquid}>
       {(liquid.l) ? <g key={'l'} style={Liquids.strokeStyle(liquid.l)}><line x1="0" y1="25" x2="10" y2="25" /></g> : null }

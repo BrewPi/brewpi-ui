@@ -65,10 +65,10 @@ class ProcessViewPage extends React.Component { // eslint-disable-line react/pre
             </div>
           </div>
           <div className={styles.headerRight}>
-          <ButtonGroup vertical>
-            <Toggle className={styles.toggle} name="Coordinates" enabled={this.props.showCoordinates} />
-            <Toggle className={styles.toggle} name="Grid" enabled={this.props.showGrid} />
-          </ButtonGroup>
+            <ButtonGroup vertical>
+              <Toggle className={styles.toggle} name="Coordinates" enabled={this.props.showCoordinates} />
+              <Toggle className={styles.toggle} name="Grid" enabled={this.props.showGrid} />
+            </ButtonGroup>
           </div>
         </div>
         <ProcessView
