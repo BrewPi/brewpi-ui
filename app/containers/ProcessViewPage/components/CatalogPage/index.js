@@ -65,17 +65,7 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Output flows={[{ dir: { l: 's' }, liquid: 'beer' }]} />
               </td>
             </tr>
-            <tr>
-              <td>Tube Dip</td>
-              <td>
-                <Tubes.Dip />
-              </td>
-              <td>
-                <Tubes.Dip flows={[{ dir: { l: 'b' }, liquid: 'water' }]} />
-                <Tubes.Dip flows={[{ dir: { l: 'b' }, liquid: 'hotwater' }]} />
-                <Tubes.Dip flows={[{ dir: { l: 'b' }, liquid: 'beer' }]} />
-              </td>
-            </tr>
+       
             <tr>
               <td>Tube Straight</td>
               <td>
@@ -132,15 +122,16 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Bridge flows={[{ dir: { l: 'r' }, liquid: 'beer' }]} />
               </td>
             </tr>
+          
             <tr>
-              <td>Tube Inlet</td>
+              <td>Fitting</td>
               <td>
-                <Tubes.Inlet />
+                <Tubes.Fitting />
               </td>
               <td>
-                <Tubes.Inlet flows={[{ dir: { l: 'k' }, liquid: 'water' }]} />
-                <Tubes.Inlet flows={[{ dir: { l: 'k' }, liquid: 'hotwater' }]} />
-                <Tubes.Inlet flows={[{ dir: { l: 'k' }, liquid: 'beer' }]} />
+                <Tubes.Fitting flows={[{ dir: { l: 'k' }, liquid: 'water' }]} />
+                <Tubes.Fitting flows={[{ dir: { l: 'k' }, liquid: 'hotwater' }]} />
+                <Tubes.Fitting flows={[{ dir: { l: 'k' }, liquid: 'beer' }]} />
               </td>
             </tr>
             <tr>
@@ -152,6 +143,29 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.InletStraight flows={[{ dir: { l: 'k' }, liquid: 'water' }]} />
                 <Tubes.InletStraight flows={[{ dir: { l: 'k' }, liquid: 'hotwater' }]} />
                 <Tubes.InletStraight flows={[{ dir: { l: 'k' }, liquid: 'beer' }]} />
+              </td>
+            </tr>
+            <tr>
+              <td>Tube Dip</td>
+              <td>
+                <Tubes.Dip />
+              </td>
+              <td>
+                <Tubes.Dip flows={[{ dir: { k: 'l' }, liquid: 'water' }]} />
+                <Tubes.Dip flows={[{ dir: { k: 'l' }, liquid: 'hotwater' }]} />
+                <Tubes.Dip flows={[{ dir: { k: 'l' }, liquid: 'beer' }]} />
+              </td>
+            </tr>
+
+            <tr>
+              <td>Tube Inlet</td>
+              <td>
+                <Tubes.Inlet />
+              </td>
+              <td>
+                <Tubes.Inlet flows={[{ dir: { l: 'k' }, liquid: 'water' }]} />
+                <Tubes.Inlet flows={[{ dir: { l: 'k' }, liquid: 'hotwater' }]} />
+                <Tubes.Inlet flows={[{ dir: { l: 'k' }, liquid: 'beer' }]} />
               </td>
             </tr>
             <tr>

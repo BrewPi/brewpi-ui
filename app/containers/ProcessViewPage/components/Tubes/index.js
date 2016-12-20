@@ -26,6 +26,9 @@ const SvgLiquidInletStraight = require('./svg/liquid_inlet-straight.svg?tag=g');
 const SvgTubeDip = require('./svg/tube_dip.svg?tag=g');
 const SvgTubeInletWhirlpool = require('./svg/tube_inlet-whirlpool.svg?tag=g');
 const SvgLiquidInletWhirlpool = require('./svg/liquid_inlet-whirlpool.svg?tag=g');
+const SvgFitting = require('./svg/fitting.svg?tag=g');
+const SvgLiquidFitting = require('./svg/liquid_fitting.svg?tag=g');
+
 import { SvgParent } from '../SvgParent';
 import { FlowArrows, FlowArrowsBridge, pickLiquid } from '../Flows';
 import { Liquids } from '../Liquids';
@@ -211,6 +214,21 @@ InletWhirlpool.propTypes = {
   flows: React.PropTypes.array,
 };
 
+class Fitting extends React.Component {
+  static flows = () => ({ l: 'k' });
+  render() {
+    return (
+      <SvgParent viewBox={'0 0 50 50'}>
+        <SvgLiquidFitting className={styles.liquid} style={Liquids.strokeStyle(pickLiquid(this.props.flows, Fitting.flows()))} />
+        <SvgFitting className={styles.tube} />
+      </SvgParent>
+    );
+  }
+}
+Fitting.propTypes = {
+  flows: React.PropTypes.array,
+};
+
 export const Tubes = {
   Input,
   Output,
@@ -223,4 +241,5 @@ export const Tubes = {
   Inlet,
   InletStraight,
   InletWhirlpool,
+  Fitting,
 };
