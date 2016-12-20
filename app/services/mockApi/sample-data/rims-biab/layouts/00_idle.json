@@ -1,0 +1,64 @@
+{
+  "id": 0,
+  "name": "Fill HLT",
+  "parts": [
+    {
+      "part": {
+        "type": "KETTLE",
+        "options": {
+          "height": 1,
+          "volume": 70,
+          "width": 4
+        }
+      },
+      "x": 8,
+      "y": 2
+    },
+    {
+      "part": {
+        "type": "KETTLE",
+        "options": {
+          "height": 6,
+          "volume": 70,
+          "width": 4
+        }
+      },
+      "x": 3,
+      "y": 2
+    },
+    {
+      "part": {
+        "type": "BIAB_FILTER",
+        "options": {
+          "height": 5,
+          "width": 4
+        },
+        "id": "filter"
+      },
+      "x": 3,
+      "y": 2
+    },
+    {
+      "part": {
+        "type": "TUBE_INLET"
+      },
+      "x": 8,
+      "y": 2
+    },
+    {
+      "part": {
+        "type": "HEATING_ELEMENT",
+        "id": "heat_hlt"
+      },
+      "x": 8,
+      "y": 6
+    },
+    {
+      "part": {
+        "type": "FILTER"
+      },
+      "x": 3,
+      "y": 7
+    }
+  ]
+}
