@@ -215,7 +215,7 @@ InletWhirlpool.propTypes = {
 };
 
 class Fitting extends React.Component {
-  static flows = () => ({ l: 'k' });
+  static flows = () => ({ l: 'k', k: 'l' });
   render() {
     return (
       <SvgParent viewBox={'0 0 50 50'}>

@@ -1,7 +1,7 @@
 {
   "id": 3,
   "name": "Add grain",
-  "layout": 3,
+  "layout": 1,
   "settings": [
        {
       "id": "kettle",
@@ -11,9 +11,9 @@
       }
     },    
     {
-      "id": "filter",
+      "id": "bag",
       "settings": {
-        "grain": 40
+        "grain": 25
       }
     },
     {

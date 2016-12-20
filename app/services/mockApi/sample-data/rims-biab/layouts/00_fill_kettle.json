@@ -37,7 +37,8 @@
         "type": "BIAB_FILTER",
         "options": {
           "height": 5,
-          "width": 4
+          "width": 4,
+          "volume": 60
         },
         "id": "bag"
       },

@@ -1,6 +1,6 @@
 {
   "id": 1,
-  "name": "Preheat kettle",
+  "name": "RIMS connected",
   "parts": [
     {
       "part": {
@@ -20,7 +20,8 @@
         "type": "BIAB_FILTER",
         "options": {
           "height": 5,
-          "width": 4
+          "width": 4,
+          "volume": 60
         },
         "id": "bag"
       },
@@ -122,8 +123,9 @@
         "type": "KETTLE",
         "options": {
           "height": 1,
-          "volume": 70,
-          "width": 4
+          "volume": 2,
+          "width": 4,
+          "id": "rims"
         }
       },
       "x": 2,
