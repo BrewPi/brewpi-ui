@@ -1,0 +1,26 @@
+{
+  "id": 3,
+  "name": "Add grain",
+  "layout": 3,
+  "settings": [
+       {
+      "id": "kettle",
+      "settings": {
+        "volume": 50.0,
+        "liquid": "hotwater"
+      }
+    },    
+    {
+      "id": "filter",
+      "settings": {
+        "grain": 40
+      }
+    },
+    {
+      "id": "m1",
+      "settings": {
+        "pos": "closed"
+      }
+    }
+  ]
+}

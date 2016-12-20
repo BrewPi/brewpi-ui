@@ -1,0 +1,188 @@
+{
+  "id": 1,
+  "name": "Preheat kettle",
+  "parts": [
+    {
+      "part": {
+        "type": "KETTLE",
+        "options": {
+          "height": 6,
+          "volume": 70,
+          "width": 4
+        },
+        "id": "kettle"
+      },
+      "x": 2,
+      "y": 2
+    },
+    {
+      "part": {
+        "type": "BIAB_FILTER",
+        "options": {
+          "height": 5,
+          "width": 4
+        },
+        "id": "filter"
+      },
+      "x": 2,
+      "y": 2
+    },
+    {
+      "part": {
+        "rotate": 90,
+        "type": "TUBE_INLET_STRAIGHT"
+      },
+      "x": 4,
+      "y": 2
+    },
+    {
+      "part": {
+        "rotate": 90,
+        "type": "TUBE_ELBOW"
+      },
+      "x": 4,
+      "y": 1
+    },
+    {
+      "part": {
+        "rotate": 0,
+        "type": "TUBE_STRAIGHT"
+      },
+      "x": [
+        5,
+        6
+      ],
+      "y": 1
+    },
+    {
+      "part": {
+        "rotate": 180,
+        "type": "TUBE_ELBOW"
+      },
+      "x": 7,
+      "y": 1
+    },
+    {
+      "part": {
+        "rotate": 90,
+        "type": "TUBE_STRAIGHT"
+      },
+      "x": 7,
+      "y": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "part": {
+        "rotate": 270,
+        "type": "TUBE_ELBOW"
+      },
+      "x": 7,
+      "y": 8
+    },
+    {
+      "part": {
+        "rotate": 0,
+        "type": "TUBE_STRAIGHT"
+      },
+      "x": 6,
+      "y": 8
+    },
+    {
+      "part": {
+        "rotate": 90,
+        "type": "TUBE_ELBOW"
+      },
+      "x": 5,
+      "y": 8
+    },
+    {
+      "part": {
+        "rotate": 90,
+        "type": "FITTING"
+      },
+      "x": 5,
+      "y": 9
+    },
+    {
+      "part": {
+        "rotate": 90,
+        "type": "FITTING"
+      },
+      "x": 2,
+      "y": 9
+    },
+    {
+      "part": {
+        "type": "KETTLE",
+        "options": {
+          "height": 1,
+          "volume": 70,
+          "width": 4
+        }
+      },
+      "x": 2,
+      "y": 9
+    },
+    {
+      "part": {
+        "type": "PUMP",
+        "id": "p1"
+      },
+      "x": 1,
+      "y": 8
+    },
+    {
+      "part": {
+        "type": "HEATING_ELEMENT",
+        "id": "heater"
+      },
+      "x": 1,
+      "y": 9
+    },
+    {
+      "part": {
+        "rotate": 180,
+        "type": "TUBE_ELBOW"
+      },
+      "x": 2,
+      "y": 8
+    },
+    {
+      "part": {
+        "type": "VALVE_MANUAL",
+        "id": "m1"
+      },
+      "x": 1,
+      "y": 7
+    },
+    {
+      "part": {
+        "rotate": 0,
+        "type": "TUBE_ELBOW"
+      },
+      "x": 0,
+      "y": 8
+    },
+    {
+      "part": {
+        "rotate": 90,
+        "type": "TUBE_ELBOW"
+      },
+      "x": 0,
+      "y": 7
+    },
+    {
+      "part": {
+        "type": "FILTER"
+      },
+      "x": 2,
+      "y": 7
+    }
+  ]
+}

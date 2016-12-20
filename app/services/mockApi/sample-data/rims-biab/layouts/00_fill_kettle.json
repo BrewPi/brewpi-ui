@@ -1,17 +1,22 @@
 {
   "id": 0,
-  "name": "Fill HLT",
+  "name": "Fill kettle",
   "parts": [
-    {
+     {
       "part": {
-        "type": "KETTLE",
-        "options": {
-          "height": 1,
-          "volume": 70,
-          "width": 4
-        }
+        "rotate": 90,
+        "type": "TUBE_INPUT",
+        "id": "in1"
       },
-      "x": 8,
+      "x": 4,
+      "y": 1
+    },
+     {
+      "part": {
+        "rotate": 90,
+        "type": "TUBE_INLET_STRAIGHT"
+      },
+      "x": 4,
       "y": 2
     },
     {
@@ -21,9 +26,10 @@
           "height": 6,
           "volume": 70,
           "width": 4
-        }
+        },
+        "id": "kettle"
       },
-      "x": 3,
+      "x": 2,
       "y": 2
     },
     {
@@ -35,29 +41,23 @@
         },
         "id": "filter"
       },
-      "x": 3,
+      "x": 2,
       "y": 2
     },
-    {
-      "part": {
-        "type": "TUBE_INLET"
-      },
-      "x": 8,
-      "y": 2
-    },
-    {
-      "part": {
-        "type": "HEATING_ELEMENT",
-        "id": "heat_hlt"
-      },
-      "x": 8,
-      "y": 6
-    },
-    {
+     {
       "part": {
         "type": "FILTER"
       },
-      "x": 3,
+      "x": 2,
+      "y": 7
+    },
+   
+   {
+      "part": {
+        "type": "VALVE_MANUAL",
+        "id": "m1"
+      },
+      "x": 1,
       "y": 7
     }
   ]
