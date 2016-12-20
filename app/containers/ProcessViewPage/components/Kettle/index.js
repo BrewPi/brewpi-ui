@@ -40,7 +40,7 @@ export class Kettle extends React.Component {
     const grainStyle = {
       height: this.grainHeight(),
     };
-    const volumeStyle = (volume === 0) ? { display: 'none' } : {};
+    const volumeStyle = (volume === 0 || this.props.options.hideVolume === true) ? { display: 'none' } : {};
 
     return (
       <div className={styles.kettleContainer} style={kettleStyle}>
@@ -60,5 +60,6 @@ Kettle.propTypes = {
   }),
   options: React.PropTypes.shape({
     volume: React.PropTypes.number, // max volume
+    hideVolume: React.PropTypes.boolean,
   }),
 };
