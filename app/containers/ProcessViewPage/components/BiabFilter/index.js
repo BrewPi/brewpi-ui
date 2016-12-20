@@ -19,7 +19,7 @@ export class BiabFilter extends React.Component {
       height: `${50 * height}px`,
     };
     const biabFilterStyle = {
-      width: `${(50 * width) - 16}px`,
+      width: `${(50 * width) - 20}px`,
       height: `${(50 * height)}px`,
     };
     const grainStyle = {

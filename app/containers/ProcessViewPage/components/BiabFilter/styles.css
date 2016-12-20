@@ -6,10 +6,10 @@
   position: absolute;
   display: block;
   stroke: #FFF;
-  border: dashed 4px #FFF;
+  border: dashed 2px #FFF;
   border-top: none;
   border-radius: 3px;
-  margin: 0 8px;
+  margin: 0 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   z-index: 3;
@@ -20,8 +20,8 @@
   height: 0;
   position: absolute;
   bottom: 0;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   transition-duration: 1s;
 }
 
