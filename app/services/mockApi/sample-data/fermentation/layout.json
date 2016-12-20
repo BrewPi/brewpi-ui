@@ -151,7 +151,12 @@
       "x": 5,
       "y": 3,
       "part": {
-        "type": "GLYCOL_RESERVOIR"
+        "type": "KETTLE",
+        "options": {
+          "width": 2,
+          "height": 1
+        }
+
       }
     },
     {
