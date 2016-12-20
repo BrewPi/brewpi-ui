@@ -1,0 +1,35 @@
+.biabFilterContainer {
+  position: relative;
+}
+
+.biabFilter {
+  position: absolute;
+  display: block;
+  stroke: #FFF;
+  border: dashed 4px #FFF;
+  border-top: none;
+  border-radius: 3px;
+  margin: 0 8px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 3;
+}
+
+.grain {
+  width: 100%;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition-duration: 1s;
+}
+
+.grain {
+  background:
+    url(
+      data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAA3UlEQVQoU22QMQ6CQBRE/7aeQG+gtZzAE2hrR0JYIw2lmhBNKKSTBuMiyXbUnkAvALXcAE9gi5mf3WQLSUj+wvx5MyveD39Id9qrO2qft2ggIqryQhJRi2/rKc2TzG8EBlc0GX8Ji0EcNZhnS80aARc4BHGkrOjPooQ6dDCYCUuLTcEmJoonMBhXxlV5wXmBI+KXs7Jjkvmq/4xQgkUoaM8okh70iYPiYH5IuwSSi2e0iwHeiuyNcOuX2h7vl2sPJxqoTPe6hNA8oCnMwl54cvbD2UpLZK47KlHQRf8AQAKXY5Ve76gAAAAASUVORK5CYII=
+    ) repeat;
+  height: 100px;
+  z-index: 2;
+}

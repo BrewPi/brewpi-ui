@@ -25,6 +25,8 @@ import { GlycolReservoir } from '../GlycolReservoir';
 import { Keg } from '../Keg';
 import { TubularHeater } from '../TubularHeater';
 import { SetPoint } from '../SetPoint';
+import { Filter } from '../Filter';
+import { BiabFilter } from '../BiabFilter';
 import { Map } from 'immutable';
 import { Table } from 'immutable-table';
 
@@ -66,6 +68,8 @@ const componentTable = {
   TUBULAR_HEATER: TubularHeater,
   CARBOY: Carboy,
   SETPOINT: SetPoint,
+  FILTER: Filter,
+  BIAB_FILTER: BiabFilter,
   DEFAULT: NoPart,
 };
 
