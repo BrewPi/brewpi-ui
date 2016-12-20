@@ -55,8 +55,8 @@
 
 .id {
   position: absolute;
-  top: 39px;
-  left: 0;
+  right: 1px;
+  bottom: 0px;
   width: 100%;
   text-align: right;
   font-size: 10px;
