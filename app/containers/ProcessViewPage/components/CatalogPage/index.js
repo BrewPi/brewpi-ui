@@ -16,7 +16,7 @@ import { BlowerFan } from '../BlowerFan';
 import { TempSensors } from '../TempSensors';
 import { Cfc } from '../Cfc';
 import { GlycolChiller } from '../GlycolChiller';
-import { Filter } from '../Filter';
+import { FilterBottom } from '../FilterBottom';
 import { Lauterhexe } from '../Lauterhexe';
 import { HeatingElement } from '../HeatingElement';
 import { TubularHeater } from '../TubularHeater';
@@ -336,12 +336,14 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               </td>
             </tr>
             <tr>
-              <td>Filter</td>
+              <td>Filter Bottom</td>
               <td>
-                <Filter />
+                <FilterBottom />
               </td>
               <td>
-                <Filter liquid={'water'} />
+                <FilterBottom
+                  flows={[{ dir: { k: 'l' }, liquid: 'water' }]}
+                />
               </td>
             </tr>
             <tr>

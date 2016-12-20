@@ -22,7 +22,7 @@
           "height": 5,
           "width": 4
         },
-        "id": "filter"
+        "id": "bag"
       },
       "x": 2,
       "y": 2
@@ -179,7 +179,7 @@
     },
     {
       "part": {
-        "type": "FILTER"
+        "type": "FILTER_BOTTOM"
       },
       "x": 2,
       "y": 7
