@@ -1,0 +1,34 @@
+{
+  "id": 1,
+  "name": "Preheat kettle",
+  "layout": 1,
+  "settings": [
+    {
+      "id": "kettle",
+      "settings": {
+        "volume": 50.0,
+        "liquid": "hotwater"
+      }
+    },
+    {
+      "id": "rims",
+      "settings": {
+        "volume": 2.0,
+        "liquid": "hotwater"
+      }
+    },
+        
+    {
+      "id": "m1",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "heater",
+      "settings": {
+        "duty": 100
+      }
+    }
+  ]
+}

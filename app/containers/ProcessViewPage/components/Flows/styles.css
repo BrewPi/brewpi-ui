@@ -3,3 +3,76 @@
   stroke-width: 2px;
   stroke: #FFF;
 }
+
+.moveUp {
+  animation: moveup 2s linear infinite;
+
+  /* hardware accelerate */
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+@keyframes moveup {
+  0% {
+    transform: translateY(13px);
+  }
+
+  100% {
+    transform: translateY(-12px);
+  }
+}
+
+.moveDown {
+  animation: movedown 2s linear infinite;
+
+  /* hardware accelerate */
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+@keyframes movedown {
+  0% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(13px);
+  }
+}
+
+.moveLeft {
+  animation: moveleft 2s linear infinite;
+
+  /* hardware accelerate */
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+@keyframes moveleft {
+  0% {
+    transform: translateX(13px);
+  }
+
+  100% {
+    transform: translateX(-12px);
+  }
+}
+
+.moveRight {
+  animation: moveright 2s linear infinite;
+  overflow: visible;
+
+  /* hardware accelerate */
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+@keyframes moveright {
+  0% {
+    transform: translateX(-12px);
+  }
+
+  100% {
+    transform: translateX(13px);
+  }
+}

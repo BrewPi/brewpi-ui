@@ -13,6 +13,8 @@
   fill: #FFF;
   stroke: #FFF;
   stroke-width: 2pt;
+  transform-origin: 25px 25px;
+  transition-duration: 1s;
 }
 
 .rotate_90 {
@@ -39,20 +41,22 @@
   fill: #000;
 }
 
+.ballOpen {
+  transform: rotate(0deg);
+}
+
 .ballMidway {
-  transform-origin: 25px 25px;
   transform: rotate(45deg);
 }
 
 .ballClosed {
-  transform-origin: 25px 25px;
   transform: rotate(90deg);
 }
 
 .id {
   position: absolute;
-  top: 39px;
-  left: 0;
+  right: 1px;
+  bottom: 0;
   width: 100%;
   text-align: right;
   font-size: 10px;
@@ -63,4 +67,24 @@
   padding: 0;
   background: none;
   border: none;
+}
+
+.variant1 {
+  transform-origin: 25px 25px;
+  transform: rotate(0deg);
+}
+
+.variant2 {
+  transform-origin: 25px 25px;
+  transform: rotate(90deg);
+}
+
+.variant3 {
+  transform-origin: 25px 25px;
+  transform: rotate(180deg);
+}
+
+.variant4 {
+  transform-origin: 25px 25px;
+  transform: rotate(270deg);
 }

@@ -1,5 +1,10 @@
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 .title {
-  display: table;
   margin: auto;
 }
 
@@ -22,3 +27,17 @@
 .viewName {
   font-weight: bold;
 }
+
+.headerCenter {
+  align-self: center;
+  min-width: 700px;
+}
+
+.headerLeft {
+  align-self: center;
+}
+
+.headerRight {
+  align-self: center;
+}
+

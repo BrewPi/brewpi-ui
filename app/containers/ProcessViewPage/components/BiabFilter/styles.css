@@ -1,29 +1,28 @@
-.kettleContainer {
+.biabFilterContainer {
   position: relative;
 }
 
-.kettle {
+.biabFilter {
   position: absolute;
   display: block;
   stroke: #FFF;
-  border: solid 4px #FFF;
-  border-radius: 8px;
+  border: dashed 2px #FFF;
+  border-top: none;
+  border-radius: 3px;
+  margin: 0 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   z-index: 3;
 }
 
-.kettleFill,
 .grain {
   width: 100%;
   height: 0;
   position: absolute;
   bottom: 0;
-  border-radius: 8px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   transition-duration: 1s;
-}
-
-.kettleFill {
-  z-index: 1;
-  background: gray;
 }
 
 .grain {
@@ -34,14 +33,3 @@
   height: 100px;
   z-index: 2;
 }
-
-.volume {
-  text-shadow: 0 0 1px #24333D, 0 0 2px #24333D, 0 0 3px #24333D, 0 0 4px #24333D;
-  position: absolute;
-  font-size: 20px;
-  font-weight: bold;
-  top: 10px;
-  right: 15px;
-  z-index: 2;
-}
-

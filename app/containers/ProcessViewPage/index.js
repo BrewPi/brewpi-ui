@@ -24,6 +24,8 @@ import {
 } from './selectors.js';
 import * as actions from './actions';
 import StepSelect from './components/StepSelect';
+import Toggle from './components/Toggle';
+import { ButtonGroup } from 'react-bootstrap';
 
 class ProcessViewPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   componentWillMount() {
@@ -47,17 +49,26 @@ class ProcessViewPage extends React.Component { // eslint-disable-line react/pre
           ]}
         />
         <div className={styles.header}>
-          <div className={styles.title}>
-            <h3 className={styles.processViewTitle}><FormattedMessage {...messages.header} />:</h3>
-            <h3 className={styles.viewName}>{this.props.viewName}</h3>
+          <div className={styles.headerLeft}></div>
+          <div className={styles.headerCenter}>
+            <div className={styles.title}>
+              <h3 className={styles.processViewTitle}><FormattedMessage {...messages.header} />:</h3>
+              <h3 className={styles.viewName}>{this.props.viewName}</h3>
+            </div>
+            <div className={styles.stepSelect}>
+              <StepSelect
+                steps={this.props.steps}
+                selected={this.props.activeStepId}
+                modified={this.props.stepModified}
+                onSelect={this.props.onStepSelected}
+              />
+            </div>
           </div>
-          <div className={styles.stepSelect}>
-            <StepSelect
-              steps={this.props.steps}
-              selected={this.props.activeStepId}
-              modified={this.props.stepModified}
-              onSelect={this.props.onStepSelected}
-            />
+          <div className={styles.headerRight}>
+            <ButtonGroup vertical>
+              <Toggle className={styles.toggle} name="Coordinates" enabled={this.props.showCoordinates} />
+              <Toggle className={styles.toggle} name="Grid" enabled={this.props.showGrid} />
+            </ButtonGroup>
           </div>
         </div>
         <ProcessView
@@ -79,6 +90,7 @@ ProcessViewPage.propTypes = {
   layout: React.PropTypes.instanceOf(Table),
   flows: React.PropTypes.instanceOf(Table),
   showCoordinates: React.PropTypes.bool,
+  showGrid: React.PropTypes.bool,
   steps: React.PropTypes.object,
   stepModified: React.PropTypes.bool,
   activeStepId: React.PropTypes.number,

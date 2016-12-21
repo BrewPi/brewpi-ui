@@ -8,21 +8,21 @@ import React from 'react';
 import styles from './styles.css';
 
 const SvgArrows = {
-  t: <polyline key="t" points="21 10.5 25 14.5 29 10.5" />,
-  l: <polyline key="l" points="10.5 21 14.5 25 10.5 29" />,
-  b: <polyline key="b" points="29 39.5 25 35.5 21 39.5" />,
-  r: <polyline key="r" points="39.5 21 35.5 25 39.5 29" />,
-  T: <polyline key="T" points="21 14.5 25 10.5 29 14.5" />,
-  L: <polyline key="L" points="14.5 21 10.5 25 14.5 29" />,
-  B: <polyline key="B" points="29 35.5 25 39.5 21 35.5" />,
-  R: <polyline key="R" points="35.5 21 39.5 25 35.5 29" />,
+  t: <polyline className={styles.moveDown} key="t" points="21 10.5 25 14.5 29 10.5" />,
+  l: <polyline className={styles.moveRight} key="l" points="10.5 21 14.5 25 10.5 29" />,
+  b: <polyline className={styles.moveUp} key="b" points="29 39.5 25 35.5 21 39.5" />,
+  r: <polyline className={styles.moveLeft} key="r" points="39.5 21 35.5 25 39.5 29" />,
+  T: <polyline className={styles.moveUp} key="T" points="21 14.5 25 10.5 29 14.5" />,
+  L: <polyline className={styles.moveLeft} key="L" points="14.5 21 10.5 25 14.5 29" />,
+  B: <polyline className={styles.moveDown} key="B" points="29 35.5 25 39.5 21 35.5" />,
+  R: <polyline className={styles.moveRight} key="R" points="35.5 21 39.5 25 35.5 29" />,
 };
 
 const SvgArrowsBridge = {
-  l: <polyline key="l" points="6.5 21 10.5 25 6.5 29" />,
-  r: <polyline key="r" points="43.5 21 39.5 25 43.5 29" />,
-  L: <polyline key="L" points="10.5 21 6.5 25 10.5 29" />,
-  R: <polyline key="R" points="39.5 21 43.5 25 39.5 29" />,
+  l: <polyline className={styles.moveRightBridge} key="l" points="6.5 21 10.5 25 6.5 29" />,
+  r: <polyline className={styles.moveLeftBridge} key="r" points="43.5 21 39.5 25 43.5 29" />,
+  L: <polyline className={styles.moveLeftBridge} key="L" points="10.5 21 6.5 25 10.5 29" />,
+  R: <polyline className={styles.moveRightBridge} key="R" points="39.5 21 43.5 25 39.5 29" />,
 };
 
 function pickArrows(flows, arrows) {

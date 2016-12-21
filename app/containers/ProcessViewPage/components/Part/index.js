@@ -25,6 +25,8 @@ import { GlycolReservoir } from '../GlycolReservoir';
 import { Keg } from '../Keg';
 import { TubularHeater } from '../TubularHeater';
 import { SetPoint } from '../SetPoint';
+import { FilterBottom } from '../FilterBottom';
+import { BiabFilter } from '../BiabFilter';
 import { Map } from 'immutable';
 import { Table } from 'immutable-table';
 
@@ -38,13 +40,16 @@ const componentTable = {
   TUBE_TEE: Tubes.Tee,
   TUBE_CROSS: Tubes.Cross,
   TUBE_BRIDGE: Tubes.Bridge,
+  TUBE_INLET_STRAIGHT: Tubes.InletStraight,
   TUBE_INLET: Tubes.Inlet,
   TUBE_WHIRLPOOL: Tubes.InletWhirlpool,
   TUBE_INPUT: Tubes.Input,
   TUBE_OUTPUT: Tubes.Output,
   TUBE_DIP: Tubes.Dip,
+  FITTING: Tubes.Fitting,
   VALVE_MOTOR: Valves.Motor,
   VALVE_MANUAL: Valves.Manual,
+  VALVE_MANUAL_TEE: Valves.ManualTee,
   VALVE_CHECK: Valves.Check,
   KETTLE: Kettle,
   COIL: Coil,
@@ -65,6 +70,8 @@ const componentTable = {
   TUBULAR_HEATER: TubularHeater,
   CARBOY: Carboy,
   SETPOINT: SetPoint,
+  FILTER_BOTTOM: FilterBottom,
+  BIAB_FILTER: BiabFilter,
   DEFAULT: NoPart,
 };
 
@@ -233,8 +240,10 @@ export class Part extends React.Component {
       options = options.toJS();
     }
 
+    let flows = this.props.flows; // tile flows
+    const partAcceptsFlows = Part.acceptsFlows(data); // possible flows due to this part
+
     // flows are in an immutable table. We want to get them back to normal JS objects
-    let flows = this.props.flows;
     const width = flows.width;
     const height = flows.height;
     if (flows) {
@@ -248,8 +257,12 @@ export class Part extends React.Component {
           if (flowTile !== undefined) {
             for (const flow of flowTile) {
               if (flow.dir !== 'undefined') {
-                // We rotate each flow in the tile back to normal orientation
-                flowsInTile.push({ dir: rotateFlows(flow.dir, 360 - rotate), liquid: flow.liquid });
+                // check that the flow in the tile comes from this part
+                if (Object.prototype.hasOwnProperty.call(partAcceptsFlows, Object.keys(flow.dir)[0])) {
+                  // We rotate each flow in the tile back to normal orientation for rendering
+                  const dir = rotateFlows(flow.dir, 360 - rotate);
+                  flowsInTile.push({ dir, liquid: flow.liquid });
+                }
               }
             }
           }

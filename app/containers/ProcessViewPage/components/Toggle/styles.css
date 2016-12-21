@@ -1,0 +1,15 @@
+.enabled {
+  color: green;
+}
+
+.disabled {
+  color: #888;
+}
+
+.name {
+  margin-left: 5px;
+}
+
+.toggleButton {
+  text-align: left;
+}

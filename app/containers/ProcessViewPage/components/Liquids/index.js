@@ -6,7 +6,7 @@ const fills = {
   runoff: '#d69d5f',
   cleaner: '#89448a',
   background: '#24333D',
-  conflict: 'orange',
+  conflict: 'black',
 };
 function color(liquid) {
   return liquid ? fills[liquid] : fills.background;

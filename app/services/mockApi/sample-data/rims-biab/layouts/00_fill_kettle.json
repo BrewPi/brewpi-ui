@@ -1,0 +1,65 @@
+{
+  "id": 0,
+  "name": "Fill kettle",
+  "parts": [
+     {
+      "part": {
+        "rotate": 90,
+        "type": "TUBE_INPUT",
+        "id": "in1"
+      },
+      "x": 4,
+      "y": 1
+    },
+     {
+      "part": {
+        "rotate": 90,
+        "type": "TUBE_INLET_STRAIGHT"
+      },
+      "x": 4,
+      "y": 2
+    },
+    {
+      "part": {
+        "type": "KETTLE",
+        "options": {
+          "height": 6,
+          "volume": 70,
+          "width": 4
+        },
+        "id": "kettle"
+      },
+      "x": 2,
+      "y": 2
+    },
+    {
+      "part": {
+        "type": "BIAB_FILTER",
+        "options": {
+          "height": 5,
+          "width": 4,
+          "volume": 60
+        },
+        "id": "bag"
+      },
+      "x": 2,
+      "y": 2
+    },
+     {
+      "part": {
+        "type": "FILTER_BOTTOM"
+      },
+      "x": 2,
+      "y": 7
+    },
+   
+   {
+      "part": {
+        "type": "VALVE_MANUAL",
+        "id": "m1"
+      },
+      "x": 1,
+      "y": 7
+    }
+  ]
+}

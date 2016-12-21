@@ -40,13 +40,14 @@ export class Kettle extends React.Component {
     const grainStyle = {
       height: this.grainHeight(),
     };
+    const volumeStyle = (volume === 0 || this.props.options.hideVolume === true) ? { display: 'none' } : {};
 
     return (
       <div className={styles.kettleContainer} style={kettleStyle}>
         <div className={styles.kettleFill} style={liquidStyle} />
         <div className={styles.grain} style={grainStyle} />
         <div className={styles.kettle} style={kettleStyle} />
-        <span className={styles.volume}>{volume.toFixed(1)}L</span>
+        <span className={styles.volume} style={volumeStyle}>{volume.toFixed(1)}L</span>
       </div>
     );
   }
@@ -59,5 +60,6 @@ Kettle.propTypes = {
   }),
   options: React.PropTypes.shape({
     volume: React.PropTypes.number, // max volume
+    hideVolume: React.PropTypes.boolean,
   }),
 };

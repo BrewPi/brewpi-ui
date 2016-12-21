@@ -16,7 +16,7 @@ import { BlowerFan } from '../BlowerFan';
 import { TempSensors } from '../TempSensors';
 import { Cfc } from '../Cfc';
 import { GlycolChiller } from '../GlycolChiller';
-import { Filter } from '../Filter';
+import { FilterBottom } from '../FilterBottom';
 import { Lauterhexe } from '../Lauterhexe';
 import { HeatingElement } from '../HeatingElement';
 import { TubularHeater } from '../TubularHeater';
@@ -63,17 +63,6 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.Output flows={[{ dir: { l: 's' }, liquid: 'water' }]} />
                 <Tubes.Output flows={[{ dir: { l: 's' }, liquid: 'hotwater' }]} />
                 <Tubes.Output flows={[{ dir: { l: 's' }, liquid: 'beer' }]} />
-              </td>
-            </tr>
-            <tr>
-              <td>Tube Dip</td>
-              <td>
-                <Tubes.Dip />
-              </td>
-              <td>
-                <Tubes.Dip flows={[{ dir: { l: 'b' }, liquid: 'water' }]} />
-                <Tubes.Dip flows={[{ dir: { l: 'b' }, liquid: 'hotwater' }]} />
-                <Tubes.Dip flows={[{ dir: { l: 'b' }, liquid: 'beer' }]} />
               </td>
             </tr>
             <tr>
@@ -133,14 +122,14 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               </td>
             </tr>
             <tr>
-              <td>Tube Inlet</td>
+              <td>Fitting</td>
               <td>
-                <Tubes.Inlet />
+                <Tubes.Fitting />
               </td>
               <td>
-                <Tubes.Inlet flows={[{ dir: { l: 'k' }, liquid: 'water' }]} />
-                <Tubes.Inlet flows={[{ dir: { l: 'k' }, liquid: 'hotwater' }]} />
-                <Tubes.Inlet flows={[{ dir: { l: 'k' }, liquid: 'beer' }]} />
+                <Tubes.Fitting flows={[{ dir: { l: 'k' }, liquid: 'water' }]} />
+                <Tubes.Fitting flows={[{ dir: { l: 'k' }, liquid: 'hotwater' }]} />
+                <Tubes.Fitting flows={[{ dir: { l: 'k' }, liquid: 'beer' }]} />
               </td>
             </tr>
             <tr>
@@ -152,6 +141,28 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Tubes.InletStraight flows={[{ dir: { l: 'k' }, liquid: 'water' }]} />
                 <Tubes.InletStraight flows={[{ dir: { l: 'k' }, liquid: 'hotwater' }]} />
                 <Tubes.InletStraight flows={[{ dir: { l: 'k' }, liquid: 'beer' }]} />
+              </td>
+            </tr>
+            <tr>
+              <td>Tube Dip</td>
+              <td>
+                <Tubes.Dip />
+              </td>
+              <td>
+                <Tubes.Dip flows={[{ dir: { k: 'l' }, liquid: 'water' }]} />
+                <Tubes.Dip flows={[{ dir: { k: 'l' }, liquid: 'hotwater' }]} />
+                <Tubes.Dip flows={[{ dir: { k: 'l' }, liquid: 'beer' }]} />
+              </td>
+            </tr>
+            <tr>
+              <td>Tube Inlet</td>
+              <td>
+                <Tubes.Inlet />
+              </td>
+              <td>
+                <Tubes.Inlet flows={[{ dir: { l: 'k' }, liquid: 'water' }]} />
+                <Tubes.Inlet flows={[{ dir: { l: 'k' }, liquid: 'hotwater' }]} />
+                <Tubes.Inlet flows={[{ dir: { l: 'k' }, liquid: 'beer' }]} />
               </td>
             </tr>
             <tr>
@@ -325,12 +336,14 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               </td>
             </tr>
             <tr>
-              <td>Filter</td>
+              <td>Filter Bottom</td>
               <td>
-                <Filter />
+                <FilterBottom />
               </td>
               <td>
-                <Filter liquid={'water'} />
+                <FilterBottom
+                  flows={[{ dir: { k: 'l' }, liquid: 'water' }]}
+                />
               </td>
             </tr>
             <tr>
