@@ -241,42 +241,55 @@ export class Part extends React.Component {
     }
 
     let flows = this.props.flows; // tile flows
-    const partAcceptsFlows = Part.acceptsFlows(data); // possible flows due to this part
-
-    // flows are in an immutable table. We want to get them back to normal JS objects
-    const width = flows.width;
-    const height = flows.height;
-    if (flows) {
-      const partFlows = [];
-      for (let y = 0; y < height; y += 1) {
-        const row = [];
-        for (let x = 0; x < width; x += 1) {
-          const flowTile = flows.getCell(x, y);
-          // to pass them to the part we convert them to a normal mutable object by reading the cells
-          const flowsInTile = [];
-          if (flowTile !== undefined) {
-            for (const flow of flowTile) {
-              if (flow.dir !== 'undefined') {
-                // check that the flow in the tile comes from this part
-                if (Object.prototype.hasOwnProperty.call(partAcceptsFlows, Object.keys(flow.dir)[0])) {
-                  // We rotate each flow in the tile back to normal orientation for rendering
-                  const dir = rotateFlows(flow.dir, 360 - rotate);
-                  flowsInTile.push({ dir, liquid: flow.liquid });
+    let partAcceptsFlows = Part.acceptsFlows(data); // possible flows due to this part
+    if (partAcceptsFlows) {
+      // make sure partAcceptFlows is a twodimensional Array
+      if (partAcceptsFlows.constructor === Array) {
+        if (partAcceptsFlows[0].constructor !== Array) {
+          partAcceptsFlows = [partAcceptsFlows];
+        }
+      } else {
+        partAcceptsFlows = [[partAcceptsFlows]];
+      }
+      // flows are in an immutable table. We want to get them back to normal JS objects
+      const width = flows.width;
+      const height = flows.height;
+      if (flows) {
+        const partFlows = [];
+        for (let y = 0; y < height; y += 1) {
+          const row = [];
+          for (let x = 0; x < width; x += 1) {
+            const flowTile = flows.getCell(x, y);
+            // to pass them to the part we convert them to a normal mutable object by reading the cells
+            const flowsInTile = [];
+            if (flowTile !== undefined) {
+              for (const flow of flowTile) {
+                if (flow.dir !== 'undefined') {
+                  // check that the flow in the tile comes from this part
+                  const flowOrigin = Object.keys(flow.dir)[0];
+                  const partFlowsInTile = partAcceptsFlows[y][x];
+                  if (partFlowsInTile && Object.prototype.hasOwnProperty.call(partFlowsInTile, flowOrigin)) {
+                    // We rotate each flow in the tile back to normal orientation for rendering
+                    const dir = rotateFlows(flow.dir, 360 - rotate);
+                    flowsInTile.push({ dir, liquid: flow.liquid });
+                  }
                 }
               }
             }
+            row.push(flowsInTile);
           }
-          row.push(flowsInTile);
+          partFlows.push(row);
         }
-        partFlows.push(row);
+        if (width === 1 && height === 1) {
+          // unpack unnecessary 1x1 tables, because 1x1 parts do not expect an Array[][][], but an Array[] of flows
+          flows = partFlows[0][0];
+        } else {
+          // Then we rotate the entire table back to normal orientation
+          flows = rotateArray(partFlows, rotate);
+        }
       }
-      if (width === 1 && height === 1) {
-        // unpack unnecessary 1x1 tables, because 1x1 parts do not expect an Array[][][], but an Array[] of flows
-        flows = partFlows[0][0];
-      } else {
-        // Then we rotate the entire table back to normal orientation
-        flows = rotateArray(partFlows, rotate);
-      }
+    } else {
+      flows = {};
     }
     const renderedComponent = React.createElement(Part.component(data), { id, settings, options, flows, flip, rotate });
     return (
