@@ -240,8 +240,10 @@ export class Part extends React.Component {
       options = options.toJS();
     }
 
+    let flows = this.props.flows; // tile flows
+    const partAcceptsFlows = Part.acceptsFlows(data); // possible flows due to this part
+
     // flows are in an immutable table. We want to get them back to normal JS objects
-    let flows = this.props.flows;
     const width = flows.width;
     const height = flows.height;
     if (flows) {
@@ -255,8 +257,12 @@ export class Part extends React.Component {
           if (flowTile !== undefined) {
             for (const flow of flowTile) {
               if (flow.dir !== 'undefined') {
-                // We rotate each flow in the tile back to normal orientation
-                flowsInTile.push({ dir: rotateFlows(flow.dir, 360 - rotate), liquid: flow.liquid });
+                // check that the flow in the tile comes from this part
+                if (Object.prototype.hasOwnProperty.call(partAcceptsFlows, Object.keys(flow.dir)[0])) {
+                  // We rotate each flow in the tile back to normal orientation for rendering
+                  const dir = rotateFlows(flow.dir, 360 - rotate);
+                  flowsInTile.push({ dir, liquid: flow.liquid });
+                }
               }
             }
           }
