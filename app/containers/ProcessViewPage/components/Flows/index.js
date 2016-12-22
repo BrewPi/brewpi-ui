@@ -29,18 +29,14 @@ function pickArrows(flows, arrows) {
   if (typeof flows === 'undefined') {
     return undefined;
   }
-  let combinedAsString = '';
+  const picked = [];
   for (const flow of flows.values()) {
-    if (flow.liquid !== 'conflict') {
-      for (const [inEdge, outEdges] of Object.entries(flow.dir)) {
-        combinedAsString += inEdge;
-        combinedAsString += outEdges.toUpperCase();
+    console.log(JSON.stringify(flow));
+    if (flow.flowing) {
+      for (const ch of flow.flowing) {
+        picked.push(arrows[ch]);
       }
     }
-  }
-  const picked = [];
-  for (const ch of combinedAsString) {
-    picked.push(arrows[ch]);
   }
   return picked;
 }

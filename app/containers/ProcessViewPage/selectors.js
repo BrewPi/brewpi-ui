@@ -221,7 +221,7 @@ const layoutTableSelector = createSelector(
 /**
  * get a table of possible flows for each tile.
  */
-const flowTableSelector = createSelector(
+const possibleFlowTableSelector = createSelector(
   layoutTableSelector,
   (layoutTable) => {
     const width = layoutTable.width;
@@ -315,8 +315,8 @@ const getNeighbour = (x, y, edge, width, height) => {
  * get a table of actual flows for each tile by recursively following possible flows,
  * starting at each source, ending in a sink.
  */
-const actualFlowTableSelector = createSelector(
-  flowTableSelector,
+const flowTableSelector = createSelector(
+  possibleFlowTableSelector,
   (possibleFlowTable) => {
     const width = possibleFlowTable.width;
     const height = possibleFlowTable.height;
@@ -325,7 +325,8 @@ const actualFlowTableSelector = createSelector(
       for (let y = 0; y < height; y += 1) {
         const tileFlow = possibleFlowTable.getCell(x, y);
         if (tileFlow !== undefined && tileFlow.s !== undefined && tileFlow.liquid !== undefined) { // this tile is a source, start an expanding flow path from here
-          actualFlowTable = expandFlow(x, y, 's', tileFlow.liquid, possibleFlowTable, actualFlowTable);
+          const expanded = expandFlow(x, y, 's', tileFlow.liquid, possibleFlowTable, actualFlowTable);
+          actualFlowTable = expanded.flow;
         }
       }
     }
@@ -337,7 +338,7 @@ const expandFlow = (x, y, inEdge, liquid, possibleFlowTable, actualFlowTable) =>
   const possibleFlow = possibleFlowTable.getCell(x, y) || {};
   const outEdges = possibleFlow[inEdge];
   if (typeof outEdges === 'undefined') {
-    return actualFlowTable; // no flow possible, leave actual flow table unchanged
+    return { flow: actualFlowTable, flowing: false }; // no flow possible, leave actual flow table unchanged
   }
   // check for conflicts (existing outflows match this inflow)
   // this prevents loops
@@ -360,16 +361,38 @@ const expandFlow = (x, y, inEdge, liquid, possibleFlowTable, actualFlowTable) =>
   const newCell = { dir: {}, liquid: {} };
   newCell.dir[inEdge] = outEdges;
   newCell.liquid = liquid;
+  let flowing = false;
+  let flowingOutEdges = '';
   let newActualFlowTable = pushToCell(x, y, actualFlowTable, newCell);
   if (!conflict) { // only continue recursion when there are no conflicts
     for (const edge of outEdges) {
       const neighbour = getNeighbour(x, y, edge, possibleFlowTable.width, possibleFlowTable.height);
+      let flowingToNeighbour = false;
       if (neighbour) {
-        newActualFlowTable = expandFlow(neighbour.x, neighbour.y, neighbour.edge, liquid, possibleFlowTable, newActualFlowTable);
+        const expanded = expandFlow(neighbour.x, neighbour.y, neighbour.edge, liquid, possibleFlowTable, newActualFlowTable);
+        newActualFlowTable = expanded.flow;
+        flowingToNeighbour = expanded.flowing;
       }
+      const isSink = (edge === 'k') || (edge === 's');
+      const flowOnThisEdge = flowingToNeighbour || isSink;
+      flowing = flowing || flowOnThisEdge;
+      flowingOutEdges = (flowOnThisEdge) ? flowingOutEdges + edge : flowingOutEdges;
     }
   }
-  return newActualFlowTable;
+  if (flowing) {
+    // update cell with what is actually flowing
+    let cell = newActualFlowTable.getCell(x, y);
+    const index = cell.findIndex((f) => f.dir === newCell.dir);
+    if (index >= 0) {
+      cell = cell.update(index, (f) => {
+        const f2 = f;
+        f2.flowing = inEdge + flowingOutEdges.toUpperCase();
+        return f2;
+      });
+      newActualFlowTable = newActualFlowTable.setCell(x, y, cell);
+    }
+  }
+  return { flow: newActualFlowTable, flowing };
 };
 
 
@@ -383,8 +406,8 @@ export {
   showCoordinatesSelector,
   dimensionsSelector,
   layoutTableSelector,
+  possibleFlowTableSelector,
   flowTableSelector,
-  actualFlowTableSelector,
   stepsSelector,
   activeStepIdSelector,
   activeStepSettingsSelector,

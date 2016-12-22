@@ -100,7 +100,7 @@ const rotateClassNames = {
  */
 const rotateString = (oldString, angle) => {
   let newString = '';
-  const lookup = { l: 't', t: 'r', r: 'b', b: 'l' };
+  const lookup = { l: 't', t: 'r', r: 'b', b: 'l', L: 'T', T: 'R', R: 'B', B: 'L' };
   for (const ch of oldString) {
     let newCh = ch;
     let angleRemaining = angle;
@@ -271,7 +271,8 @@ export class Part extends React.Component {
                   if (partFlowsInTile && Object.prototype.hasOwnProperty.call(partFlowsInTile, flowOrigin)) {
                     // We rotate each flow in the tile back to normal orientation for rendering
                     const dir = rotateFlows(flow.dir, 360 - rotate);
-                    flowsInTile.push({ dir, liquid: flow.liquid });
+                    const flowing = (flow.flowing) ? rotateString(flow.flowing, 360 - rotate) : '';
+                    flowsInTile.push({ dir, liquid: flow.liquid, flowing });
                   }
                 }
               }
