@@ -166,7 +166,7 @@
     {
       "id": "p2",
       "settings":{
-        "powered": "off"
+        "powered": "on"
       }
     }
   ]
