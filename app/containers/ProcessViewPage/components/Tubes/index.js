@@ -215,7 +215,10 @@ InletWhirlpool.propTypes = {
 };
 
 class Fitting extends React.Component {
-  static flows = () => ({ l: 'k', k: 'l' });
+  static flows = (data) => {
+    const input = data.getIn(['settings', 'dir']) === 'in';
+    return (input) ? { l: 'k' } : { k: 'l' }; // only input when explicitly set as input
+  }
   render() {
     return (
       <SvgParent viewBox={'0 0 50 50'}>

@@ -105,7 +105,10 @@
     {
       "part": {
         "rotate": 90,
-        "type": "FITTING"
+        "type": "FITTING",
+        "settings": {
+          "dir": "out"
+        }        
       },
       "x": 5,
       "y": 9
@@ -113,7 +116,10 @@
     {
       "part": {
         "rotate": 90,
-        "type": "FITTING"
+        "type": "FITTING",
+        "settings": {
+          "dir": "in"
+        }
       },
       "x": 2,
       "y": 9
@@ -121,11 +127,12 @@
     {
       "part": {
         "type": "KETTLE",
+        "id": "rims",
         "options": {
           "height": 1,
           "volume": 2,
           "width": 4,
-          "id": "rims"
+          "hideVolume": true
         }
       },
       "x": 2,
