@@ -20,8 +20,8 @@ export class Cfc extends React.Component {
     let liquidTop;
     let liquidBottom;
     if (this.props.flows !== undefined) {
-      liquidTop = pickLiquid(this.props.flows[0][0], Cfc.flows()[0][0]);
-      liquidBottom = pickLiquid(this.props.flows[1][0], Cfc.flows()[1][0]);
+      liquidTop = pickLiquid(this.props.flows[0][0]);
+      liquidBottom = pickLiquid(this.props.flows[1][0]);
     }
     return (
       <SvgParent viewBox={'0 0 150 100'}>

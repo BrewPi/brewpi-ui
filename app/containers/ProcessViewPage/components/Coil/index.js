@@ -16,7 +16,7 @@ export class Coil extends React.Component {
   render() {
     let liquid;
     if (this.props.flows !== undefined) {
-      liquid = pickLiquid(this.props.flows[0][0], Coil.flows()[0][0]);
+      liquid = pickLiquid(this.props.flows[0][0]);
     }
     return (
       <SvgParent viewBox={'0 0 150 100'}>

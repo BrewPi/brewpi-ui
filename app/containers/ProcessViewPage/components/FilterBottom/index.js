@@ -13,7 +13,7 @@ export class FilterBottom extends React.Component {
   render() {
     return (
       <SvgParent viewBox={'0 0 200 50'}>
-        <SvgLiquidDip className={styles.liquid} style={Liquids.strokeStyle(pickLiquid(this.props.flows, FilterBottom.flows()))} />
+        <SvgLiquidDip className={styles.liquid} style={Liquids.strokeStyle(pickLiquid(this.props.flows))} />
         <SvgDip className={styles.lines} />
         <SvgFilter className={styles.filter} />
         <FlowArrows flows={this.props.flows} />

@@ -17,7 +17,7 @@ export class Pump extends React.Component {
   render() {
     const powered = this.props.settings.powered;
     const rotateClass = getRotateClass(powered);
-    const liquid = pickLiquid(this.props.flows, Pump.flows());
+    const liquid = pickLiquid(this.props.flows);
     return (
       <div>
         <SvgParent>

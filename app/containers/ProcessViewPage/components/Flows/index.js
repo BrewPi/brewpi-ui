@@ -31,7 +31,6 @@ function pickArrows(flows, arrows) {
   }
   const picked = [];
   for (const flow of flows.values()) {
-    console.log(JSON.stringify(flow));
     if (flow.flowing) {
       for (const ch of flow.flowing) {
         picked.push(arrows[ch]);
@@ -74,15 +73,11 @@ FlowArrowsBridge.propTypes = {
 };
 
 // Find the flow that maches this part/tile and extract which liquid it is
-export const pickLiquid = (flows, allowedFlows) => {
+export const pickLiquid = (flows) => {
   const liquids = [];
   if (typeof flows !== 'undefined') {
     for (const flow of flows.values()) {
-      for (const edge of Object.keys(flow.dir)) {
-        if (typeof allowedFlows[edge] !== 'undefined') {
-          liquids.push(flow.liquid);
-        }
-      }
+      liquids.push(flow.liquid);
     }
   }
   if (liquids.length === 0) {
