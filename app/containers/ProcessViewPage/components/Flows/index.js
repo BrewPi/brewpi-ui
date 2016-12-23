@@ -41,7 +41,7 @@ function pickArrows(flows, arrows) {
 }
 
 /* Renders flow arrows, to be used inside an svg tag
- * flow is a string containing the letters NESW.
+ * flow is a string containing the letters tblr.
  * lowercase is inflow, uppercase is outflow
  */
 export const FlowArrows = (props) => {
@@ -53,6 +53,34 @@ export const FlowArrows = (props) => {
   );
 };
 FlowArrows.propTypes = {
+  flows: React.PropTypes.array,
+};
+
+/* Renders flow arrows for multiple tiles, to be used inside an svg tag
+ * flow is a string containing the letters tblr.
+ * lowercase is inflow, uppercase is outflow
+ */
+export const FlowArrows2D = (props) => {
+  const allArrows = [];
+  let y = 0;
+  for (const yy of props.flows) {
+    let x = 0;
+    for (const xx of yy) {
+      const xPos = x * 50;
+      const yPos = y * 50;
+      const tile = (
+        <g transform={`translate(${xPos},${yPos})`} className={styles.flowArrows}>
+          {pickArrows(xx, SvgArrows)}
+        </g>
+      );
+      allArrows.push(tile);
+      x += 1;
+    }
+    y += 1;
+  }
+  return <g>{allArrows}</g>;
+};
+FlowArrows2D.propTypes = {
   flows: React.PropTypes.array,
 };
 
@@ -73,10 +101,17 @@ FlowArrowsBridge.propTypes = {
 };
 
 // Find the flow that maches this part/tile and extract which liquid it is
-export const pickLiquid = (flows) => {
+// If x and y are defined, interpret flows as 2 dimensional and get the flow from those coordinates
+export const pickLiquid = (flows, x, y) => {
   const liquids = [];
-  if (typeof flows !== 'undefined') {
-    for (const flow of flows.values()) {
+  let flowsSingleTile;
+  if (x !== undefined && y !== undefined) {
+    flowsSingleTile = flows[y][x];
+  } else {
+    flowsSingleTile = flows;
+  }
+  if (typeof flowsSingleTile !== 'undefined') {
+    for (const flow of flowsSingleTile.values()) {
       liquids.push(flow.liquid);
     }
   }

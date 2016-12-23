@@ -30,7 +30,7 @@ const SvgFitting = require('./svg/fitting.svg?tag=g');
 const SvgLiquidFitting = require('./svg/liquid_fitting.svg?tag=g');
 
 import { SvgParent } from '../SvgParent';
-import { FlowArrows, FlowArrowsBridge, pickLiquid } from '../Flows';
+import { FlowArrows, FlowArrows2D, FlowArrowsBridge, pickLiquid } from '../Flows';
 import { Liquids } from '../Liquids';
 
 class Input extends React.Component {
@@ -199,13 +199,13 @@ Dip.propTypes = {
 };
 
 class InletWhirlpool extends React.Component {
-  static flows = () => ({ l: 'k' });
+  static flows = () => ([[{ l: 'b' }], [{ t: 'b' }], [{ t: 'b' }], [{ t: 'k' }]]);
   render() {
     return (
       <SvgParent viewBox={'0 0 50 200'}>
-        <SvgLiquidInletWhirlpool className={styles.liquid} style={Liquids.strokeStyle(pickLiquid(this.props.flows))} />
+        <SvgLiquidInletWhirlpool className={styles.liquid} style={Liquids.strokeStyle(pickLiquid(this.props.flows, 0, 0))} />
         <SvgTubeInletWhirlpool className={styles.tube} />
-        <FlowArrows flows={this.props.flows} />
+        <FlowArrows2D flows={this.props.flows} />
       </SvgParent>
     );
   }
