@@ -168,6 +168,24 @@
       "settings":{
         "powered": "on"
       }
+    },
+    {
+      "id": "sphlt",
+      "settings": {
+        "val": 20
+      }
+    },
+    {
+      "id": "spmt",
+      "settings": {
+        "val": 20
+      }
+    },
+    {
+      "id": "spbk",
+      "settings": {
+        "val": 48
+      }
     }
   ]
 }

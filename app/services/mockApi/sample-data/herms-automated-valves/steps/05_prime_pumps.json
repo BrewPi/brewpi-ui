@@ -140,6 +140,24 @@
       "id": "in1",
       "settings": {
       }
-    }    
+    },
+    {
+      "id": "sphlt",
+      "settings": {
+        "val": 15
+      }
+    },
+    {
+      "id": "spmt",
+      "settings": {
+        "val": 20
+      }
+    },
+    {
+      "id": "spbk",
+      "settings": {
+        "val": 15
+      }
+    }
   ]
 }

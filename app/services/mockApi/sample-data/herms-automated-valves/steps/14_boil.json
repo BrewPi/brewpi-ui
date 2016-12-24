@@ -170,6 +170,26 @@
       "settings":{
         "powered": "off"
       }
+    },
+    {
+      "id": "sphlt",
+      "settings": {
+        "val": 66.2,
+        "set": 60
+      }
+    },
+    {
+      "id": "spmt",
+      "settings": {
+        "val": 20
+      }
+    },
+    {
+      "id": "spbk",
+      "settings": {
+        "val": 100,
+        "set": 100
+      }
     }
   ]
 }

@@ -158,7 +158,7 @@
     {
       "id": "heat_bk",
       "settings": {
-        "duty": 0
+        "duty": 100
       }
     },
     {
@@ -171,6 +171,26 @@
       "id": "p2",
       "settings":{
         "powered": "slow"
+      }
+    },
+    {
+      "id": "sphlt",
+      "settings": {
+        "val": 75.2,
+        "set": 60
+      }
+    },
+    {
+      "id": "spmt",
+      "settings": {
+        "val": 72.8
+      }
+    },
+    {
+      "id": "spbk",
+      "settings": {
+        "val": 82.9,
+        "set": 100
       }
     }
   ]

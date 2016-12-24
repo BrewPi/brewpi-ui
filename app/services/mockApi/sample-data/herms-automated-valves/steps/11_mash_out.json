@@ -171,6 +171,26 @@
       "settings":{
         "powered": "fast"
       }
+    },
+    {
+      "id": "sphlt",
+      "settings": {
+        "val": 77.0,
+        "set": 77.7
+      }
+    },
+    {
+      "id": "spmt",
+      "settings": {
+        "val": 72.9,
+        "set": 75.6
+      }
+    },
+    {
+      "id": "spbk",
+      "settings": {
+        "val": 20
+      }
     }
   ]
 }

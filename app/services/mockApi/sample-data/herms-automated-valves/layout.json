@@ -830,21 +830,24 @@
     },
     {
       "part": {
-        "type": "SETPOINT"
+        "type": "SETPOINT",
+        "id": "sphlt"
       },
       "x": 4,
       "y": 1
     },
     {
       "part": {
-        "type": "SETPOINT"
+        "type": "SETPOINT",
+        "id": "spmt"
       },
       "x": 11,
       "y": 1
     },
     {
       "part": {
-        "type": "SETPOINT"
+        "type": "SETPOINT",
+        "id": "spbk"
       },
       "x": 18,
       "y": 1

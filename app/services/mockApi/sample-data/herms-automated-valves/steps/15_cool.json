@@ -151,7 +151,7 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 0
+        "duty": 10
       }
     },
     {
@@ -170,6 +170,26 @@
       "id": "p2",
       "settings":{
         "powered": "fast"
+      }
+    },
+    {
+      "id": "sphlt",
+      "settings": {
+        "val": 60,
+        "set": 60
+      }
+    },
+    {
+      "id": "spmt",
+      "settings": {
+        "val": 20
+      }
+    },
+    {
+      "id": "spbk",
+      "settings": {
+        "val": 47,
+        "set": 20
       }
     }
   ]

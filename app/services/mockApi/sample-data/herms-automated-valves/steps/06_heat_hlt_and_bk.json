@@ -152,6 +152,26 @@
       "settings": {
         "duty": 100
       }
+    },
+    {
+      "id": "sphlt",
+      "settings": {
+        "val": 45.3,
+        "set": 67
+      }
+    },
+    {
+      "id": "spmt",
+      "settings": {
+        "val": 20
+      }
+    },
+    {
+      "id": "spbk",
+      "settings": {
+        "val": 57.7,
+        "set": 73
+      }
     }
   ]
 }
