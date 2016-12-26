@@ -6,6 +6,7 @@
 
 import React from 'react';
 import styles from './styles.css';
+import stylesBridge from './stylesBridge.css';
 
 const SvgArrows = {
   t: <polyline className={styles.moveDown} key="t" points="21 10.5 25 14.5 29 10.5" />,
@@ -19,10 +20,10 @@ const SvgArrows = {
 };
 
 const SvgArrowsBridge = {
-  l: <polyline className={styles.moveRightBridge} key="l" points="6.5 21 10.5 25 6.5 29" />,
-  r: <polyline className={styles.moveLeftBridge} key="r" points="43.5 21 39.5 25 43.5 29" />,
-  L: <polyline className={styles.moveLeftBridge} key="L" points="10.5 21 6.5 25 10.5 29" />,
-  R: <polyline className={styles.moveRightBridge} key="R" points="39.5 21 43.5 25 39.5 29" />,
+  l: <polyline className={stylesBridge.moveRightUp} key="l" points="6.5 21 10.5 25 6.5 29" />,
+  r: <polyline className={stylesBridge.moveLeftUp} key="r" points="43.5 21 39.5 25 43.5 29" />,
+  L: <polyline className={stylesBridge.moveLeftDown} key="L" points="10.5 21 6.5 25 10.5 29" />,
+  R: <polyline className={stylesBridge.moveRightDown} key="R" points="39.5 21 43.5 25 39.5 29" />,
 };
 
 function pickArrows(flows, arrows) {
