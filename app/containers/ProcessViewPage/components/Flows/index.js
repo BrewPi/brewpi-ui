@@ -54,7 +54,7 @@ export const FlowArrows = (props) => {
   );
 };
 FlowArrows.propTypes = {
-  flows: React.PropTypes.array,
+  flows: React.PropTypes.array.isRequired,
 };
 
 /* Renders flow arrows for multiple tiles, to be used inside an svg tag
@@ -82,7 +82,7 @@ export const FlowArrows2D = (props) => {
   return <g>{allArrows}</g>;
 };
 FlowArrows2D.propTypes = {
-  flows: React.PropTypes.array,
+  flows: React.PropTypes.array.isRequired,
 };
 
 /* Renders flow arrows, to be used inside an svg tag
@@ -98,7 +98,7 @@ export const FlowArrowsBridge = (props) => {
   );
 };
 FlowArrowsBridge.propTypes = {
-  flows: React.PropTypes.array,
+  flows: React.PropTypes.array.isRequired,
 };
 
 // Find the flow that maches this part/tile and extract which liquid it is

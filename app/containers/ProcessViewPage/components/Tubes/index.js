@@ -172,7 +172,7 @@ class InletStraight extends React.Component {
       <SvgParent>
         <SvgLiquidInletStraight className={styles.liquid} style={Liquids.strokeStyle(pickLiquid(this.props.flows))} />
         <SvgTubeInletStraight className={styles.tube} />
-        <FlowArrows flow={this.props.flows} />
+        <FlowArrows flows={this.props.flows} />
       </SvgParent>
     );
   }
