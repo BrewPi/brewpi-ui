@@ -46,6 +46,9 @@ function pickArrows(flows, arrows) {
  * lowercase is inflow, uppercase is outflow
  */
 export const FlowArrows = (props) => {
+  if (props.flows === undefined) {
+    return null;
+  }
   const arrows = pickArrows(props.flows, SvgArrows);
   return (
     <g className={styles.flowArrows}>
@@ -54,7 +57,7 @@ export const FlowArrows = (props) => {
   );
 };
 FlowArrows.propTypes = {
-  flows: React.PropTypes.array.isRequired,
+  flows: React.PropTypes.array,
 };
 
 /* Renders flow arrows for multiple tiles, to be used inside an svg tag
@@ -64,13 +67,16 @@ FlowArrows.propTypes = {
 export const FlowArrows2D = (props) => {
   const allArrows = [];
   let y = 0;
+  if (props.flows === undefined) {
+    return null;
+  }
   for (const yy of props.flows) {
     let x = 0;
     for (const xx of yy) {
       const xPos = x * 50;
       const yPos = y * 50;
       const tile = (
-        <g transform={`translate(${xPos},${yPos})`} className={styles.flowArrows}>
+        <g key={`${x}_${y}`} transform={`translate(${xPos},${yPos})`} className={styles.flowArrows}>
           {pickArrows(xx, SvgArrows)}
         </g>
       );
@@ -82,7 +88,7 @@ export const FlowArrows2D = (props) => {
   return <g>{allArrows}</g>;
 };
 FlowArrows2D.propTypes = {
-  flows: React.PropTypes.array.isRequired,
+  flows: React.PropTypes.array,
 };
 
 /* Renders flow arrows, to be used inside an svg tag
@@ -98,7 +104,7 @@ export const FlowArrowsBridge = (props) => {
   );
 };
 FlowArrowsBridge.propTypes = {
-  flows: React.PropTypes.array.isRequired,
+  flows: React.PropTypes.array,
 };
 
 // Find the flow that maches this part/tile and extract which liquid it is
@@ -106,6 +112,9 @@ FlowArrowsBridge.propTypes = {
 export const pickLiquid = (flows, x, y) => {
   const liquids = [];
   let flowsSingleTile;
+  if (flows === undefined) {
+    return undefined;
+  }
   if (x !== undefined && y !== undefined) {
     flowsSingleTile = flows[y][x];
   } else {

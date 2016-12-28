@@ -35,7 +35,7 @@ class BlowerFan extends React.Component {
 }
 BlowerFan.propTypes = {
   settings: React.PropTypes.shape({
-    power: React.PropTypes.string,
+    power: React.PropTypes.boolean,
     speed: React.PropTypes.number, // 0-100
   }),
   id: React.PropTypes.string,

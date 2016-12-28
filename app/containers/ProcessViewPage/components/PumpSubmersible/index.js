@@ -51,7 +51,7 @@ class PumpSubmersible extends React.Component {
 }
 PumpSubmersible.propTypes = {
   settings: React.PropTypes.shape({
-    power: React.PropTypes.string,
+    power: React.PropTypes.boolean,
     speed: React.PropTypes.number, // 0-100
   }),
   flows: React.PropTypes.array,

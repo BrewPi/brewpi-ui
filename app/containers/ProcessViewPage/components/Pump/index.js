@@ -52,7 +52,7 @@ class Pump extends React.Component {
 }
 Pump.propTypes = {
   settings: React.PropTypes.shape({
-    power: React.PropTypes.string,
+    power: React.PropTypes.boolean,
     speed: React.PropTypes.number, // 0-100
   }),
   flows: React.PropTypes.array,
