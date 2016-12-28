@@ -3,10 +3,19 @@ import styles from './styles.css';
 import { Liquids } from '../Liquids';
 
 export class Kettle extends React.Component {
-  static flows = (settings, options) => {
-    const [width, height] = options ? Kettle.dims(options) : [4, 6];
-    const flows = Array.from(new Array(height), () => (
-      Array.from(new Array(width), () => ({ s: 'k' }))
+  static flows = (data) => {
+    const options = data.get('options');
+    const settings = data.get('settings');
+    const [width, height] = Kettle.dims(options);
+    const totalVolume = options ? options.get('volume') || 100 : 100;
+    const volume = settings ? settings.get('volume') || 0 : 0;
+    const filledTiles = parseInt((volume * height) / totalVolume, 10);
+    const flows = Array.from(new Array(height), (v, k) => (
+      Array.from(new Array(width), () => {
+        let pressure = (k + filledTiles) - height;
+        pressure = (pressure > 0) ? pressure : 0;
+        return { s: `k+${pressure}` };
+      })
     ));
     return flows;
   }
