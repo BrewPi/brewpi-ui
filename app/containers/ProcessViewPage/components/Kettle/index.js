@@ -27,7 +27,7 @@ export class Kettle extends React.Component {
   liquidHeight() {
     const vol = this.props.settings ? this.props.settings.volume || 0 : 0;
     const total = this.props.options ? this.props.options.volume || 100 : 100;
-    return `${(100 * vol) / total}%`;
+    return `calc(${(100 * vol) / total}% - 8px)`;
   }
   grainHeight() {
     const vol = this.props.settings ? this.props.settings.grain || 0 : 0;
