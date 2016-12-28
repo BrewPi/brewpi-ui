@@ -428,7 +428,7 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               <td>
                 <Kettle settings={{ liquid: 'beer', volume: 20 }} options={{ volume: 70 }} />
                 <Kettle settings={{ liquid: 'water', volume: 50 }} options={{ volume: 70, width: 3, height: 2 }} />
-                <Kettle settings={{ liquid: 'hotwater', volume: 30 }} options={{ volume: 70, width: 4, height: 4 }} />
+                <Kettle settings={{ liquid: 'hotwater', volume: 30, grain: 20 }} options={{ volume: 70, width: 4, height: 4 }} />
               </td>
             </tr>
             <tr>

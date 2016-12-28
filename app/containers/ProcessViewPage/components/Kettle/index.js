@@ -32,7 +32,7 @@ export class Kettle extends React.Component {
   grainHeight() {
     const vol = this.props.settings ? this.props.settings.grain || 0 : 0;
     const total = this.props.options ? this.props.options.volume || 100 : 100;
-    return `${(100 * vol) / total}%`;
+    return `calc(${(100 * vol) / total}% - 8px)`;
   }
   render() {
     const [width, height] = Kettle.dims(this.props.options);
