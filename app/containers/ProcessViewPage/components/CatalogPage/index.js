@@ -21,6 +21,7 @@ import { Lauterhexe } from '../Lauterhexe';
 import { HeatingElement } from '../HeatingElement';
 import { TubularHeater } from '../TubularHeater';
 import { Coil } from '../Coil';
+import { CoilImmersion } from '../CoilImmersion';
 import { Kettle } from '../Kettle';
 import { Carboy } from '../Carboy';
 import { Keg } from '../Keg';
@@ -395,6 +396,26 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                   flows={[
                     [[{ dir: { l: 'b' }, flowing: 'lB', liquid: 'hotwater' }], [], []],
                     [[{ dir: { t: 'l' }, flowing: 'tL', liquid: 'hotwater' }], [], []],
+                  ]}
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Coil Immersion</td>
+              <td>
+                <CoilImmersion />
+              </td>
+              <td>
+                <CoilImmersion
+                  flows={[
+                    [[{ dir: { t: 'b' }, flowing: 'tB', liquid: 'water' }], [{ dir: { b: 't' }, flowing: 'bT', liquid: 'water' }]],
+                    [[{ dir: { t: 'r' }, flowing: 'tR', liquid: 'water' }], [{ dir: { l: 't' }, flowing: 'lT', liquid: 'water' }]],
+                  ]}
+                />
+                <CoilImmersion
+                  flows={[
+                    [[{ dir: { b: 't' }, flowing: 'bT', liquid: 'water' }], [{ dir: { t: 'b' }, flowing: 'tB', liquid: 'water' }]],
+                    [[{ dir: { r: 't' }, flowing: 'rT', liquid: 'water' }], [{ dir: { t: 'l' }, flowing: 'tL', liquid: 'water' }]],
                   ]}
                 />
               </td>

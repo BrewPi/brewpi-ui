@@ -1,4 +1,8 @@
 <svg viewBox="0 0 150 100" width="150" height="100">
+  <rect fill="white" y="12.5" width="8" height="8"/>
+  <rect fill="white" y="30" width="8" height="8"/>
+	<rect fill="white" y="62.5" width="8" height="8"/>
+  <rect fill="white" y="80" width="8" height="8"/>
  	<path d="M103.9,30.8L94.8,30c-22.2-1-49.5-1-49.8-1H0"/>
 	<path d="M0,21h45c0.3,0,27.9,0,50.2,1l50.2,4.6"/>
 	<path d="M86.4,40.6l59,5.4"/>

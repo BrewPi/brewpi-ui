@@ -1,0 +1,14 @@
+.coil {
+  stroke: #FFF;
+  stroke-width: 2pt;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.liquid {
+  fill: none;
+  stroke-width: 5pt;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
