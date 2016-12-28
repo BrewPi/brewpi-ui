@@ -1,0 +1,6 @@
+<svg viewBox="0 0 50 50" width="50" height="50">
+  <circle cx="25" cy="30" r="16"/>
+  <path d="M25,46c-8.8,0-16-7.2-16-16v19h32V30C41,38.8,33.8,46,25,46z" fill="white"/>
+</svg>
+
+

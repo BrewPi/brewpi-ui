@@ -41,12 +41,3 @@
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-
-.id {
-  position: absolute;
-  top: 39px;
-  left: 0;
-  width: 100%;
-  text-align: right;
-  font-size: 10px;
-}

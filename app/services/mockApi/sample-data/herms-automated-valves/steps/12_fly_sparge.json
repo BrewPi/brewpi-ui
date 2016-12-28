@@ -164,13 +164,15 @@
     {
       "id": "p1",
       "settings":{
-        "powered": "slow"
+        "power": true,
+        "speed": 40
       }
     },
     {
       "id": "p2",
       "settings":{
-        "powered": "slow"
+        "power": true,
+        "speed": 40
       }
     },
     {

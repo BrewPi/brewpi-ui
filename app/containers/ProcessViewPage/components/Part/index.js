@@ -12,9 +12,9 @@ import { Kettle } from '../Kettle';
 import { Coil } from '../Coil';
 import { HeatingElement } from '../HeatingElement';
 import { Lauterhexe } from '../Lauterhexe';
-import { Pump } from '../Pump';
-import { SubmersiblePump } from '../SubmersiblePump';
-import { BlowerFan } from '../BlowerFan';
+import Pump from '../Pump';
+import PumpSubmersible from '../PumpSubmersible';
+import BlowerFan from '../BlowerFan';
 import { Cfc } from '../Cfc';
 import { TempSensors } from '../TempSensors';
 import { BeerBottle } from '../BeerBottle';
@@ -56,7 +56,7 @@ const componentTable = {
   HEATING_ELEMENT: HeatingElement,
   LAUTERHEXE: Lauterhexe,
   PUMP: Pump,
-  SUBMERSIBLE_PUMP: SubmersiblePump,
+  SUBMERSIBLE_PUMP: PumpSubmersible,
   CFC: Cfc,
   TEMP_SENSOR_INLINE: TempSensors.Inline,
   BEER_BOTTLE: BeerBottle,
@@ -203,7 +203,7 @@ export class Part extends React.Component {
         width = flows.length;
       }
     }
-    return [width, height];
+    return { width, height };
   }
 
   type() {

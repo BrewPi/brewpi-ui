@@ -29,6 +29,13 @@
       "settings": {
         "duty": 100
       }
+    },
+    {
+      "id": "p1",
+      "settings":{
+        "power": true,
+        "speed": 100
+      }
     }
   ]
 }

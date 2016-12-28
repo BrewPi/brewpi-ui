@@ -59,7 +59,8 @@
       "x": 6,
       "y": 3,
       "part": {
-        "type": "SUBMERSIBLE_PUMP"
+        "type": "SUBMERSIBLE_PUMP",
+        "id": "p1"
       }
     },
     {
@@ -116,7 +117,8 @@
       "y": 3,
       "part": {
         "type": "BLOWER_FAN",
-        "rotate": 270
+        "rotate": 270,
+        "id": "blow"
       }
     },
     {

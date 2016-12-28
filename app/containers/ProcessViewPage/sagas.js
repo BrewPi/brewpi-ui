@@ -51,18 +51,35 @@ function* watchValveClicked() {
   yield* takeLatest(constants.VALVE_CLICKED, onValveClicked);
 }
 
+
+function* onPowerTogglableClicked(action) {
+  const oldPartSettings = yield select(partSettingsSelector);
+  const pumpIndex = oldPartSettings.findIndex((p) => p.get('id') === action.partId);
+  if (pumpIndex !== -1) {
+    const newPower = !action.oldPower;
+    const newPartSettings = oldPartSettings.setIn([pumpIndex, 'settings', 'power'], newPower);
+    yield put(actions.newPartSettingsReceived(newPartSettings));
+  }
+}
+
+function* watchPowerTogglableClicked() {
+  yield* takeLatest(constants.POWER_TOGGLABLE_CLICKED, onPowerTogglableClicked);
+}
+
 /**
  * Root saga manages watcher's lifecycle
  */
 export function* processViewSaga() {
   // Fork watcher so we can continue execution
   const valveClickWatcher = yield fork(watchValveClicked);
+  const powerTogglableClickWatcher = yield fork(watchPowerTogglableClicked);
   const stepSelectedWatcher = yield fork(watchStepSelected);
   const fetchProcessViewWatcher = yield fork(watchFetchProcessView);
 
   // Suspend execution until location changes
   yield take(LOCATION_CHANGE);
   yield cancel(valveClickWatcher);
+  yield cancel(powerTogglableClickWatcher);
   yield cancel(stepSelectedWatcher);
   yield cancel(fetchProcessViewWatcher);
 }

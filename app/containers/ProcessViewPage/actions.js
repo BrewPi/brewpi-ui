@@ -42,6 +42,15 @@ export function valveClicked(valveId, oldPos) {
   };
 }
 
+export function powerTogglableClicked(partId, oldPower) {
+  return {
+    type: constants.POWER_TOGGLABLE_CLICKED,
+    partId,
+    oldPower,
+  };
+}
+
+
 export function activeStepChanged(stepId) {
   return {
     type: constants.ACTIVE_STEP_CHANGED,

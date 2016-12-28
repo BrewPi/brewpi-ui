@@ -10,9 +10,9 @@ import styles from './styles.css';
 import { Table } from 'react-bootstrap';
 import { Valves } from '../Valves';
 import { Tubes } from '../Tubes';
-import { Pump } from '../Pump';
-import { SubmersiblePump } from '../SubmersiblePump';
-import { BlowerFan } from '../BlowerFan';
+import Pump from '../Pump';
+import PumpSubmersible from '../PumpSubmersible';
+import BlowerFan from '../BlowerFan';
 import { TempSensors } from '../TempSensors';
 import { Cfc } from '../Cfc';
 import { GlycolChiller } from '../GlycolChiller';
@@ -266,20 +266,20 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Pump />
               </td>
               <td>
-                <Pump powered={'on'} liquid={'water'} />
-                <Pump powered={'slow'} liquid={'hotwater'} />
-                <Pump powered={'fast'} liquid={'beer'} />
+                <Pump power={'on'} speed={20} liquid={'water'} />
+                <Pump power={'on'} speed={50} liquid={'hotwater'} />
+                <Pump power={'on'} speed={100} liquid={'beer'} />
               </td>
             </tr>
             <tr>
               <td>Submersible pump</td>
               <td>
-                <SubmersiblePump />
+                <PumpSubmersible />
               </td>
               <td>
-                <SubmersiblePump powered={'on'} liquid={'water'} />
-                <SubmersiblePump powered={'slow'} liquid={'hotwater'} />
-                <SubmersiblePump powered={'fast'} liquid={'beer'} />
+                <PumpSubmersible power={'on'} speed={20} liquid={'water'} />
+                <PumpSubmersible power={'on'} speed={50} liquid={'hotwater'} />
+                <PumpSubmersible power={'on'} speed={100} liquid={'beer'} />
               </td>
             </tr>
             <tr>

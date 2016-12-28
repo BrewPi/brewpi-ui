@@ -16,35 +16,10 @@
   }
 }
 
-@keyframes rotatingCC {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
-.rotateOff,
-.rotateFast,
-.rotateSlow {
+.rotate {
   transform-origin: 25px 25px;
+  animation-name: rotating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
-
-.rotateFast.clockwise {
-  animation: rotating 1s linear infinite;
-}
-
-.rotateFast.counterClockwise {
-  animation: rotatingCC 1s linear infinite;
-}
-
-.rotateSlow.clockwise {
-  animation: rotating 4s linear infinite;
-}
-
-.rotateSlow.counterClockwise {
-  animation: rotatingCC 4s linear infinite;
-}
-

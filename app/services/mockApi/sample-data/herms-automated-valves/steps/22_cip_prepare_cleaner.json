@@ -162,13 +162,14 @@
     {
       "id": "p1",
       "settings":{
-        "powered": "on"
+        "power": true,
+        "speed": 100
       }
     },
     {
       "id": "p2",
       "settings":{
-        "powered": "off"
+        "power": false
       }
     },
     {

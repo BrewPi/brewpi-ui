@@ -164,7 +164,8 @@
     {
       "id": "p2",
       "settings":{
-        "powered": "fast"
+        "power": true,
+        "speed": 100
       }
     },
     {

@@ -325,7 +325,11 @@ const flowTableSelector = createSelector(
       for (let y = 0; y < height; y += 1) {
         const tileFlow = possibleFlowTable.getCell(x, y);
         if (tileFlow !== undefined && tileFlow.s !== undefined && tileFlow.liquid !== undefined) { // this tile is a source, start an expanding flow path from here
-          const expanded = expandFlow(x, y, 's', tileFlow.liquid, possibleFlowTable, actualFlowTable);
+          let pressure = 0;
+          if (tileFlow.pressure) {
+            pressure = tileFlow.presure;
+          }
+          const expanded = expandFlow(x, y, 's', tileFlow.liquid, pressure, possibleFlowTable, actualFlowTable);
           actualFlowTable = expanded.flow;
         }
       }
@@ -334,10 +338,22 @@ const flowTableSelector = createSelector(
   }
 );
 
-const expandFlow = (x, y, inEdge, liquid, possibleFlowTable, actualFlowTable) => {
+function extractPressureDiff(edgesAndPressure) {
+  const outEdgesMinusReplaced = edgesAndPressure.replace('-', '+-');
+  const split = outEdgesMinusReplaced.split('+');
+  const edges = split[0];
+  let pressureDiff = 0;
+  if (split.length > 1) {
+    pressureDiff = parseInt(split[1], 10);
+  }
+  return { edges, pressureDiff };
+}
+
+
+const expandFlow = (x, y, inEdge, liquid, pressure, possibleFlowTable, actualFlowTable) => {
   const possibleFlow = possibleFlowTable.getCell(x, y) || {};
-  const outEdges = possibleFlow[inEdge];
-  if (typeof outEdges === 'undefined') {
+  const outEdgesString = possibleFlow[inEdge];
+  if (typeof outEdgesString === 'undefined') {
     return { flow: actualFlowTable, flowing: false }; // no flow possible, leave actual flow table unchanged
   }
   // check for conflicts (existing outflows match this inflow)
@@ -358,6 +374,9 @@ const expandFlow = (x, y, inEdge, liquid, possibleFlowTable, actualFlowTable) =>
       }
     }
   }
+  const extracted = extractPressureDiff(outEdgesString);
+  const outEdges = extracted.edges;
+  const pressureDiff = extracted.pressureDiff;
   const newCell = { dir: {}, liquid: {} };
   newCell.dir[inEdge] = outEdges;
   newCell.liquid = liquid;
@@ -369,9 +388,12 @@ const expandFlow = (x, y, inEdge, liquid, possibleFlowTable, actualFlowTable) =>
       const neighbour = getNeighbour(x, y, edge, possibleFlowTable.width, possibleFlowTable.height);
       let flowingToNeighbour = false;
       if (neighbour) {
-        const expanded = expandFlow(neighbour.x, neighbour.y, neighbour.edge, liquid, possibleFlowTable, newActualFlowTable);
-        newActualFlowTable = expanded.flow;
-        flowingToNeighbour = expanded.flowing;
+        const newPressure = pressure + (neighbour.y - y) + pressureDiff;
+        if (newPressure >= 0) {
+          const expanded = expandFlow(neighbour.x, neighbour.y, neighbour.edge, liquid, newPressure, possibleFlowTable, newActualFlowTable);
+          newActualFlowTable = expanded.flow;
+          flowingToNeighbour = expanded.flowing;
+        }
       }
       const isSink = (edge === 'k') || (edge === 's');
       const flowOnThisEdge = flowingToNeighbour || isSink;

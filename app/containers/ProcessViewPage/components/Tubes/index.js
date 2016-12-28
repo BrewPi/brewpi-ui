@@ -34,7 +34,7 @@ import { FlowArrows, FlowArrows2D, FlowArrowsBridge, pickLiquid } from '../Flows
 import { Liquids } from '../Liquids';
 
 class Input extends React.Component {
-  static flows = () => ({ s: 'r' }); // source on the right edge
+  static flows = () => ({ s: 'r+99' }); // source on the right edge
 
   render() {
     return (

@@ -162,13 +162,13 @@
     {
       "id": "p1",
       "settings":{
-        "powered": "off"
+        "power": false
       }
     },
     {
       "id": "p2",
       "settings":{
-        "powered": "off"
+        "power": false
       }
     },
     {

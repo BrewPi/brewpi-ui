@@ -1,25 +1,12 @@
 import styles from './styles.css';
-const classNames = require('classnames');
 
-const powerClasses = {
-  off: styles.powerOff,
-  on: styles.powerOn,
-  slow: styles.powerOn,
-  fast: styles.powerOn,
-  default: styles.powerOff,
-};
+const speedStyle = (speed, clockwise = true) => ({
+  'animation-duration': `${(3.0 * 100) / speed}s`,
+  'animation-direction': (clockwise) ? 'normal' : 'reversed',
+});
 
-const rotateClasses = {
-  off: styles.rotateOff,
-  on: styles.rotateFast,
-  slow: styles.rotateSlow,
-  fast: styles.rotateFast,
-  default: styles.rotateOff,
-};
 
-export const getPowerClass = (powered) => powerClasses[powered] || powerClasses.default;
-export const getRotateClass = (powered, clockwise = true) => {
-  const rotate = rotateClasses[powered] || rotateClasses.default;
-  const dir = (clockwise) ? styles.clockwise : styles.counterClockwise;
-  return classNames(rotate, dir);
+export const RotateCss = {
+  styles,
+  speedStyle,
 };
