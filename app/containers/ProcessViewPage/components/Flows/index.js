@@ -107,7 +107,7 @@ FlowArrowsBridge.propTypes = {
   flows: React.PropTypes.array,
 };
 
-// Find the flow that maches this part/tile and extract which liquid it is
+// extract the type of liquid from the flows
 // If x and y are defined, interpret flows as 2 dimensional and get the flow from those coordinates
 export const pickLiquid = (flows, x, y) => {
   const liquids = [];

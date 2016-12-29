@@ -132,7 +132,8 @@
           "height": 1,
           "volume": 2,
           "width": 4,
-          "hideVolume": true
+          "hideVolume": true,
+          "useAsTube": true
         }
       },
       "x": 2,

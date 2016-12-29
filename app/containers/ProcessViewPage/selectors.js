@@ -359,31 +359,44 @@ const expandFlow = (x, y, inEdge, liquid, pressure, possibleFlowTable, actualFlo
   // check for conflicts (existing outflows match this inflow)
   // this prevents loops
   let conflict = '';
+  let loop = '';
   const currentCell = actualFlowTable.getCell(x, y);
   if (typeof currentCell !== 'undefined') {
     for (const existingFlow of currentCell) {
+      const existingLiquid = existingFlow.liquid;
       for (const [existingInEdge, exitingOutEdges] of Object.entries(existingFlow.dir)) {
         if (existingInEdge === inEdge && inEdge !== 'k') { // kettle flow is an exception
           conflict += inEdge;
         }
         for (const outEdge of exitingOutEdges) {
           if (outEdge === inEdge && inEdge !== 'k') {
-            conflict += outEdge;
+            if (existingLiquid === liquid) {
+              loop += inEdge;
+            } else {
+              conflict += inEdge;
+            }
           }
         }
       }
     }
   }
+  let newActualFlowTable = actualFlowTable;
+  let flowing = false;
+  let flowingOutEdges = '';
   const extracted = extractPressureDiff(outEdgesString);
   const outEdges = extracted.edges;
   const pressureDiff = extracted.pressureDiff;
   const newCell = { dir: {}, liquid: {} };
   newCell.dir[inEdge] = outEdges;
   newCell.liquid = liquid;
-  let flowing = false;
-  let flowingOutEdges = '';
-  let newActualFlowTable = pushToCell(x, y, actualFlowTable, newCell);
-  if (!conflict) { // only continue recursion when there are no conflicts
+  if (conflict) {
+    console.warn(`Conflict in tile [${x}, ${y}] on edge(s) ${conflict}!`); // eslint-disable-line no-console
+  } else if (loop) {
+    if (inEdge !== 'k') {
+      console.warn(`Loop in tile [${x}, ${y}] on edge(s) ${loop}!`); // eslint-disable-line no-console
+    }
+  } else { // only continue recursion when there are no conflicts or loops
+    newActualFlowTable = pushToCell(x, y, newActualFlowTable, newCell);
     for (const edge of outEdges) {
       const neighbour = getNeighbour(x, y, edge, possibleFlowTable.width, possibleFlowTable.height);
       let flowingToNeighbour = false;
