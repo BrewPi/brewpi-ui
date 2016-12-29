@@ -5,8 +5,8 @@ view.layouts = [
   require('./layout.json'),
 ];
 view.steps = [
-  require('./steps/01_valves_closed.json'),
-  require('./steps/02_valves_open.json'),
+  require('./steps/01_valves_open.json'),
+  require('./steps/02_valves_closed.json'),
   require('./steps/03_fill_hlt.json'),
   require('./steps/04_fill_bk.json'),
   require('./steps/05_prime_pumps.json'),
