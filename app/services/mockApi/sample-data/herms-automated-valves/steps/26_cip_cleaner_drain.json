@@ -107,7 +107,7 @@
     {
       "id": "m5",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -125,6 +125,8 @@
     {
       "id": "hlt",
       "settings": {
+        "volume": 10.0,
+        "liquid": "hotwater"        
       }
     },
     {

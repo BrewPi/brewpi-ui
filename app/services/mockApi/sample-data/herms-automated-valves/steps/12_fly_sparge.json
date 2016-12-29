@@ -119,7 +119,7 @@
     {
       "id": "m7",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -140,13 +140,14 @@
       "id": "mt",
       "settings": {
         "grain": 15,
-        "volume": 17,
+        "volume": 10,
         "liquid": "runoff"
       }
     },
     {
       "id": "in1",
       "settings": {
+        "liquid": "water"
       }
     },
     {

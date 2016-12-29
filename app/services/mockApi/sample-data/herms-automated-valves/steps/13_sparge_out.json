@@ -119,20 +119,20 @@
     {
       "id": "m7",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "hlt",
       "settings": {
-        "volume": 20.0,
+        "volume": 30.0,
         "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 50,
+        "volume": 42,
         "liquid": "wort"
       }
     },
@@ -140,13 +140,14 @@
       "id": "mt",
       "settings": {
         "grain": 15,
-        "volume": 0,
+        "volume": 8,
         "liquid": "runoff"
       }
     },
     {
       "id": "in1",
       "settings": {
+        "liquid": "water"
       }
     },
     {

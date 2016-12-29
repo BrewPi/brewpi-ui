@@ -125,7 +125,7 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 20.0,
+        "volume": 30.0,
         "liquid": "hotwater"
       }
     },
@@ -145,12 +145,13 @@
     {
       "id": "in1",
       "settings": {
+        "liquid": "water"
       }
     },
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 0
+        "duty": 10
       }
     },
     {

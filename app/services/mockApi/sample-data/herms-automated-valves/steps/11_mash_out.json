@@ -119,7 +119,7 @@
     {
       "id": "m7",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -146,6 +146,7 @@
     {
       "id": "in1",
       "settings": {
+        "liquid": "water"
       }
     },
     {
