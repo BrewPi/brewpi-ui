@@ -11,7 +11,7 @@
     {
       "id": "v2",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -137,7 +137,7 @@
     {
       "id": "mt",
       "settings": {
-        "volume": 10,
+        "volume": 15,
         "liquid": "water"
       }
     },
