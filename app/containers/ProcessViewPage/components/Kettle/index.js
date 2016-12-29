@@ -119,3 +119,7 @@ Kettle.propTypes = {
   flows: React.PropTypes.array,
   id: React.PropTypes.string,
 };
+Kettle.defaultProps = {
+  settings: {},
+  options: {},
+};
