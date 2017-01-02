@@ -185,7 +185,11 @@ export const pickLiquid = (flows, x, y) => {
     return undefined;
   }
   if (liquids.length > 1) {
-    return 'conflict';
+    for (const liquid of liquids) {
+      if (liquid === liquids[0]) {
+        return 'conflict';
+      }
+    }
   }
   return liquids[0];
 };

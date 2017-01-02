@@ -408,7 +408,7 @@ const expandFlow = (x, y, inEdge, liquid, pressure, possibleFlowTable, actualFlo
           flowingToNeighbour = expanded.flowing;
         }
       }
-      const isSink = (edge === 'k') || (edge === 's');
+      const isSink = edge === 's';
       const flowOnThisEdge = flowingToNeighbour || isSink;
       flowing = flowing || flowOnThisEdge;
       flowingOutEdges = (flowOnThisEdge) ? flowingOutEdges + edge : flowingOutEdges;

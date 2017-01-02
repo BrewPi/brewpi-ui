@@ -48,9 +48,9 @@ export class Kettle extends React.Component {
         // liquid level determines which tiles can source
         const pressure = (k + filledTiles) - height;
         if (pressure >= 0) {
-          return { s: `k+${pressure}` };
+          return { s: `k+${pressure}`, k: 's' };
         }
-        return {};
+        return { k: 's' };
       })
     ));
     return flows;
