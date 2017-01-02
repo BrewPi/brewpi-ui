@@ -272,8 +272,8 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               </td>
               <td>
                 <Pump settings={{ power: true, speed: 20 }} flows={[{ dir: { l: 'r' }, flowing: 'lR', liquid: 'water' }]} />
-                <Pump settings={{ power: true, speed: 50 }} flows={[{ dir: { l: 'r' }, flowing: 'lR', liquid: '$1' }]} />
-                <Pump settings={{ power: true, speed: 100 }} flows={[{ dir: { l: 'r' }, flowing: 'lR', liquid: '$1' }]} />
+                <Pump settings={{ power: true, speed: 50 }} flows={[{ dir: { l: 'r' }, flowing: 'lR', liquid: 'beer' }]} />
+                <Pump settings={{ power: true, speed: 100 }} flows={[{ dir: { l: 'r' }, flowing: 'lR', liquid: 'hotwater' }]} />
               </td>
             </tr>
             <tr>
@@ -282,9 +282,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <PumpSubmersible />
               </td>
               <td>
-                <PumpSubmersible settings={{ power: true, speed: 20 }} flows={[{ dir: { l: 'r' }, flowing: 'lR', liquid: '$1' }]} />
-                <PumpSubmersible settings={{ power: true, speed: 50 }} flows={[{ dir: { l: 'r' }, flowing: 'lR', liquid: '$1' }]} />
-                <PumpSubmersible settings={{ power: true, speed: 100 }} flows={[{ dir: { l: 'r' }, flowing: 'lR', liquid: '$1' }]} />
+                <PumpSubmersible settings={{ power: true, speed: 20 }} flows={[{ dir: { l: 'r' }, flowing: 'lR', liquid: 'water' }]} />
+                <PumpSubmersible settings={{ power: true, speed: 50 }} flows={[{ dir: { l: 'r' }, flowing: 'lR', liquid: 'beer' }]} />
+                <PumpSubmersible settings={{ power: true, speed: 100 }} flows={[{ dir: { l: 'r' }, flowing: 'lR', liquid: 'hotwater' }]} />
               </td>
             </tr>
             <tr>
