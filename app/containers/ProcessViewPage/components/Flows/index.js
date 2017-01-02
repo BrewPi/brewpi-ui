@@ -7,6 +7,7 @@
 import React from 'react';
 import styles from './styles.css';
 import stylesBridge from './stylesBridge.css';
+import stylesCfc from './stylesCfc.css';
 
 const SvgArrows = {
   t: <polyline className={styles.moveDown} key="t" points="21 10.5 25 14.5 29 10.5" />,
@@ -24,6 +25,44 @@ const SvgArrowsBridge = {
   r: <polyline className={stylesBridge.moveLeftUp} key="r" points="43.5 21 39.5 25 43.5 29" />,
   L: <polyline className={stylesBridge.moveLeftDown} key="L" points="10.5 21 6.5 25 10.5 29" />,
   R: <polyline className={stylesBridge.moveRightDown} key="R" points="39.5 21 43.5 25 39.5 29" />,
+};
+
+const SvgArrowsCfcTop = {
+  l: (<g key="l">
+    <polyline className={stylesCfc.moveRightTop} key="l1" points="6.5 21 10.5 25 6.5 29" />
+    <polyline className={stylesCfc.moveRightTop} key="l2" points="6.5 21 10.5 25 6.5 29" style={{ animationDelay: '-2s' }} />
+    <polyline className={stylesCfc.moveRightTop} key="l3" points="6.5 21 10.5 25 6.5 29" style={{ animationDelay: '-4s' }} />
+    <polyline className={stylesCfc.moveRightTop} key="l4" points="6.5 21 10.5 25 6.5 29" style={{ animationDelay: '-6s' }} />
+    <polyline className={stylesCfc.moveRightTop} key="l5" points="6.5 21 10.5 25 6.5 29" style={{ animationDelay: '-8s' }} />
+    <polyline className={stylesCfc.moveRightTop} key="l6" points="6.5 21 10.5 25 6.5 29" style={{ animationDelay: '-10s' }} />
+  </g>),
+  L: (<g key="L">
+    <polyline className={stylesCfc.moveLeftTop} key="l1" points="10.5 21 6.5 25 10.5 29" />
+    <polyline className={stylesCfc.moveLeftTop} key="l2" points="10.5 21 6.5 25 10.5 29" style={{ animationDelay: '-2s' }} />
+    <polyline className={stylesCfc.moveLeftTop} key="l3" points="10.5 21 6.5 25 10.5 29" style={{ animationDelay: '-4s' }} />
+    <polyline className={stylesCfc.moveLeftTop} key="l4" points="10.5 21 6.5 25 10.5 29" style={{ animationDelay: '-6s' }} />
+    <polyline className={stylesCfc.moveLeftTop} key="l5" points="10.5 21 6.5 25 10.5 29" style={{ animationDelay: '-8s' }} />
+    <polyline className={stylesCfc.moveLeftTop} key="l6" points="10.5 21 6.5 25 10.5 29" style={{ animationDelay: '-10s' }} />
+  </g>),
+};
+
+const SvgArrowsCfcBottom = {
+  l: (<g key="l">
+    <polyline className={stylesCfc.moveRightBottom} key="l1" points="6.5 21 10.5 25 6.5 29" />
+    <polyline className={stylesCfc.moveRightBottom} key="l2" points="6.5 21 10.5 25 6.5 29" style={{ animationDelay: '-2s' }} />
+    <polyline className={stylesCfc.moveRightBottom} key="l3" points="6.5 21 10.5 25 6.5 29" style={{ animationDelay: '-4s' }} />
+    <polyline className={stylesCfc.moveRightBottom} key="l4" points="6.5 21 10.5 25 6.5 29" style={{ animationDelay: '-6s' }} />
+    <polyline className={stylesCfc.moveRightBottom} key="l5" points="6.5 21 10.5 25 6.5 29" style={{ animationDelay: '-8s' }} />
+    <polyline className={stylesCfc.moveRightBottom} key="l6" points="6.5 21 10.5 25 6.5 29" style={{ animationDelay: '-10s' }} />
+  </g>),
+  L: (<g key="L">
+    <polyline className={stylesCfc.moveLeftBottom} key="l1" points="10.5 21 6.5 25 10.5 29" />
+    <polyline className={stylesCfc.moveLeftBottom} key="l2" points="10.5 21 6.5 25 10.5 29" style={{ animationDelay: '-2s' }} />
+    <polyline className={stylesCfc.moveLeftBottom} key="l3" points="10.5 21 6.5 25 10.5 29" style={{ animationDelay: '-4s' }} />
+    <polyline className={stylesCfc.moveLeftBottom} key="l4" points="10.5 21 6.5 25 10.5 29" style={{ animationDelay: '-6s' }} />
+    <polyline className={stylesCfc.moveLeftBottom} key="l5" points="10.5 21 6.5 25 10.5 29" style={{ animationDelay: '-8s' }} />
+    <polyline className={stylesCfc.moveLeftBottom} key="l6" points="10.5 21 6.5 25 10.5 29" style={{ animationDelay: '-10s' }} />
+  </g>),
 };
 
 function pickArrows(flows, arrows) {
@@ -91,19 +130,36 @@ FlowArrows2D.propTypes = {
   flows: React.PropTypes.array,
 };
 
-/* Renders flow arrows, to be used inside an svg tag
- * flow is a string containing the letters NESW.
- * lowercase is inflow, uppercase is outflow
- */
 export const FlowArrowsBridge = (props) => {
   const arrows = pickArrows(props.flows, SvgArrowsBridge);
   return (
     <g className={styles.flowArrows}>
-      {arrows}
+        {arrows}
     </g>
   );
 };
 FlowArrowsBridge.propTypes = {
+  flows: React.PropTypes.array,
+};
+
+export const FlowArrowsCfc = (props) => {
+  if (props.flows === undefined) {
+    return null;
+  }
+  const arrowsTop = pickArrows(props.flows[0][0], SvgArrowsCfcTop);
+  const arrowsBottom = pickArrows(props.flows[1][0], SvgArrowsCfcBottom);
+  return (
+    <g className={styles.flowArrows}>
+      <g key="top">
+        {arrowsTop}
+      </g>
+      <g key="bottom" style={{ transform: 'translateY(50px)' }} >
+        {arrowsBottom}
+      </g>
+    </g>
+  );
+};
+FlowArrowsCfc.propTypes = {
   flows: React.PropTypes.array,
 };
 

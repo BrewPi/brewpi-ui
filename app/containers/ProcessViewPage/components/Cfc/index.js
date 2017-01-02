@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.css';
 import { Liquids } from '../Liquids';
-import { pickLiquid } from '../Flows';
+import { FlowArrows, FlowArrowsCfc, pickLiquid } from '../Flows';
 
 const SvgCfc = require('./svg/tubes_cfc.svg?tag=g');
 const SvgLiquidCfcTop = require('./svg/liquid_cfc_top.svg?tag=g');
@@ -19,9 +19,11 @@ export class Cfc extends React.Component {
   render() {
     let liquidTop;
     let liquidBottom;
+    let flowArrows;
     if (this.props.flows !== undefined) {
       liquidTop = pickLiquid(this.props.flows[0][0]);
       liquidBottom = pickLiquid(this.props.flows[1][0]);
+      flowArrows = <FlowArrowsCfc flows={this.props.flows} />;
     }
     return (
       <SvgParent viewBox={'0 0 150 100'}>
@@ -30,6 +32,7 @@ export class Cfc extends React.Component {
         <SvgLiquidCfcTop className={styles.liquidBody} style={Liquids.strokeStyle(liquidTop)} />
         <SvgLiquidCfcBottom className={styles.liquidBody} style={Liquids.strokeStyle(liquidBottom)} />
         <SvgCfc className={styles.tubes} />
+        {flowArrows}
       </SvgParent>
     );
   }
