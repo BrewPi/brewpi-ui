@@ -388,14 +388,14 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               <td>
                 <Coil
                   flows={[
-                    [[{ dir: { l: 'b' }, flowing: 'lB', liquid: 'water' }], [], []],
-                    [[{ dir: { t: 'l' }, flowing: 'tL', liquid: 'water' }], [], []],
+                    [[{ dir: { l: 'r' }, flowing: 'lR', liquid: 'water' }], [{ dir: { l: 'b' }, flowing: 'lB', liquid: 'water' }], []],
+                    [[{ dir: { r: 'l' }, flowing: 'rL', liquid: 'water' }], [{ dir: { t: 'l' }, flowing: 'tL', liquid: 'water' }], []],
                   ]}
                 />
                 <Coil
                   flows={[
-                    [[{ dir: { l: 'b' }, flowing: 'lB', liquid: 'hotwater' }], [], []],
-                    [[{ dir: { t: 'l' }, flowing: 'tL', liquid: 'hotwater' }], [], []],
+                    [[{ dir: { l: 'r' }, flowing: 'lR', liquid: 'water' }], [{ dir: { l: 'b' }, flowing: 'lB', liquid: 'water' }], []],
+                    [[{ dir: { r: 'l' }, flowing: 'rL', liquid: 'water' }], [{ dir: { t: 'l' }, flowing: 'tL', liquid: 'water' }], []],
                   ]}
                 />
               </td>
