@@ -3,6 +3,24 @@
   "name": "Fill boil kettle",
   "layout": 2,
   "settings": [
+      {
+      "id": "sphlt",
+      "settings": {
+        "val": 15
+      }
+    },
+    {
+      "id": "spmt",
+      "settings": {
+        "val": 20
+      }
+    },
+    {
+      "id": "spbk",
+      "settings": {
+        "val": 15
+      }
+    },
      {
       "id": "hlt-in",
       "settings": {
@@ -13,6 +31,18 @@
       "id": "hlt-out",
       "settings": {
         "pos": "closed"
+      }
+    },
+        {
+      "id": "coil-top",
+      "settings": {
+        "pos": "open"
+      }
+    },
+        {
+      "id": "coil-bottom",
+      "settings": {
+        "pos": "open"
       }
     },
     {
@@ -43,6 +73,13 @@
       "id": "hlt",
       "settings": {
         "volume": 50.0,
+        "liquid": "water"
+      }
+    },
+        {
+      "id": "bk",
+      "settings": {
+        "volume": 24.5,
         "liquid": "water"
       }
     },

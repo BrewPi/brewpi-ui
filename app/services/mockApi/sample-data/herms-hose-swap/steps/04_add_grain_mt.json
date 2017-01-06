@@ -1,12 +1,19 @@
 {
-  "id": 1,
-  "name": "Fill hot liquor tun",
-  "layout": 1,
+  "id": 4,
+  "name": "Add grain to mash tun",
+  "layout": 4,
   "settings": [
-           {
+       {
+      "id": "mt",
+      "settings": {
+        "grain": 15
+      }
+    },
+       {
       "id": "sphlt",
       "settings": {
-        "val": 15
+        "val": 67,
+        "set": 67
       }
     },
     {
@@ -18,10 +25,23 @@
     {
       "id": "spbk",
       "settings": {
-        "val": 20
+        "val": 73,
+        "set": 73
       }
     },
     {
+      "id": "heat_hlt",
+      "settings": {
+        "duty": 100
+      }
+    },
+        {
+      "id": "heat_bk",
+      "settings": {
+        "duty": 100
+      }
+    },
+     {
       "id": "hlt-in",
       "settings": {
         "pos": "open"
@@ -33,7 +53,7 @@
         "pos": "closed"
       }
     },
-    {
+        {
       "id": "coil-top",
       "settings": {
         "pos": "open"
@@ -73,7 +93,14 @@
       "id": "hlt",
       "settings": {
         "volume": 50.0,
-        "liquid": "water"
+        "liquid": "hotwater"
+      }
+    },
+        {
+      "id": "bk",
+      "settings": {
+        "volume": 24.5,
+        "liquid": "hotwater"
       }
     },
     {

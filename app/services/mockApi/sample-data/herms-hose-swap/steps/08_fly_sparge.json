@@ -1,24 +1,39 @@
 {
-  "id": 1,
-  "name": "Fill hot liquor tun",
-  "layout": 1,
+  "id": 8,
+  "name": "Fly sparge",
+  "layout": 8,
   "settings": [
-           {
+    {
       "id": "sphlt",
       "settings": {
-        "val": 15
+        "val": 76,
+        "set": 75.5
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 20
+        "val": 74.9
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 20
+        "val": 73.3
+      }
+    },
+    {
+      "id": "mt",
+      "settings": {
+        "grain": 15,
+        "volume": 10,
+        "liquid": "wort"
+      }
+    },
+    {
+      "id": "heat_hlt",
+      "settings": {
+        "duty": 10
       }
     },
     {
@@ -30,10 +45,10 @@
     {
       "id": "hlt-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
-    {
+        {
       "id": "coil-top",
       "settings": {
         "pos": "open"
@@ -54,7 +69,21 @@
     {
       "id": "mt-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
+      }
+    },
+    {
+      "id": "p1",
+      "settings": {
+        "power": true,
+        "speed": 100
+      }
+    },
+    {
+      "id": "p2",
+      "settings": {
+        "power": true,
+        "speed": 100
       }
     },
     {
@@ -72,8 +101,15 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 50.0,
-        "liquid": "water"
+        "volume": 45.0,
+        "liquid": "hotwater"
+      }
+    },
+    {
+      "id": "bk",
+      "settings": {
+        "volume": 25,
+        "liquid": "wort"
       }
     },
     {

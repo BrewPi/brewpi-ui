@@ -1,27 +1,37 @@
 {
-  "id": 1,
-  "name": "Fill hot liquor tun",
-  "layout": 1,
+  "id": 6,
+  "name": "Mash rest 10 min",
+  "layout": 6,
   "settings": [
-           {
+    {
+      "id": "mt",
+      "settings": {
+        "grain": 15,
+        "volume": 30,
+        "liquid": "wort"
+      }
+    },
+       {
       "id": "sphlt",
       "settings": {
-        "val": 15
+        "val": 67,
+        "set": 67
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 20
+        "val": 67.5,
+        "set": 67.7
       }
     },
     {
-      "id": "spbk",
+      "id": "heat_hlt",
       "settings": {
-        "val": 20
+        "duty": 100
       }
     },
-    {
+     {
       "id": "hlt-in",
       "settings": {
         "pos": "open"
@@ -33,7 +43,7 @@
         "pos": "closed"
       }
     },
-    {
+        {
       "id": "coil-top",
       "settings": {
         "pos": "open"
@@ -73,7 +83,7 @@
       "id": "hlt",
       "settings": {
         "volume": 50.0,
-        "liquid": "water"
+        "liquid": "hotwater"
       }
     },
     {

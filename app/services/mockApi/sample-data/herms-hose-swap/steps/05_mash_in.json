@@ -1,12 +1,21 @@
 {
-  "id": 1,
-  "name": "Fill hot liquor tun",
-  "layout": 1,
+  "id": 5,
+  "name": "Mash in from boil kettle",
+  "layout": 5,
   "settings": [
-           {
+         {
+      "id": "mt",
+      "settings": {
+        "grain": 15,
+        "volume": 20,
+        "liquid": "hotwater"
+      }
+    },
+       {
       "id": "sphlt",
       "settings": {
-        "val": 15
+        "val": 67,
+        "set": 67
       }
     },
     {
@@ -18,10 +27,23 @@
     {
       "id": "spbk",
       "settings": {
-        "val": 20
+        "val": 73,
+        "set": 73
       }
     },
     {
+      "id": "heat_hlt",
+      "settings": {
+        "duty": 100
+      }
+    },
+        {
+      "id": "heat_bk",
+      "settings": {
+        "duty": 100
+      }
+    },
+     {
       "id": "hlt-in",
       "settings": {
         "pos": "open"
@@ -33,7 +55,7 @@
         "pos": "closed"
       }
     },
-    {
+        {
       "id": "coil-top",
       "settings": {
         "pos": "open"
@@ -66,14 +88,28 @@
     {
       "id": "bk-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
+      }
+    },
+    {
+      "id": "p1",
+      "settings":{
+        "power": true,
+        "speed": 100
       }
     },
     {
       "id": "hlt",
       "settings": {
         "volume": 50.0,
-        "liquid": "water"
+        "liquid": "hotwater"
+      }
+    },
+        {
+      "id": "bk",
+      "settings": {
+        "volume": 24.5,
+        "liquid": "hotwater"
       }
     },
     {

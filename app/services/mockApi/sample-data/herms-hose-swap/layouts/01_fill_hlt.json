@@ -4,6 +4,30 @@
   "parts": [
     {
       "part": {
+        "type": "SETPOINT",
+        "id": "sphlt"
+      },
+      "x": 4,
+      "y": 1
+    },
+    {
+      "part": {
+        "type": "SETPOINT",
+        "id": "spmt"
+      },
+      "x": 11,
+      "y": 1
+    },
+    {
+      "part": {
+        "type": "SETPOINT",
+        "id": "spbk"
+      },
+      "x": 18,
+      "y": 1
+    },
+    {
+      "part": {
         "id": "hlt",
         "type": "KETTLE",
         "options": {
@@ -126,6 +150,22 @@
       "x": 2,
       "y": 7
     },
+      {
+      "part": {
+        "type": "VALVE_MANUAL",
+        "id": "coil-top"
+      },
+      "x": 7,
+      "y": 4
+    },
+    {
+      "part": {
+        "type": "VALVE_MANUAL",
+        "id": "coil-bottom"
+      },
+      "x": 7,
+      "y": 5
+    },
     {
       "part": {
         "type": "VALVE_MANUAL",
@@ -139,7 +179,7 @@
         "type": "VALVE_MANUAL",
         "id": "mt-out"
       },
-      "x": 9,
+      "x": 14,
       "y": 7
     },
     {
@@ -157,27 +197,6 @@
       },
       "x": 21,
       "y": 7
-    },
-    {
-      "part": {
-        "type": "SETPOINT"
-      },
-      "x": 4,
-      "y": 1
-    },
-    {
-      "part": {
-        "type": "SETPOINT"
-      },
-      "x": 11,
-      "y": 1
-    },
-    {
-      "part": {
-        "type": "SETPOINT"
-      },
-      "x": 18,
-      "y": 1
     },
     {
       "part": {

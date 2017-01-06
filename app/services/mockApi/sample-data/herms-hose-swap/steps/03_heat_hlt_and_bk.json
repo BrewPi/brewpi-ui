@@ -1,12 +1,13 @@
 {
-  "id": 1,
-  "name": "Fill hot liquor tun",
-  "layout": 1,
+  "id": 3,
+  "name": "Heat HLT",
+  "layout": 3,
   "settings": [
-           {
+       {
       "id": "sphlt",
       "settings": {
-        "val": 15
+        "val": 45.3,
+        "set": 67
       }
     },
     {
@@ -18,10 +19,23 @@
     {
       "id": "spbk",
       "settings": {
-        "val": 20
+        "val": 57.7,
+        "set": 73
       }
     },
     {
+      "id": "heat_hlt",
+      "settings": {
+        "duty": 100
+      }
+    },
+        {
+      "id": "heat_bk",
+      "settings": {
+        "duty": 100
+      }
+    },
+     {
       "id": "hlt-in",
       "settings": {
         "pos": "open"
@@ -33,7 +47,7 @@
         "pos": "closed"
       }
     },
-    {
+        {
       "id": "coil-top",
       "settings": {
         "pos": "open"
@@ -73,7 +87,14 @@
       "id": "hlt",
       "settings": {
         "volume": 50.0,
-        "liquid": "water"
+        "liquid": "hotwater"
+      }
+    },
+        {
+      "id": "bk",
+      "settings": {
+        "volume": 24.5,
+        "liquid": "hotwater"
       }
     },
     {

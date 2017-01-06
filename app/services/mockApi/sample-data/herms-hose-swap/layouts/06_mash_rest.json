@@ -1,6 +1,6 @@
 {
-  "id": 0,
-  "name": "Fill HLT",
+  "id": 6,
+  "name": "Mash rest 10 min",
   "parts": [
     {
       "part": {
@@ -126,10 +126,10 @@
       "x": 2,
       "y": 7
     },
-    {
+      {
       "part": {
         "type": "VALVE_MANUAL",
-        "id": "cl-t"
+        "id": "coil-top"
       },
       "x": 7,
       "y": 4
@@ -137,7 +137,7 @@
     {
       "part": {
         "type": "VALVE_MANUAL",
-        "id": "cl-b"
+        "id": "coil-bottom"
       },
       "x": 7,
       "y": 5
@@ -176,21 +176,24 @@
     },
     {
       "part": {
-        "type": "SETPOINT"
+        "type": "SETPOINT",
+        "id": "sphlt"
       },
       "x": 4,
       "y": 1
     },
     {
       "part": {
-        "type": "SETPOINT"
+        "type": "SETPOINT",
+        "id": "spmt"
       },
       "x": 11,
       "y": 1
     },
     {
       "part": {
-        "type": "SETPOINT"
+        "type": "SETPOINT",
+        "id": "spbk"
       },
       "x": 18,
       "y": 1
