@@ -8,16 +8,18 @@ import React from 'react';
 import styles from './styles.css';
 import stylesBridge from './stylesBridge.css';
 import stylesCfc from './stylesCfc.css';
+import { Animation } from 'react-web-animation';
+import { FlowAnimations } from './animations';
 
 const SvgArrows = {
-  t: <polyline className={styles.moveDown} key="t" points="21 10.5 25 14.5 29 10.5" />,
-  l: <polyline className={styles.moveRight} key="l" points="10.5 21 14.5 25 10.5 29" />,
-  b: <polyline className={styles.moveUp} key="b" points="29 39.5 25 35.5 21 39.5" />,
-  r: <polyline className={styles.moveLeft} key="r" points="39.5 21 35.5 25 39.5 29" />,
-  T: <polyline className={styles.moveUp} key="T" points="21 14.5 25 10.5 29 14.5" />,
-  L: <polyline className={styles.moveLeft} key="L" points="14.5 21 10.5 25 14.5 29" />,
-  B: <polyline className={styles.moveDown} key="B" points="29 35.5 25 39.5 21 35.5" />,
-  R: <polyline className={styles.moveRight} key="R" points="35.5 21 39.5 25 35.5 29" />,
+  t: <polyline key="t" points="21 10.5 25 14.5 29 10.5" />,
+  l: <polyline key="l" points="10.5 21 14.5 25 10.5 29" />,
+  b: <polyline key="b" points="29 39.5 25 35.5 21 39.5" />,
+  r: <polyline key="r" points="39.5 21 35.5 25 39.5 29" />,
+  T: <polyline key="T" points="21 14.5 25 10.5 29 14.5" />,
+  L: <polyline key="L" points="14.5 21 10.5 25 14.5 29" />,
+  B: <polyline key="B" points="29 35.5 25 39.5 21 35.5" />,
+  R: <polyline key="R" points="35.5 21 39.5 25 35.5 29" />,
 };
 
 const SvgArrowsBridge = {
@@ -65,7 +67,30 @@ const SvgArrowsCfcBottom = {
   </g>),
 };
 
-function pickArrows(flows, arrows) {
+
+const defaultTiming = {
+  duration: 2000,
+  iterations: +Infinity,
+};
+
+function animate(elem, animations) {
+  const key = elem.key;
+  if (key) {
+    const anim = animations ? animations[key] : undefined;
+    if (anim !== undefined) {
+      const keyframes = anim.keyframes;
+      const timing = anim.timing || defaultTiming;
+      return (
+        <Animation key={key} keyframes={keyframes} timing={timing}>
+          {elem}
+        </Animation>
+      );
+    }
+  }
+  return elem;
+}
+
+function renderArrows(flows, arrows, animations) {
   if (typeof flows === 'undefined') {
     return undefined;
   }
@@ -73,7 +98,10 @@ function pickArrows(flows, arrows) {
   for (const flow of flows.values()) {
     if (flow.flowing) {
       for (const ch of flow.flowing) {
-        picked.push(arrows[ch]);
+        const elem = arrows[ch];
+        if (elem) {
+          picked.push(animate(elem, animations));
+        }
       }
     }
   }
@@ -88,7 +116,7 @@ export const FlowArrows = (props) => {
   if (props.flows === undefined) {
     return null;
   }
-  const arrows = pickArrows(props.flows, SvgArrows);
+  const arrows = renderArrows(props.flows, SvgArrows, FlowAnimations.basic);
   return (
     <g className={styles.flowArrows}>
       {arrows}
@@ -116,7 +144,7 @@ export const FlowArrows2D = (props) => {
       const yPos = y * 50;
       const tile = (
         <g key={`${x}_${y}`} transform={`translate(${xPos},${yPos})`} className={styles.flowArrows}>
-          {pickArrows(xx, SvgArrows)}
+          {renderArrows(xx, SvgArrows)}
         </g>
       );
       allArrows.push(tile);
@@ -131,7 +159,7 @@ FlowArrows2D.propTypes = {
 };
 
 export const FlowArrowsBridge = (props) => {
-  const arrows = pickArrows(props.flows, SvgArrowsBridge);
+  const arrows = renderArrows(props.flows, SvgArrowsBridge);
   return (
     <g className={styles.flowArrows}>
         {arrows}
@@ -146,8 +174,8 @@ export const FlowArrowsCfc = (props) => {
   if (props.flows === undefined) {
     return null;
   }
-  const arrowsTop = pickArrows(props.flows[0][0], SvgArrowsCfcTop);
-  const arrowsBottom = pickArrows(props.flows[1][0], SvgArrowsCfcBottom);
+  const arrowsTop = renderArrows(props.flows[0][0], SvgArrowsCfcTop);
+  const arrowsBottom = renderArrows(props.flows[1][0], SvgArrowsCfcBottom);
   return (
     <g className={styles.flowArrows}>
       <g key="top">
