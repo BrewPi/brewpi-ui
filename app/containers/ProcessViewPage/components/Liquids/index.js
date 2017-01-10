@@ -9,6 +9,10 @@ const fills = {
   conflict: 'black',
 };
 function color(liquid) {
+  const isHexColor = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(liquid);
+  if (isHexColor) {
+    return liquid;
+  }
   return liquid ? fills[liquid] : fills.background;
 }
 

@@ -499,9 +499,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <BeerBottle />
               </td>
               <td>
-                <BeerBottle liquid={'water'} />
-                <BeerBottle liquid={'hotwater'} />
-                <BeerBottle liquid={'beer'} />
+                <BeerBottle liquid={'#7f210f'} />
+                <BeerBottle liquid={'#2d0801'} />
+                <BeerBottle liquid={'#bc9945'} />
               </td>
             </tr>
           </tbody>
