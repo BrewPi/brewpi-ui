@@ -2,7 +2,7 @@
   "name": "HERMS with swapping hoses",
   "width": 23,
   "height": 14,
-  "showCoordinates": false,
+  "showCoordinates": true,
   "defaultLayout": 0,
   "layouts": []
 }

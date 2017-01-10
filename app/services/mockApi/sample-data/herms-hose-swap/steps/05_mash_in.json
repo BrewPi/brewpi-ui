@@ -21,26 +21,26 @@
     {
       "id": "spmt",
       "settings": {
-        "val": 20
+        "val": 52.7,
+        "set": 67.5
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 73,
-        "set": 73
+        "val": 72.5
       }
     },
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 100
+        "duty": 10
       }
     },
         {
       "id": "heat_bk",
       "settings": {
-        "duty": 100
+        "duty": 0
       }
     },
      {
@@ -108,7 +108,7 @@
         {
       "id": "bk",
       "settings": {
-        "volume": 24.5,
+        "volume": 10,
         "liquid": "hotwater"
       }
     },

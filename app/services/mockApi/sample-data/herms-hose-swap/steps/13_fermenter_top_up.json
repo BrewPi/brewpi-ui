@@ -1,37 +1,55 @@
 {
-  "id": 7,
-  "name": "Mash recirculation",
-  "layout": 7,
+  "id": 13,
+  "name": "Top up fermenter if needed",
+  "layout": 13,
   "settings": [
-    {
-      "id": "mt",
-      "settings": {
-        "grain": 15,
-        "volume": 30,
-        "liquid": "wort"
-      }
-    },
-       {
+     {
       "id": "sphlt",
       "settings": {
-        "val": 68.3,
-        "set": 69.2
+        "val": 60,
+        "set": 60
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 67.6,
-        "set": 67.7
+        "val": 20
+      }
+    },
+    {
+      "id": "spbk",
+      "settings": {
+        "val": 20
+      }
+    },
+    {
+      "id": "hlt",
+      "settings": {
+        "volume": 30.0,
+        "liquid": "hotwater"
+      }
+    },
+    {
+      "id": "mt",
+      "settings": {
+        "grain": 15,
+        "liquid": "wort"
+      }
+    },
+    {
+      "id": "bk",
+      "settings": {
+        "volume": 0,
+        "liquid": "wort"
       }
     },
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 10
+        "duty": 0
       }
     },
-     {
+    {
       "id": "hlt-in",
       "settings": {
         "pos": "open"
@@ -43,13 +61,13 @@
         "pos": "open"
       }
     },
-        {
+    {
       "id": "coil-top",
       "settings": {
         "pos": "open"
       }
     },
-        {
+    {
       "id": "coil-bottom",
       "settings": {
         "pos": "open"
@@ -68,20 +86,6 @@
       }
     },
     {
-      "id": "p1",
-      "settings":{
-        "power": true,
-        "speed": 100
-      }
-    },
-        {
-      "id": "p2",
-      "settings":{
-        "power": true,
-        "speed": 100
-      }
-    },
-    {
       "id": "bk-in",
       "settings": {
         "pos": "open"
@@ -90,18 +94,31 @@
     {
       "id": "bk-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "hlt",
+      "id": "p1",
       "settings": {
-        "volume": 50.0,
-        "liquid": "hotwater"
+        "power": true,
+        "speed": 100
       }
     },
-    {
+     {
+      "id": "p2",
+      "settings": {
+        "power": true,
+        "speed": 100
+      }
+    },
+     {
       "id": "in1",
+      "settings": {
+        "liquid": "water"
+      }
+    },
+     {
+      "id": "out1",
       "settings": {
         "liquid": "water"
       }

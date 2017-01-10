@@ -1,6 +1,6 @@
 {
   "id": 9,
-  "name": "Fly sparge out",
+  "name": "Sparge out",
   "layout": 9,
   "settings": [
     {
@@ -46,7 +46,7 @@
     {
       "id": "hlt-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
         {

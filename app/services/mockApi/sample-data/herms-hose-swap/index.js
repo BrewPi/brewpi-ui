@@ -12,6 +12,10 @@ view.layouts = [
   require('./layouts/07_mash_recirc.json'),
   require('./layouts/08_fly_sparge.json'),
   require('./layouts/09_sparge_out.json'),
+  require('./layouts/10_boil.json'),
+  require('./layouts/11_cool.json'),
+  require('./layouts/12_pump_to_fermentor.json'),
+  require('./layouts/13_fermenter_top_up.json'),
 ];
 view.steps = [
   require('./steps/00_idle.json'),
@@ -24,6 +28,10 @@ view.steps = [
   require('./steps/07_mash_recirc.json'),
   require('./steps/08_fly_sparge.json'),
   require('./steps/09_sparge_out.json'),
+  require('./steps/10_boil.json'),
+  require('./steps/11_cool.json'),
+  require('./steps/12_pump_to_fermentor.json'),
+  require('./steps/13_fermenter_top_up.json'),
 ];
 
 export default view;

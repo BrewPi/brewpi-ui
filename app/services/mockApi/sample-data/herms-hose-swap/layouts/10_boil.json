@@ -1,6 +1,6 @@
 {
-  "id": 9,
-  "name": "Sparge out",
+  "id": 10,
+  "name": "Boil",
   "parts": [
     {
       "part": {
@@ -128,45 +128,6 @@
     },
     {
       "part": {
-        "type": "TUBE_ELBOW",
-        "rotate": 90
-      },
-      "x": 1,
-      "y": 7
-    },
-    {
-      "part": {
-        "rotate": 90,
-        "type": "PUMP",
-        "id": "p2"
-      },
-      "x": 1,
-      "y": 8
-    },
-    {
-      "part": {
-        "type": "TUBE_ELBOW",
-        "rotate": 0
-      },
-      "x": 1,
-      "y": 9
-    },
-     {
-      "part": {
-        "type": "TUBE_STRAIGHT"
-      },
-      "x": [
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
-      ],
-      "y": 9
-    },
-    {
-      "part": {
         "type": "VALVE_MANUAL",
         "id": "mt-in"
       },
@@ -180,112 +141,6 @@
       },
       "x": 14,
       "y": 7
-    },
-     {
-      "part": {
-        "type": "TUBE_ELBOW",
-        "rotate": 180
-      },
-      "x": 15,
-      "y": 7
-    },
-    {
-      "part": {
-        "rotate": 90,
-        "type": "PUMP",
-        "id": "p1"
-      },
-      "x": 15,
-      "y": 8
-    },
-    {
-      "part": {
-        "type": "TUBE_ELBOW"
-      },
-      "x": 15,
-      "y": 9
-    },
-      {
-      "part": {
-        "type": "TUBE_ELBOW",
-        "rotate": 270
-    },
-      "x": 16,
-      "y": 9
-    },
-     {
-      "part": {
-        "type": "TUBE_STRAIGHT",
-        "rotate": 90
-      },
-      "x": 16,
-      "y": [
-        7,
-        8
-      ]
-    },
-     {
-      "part": {
-        "type": "TUBE_ELBOW",
-        "rotate": 180
-    },
-      "x": 16,
-      "y": 6
-    },
-     {
-      "part": {
-        "type": "TUBE_ELBOW"
-    },
-      "x": 15,
-      "y": 6
-    },
-    {
-      "part": {
-        "type": "TUBE_STRAIGHT",
-        "rotate": 90
-      },
-      "x": 15,
-      "y": [
-        3,
-        4,
-        5
-      ]
-    },
-     {
-      "part": {
-        "type": "TUBE_ELBOW",
-        "rotate": 90
-    },
-      "x": 15,
-      "y": 2
-    },
-    {
-      "part": {
-        "type": "TUBE_ELBOW",
-        "rotate": 270
-      },
-      "x": 8,
-      "y": 9
-    },
-    {
-      "part": {
-        "type": "TUBE_STRAIGHT",
-        "rotate": 90
-      },
-      "x": 8,
-      "y": [
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "part": {
-        "type": "TUBE_ELBOW",
-        "rotate": 180
-      },
-      "x": 8,
-      "y": 5
     },
         {
       "part": {
@@ -302,30 +157,6 @@
       },
       "x": 7,
       "y": 5
-    },
-     {
-      "part": {
-        "type": "TUBE_ELBOW",
-        "rotate": 270
-      },
-      "x": 8,
-      "y": 4
-    },
-    {
-      "part": {
-        "type": "TUBE_STRAIGHT",
-        "rotate": 90
-      },
-      "x": 8,
-      "y": 3
-    },
-     {
-      "part": {
-        "type": "TUBE_ELBOW",
-        "rotate": 90
-      },
-      "x": 8,
-      "y": 2
     },
     {
       "part": {

@@ -28,7 +28,7 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 100
+        "duty": 10
       }
     },
      {
