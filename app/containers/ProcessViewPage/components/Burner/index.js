@@ -9,21 +9,20 @@ import { SvgParent } from '../SvgParent';
 
 const SvgBurner = require('./svg/burner.svg?tag=g');
 const SvgFlame = require('./svg/flame.svg?tag=g');
+const SvgFlameInner = require('./svg/flame_inner.svg?tag=g');
 
 class Burner extends React.Component {
   render() {
     const power = this.props.settings.power;
     const intensity = this.props.settings.intensity;
-    const flameStyle = (intensity) ? { transform: `scaleY(${intensity / 100.0})` } : {};
+    const flameScale = 1.0 - Math.pow(0.05, (intensity / 100.0));
+    const flameStyle = (intensity) ? { transform: `scaleY(${flameScale})` } : {};
     let flames;
     if (power) {
       flames = (
-        <g className={styles.flames} style={flameStyle} >
-          <SvgFlame className={styles.flame} />
-          <SvgFlame className={styles.flame} />
-          <SvgFlame className={styles.flame} />
-          <SvgFlame className={styles.flame} />
-          <SvgFlame className={styles.flame} />
+        <g className={styles.flameContainer} style={flameStyle} >
+          <SvgFlame className={styles.flame} style={flameStyle} />;
+          <SvgFlameInner className={styles.flameInner} style={flameStyle} />;
         </g>
       );
     }

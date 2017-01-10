@@ -387,7 +387,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <Burner />
               </td>
               <td>
+                <Burner settings={{ power: true, intensity: 25 }} />
                 <Burner settings={{ power: true, intensity: 50 }} />
+                <Burner settings={{ power: true, intensity: 75 }} />
                 <Burner settings={{ power: true, intensity: 100 }} />
               </td>
             </tr>
