@@ -14,20 +14,23 @@ class Burner extends React.Component {
   render() {
     const power = this.props.settings.power;
     const intensity = this.props.settings.intensity;
-    const flameStyle = {};
-    if (power === true) {
-      flameStyle.visible = true;
+    const flameStyle = (intensity) ? { transform: `scaleY(${intensity / 100.0})` } : {};
+    let flames;
+    if (power) {
+      flames = (
+        <g className={styles.flames} style={flameStyle} >
+          <SvgFlame className={styles.flame} />
+          <SvgFlame className={styles.flame} />
+          <SvgFlame className={styles.flame} />
+          <SvgFlame className={styles.flame} />
+          <SvgFlame className={styles.flame} />
+        </g>
+      );
     }
     return (
       <button className={styles.Burner} onClick={() => this.props.onClicked(this.props.id, this.props.settings.power)}>
         <SvgParent viewBox={'0 0 100 50'}>
-          <g className={styles.flames} >
-            <SvgFlame className={styles.flame1} style={flameStyle} />
-            <SvgFlame className={styles.flame2} style={flameStyle} />
-            <SvgFlame className={styles.flame3} style={flameStyle} />
-            <SvgFlame className={styles.flame4} style={flameStyle} />
-            <SvgFlame className={styles.flame5} style={flameStyle} />
-          </g>
+          {flames}
           <SvgBurner className={styles.burner} />
         </SvgParent>
       </button>

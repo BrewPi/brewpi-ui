@@ -1,30 +1,13 @@
 .flames {
   fill: none;
-  animation-name: flame;
-  animation-duration: 0.2s;
-  animation-iteration-count: infinite; 
   transform-origin: center bottom;
 }
 
-.flame1,
-.flame2 {
-  transform: scale(0.1);
-}
-
-.flame1 {
-  transform: translateX(-5px);
-}
-
-.flame2 {
-  transform: translateX(5px);
-}
-
-.flame3 {
-  transform: translateX(-10px);
-}
-
-.flame4 {
-  transform: translateX(10px);
+.flame {
+  animation-name: flame;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+  transform-origin: center bottom;
 }
 
 .burner {
