@@ -10,11 +10,13 @@ import { Valves } from '../Valves';
 import { Tubes } from '../Tubes';
 import { Kettle } from '../Kettle';
 import { Coil } from '../Coil';
+import { CoilImmersion } from '../CoilImmersion';
 import { HeatingElement } from '../HeatingElement';
 import { Lauterhexe } from '../Lauterhexe';
 import Pump from '../Pump';
 import PumpSubmersible from '../PumpSubmersible';
 import BlowerFan from '../BlowerFan';
+import Burner from '../Burner';
 import { Cfc } from '../Cfc';
 import { TempSensors } from '../TempSensors';
 import { BeerBottle } from '../BeerBottle';
@@ -53,6 +55,7 @@ const componentTable = {
   VALVE_CHECK: Valves.Check,
   KETTLE: Kettle,
   COIL: Coil,
+  COIL_IMMERSION: CoilImmersion,
   HEATING_ELEMENT: HeatingElement,
   LAUTERHEXE: Lauterhexe,
   PUMP: Pump,
@@ -64,6 +67,7 @@ const componentTable = {
   FRIDGE_TALL: FridgeTall,
   FRIDGE_FAN: FridgeFan,
   BLOWER_FAN: BlowerFan,
+  Burner: Burner,
   FRIDGE_SHELF: FridgeShelf,
   GLYCOL_RESERVOIR: GlycolReservoir,
   CORNEY_KEG: Keg,

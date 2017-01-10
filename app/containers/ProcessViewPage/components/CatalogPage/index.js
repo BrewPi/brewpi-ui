@@ -13,6 +13,7 @@ import { Tubes } from '../Tubes';
 import Pump from '../Pump';
 import PumpSubmersible from '../PumpSubmersible';
 import BlowerFan from '../BlowerFan';
+import Burner from '../Burner';
 import { TempSensors } from '../TempSensors';
 import { Cfc } from '../Cfc';
 import { GlycolChiller } from '../GlycolChiller';
@@ -378,6 +379,16 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
               <td>
                 <TubularHeater />
                 <TubularHeater />
+              </td>
+            </tr>
+            <tr>
+              <td>Gas Burner</td>
+              <td>
+                <Burner />
+              </td>
+              <td>
+                <Burner settings={{ power: true, intensity: 50 }} />
+                <Burner settings={{ power: true, intensity: 100 }} />
               </td>
             </tr>
             <tr>
