@@ -1,8 +1,15 @@
 {
   "id": 7,
   "name": "Remove bag",
-  "layout": 2,
+  "layout": 4,
   "settings": [
+              {
+      "id": "temp",
+      "settings": {
+        "val": 67,
+        "set": 67
+      }
+    },
        {
       "id": "kettle",
       "settings": {
@@ -15,32 +22,11 @@
       "settings": {
         "grain": 25
       }
-    },
-    {
-      "id": "rims",
-      "settings": {
-        "volume": 2,
-        "liquid": "hotwater"
-      }
-    },
-        
+    },        
     {
       "id": "m1",
       "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "heater",
-      "settings": {
-        "duty": 0
-      }
-    },
-    {
-      "id": "p1",
-      "settings":{
-        "power": false,
-        "speed": 50
+        "pos": "closed"
       }
     }
   ]

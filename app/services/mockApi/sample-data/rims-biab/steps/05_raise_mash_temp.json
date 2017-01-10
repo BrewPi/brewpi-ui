@@ -1,8 +1,15 @@
 {
   "id": 6,
   "name": "Raise to mash out temperature",
-  "layout": 1,
+  "layout": 2,
   "settings": [
+              {
+      "id": "temp",
+      "settings": {
+        "val": 67,
+        "set": 67
+      }
+    },
        {
       "id": "kettle",
       "settings": {

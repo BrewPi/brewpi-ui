@@ -1,10 +1,11 @@
 {
-  "id": 3,
-  "name": "Boil",
+  "id": 1,
+  "name": "Only kettle",
   "parts": [
     {
       "part": {
-        "type": "SETPOINT"
+        "type": "SETPOINT",
+        "id": "temp"
       },
       "x": 6,
       "y": 0
@@ -24,11 +25,10 @@
     },
     {
       "part": {
-        "rotate": 90,
-        "type": "TUBE_INLET_STRAIGHT"
+        "type": "FILTER_BOTTOM"
       },
-      "x": 4,
-      "y": 3
+      "x": 2,
+      "y": 8
     },
     {
       "part": {
@@ -44,13 +44,6 @@
         "id": "m1"
       },
       "x": 1,
-      "y": 8
-    },
-    {
-      "part": {
-        "type": "FILTER_BOTTOM"
-      },
-      "x": 2,
       "y": 8
     }
   ]
