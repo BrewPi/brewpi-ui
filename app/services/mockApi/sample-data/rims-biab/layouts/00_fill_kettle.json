@@ -2,16 +2,43 @@
   "id": 0,
   "name": "Fill kettle",
   "parts": [
-     {
+    {
       "part": {
-        "rotate": 90,
+        "type": "SETPOINT"
+      },
+      "x": 6,
+      "y": 0
+    },
+    {
+      "part": {
+        "rotate": 0,
         "type": "TUBE_INPUT",
         "id": "in1"
+      },
+      "x": 0,
+      "y": 2
+    },
+    {
+      "part": {
+        "rotate": 0,
+        "type": "TUBE_STRAIGHT"
+      },
+      "x": [
+        1,
+        2,
+        3
+      ],
+      "y": 2
+    },
+     {
+      "part": {
+        "rotate": 180,
+        "type": "TUBE_ELBOW"
       },
       "x": 4,
       "y": 2
     },
-     {
+    {
       "part": {
         "rotate": 90,
         "type": "TUBE_INLET_STRAIGHT"
@@ -45,15 +72,14 @@
       "x": 2,
       "y": 3
     },
-     {
+    {
       "part": {
         "type": "FILTER_BOTTOM"
       },
       "x": 2,
       "y": 8
     },
-   
-   {
+    {
       "part": {
         "type": "VALVE_MANUAL",
         "id": "m1"

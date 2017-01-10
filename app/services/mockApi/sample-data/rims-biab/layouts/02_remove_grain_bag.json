@@ -1,6 +1,6 @@
 {
-  "id": 1,
-  "name": "RIMS connected",
+  "id": 2,
+  "name": "Remove bag",
   "parts": [
     {
       "part": {
@@ -33,33 +33,14 @@
         "id": "bag"
       },
       "x": 2,
-      "y": 3
-    },
-    {
-      "part": {
-        "rotate": 90,
-        "type": "TUBE_INLET_STRAIGHT"
-      },
-      "x": 4,
-      "y": 3
-    },
-    {
-      "part": {
-        "rotate": 90,
-        "type": "TUBE_ELBOW"
-      },
-      "x": 4,
-      "y": 2
+      "y": 0
     },
     {
       "part": {
         "rotate": 0,
         "type": "TUBE_STRAIGHT"
       },
-      "x": [
-        5,
-        6
-      ],
+      "x": 6,
       "y": 2
     },
     {
@@ -152,14 +133,6 @@
         "id": "p1"
       },
       "x": 1,
-      "y": 9
-    },
-    {
-      "part": {
-        "type": "Burner",
-        "id": "b1"
-      },
-      "x": 3,
       "y": 9
     },
     {
