@@ -11,37 +11,37 @@
     {
       "id": "m2",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "m3",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "m4",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "m5",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "a1",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "a2",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -71,7 +71,7 @@
     {
       "id": "hlt_out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {

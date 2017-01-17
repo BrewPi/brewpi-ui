@@ -77,7 +77,7 @@
     {
       "id": "mt_in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -101,13 +101,13 @@
     {
       "id": "coil_in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "coil_out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
