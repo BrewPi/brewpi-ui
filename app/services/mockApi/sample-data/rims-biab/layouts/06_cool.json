@@ -1,10 +1,11 @@
 {
-  "id": 4,
+  "id": 6,
   "name": "Cool",
   "parts": [
     {
       "part": {
-        "type": "SETPOINT"
+        "type": "SETPOINT",
+        "id": "temp"
       },
       "x": 6,
       "y": 0

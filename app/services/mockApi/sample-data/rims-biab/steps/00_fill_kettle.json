@@ -3,6 +3,12 @@
   "name": "Fill kettle",
   "layout": 0,
   "settings": [
+      {
+      "id": "temp",
+      "settings": {
+        "val": 15
+      }
+    },
      {
       "id": "in1",
       "settings": {

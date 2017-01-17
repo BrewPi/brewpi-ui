@@ -1,10 +1,11 @@
 {
-  "id": 5,
+  "id": 7,
   "name": "Fermentor out",
   "parts": [
     {
       "part": {
-        "type": "SETPOINT"
+        "type": "SETPOINT",
+        "id": "temp"
       },
       "x": 6,
       "y": 0
@@ -39,7 +40,7 @@
       "x": 1,
       "y": 8
     },
-     {
+    {
       "part": {
         "rotate": 90,
         "type": "TUBE_ELBOW"
@@ -47,7 +48,7 @@
       "x": 0,
       "y": 8
     },
-     {
+    {
       "part": {
         "type": "PUMP",
         "rotate": 90,

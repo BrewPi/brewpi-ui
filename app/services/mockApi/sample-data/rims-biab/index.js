@@ -3,11 +3,13 @@ const view = require('./view.json');
 
 view.layouts = [
   require('./layouts/00_fill_kettle.json'),
-  require('./layouts/01_rims_connected.json'),
-  require('./layouts/02_remove_grain_bag.json'),
-  require('./layouts/03_boil.json'),
-  require('./layouts/04_cool.json'),
-  require('./layouts/05_fermentor_out.json'),
+  require('./layouts/01_only_kettle.json'),
+  require('./layouts/02_rims_connected.json'),
+  require('./layouts/03_add_grain.json'),
+  require('./layouts/04_remove_grain_bag.json'),
+  require('./layouts/05_boil.json'),
+  require('./layouts/06_cool.json'),
+  require('./layouts/07_fermentor_out.json'),
 ];
 view.steps = [
   require('./steps/00_fill_kettle.json'),

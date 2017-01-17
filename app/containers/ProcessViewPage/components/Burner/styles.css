@@ -1,13 +1,18 @@
-.flames {
-  fill: none;
+.flameContainer {
+  transform-origin: center bottom;
+}
+
+.flame,
+.flameInner {
   transform-origin: center bottom;
 }
 
 .flame {
-  animation-name: flame;
-  animation-duration: 0.2s;
-  animation-iteration-count: infinite;
-  transform-origin: center bottom;
+  fill: #45B7FF
+}
+
+.flameInner {
+  fill: #9cd4ff;
 }
 
 .burner {
@@ -17,14 +22,9 @@
   fill: none;
 }
 
-@keyframes flame {
-  0% {
-    transform: scale(1, 1);
-  }
-
-  50% {
-    transform: scale(1.3, 1.3);
-  }
+.burner rect,
+.burner polygon {
+  fill: #FFF;
 }
 
 .Burner {

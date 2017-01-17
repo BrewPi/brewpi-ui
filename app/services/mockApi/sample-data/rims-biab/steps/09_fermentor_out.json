@@ -1,8 +1,15 @@
 {
   "id": 10,
   "name": "Fermentor out",
-  "layout": 5,
+  "layout": 7,
   "settings": [
+              {
+      "id": "temp",
+      "settings": {
+        "val": 20,
+        "set": 20
+      }
+    },
        {
       "id": "kettle",
       "settings": {

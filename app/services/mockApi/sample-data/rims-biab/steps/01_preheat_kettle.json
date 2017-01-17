@@ -4,6 +4,13 @@
   "layout": 1,
   "settings": [
     {
+      "id": "temp",
+      "settings": {
+        "val": 45,
+        "set": 67
+      }
+    },
+    {
       "id": "kettle",
       "settings": {
         "volume": 50.0,
@@ -17,11 +24,10 @@
         "liquid": "hotwater"
       }
     },
-        
     {
       "id": "m1",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -31,8 +37,15 @@
       }
     },
     {
+      "id": "b1",
+      "settings": {
+        "power": true,
+        "intensity": 100
+      }
+    },
+    {
       "id": "p1",
-      "settings":{
+      "settings": {
         "power": true,
         "speed": 100
       }

@@ -1,8 +1,15 @@
 {
   "id": 9,
   "name": "Cool",
-  "layout": 4,
+  "layout": 6,
   "settings": [
+              {
+      "id": "temp",
+      "settings": {
+        "val": 47,
+        "set": 20
+      }
+    },
        {
       "id": "kettle",
       "settings": {
