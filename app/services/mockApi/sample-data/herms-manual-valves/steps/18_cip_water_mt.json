@@ -3,87 +3,9 @@
   "name": "CIP: flush mash tun with water",
   "settings": [
     {
-      "id": "v1",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v2",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "v3",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "v4",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v5",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "v6",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "v8",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "v9",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "v10",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v11",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v12",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v13",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
       "id": "m1",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -111,15 +33,111 @@
       }
     },
     {
-      "id": "m6",
+      "id": "a1",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "a2",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "cfc_in",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "hlt_in",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "hlti",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "m7",
+      "id": "hltx",
       "settings": {
         "pos": "open"
+      }
+    },
+    {
+      "id": "hlt_out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "mt_in",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "mti",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "mtx",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "mt_out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "coil_in",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "coil_out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "bk_in",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "bki",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "bk_out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "bkx",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "cfc_in",
+      "settings": {
+        "pos": "closed"
       }
     },
     {
