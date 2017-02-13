@@ -1,6 +1,9 @@
 {
   "id": 26,
   "name": "CIP: drain cleaner",
+  "notes": [
+    "After cleaner has been pumped through the entire system, we flush the system with water again. The steps of this are omitted because they're identical to the previous water CIP steps."
+  ],
   "settings": [
     {
       "id": "v1",

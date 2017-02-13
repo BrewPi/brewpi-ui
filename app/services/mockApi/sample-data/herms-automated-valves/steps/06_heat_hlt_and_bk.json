@@ -1,6 +1,10 @@
 {
   "id": 6,
   "name": "Heat HLT and boil kettle",
+  "notes": [
+    "The HLT is pre-heated for the first mash step.",
+    "The BK is pre-heated to the strike temperature. This temperature is higher than the first mash step to account for temperature losses to the grain and kettle."
+  ],
   "settings": [
     {
       "id": "v1",

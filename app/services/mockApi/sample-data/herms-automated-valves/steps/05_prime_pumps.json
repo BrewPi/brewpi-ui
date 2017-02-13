@@ -1,6 +1,9 @@
 {
   "id": 5,
   "name": "Prime pumps",
+  "notes": [
+    "To remove air from pumps, shortly open valve after each pump above a bucket."
+  ],
   "settings": [
     {
       "id": "v1",

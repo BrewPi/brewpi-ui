@@ -1,6 +1,9 @@
 {
   "id": 4,
   "name": "Fill boil kettle",
+  "notes": [
+    "BK is filled with strike water for the mash."
+  ],
   "settings": [
     {
       "id": "v1",

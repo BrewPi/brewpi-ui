@@ -1,6 +1,10 @@
 {
   "id": 9,
   "name": "Mash rest 10 min",
+  "notes": [
+    "It is recommended to give the grain bed some time to settle before you start pumping. This will prevent getting air in the pumps and will prevent a stuck mash.",
+    "Because the grain bed has some time to settle and compact, you will also suck fewer small particles towards your filter that can potentially clog it."
+  ],
   "settings": [
     {
       "id": "v1",

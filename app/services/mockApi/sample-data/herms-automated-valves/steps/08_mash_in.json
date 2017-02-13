@@ -1,6 +1,10 @@
 {
   "id": 8,
   "name": "Mash in from boil kettle",
+  "notes": [
+    "The strike water is pumped from the boil kettle to the mash tun.",
+    "If you calculated your grain losses correctly, the mash should have the right temperature after mixing grain and water."
+  ],
   "settings": [
     {
       "id": "v1",

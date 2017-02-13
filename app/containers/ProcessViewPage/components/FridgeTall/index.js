@@ -13,7 +13,7 @@ const SvgIconHeating = require('../Icons/svg/heating.svg');
 import { SvgParent } from '../SvgParent';
 
 export const FridgeFan = (props) => {
-  const powerClass = getPowerClass(props.powered);
+  const powerClass = props.powered;
   const rotateClass = getRotateClass(props.powered);
   return (
     <SvgParent>
@@ -27,20 +27,6 @@ export const FridgeFan = (props) => {
 FridgeFan.propTypes = {
   powered: React.PropTypes.string,
 };
-
-export const BlowerFan = (props) => {
-  const rotateClass = getRotateClass(props.powered);
-  return (
-    <SvgParent>
-      <SvgFanbase className={styles.fanbase} />
-      <SvgFanblades className={classNames(styles.blades, rotateClass)} />
-    </SvgParent>
-  );
-};
-BlowerFan.propTypes = {
-  powered: React.PropTypes.string,
-};
-
 
 export const FridgeShelf = () => (
   <div>

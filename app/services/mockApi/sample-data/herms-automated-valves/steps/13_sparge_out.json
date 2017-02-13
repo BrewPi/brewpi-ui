@@ -1,6 +1,10 @@
 {
   "id": 13,
   "name": "Sparge Out",
+  "notes": [
+    "The water pump is stopped and all wort is pumped to the boil kettle.",
+    "As soon as the boil kettle element is under water, the element can be turned on to start bringing the wort to boil."
+  ],
   "settings": [
     {
       "id": "v1",

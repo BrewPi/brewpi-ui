@@ -22,6 +22,7 @@ import {
   showGridSelector,
   stepsSelector,
   activeStepIdSelector,
+  activeStepNotesSelector,
 } from './selectors.js';
 import * as actions from './actions';
 import StepSelect from './components/StepSelect';
@@ -79,6 +80,11 @@ class ProcessViewPage extends React.Component { // eslint-disable-line react/pre
           showCoordinates={this.props.showCoordinates}
           showGrid={this.props.showGrid}
         />
+        <div className={styles.notes}>
+          <ul className={styles.text}>
+            {this.props.activeStepNotes.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
       </div>
     );
   }
@@ -96,6 +102,7 @@ ProcessViewPage.propTypes = {
   steps: React.PropTypes.object,
   stepModified: React.PropTypes.bool,
   activeStepId: React.PropTypes.number,
+  activeStepNotes: React.PropTypes.string,
   // actions
   onStepSelected: React.PropTypes.func,
   fetchView: React.PropTypes.func,
@@ -119,6 +126,7 @@ const mapStateToProps = (state, props) => ({
   showGrid: showGridSelector(state, props),
   steps: stepsSelector(state, props),
   activeStepId: activeStepIdSelector(state, props),
+  activeStepNotes: activeStepNotesSelector(state, props),
 });
 
 function mapDispatchToProps(dispatch) {

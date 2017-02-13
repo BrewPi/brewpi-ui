@@ -41,3 +41,15 @@
   align-self: center;
 }
 
+.notes {
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:global body {
+  background-color: #24333D;
+}

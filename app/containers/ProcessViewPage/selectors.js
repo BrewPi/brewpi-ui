@@ -95,6 +95,19 @@ const activeStepSelector = createSelector(
 );
 
 /*
+ * Get notes for the currently active step.
+ */
+
+const activeStepNotesSelector = createSelector(
+  activeStepSelector,
+  (step) => {
+    const notes = (typeof step !== 'undefined') ? step.get('notes') : new List();
+    return new List(notes); // ensure returned type is list
+  }
+);
+
+
+/*
  * Get step settings for he active step id
  */
 const activeStepSettingsSelector = createSelector(
@@ -455,4 +468,5 @@ export {
   stepsSelector,
   activeStepIdSelector,
   activeStepSettingsSelector,
+  activeStepNotesSelector,
 };

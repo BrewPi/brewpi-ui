@@ -4,12 +4,11 @@
   color: #FFF;
   width: 100%;
   overflow: auto;
-  padding: 10px 50px;
+  padding: 10px 0;
 }
 
 .tiles {
   text-align: center;
-  min-height: 60vh;
   display: block;
 }
 
