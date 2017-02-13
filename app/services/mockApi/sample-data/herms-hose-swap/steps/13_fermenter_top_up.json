@@ -1,7 +1,7 @@
 {
   "id": 13,
   "name": "Top up fermenter if needed",
-  "layout": 13,
+  "layout": 8,
   "settings": [
      {
       "id": "sphlt",
@@ -64,13 +64,13 @@
     {
       "id": "coil-top",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "coil-bottom",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -82,7 +82,7 @@
     {
       "id": "mt-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {

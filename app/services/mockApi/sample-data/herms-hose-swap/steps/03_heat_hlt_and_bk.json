@@ -1,7 +1,7 @@
 {
   "id": 3,
   "name": "Heat HLT",
-  "layout": 3,
+  "layout": 0,
   "settings": [
        {
       "id": "sphlt",
@@ -50,13 +50,13 @@
         {
       "id": "coil-top",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
         {
       "id": "coil-bottom",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {

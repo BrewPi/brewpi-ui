@@ -1,7 +1,7 @@
 {
   "id": 12,
   "name": "Pump to fermentor",
-  "layout": 12,
+  "layout": 7,
   "settings": [
      {
       "id": "sphlt",
@@ -65,13 +65,13 @@
     {
       "id": "coil-top",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "coil-bottom",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -83,7 +83,7 @@
     {
       "id": "mt-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {

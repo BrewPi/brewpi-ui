@@ -2,30 +2,6 @@
   "id": 12,
   "name": "Pump to fermentor",
   "parts": [
-        {
-      "part": {
-        "type": "SETPOINT",
-        "id": "sphlt"
-      },
-      "x": 4,
-      "y": 1
-    },
-    {
-      "part": {
-        "type": "SETPOINT",
-        "id": "spmt"
-      },
-      "x": 11,
-      "y": 1
-    },
-    {
-      "part": {
-        "type": "SETPOINT",
-        "id": "spbk"
-      },
-      "x": 18,
-      "y": 1
-    },
     {
       "part": {
         "id": "hlt",
@@ -37,14 +13,14 @@
         }
       },
       "x": 3,
-      "y": 2
+      "y": 1
     },
     {
       "part": {
         "type": "TUBE_INLET"
       },
       "x": 3,
-      "y": 2
+      "y": 1
     },
     {
       "part": {
@@ -52,7 +28,7 @@
         "type": "COIL"
       },
       "x": 4,
-      "y": 4
+      "y": 3
     },
     {
       "part": {
@@ -60,14 +36,14 @@
         "id": "heat_hlt"
       },
       "x": 2,
-      "y": 6
+      "y": 5
     },
     {
       "part": {
         "type": "TUBE_DIP"
       },
       "x": 3,
-      "y": 7
+      "y": 6
     },
     {
       "part": {
@@ -80,14 +56,14 @@
         }
       },
       "x": 10,
-      "y": 2
+      "y": 1
     },
     {
       "part": {
         "type": "TUBE_INLET"
       },
       "x": 10,
-      "y": 2
+      "y": 1
     },
     {
       "part": {
@@ -95,7 +71,7 @@
         "rotate": 180
       },
       "x": 10,
-      "y": 7
+      "y": 6
     },
     {
       "part": {
@@ -108,14 +84,14 @@
         }
       },
       "x": 17,
-      "y": 2
+      "y": 1
     },
     {
       "part": {
         "type": "TUBE_WHIRLPOOL"
       },
       "x": 17,
-      "y": 2
+      "y": 1
     },
     {
       "part": {
@@ -124,7 +100,7 @@
         "id": "heat_bk"
       },
       "x": 17,
-      "y": 6
+      "y": 5
     },
     {
       "part": {
@@ -132,7 +108,7 @@
         "rotate": 180
       },
       "x": 17,
-      "y": 7
+      "y": 6
     },
     {
       "part": {
@@ -140,7 +116,7 @@
         "id": "hlt-in"
       },
       "x": 2,
-      "y": 2
+      "y": 1
     },
     {
       "part": {
@@ -148,12 +124,20 @@
         "id": "hlt-out"
       },
       "x": 2,
-      "y": 7
+      "y": 6
     },
     {
       "part": {
         "type": "VALVE_MANUAL",
-        "id": "cl-t"
+        "id": "coil-top"
+      },
+      "x": 7,
+      "y": 3
+    },
+    {
+      "part": {
+        "type": "VALVE_MANUAL",
+        "id": "coil-bottom"
       },
       "x": 7,
       "y": 4
@@ -161,18 +145,10 @@
     {
       "part": {
         "type": "VALVE_MANUAL",
-        "id": "cl-b"
-      },
-      "x": 7,
-      "y": 5
-    },
-    {
-      "part": {
-        "type": "VALVE_MANUAL",
         "id": "mt-in"
       },
       "x": 9,
-      "y": 2
+      "y": 1
     },
     {
       "part": {
@@ -180,7 +156,7 @@
         "id": "mt-out"
       },
       "x": 14,
-      "y": 7
+      "y": 6
     },
     {
       "part": {
@@ -188,7 +164,7 @@
         "id": "bk-in"
       },
       "x": 16,
-      "y": 2
+      "y": 1
     },
     {
       "part": {
@@ -196,7 +172,31 @@
         "id": "bk-out"
       },
       "x": 21,
-      "y": 7
+      "y": 6
+    },
+    {
+      "part": {
+        "type": "SETPOINT",
+        "id": "sphlt"
+      },
+      "x": 4,
+      "y": 0
+    },
+    {
+      "part": {
+        "type": "SETPOINT",
+        "id": "spmt"
+      },
+      "x": 11,
+      "y": 0
+    },
+    {
+      "part": {
+        "type": "SETPOINT",
+        "id": "spbk"
+      },
+      "x": 18,
+      "y": 0
     },
     {
       "part": {
@@ -204,7 +204,7 @@
         "rotate": 180
       },
       "x": 22,
-      "y": 7
+      "y": 6
     },
      {
       "part": {
@@ -213,7 +213,7 @@
         "id": "p1"
       },
       "x": 22,
-      "y": 8
+      "y": 7
     },
     {
       "part": {
@@ -221,7 +221,7 @@
         "type": "TUBE_OUTPUT"
       },
       "x": 22,
-      "y": 9
+      "y": 8
     }
   ]
 }

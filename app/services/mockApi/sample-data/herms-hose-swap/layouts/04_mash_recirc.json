@@ -1,31 +1,7 @@
 {
-  "id": 11,
-  "name": "Cool & whirlpool",
+  "id": 4,
+  "name": "Mash recirculation",
   "parts": [
-    {
-      "part": {
-        "type": "SETPOINT",
-        "id": "sphlt"
-      },
-      "x": 4,
-      "y": 1
-    },
-    {
-      "part": {
-        "type": "SETPOINT",
-        "id": "spmt"
-      },
-      "x": 11,
-      "y": 1
-    },
-    {
-      "part": {
-        "type": "SETPOINT",
-        "id": "spbk"
-      },
-      "x": 18,
-      "y": 1
-    },
     {
       "part": {
         "id": "hlt",
@@ -37,14 +13,14 @@
         }
       },
       "x": 3,
-      "y": 2
+      "y": 1
     },
     {
       "part": {
         "type": "TUBE_INLET"
       },
       "x": 3,
-      "y": 2
+      "y": 1
     },
     {
       "part": {
@@ -52,7 +28,7 @@
         "type": "COIL"
       },
       "x": 4,
-      "y": 4
+      "y": 3
     },
     {
       "part": {
@@ -60,14 +36,14 @@
         "id": "heat_hlt"
       },
       "x": 2,
-      "y": 6
+      "y": 5
     },
     {
       "part": {
         "type": "TUBE_DIP"
       },
       "x": 3,
-      "y": 7
+      "y": 6
     },
     {
       "part": {
@@ -80,14 +56,14 @@
         }
       },
       "x": 10,
-      "y": 2
+      "y": 1
     },
     {
       "part": {
         "type": "TUBE_INLET"
       },
       "x": 10,
-      "y": 2
+      "y": 1
     },
     {
       "part": {
@@ -95,7 +71,7 @@
         "rotate": 180
       },
       "x": 10,
-      "y": 7
+      "y": 6
     },
     {
       "part": {
@@ -108,14 +84,14 @@
         }
       },
       "x": 17,
-      "y": 2
+      "y": 1
     },
     {
       "part": {
         "type": "TUBE_WHIRLPOOL"
       },
       "x": 17,
-      "y": 2
+      "y": 1
     },
     {
       "part": {
@@ -124,7 +100,7 @@
         "id": "heat_bk"
       },
       "x": 17,
-      "y": 6
+      "y": 5
     },
     {
       "part": {
@@ -132,7 +108,7 @@
         "rotate": 180
       },
       "x": 17,
-      "y": 7
+      "y": 6
     },
     {
       "part": {
@@ -140,7 +116,7 @@
         "id": "hlt-in"
       },
       "x": 2,
-      "y": 2
+      "y": 1
     },
     {
       "part": {
@@ -148,126 +124,54 @@
         "id": "hlt-out"
       },
       "x": 2,
-      "y": 7
-    },
-    {
-      "part": {
-        "type": "VALVE_MANUAL",
-        "id": "coil-top"
-      },
-      "x": 7,
-      "y": 4
-    },
-    {
-      "part": {
-        "type": "VALVE_MANUAL",
-        "id": "coil-bottom"
-      },
-      "x": 7,
-      "y": 5
-    },
-    {
-      "part": {
-        "type": "VALVE_MANUAL",
-        "id": "mt-in"
-      },
-      "x": 9,
-      "y": 2
-    },
-    {
-      "part": {
-        "type": "VALVE_MANUAL",
-        "id": "mt-out"
-      },
-      "x": 14,
-      "y": 7
-    },
-    {
-      "part": {
-        "type": "VALVE_MANUAL",
-        "id": "bk-in"
-      },
-      "x": 16,
-      "y": 2
-    },
-    {
-      "part": {
-        "type": "VALVE_MANUAL",
-        "id": "bk-out"
-      },
-      "x": 21,
-      "y": 7
+      "y": 6
     },
     {
       "part": {
         "type": "TUBE_ELBOW",
-        "rotate": 180
+        "rotate": 90
       },
-      "x": 22,
-      "y": 7
+      "x": 1,
+      "y": 6
     },
     {
       "part": {
         "rotate": 90,
         "type": "PUMP",
-        "id": "p1"
+        "id": "p2"
       },
-      "x": 22,
-      "y": 8
+      "x": 1,
+      "y": 7
     },
     {
       "part": {
         "type": "TUBE_ELBOW",
         "rotate": 270
       },
-      "x": 22,
-      "y": 9
-    },
-    {
-      "part": {
-        "type": "TUBE_STRAIGHT"
-      },
-      "x": [
-        20,
-        21
-      ],
-      "y": 9
-    },
-    {
-      "part": {
-        "type": "CFC"
-      },
-      "x": 17,
-      "y": 9
-    },
-    {
-      "part": {
-        "type": "TUBE_STRAIGHT"
-      },
-      "x": 16,
-      "y": 9
+      "x": 1,
+      "y": 8
     },
     {
       "part": {
         "type": "TUBE_ELBOW",
         "rotate": 0
       },
-      "x": 15,
-      "y": 9
+      "x": 0,
+      "y": 8
     },
-    {
+     {
       "part": {
         "type": "TUBE_STRAIGHT",
         "rotate": 90
       },
-      "x": 15,
+      "x": 0,
       "y": [
+        2,
         3,
         4,
         5,
         6,
-        7,
-        8
+        7
       ]
     },
     {
@@ -275,57 +179,178 @@
         "type": "TUBE_ELBOW",
         "rotate": 90
       },
-      "x": 15,
-      "y": 2
+      "x": 0,
+      "y": 1
     },
     {
       "part": {
-        "rotate": 270,
-        "id": "in1",
-        "type": "TUBE_INPUT"
+        "type": "TUBE_STRAIGHT"
       },
-      "x": 16,
-      "y": 12
+      "x": 1,
+      "y": 1
+    },
+    {
+      "part": {
+        "type": "VALVE_MANUAL",
+        "id": "mt-in"
+      },
+      "x": 9,
+      "y": 1
+    },
+    {
+      "part": {
+        "type": "VALVE_MANUAL",
+        "id": "mt-out"
+      },
+      "x": 14,
+      "y": 6
+    },
+     {
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 180
+      },
+      "x": 15,
+      "y": 6
+    },
+    {
+      "part": {
+        "rotate": 90,
+        "type": "PUMP",
+        "id": "p1"
+      },
+      "x": 15,
+      "y": 7
+    },
+    {
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 270
+      },
+      "x": 15,
+      "y": 8
+    },
+    {
+      "part": {
+        "type": "TUBE_STRAIGHT"
+      },
+      "x": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "y": 8
+    },
+    {
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 0
+      },
+      "x": 8,
+      "y": 8
     },
     {
       "part": {
         "type": "TUBE_STRAIGHT",
         "rotate": 90
       },
-      "x": 16,
-      "y": 11
-    },
-    {
-      "part": {
-        "type": "TUBE_ELBOW",
-        "rotate": 90
-      },
-      "x": 16,
-      "y": 10
+      "x": 8,
+      "y": [
+        5,
+        6,
+        7
+      ]
     },
     {
       "part": {
         "type": "TUBE_ELBOW",
         "rotate": 180
       },
-      "x": 20,
-      "y": 10
+      "x": 8,
+      "y": 4
+    },
+     {
+      "part": {
+        "type": "VALVE_MANUAL",
+        "id": "coil-top"
+      },
+      "x": 7,
+      "y": 3
+    },
+    {
+      "part": {
+        "type": "VALVE_MANUAL",
+        "id": "coil-bottom"
+      },
+      "x": 7,
+      "y": 4
+    },
+     {
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 270
+      },
+      "x": 8,
+      "y": 3
     },
     {
       "part": {
         "type": "TUBE_STRAIGHT",
         "rotate": 90
       },
-      "x": 20,
-      "y": 11
+      "x": 8,
+      "y": 2
+    },
+     {
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 90
+      },
+      "x": 8,
+      "y": 1
     },
     {
       "part": {
-        "rotate": 90,
-        "type": "TUBE_OUTPUT"
+        "type": "VALVE_MANUAL",
+        "id": "bk-in"
       },
-      "x": 20,
-      "y": 12
+      "x": 16,
+      "y": 1
+    },
+    {
+      "part": {
+        "type": "VALVE_MANUAL",
+        "id": "bk-out"
+      },
+      "x": 21,
+      "y": 6
+    },
+    {
+      "part": {
+        "type": "SETPOINT",
+        "id": "sphlt"
+      },
+      "x": 4,
+      "y": 0
+    },
+    {
+      "part": {
+        "type": "SETPOINT",
+        "id": "spmt"
+      },
+      "x": 11,
+      "y": 0
+    },
+    {
+      "part": {
+        "type": "SETPOINT",
+        "id": "spbk"
+      },
+      "x": 18,
+      "y": 0
     }
   ]
 }

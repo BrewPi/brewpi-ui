@@ -1,7 +1,7 @@
 {
   "id": 6,
   "name": "Mash rest 10 min",
-  "layout": 6,
+  "layout": 0,
   "settings": [
     {
       "id": "mt",
@@ -46,13 +46,13 @@
         {
       "id": "coil-top",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
         {
       "id": "coil-bottom",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {

@@ -1,7 +1,7 @@
 {
   "id": 11,
   "name": "Cool & whirlpool",
-  "layout": 11,
+  "layout": 6,
   "settings": [
      {
       "id": "sphlt",
@@ -71,13 +71,13 @@
     {
       "id": "coil-top",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "coil-bottom",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -89,7 +89,7 @@
     {
       "id": "mt-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {

@@ -3,6 +3,7 @@ import getopt
 import sys
 import os
 import json
+import OrderedDict
 
 # Read in command line arguments 
 try:
@@ -38,7 +39,7 @@ for o, a in opts:
 print("moving all parts in {} by ({},{})".format(targetFile, moveX, moveY))
 
 with open(targetFile) as fp:
-    oldData = json.load(fp)
+    oldData = json.load(fp, object_pairs_hook=OrderedDict)
     newData = oldData
     newParts = []
     for part in oldData['parts']:

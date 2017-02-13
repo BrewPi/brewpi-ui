@@ -1,7 +1,7 @@
 {
   "id": 4,
   "name": "Add grain to mash tun",
-  "layout": 4,
+  "layout": 0,
   "settings": [
        {
       "id": "mt",
@@ -56,13 +56,13 @@
         {
       "id": "coil-top",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
         {
       "id": "coil-bottom",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
