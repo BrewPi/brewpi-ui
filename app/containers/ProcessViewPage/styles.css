@@ -14,16 +14,6 @@
   margin: 0;
 }
 
-.stepSelect {
-  padding: 10px;
-  text-align: center;
-}
-
-.processView {
-  margin: auto;
-  display: inline-block;
-}
-
 .viewName {
   font-weight: bold;
 }
@@ -41,13 +31,36 @@
   align-self: center;
 }
 
-.notes {
-  width: 80%;
-  margin: auto;
+.stepSelect {
   padding: 10px;
+  text-align: center;
+}
+
+.content {
   display: flex;
-  align-items: center;
   justify-content: center;
+  width: 100%;
+}
+
+.content > * {
+  margin: 10px;
+}
+
+.notes {
+  width: 300px;
+  padding: 10px 20px;
+  border: solid 1px rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  min-height: 200px;
+  display: inline-block;
+}
+
+.notes > ul {
+  padding: 0 20px;
+}
+
+.notes > ul > li {
+  padding: 5px 0;
 }
 
 :global body {

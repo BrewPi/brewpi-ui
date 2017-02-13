@@ -73,17 +73,20 @@ class ProcessViewPage extends React.Component { // eslint-disable-line react/pre
             </ButtonGroup>
           </div>
         </div>
-        <ProcessView
-          className={styles.processView}
-          layout={this.props.layout}
-          flows={this.props.flows}
-          showCoordinates={this.props.showCoordinates}
-          showGrid={this.props.showGrid}
-        />
-        <div className={styles.notes}>
-          <ul className={styles.text}>
-            {this.props.activeStepNotes.map((item) => <li>{item}</li>)}
-          </ul>
+        <div className={styles.content}>
+          <ProcessView
+            className={styles.processView}
+            layout={this.props.layout}
+            flows={this.props.flows}
+            showCoordinates={this.props.showCoordinates}
+            showGrid={this.props.showGrid}
+          />
+          <div className={styles.notes}>
+            <h4>Notes</h4>
+            <ul className={styles.text}>
+              {this.props.activeStepNotes.map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
         </div>
       </div>
     );
