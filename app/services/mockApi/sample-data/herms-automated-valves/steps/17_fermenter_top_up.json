@@ -2,8 +2,8 @@
   "id": 17,
   "name": "Top up fermenter if needed",
   "notes": [
-    "If the volume in the fermenter is lower than expected, you can top it up with sanitized water from the HLT by cooling it through the CFC.",
-    "The CFC is not used with counter flow here, so take into account that the cooling power is a bit less."
+    "If the volume in the fermenter is lower than required, we can top it up with sanitized water from the HLT by cooling it through the CFC.",
+    "The CFC is not used with counter flow here, so take into account that the cooling performance is a bit less by adjusting the flow."
   ],
   "settings": [
     {

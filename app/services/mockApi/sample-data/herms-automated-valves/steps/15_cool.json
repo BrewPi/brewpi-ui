@@ -3,8 +3,8 @@
   "name": "Cool and whirlpool",
   "notes": [
     "When boiling is finished, the wort is cooled using a counterflow chiller.",
-    "When boiling is stopped, DMS is no longer boiled off, but it is still created at lower temperatures. You want to cross the temperature range in which DMS is created but not boiled off as quickly as possible.",
-    "By whirlpooling the wort, floating particles will be gathered in the middle of the kettle and you can prevent pumping them to your fermentation vessel."
+    "When boiling is stopped, DMS is no longer boiled off, but it is still created at temperatures far below boiling. Therefore, we want to cross this temperature range as quickly as possible.",
+    "By whirlpooling the wort, suspended particles will be gathered in the middle of the kettle and we can prevent pumping them to your fermenter later."
   ],
   "settings": [
     {

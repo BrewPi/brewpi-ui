@@ -2,7 +2,8 @@
   "id": 4,
   "name": "Fill boil kettle",
   "notes": [
-    "BK is filled with strike water for the mash."
+    "The boil kettle (BK) is filled with strike water for the mash.",
+    "By preparing the strike water in the boil kettle, we can measure its temperature and volume separately."
   ],
   "settings": [
     {

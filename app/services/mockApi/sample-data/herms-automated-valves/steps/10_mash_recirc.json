@@ -2,9 +2,9 @@
   "id": 10,
   "name": "Mash recirculation",
   "notes": [
-    "To control the temperature of the mash, it is pumped through the coil in the HLT where it picks up heat.",
-    "The setpoint of the HLT is dynamic and controlled by BrewPi, based on temperature error in the mash tun.",
-    "By heating the mash indirectly, your wort will never get too hot.",
+    "To control the temperature of the mash, the wort is pumped through the coil in the HLT where it picks up heat.",
+    "The setpoint of the HLT is dynamic and controlled by BrewPi, based on the temperature error in the mash tun.",
+    "By heating the mash indirectly, the wort will never get too hot.",
     "The mash can go through multiple temperature steps."
   ],
   "settings": [

@@ -3,7 +3,7 @@
   "name": "All valves open",
   "notes": [
     "This layout uses 13 motorized valves and 7 manual valves.", "Manual valves on the kettles remain open during the brew.",
-    "Manual valves are also used for inputs and outputs of the system as a whole, so you van make sure a hose is connected before opening."
+    "Manual valves are also used for inputs and outputs of the system as a whole, so we can make sure a hose is connected before opening."
   ],
   "settings": [
     {

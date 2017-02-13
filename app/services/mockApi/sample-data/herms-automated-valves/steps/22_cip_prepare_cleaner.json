@@ -2,7 +2,7 @@
   "id": 22,
   "name": "CIP: prepare cleaner in mash tun",
   "notes": [
-    "We use hot water from the HLT to prepare cleaner in the mash tun."
+    "We use the remaining hot water from the HLT to prepare hot cleaning solution in the mash tun."
   ],
   "settings": [
     {
