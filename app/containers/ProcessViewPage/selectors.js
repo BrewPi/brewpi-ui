@@ -44,6 +44,14 @@ const showCoordinatesSelector = createSelector(
   (view) => view.get('showCoordinates')
 );
 
+/**
+ * Get showGrid setting for the view
+ */
+const showGridSelector = createSelector(
+  processViewSelector,
+  (view) => view.get('showGrid')
+);
+
 /*
  * Get a list of steps (id and name) sorted by id
  */
@@ -439,6 +447,7 @@ export {
   layoutPartsSelector,
   partSettingsSelector,
   showCoordinatesSelector,
+  showGridSelector,
   dimensionsSelector,
   layoutTableSelector,
   possibleFlowTableSelector,

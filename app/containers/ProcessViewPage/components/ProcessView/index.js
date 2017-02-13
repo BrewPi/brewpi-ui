@@ -10,7 +10,7 @@ import styles from './styles.css';
 import Tile from '../Tile';
 import { Part } from '../Part';
 import { Table } from 'immutable-table';
-
+const classNames = require('classnames');
 
 class ProcessView extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -21,6 +21,10 @@ class ProcessView extends React.Component { // eslint-disable-line react/prefer-
 
     const cols = layout.width;
     const rows = layout.height;
+    let gridStyle;
+    if (this.props.showGrid) {
+      gridStyle = styles.grid;
+    }
     for (let y = 0; y < rows; y += 1) {
       row = [];
       for (let x = 0; x < cols; x += 1) {
@@ -37,12 +41,12 @@ class ProcessView extends React.Component { // eslint-disable-line react/prefer-
           }
         }
         row.push(
-          <Tile key={key} x={x} y={y} showCoordinates={this.props.showCoordinates}>
+          <Tile key={key} x={x} y={y} showCoordinates={this.props.showCoordinates} showGrid={this.props.showGrid}>
             {partComponents}
           </Tile>
         );
       }
-      tiles.push(<div className={styles.row} key={`row-${y}`}>{row}</div>);
+      tiles.push(<div className={classNames(styles.row, gridStyle)} key={`row-${y}`}>{row}</div>);
     }
     return (
       <div className={styles.ProcessView}>
@@ -56,6 +60,7 @@ ProcessView.propTypes = {
   layout: React.PropTypes.instanceOf(Table),
   flows: React.PropTypes.instanceOf(Table),
   showCoordinates: React.PropTypes.bool,
+  showGrid: React.PropTypes.bool,
 };
 
 export default ProcessView;

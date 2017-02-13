@@ -7,13 +7,9 @@
   position: relative;
 }
 
-.tile {
-  border-top: dotted 1px rgba(255, 255, 255, 0.2);
-  border-left: dotted 1px rgba(255, 255, 255, 0.2);
-}
-
-.tile:last-child {
-  border-right: dotted 1px rgba(255, 255, 255, 0.2);
+.grid {
+  /* makes grid together with overlapping inset grid on row to get 1px line thickness */
+  box-shadow: 1px 1px 0 0 #45525A;
 }
 
 .content {
@@ -29,4 +25,5 @@
   top: 3px;
   left: 3px;
   margin: 0;
+  color: #717A81;
 }

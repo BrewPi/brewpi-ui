@@ -19,6 +19,7 @@
   display: table;
 }
 
-.row:last-child {
-  border-bottom: dotted 1px rgba(255, 255, 255, 0.2);
+.grid {
+  /* makes grid together with overlapping grid on tile to get 1px line thickness */
+  box-shadow: inset 1px 1px 0 0 #45525A;
 }

@@ -13,7 +13,7 @@ const Toggle = (props) => {
   }
 
   return (
-    <Button className={styles.toggleButton}>
+    <Button className={styles.toggleButton} onClick={() => props.onClicked(props.enabled)}>
       {iconElement}
       <span className={styles.name}>{props.name}</span>
     </Button>
@@ -23,6 +23,7 @@ const Toggle = (props) => {
 Toggle.propTypes = {
   enabled: React.PropTypes.bool,
   name: React.PropTypes.string,
+  onClicked: React.PropTypes.func.isRequired,
 };
 
 Toggle.defaultProps = {

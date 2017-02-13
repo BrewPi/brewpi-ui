@@ -71,3 +71,17 @@ export function layoutChoosen(layoutId) {
     layoutId,
   };
 }
+
+export function gridToggled(oldValue) {
+  return {
+    type: constants.GRID_TOGGLED,
+    oldValue,
+  };
+}
+
+export function coordinatesToggled(oldValue) {
+  return {
+    type: constants.COORDINATES_TOGGLED,
+    oldValue,
+  };
+}

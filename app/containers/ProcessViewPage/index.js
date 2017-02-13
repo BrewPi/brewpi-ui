@@ -19,6 +19,7 @@ import {
   layoutTableSelector,
   flowTableSelector,
   showCoordinatesSelector,
+  showGridSelector,
   stepsSelector,
   activeStepIdSelector,
 } from './selectors.js';
@@ -66,8 +67,8 @@ class ProcessViewPage extends React.Component { // eslint-disable-line react/pre
           </div>
           <div className={styles.headerRight}>
             <ButtonGroup vertical>
-              <Toggle className={styles.toggle} name="Coordinates" enabled={this.props.showCoordinates} />
-              <Toggle className={styles.toggle} name="Grid" enabled={this.props.showGrid} />
+              <Toggle className={styles.toggle} name="Coordinates" enabled={this.props.showCoordinates} onClicked={this.props.onCoordinatesToggle} />
+              <Toggle className={styles.toggle} name="Grid" enabled={this.props.showGrid} onClicked={this.props.onGridToggle} />
             </ButtonGroup>
           </div>
         </div>
@@ -76,6 +77,7 @@ class ProcessViewPage extends React.Component { // eslint-disable-line react/pre
           layout={this.props.layout}
           flows={this.props.flows}
           showCoordinates={this.props.showCoordinates}
+          showGrid={this.props.showGrid}
         />
       </div>
     );
@@ -97,6 +99,8 @@ ProcessViewPage.propTypes = {
   // actions
   onStepSelected: React.PropTypes.func,
   fetchView: React.PropTypes.func,
+  onCoordinatesToggle: React.PropTypes.func,
+  onGridToggle: React.PropTypes.func,
 };
 ProcessViewPage.defaultProps = {
   params: {
@@ -112,6 +116,7 @@ const mapStateToProps = (state, props) => ({
   layout: layoutTableSelector(state, props),
   flows: flowTableSelector(state, props),
   showCoordinates: showCoordinatesSelector(state, props),
+  showGrid: showGridSelector(state, props),
   steps: stepsSelector(state, props),
   activeStepId: activeStepIdSelector(state, props),
 });
@@ -120,6 +125,8 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({
     fetchView: (viewId) => dispatch(actions.viewFetchRequested(viewId)),
     onStepSelected: (stepId) => dispatch(actions.stepSelected(stepId)),
+    onGridToggle: (wasEnabled) => dispatch(actions.gridToggled(wasEnabled)),
+    onCoordinatesToggle: (wasEnabled) => dispatch(actions.coordinatesToggled(wasEnabled)),
   }, dispatch);
 }
 
