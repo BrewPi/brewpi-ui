@@ -207,6 +207,7 @@
     ]
   },
   "dependencies": {
+    "axios": "^0.15.2",
     "babel-polyfill": "6.13.0",
     "bootstrap-css-only": "3.3.6",
     "chai-immutable": "1.6.0",

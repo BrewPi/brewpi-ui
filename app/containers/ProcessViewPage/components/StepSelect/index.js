@@ -78,7 +78,7 @@ const StepSelect = (props) => {
           {renderedOptions}
         </DropdownButton>
         <Button onClick={onNext} className={styles.nextButton}><Glyphicon glyph="menu-right" /></Button>
-        <Button className={styles.applyButton}><FormattedMessage {...messages.apply} /></Button>
+        <Button onClick={props.onApply} className={styles.applyButton}><FormattedMessage {...messages.apply} /></Button>
       </ButtonGroup>
     </div>
   );
@@ -89,6 +89,7 @@ StepSelect.propTypes = {
   selected: React.PropTypes.number,
   modified: React.PropTypes.bool,
   onSelect: React.PropTypes.func,
+  onApply: React.PropTypes.func,
   onSave: React.PropTypes.func,
   onNew: React.PropTypes.func,
 };

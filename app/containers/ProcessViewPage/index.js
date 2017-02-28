@@ -63,6 +63,7 @@ class ProcessViewPage extends React.Component { // eslint-disable-line react/pre
                 selected={this.props.activeStepId}
                 modified={this.props.stepModified}
                 onSelect={this.props.onStepSelected}
+                onApply={this.props.onStepApply}
               />
             </div>
           </div>
@@ -108,6 +109,7 @@ ProcessViewPage.propTypes = {
   activeStepNotes: React.PropTypes.string,
   // actions
   onStepSelected: React.PropTypes.func,
+  onStepApply: React.PropTypes.func,
   fetchView: React.PropTypes.func,
   onCoordinatesToggle: React.PropTypes.func,
   onGridToggle: React.PropTypes.func,
@@ -136,6 +138,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({
     fetchView: (viewId) => dispatch(actions.viewFetchRequested(viewId)),
     onStepSelected: (stepId) => dispatch(actions.stepSelected(stepId)),
+    onStepApply: () => dispatch(actions.stepApplied()),
     onGridToggle: (wasEnabled) => dispatch(actions.gridToggled(wasEnabled)),
     onCoordinatesToggle: (wasEnabled) => dispatch(actions.coordinatesToggled(wasEnabled)),
   }, dispatch);

@@ -51,6 +51,12 @@ export function powerTogglableClicked(partId, oldPower) {
 }
 
 
+export function stepApplied() {
+  return {
+    type: constants.STEP_APPLIED,
+  };
+}
+
 export function activeStepChanged(stepId) {
   return {
     type: constants.ACTIVE_STEP_CHANGED,
