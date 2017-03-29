@@ -472,7 +472,7 @@
     },
     {
       "part": {
-        "id": "m4",
+        "id": "m5",
         "type": "VALVE_MANUAL"
       },
       "x": 10,
@@ -806,7 +806,7 @@
     },
     {
       "part": {
-        "id": "m5",
+        "id": "m6",
         "type": "VALVE_MANUAL"
       },
       "x": 20,

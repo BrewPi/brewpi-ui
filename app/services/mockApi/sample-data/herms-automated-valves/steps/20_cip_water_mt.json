@@ -1,8 +1,8 @@
 {
-  "id": 16,
-  "name": "Pump wort to fermenter",
+  "id": 20,
+  "name": "CIP: flush mash tun with water",
   "notes": [
-    "When the beer has been cooled, it is ready to be pumped to the fermenter."
+    "While flushing the mash tun with water, we can clean it with soft brush."
   ],
   "settings": [
     {
@@ -14,7 +14,7 @@
     {
       "id": "v2",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -56,13 +56,13 @@
     {
       "id": "v9",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "v10",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -80,7 +80,7 @@
     {
       "id": "v13",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -92,7 +92,7 @@
     {
       "id": "m2",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -104,23 +104,29 @@
     {
       "id": "m4",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "m5",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "m6",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "m7",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "m8",
       "settings": {
         "pos": "open"
       }
@@ -135,14 +141,13 @@
     {
       "id": "bk",
       "settings": {
-        "volume": 10,
-        "liquid": "wort"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "grain": 15
+        "volume": 15,
+        "liquid": "water"
       }
     },
     {
@@ -176,7 +181,7 @@
         "speed": 100
       }
     },
-    {
+        {
       "id": "sphlt",
       "settings": {
         "val": 60,
@@ -186,14 +191,13 @@
     {
       "id": "spmt",
       "settings": {
-        "val": 20
+        "val": 15
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 20,
-        "set": 20
+        "val": 20
       }
     }
   ]

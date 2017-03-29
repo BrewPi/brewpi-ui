@@ -126,6 +126,12 @@
       }
     },
     {
+      "id": "m8",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
       "id": "hlt",
       "settings": {
         "volume": 50.0,

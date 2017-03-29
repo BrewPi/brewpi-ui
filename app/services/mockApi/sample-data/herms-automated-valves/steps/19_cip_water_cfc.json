@@ -1,6 +1,9 @@
 {
-  "id": 21,
+  "id": 19,
   "name": "CIP: flush CFC with water",
+  "notes": [
+    "Note that the CFC is flushed in opposite direction of the cooling step (back flushing)."
+  ],
   "settings": [
     {
       "id": "v1",
@@ -47,7 +50,7 @@
     {
       "id": "v8",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -113,11 +116,17 @@
     {
       "id": "m6",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "m7",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "m8",
       "settings": {
         "pos": "open"
       }

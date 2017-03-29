@@ -1,6 +1,9 @@
 {
   "id": 25,
   "name": "CIP: recirc cleaner through boil kettle and CFC",
+  "notes": [
+    "Shortly open m4 and m5 over a bucket to also sanitize outputs."
+  ],
   "settings": [
     {
       "id": "v1",
@@ -41,7 +44,7 @@
     {
       "id": "v7",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -107,7 +110,7 @@
     {
       "id": "m5",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -118,6 +121,12 @@
     },
     {
       "id": "m7",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "m8",
       "settings": {
         "pos": "open"
       }

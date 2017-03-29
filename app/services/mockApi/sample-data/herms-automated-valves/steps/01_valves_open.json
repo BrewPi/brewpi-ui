@@ -85,6 +85,30 @@
       }
     },
     {
+      "id": "m1",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "m2",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "m3",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "m4",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
       "id": "m5",
       "settings": {
         "pos": "open"
@@ -98,6 +122,12 @@
     },
     {
       "id": "m7",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "m8",
       "settings": {
         "pos": "open"
       }

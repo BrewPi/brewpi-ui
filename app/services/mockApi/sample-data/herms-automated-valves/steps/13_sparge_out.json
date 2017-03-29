@@ -3,7 +3,8 @@
   "name": "Sparge Out",
   "notes": [
     "The water pump is stopped and all wort is pumped to the boil kettle.",
-    "As soon as the boil kettle element is under water, the element can be turned on to start bringing the wort to boil."
+    "As soon as the boil kettle element is under water, the element can be turned on to start bringing the wort to boil.",
+    "Don't forget to still apply the next step (boil) to close v9 and prevent wort from leaking back into the mash tun (communicating vessels)."
   ],
   "settings": [
     {
@@ -39,19 +40,19 @@
     {
       "id": "v6",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v7",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v8",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -111,7 +112,7 @@
     {
       "id": "m5",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -122,6 +123,12 @@
     },
     {
       "id": "m7",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "m8",
       "settings": {
         "pos": "open"
       }

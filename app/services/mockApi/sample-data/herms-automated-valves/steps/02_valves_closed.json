@@ -123,6 +123,12 @@
       }
     },
     {
+      "id": "m8",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
       "id": "sphlt",
       "settings": {
         "val": 20
