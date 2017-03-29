@@ -1,6 +1,11 @@
 {
-  "id": 19,
-  "name": "CIP: flush boil kettle with water",
+  "id": 16,
+  "name": "Cool",
+  "notes": [
+    "When boiling is stopped, DMS is no longer boiled off, but it is still created at temperatures far below boiling. Therefore, we want to cross this temperature range as quickly as possible.     This is done with a counter-flow wort chiller (CFC).",
+    "Do not open m3 for the first 3 minutes to pump hot wort through the CFC to sanitize it.",
+    "You do not have to wait for the boil kettle temperature to reach the desired fermenation temperature. You can stop whirlpooling as soon as the output of the CFC reaches fermetation temperature. There can be a 20 degree difference between CFC in- and output temperature."
+  ],
   "settings": [
     {
       "id": "v1",
@@ -11,43 +16,43 @@
     {
       "id": "v2",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v3",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "v4",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v5",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "v6",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v7",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v8",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -71,13 +76,13 @@
     {
       "id": "v12",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "v13",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -89,13 +94,13 @@
     {
       "id": "m2",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "m3",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -113,11 +118,17 @@
     {
       "id": "m6",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "m7",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "m8",
       "settings": {
         "pos": "open"
       }
@@ -132,13 +143,14 @@
     {
       "id": "bk",
       "settings": {
-        "volume": 15,
-        "liquid": "water"
+        "volume": 50,
+        "liquid": "wort"
       }
     },
     {
       "id": "mt",
       "settings": {
+        "grain": 15
       }
     },
     {
@@ -188,7 +200,8 @@
     {
       "id": "spbk",
       "settings": {
-        "val": 15
+        "val": 47,
+        "set": 20
       }
     }
   ]

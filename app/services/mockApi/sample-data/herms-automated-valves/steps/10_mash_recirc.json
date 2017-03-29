@@ -47,13 +47,13 @@
     {
       "id": "v7",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "v8",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -113,7 +113,7 @@
     {
       "id": "m5",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -124,6 +124,12 @@
     },
     {
       "id": "m7",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "m8",
       "settings": {
         "pos": "open"
       }

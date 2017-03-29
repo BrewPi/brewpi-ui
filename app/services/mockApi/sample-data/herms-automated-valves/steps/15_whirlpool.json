@@ -1,10 +1,10 @@
 {
   "id": 15,
-  "name": "Cool and whirlpool",
+  "name": "Whirlpool",
   "notes": [
-    "When boiling is finished, the wort is cooled using a counterflow chiller.",
-    "When boiling is stopped, DMS is no longer boiled off, but it is still created at temperatures far below boiling. Therefore, we want to cross this temperature range as quickly as possible.",
-    "By whirlpooling the wort, suspended particles will be gathered in the middle of the kettle and we can prevent pumping them to your fermenter later."
+    "When boiling is finished, we create a whirlpool in te kettle",
+    "By whirlpooling the wort, suspended particles (trub) will be gathered in the middle of the kettle and we can prevent pumping them to your fermenter later.",
+    "In this step, be bypass the counter-flow chiller, so it will not decrease our flow rate and the intensity of the whirlpool."
   ],
   "settings": [
     {
@@ -46,7 +46,7 @@
     {
       "id": "v7",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -70,13 +70,13 @@
     {
       "id": "v11",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "v12",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -100,7 +100,7 @@
     {
       "id": "m3",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -112,17 +112,23 @@
     {
       "id": "m5",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "m6",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "m7",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "m8",
       "settings": {
         "pos": "open"
       }

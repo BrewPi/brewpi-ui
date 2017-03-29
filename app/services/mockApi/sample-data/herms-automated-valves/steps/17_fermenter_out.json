@@ -1,6 +1,10 @@
 {
-  "id": 20,
-  "name": "CIP: flush coil with water",
+  "id": 17,
+  "name": "Pump wort to fermenter",
+  "notes": [
+    "When the beer has been cooled enough, it is ready to be pumped to the fermenter.",
+    "Note that the boil kettle temperature can still be around 40 degrees, while the CFC output temperature is around 20 degrees."
+  ],
   "settings": [
     {
       "id": "v1",
@@ -11,19 +15,19 @@
     {
       "id": "v2",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v3",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "v4",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -41,13 +45,13 @@
     {
       "id": "v7",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v8",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -59,25 +63,25 @@
     {
       "id": "v10",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "v11",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v12",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "v13",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -89,19 +93,19 @@
     {
       "id": "m2",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "m3",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "m4",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -123,6 +127,12 @@
       }
     },
     {
+      "id": "m8",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
       "id": "hlt",
       "settings": {
         "volume": 30.0,
@@ -132,11 +142,14 @@
     {
       "id": "bk",
       "settings": {
+        "volume": 10,
+        "liquid": "wort"
       }
     },
     {
       "id": "mt",
       "settings": {
+        "grain": 15
       }
     },
     {
@@ -166,7 +179,8 @@
     {
       "id": "p2",
       "settings":{
-        "power": false
+        "power": true,
+        "speed": 100
       }
     },
     {
@@ -185,7 +199,8 @@
     {
       "id": "spbk",
       "settings": {
-        "val": 20
+        "val": 20,
+        "set": 20
       }
     }
   ]

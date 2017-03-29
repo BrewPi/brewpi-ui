@@ -1,9 +1,8 @@
 {
-  "id": 17,
-  "name": "Top up fermenter if needed",
+  "id": 21,
+  "name": "CIP: flush boil kettle with water",
   "notes": [
-    "If the volume in the fermenter is lower than required, we can top it up with sanitized water from the HLT by cooling it through the CFC.",
-    "The CFC is not used with counter flow here, so take into account that the cooling performance is a bit less by adjusting the flow."
+  "While flushing the boil kettle with water, we can clean it with soft cloth."
   ],
   "settings": [
     {
@@ -63,7 +62,7 @@
     {
       "id": "v10",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -75,13 +74,13 @@
     {
       "id": "v12",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v13",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -93,35 +92,41 @@
     {
       "id": "m2",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "m3",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "m4",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "m5",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "m6",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "m7",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "m8",
       "settings": {
         "pos": "open"
       }
@@ -136,12 +141,13 @@
     {
       "id": "bk",
       "settings": {
+        "volume": 15,
+        "liquid": "water"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "grain": 15
       }
     },
     {
@@ -165,14 +171,14 @@
     {
       "id": "p1",
       "settings":{
-        "power": true,
-        "speed": 100
+        "power": false
       }
     },
     {
       "id": "p2",
       "settings":{
-        "power": false        
+        "power": true,
+        "speed": 100
       }
     },
     {
@@ -191,8 +197,8 @@
     {
       "id": "spbk",
       "settings": {
-        "val": 20
+        "val": 15
       }
-    }    
+    }
   ]
 }
