@@ -2,9 +2,10 @@
   "id": 10,
   "name": "Mash recirculation",
   "notes": [
-    "To control the temperature of the mash, the wort is pumped through the coil in the HLT where it picks up heat.",
+    "To control the temperature of the mash, the wort is pumped through the coil in the HLT. The water in the HLT will heat up the wort.",
+    "This heat exchange is what gives the HERMS its name: heat excange recirculating mash system",
+    "By heating the mash indirectly, the wort will never get hotter than the HLT temperature. This prevents overheating and scorching.",
     "The setpoint of the HLT is dynamic and controlled by BrewPi, based on the temperature error in the mash tun.",
-    "By heating the mash indirectly, the wort will never get too hot.",
     "The mash can go through multiple temperature steps."
   ],
   "settings": [

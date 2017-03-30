@@ -2,8 +2,10 @@
   "id": 16,
   "name": "Cool",
   "notes": [
-    "When boiling is stopped, DMS is no longer boiled off, but it is still created at temperatures far below boiling. Therefore, we want to cross this temperature range as quickly as possible.     This is done with a counter-flow wort chiller (CFC).",
-    "Do not open m3 for the first 3 minutes to pump hot wort through the CFC to sanitize it.",
+    "DMS (Dimethyl Sulfide) is created in wort whenever it is heated. It is an off-flavor that has the aroma of cooked corn.",
+    "When the wort is still boiling, DMS is boiled off and will not be a problem.",
+    "When boiling is stopped, DMS is no longer boiled off, but it is still created until the beer is cooled. Therefore, we want to cross this temperature range as quickly as possible. This is done with a counter-flow wort chiller (CFC).",
+    "Do not cool for the first 3 minutes to pump hot wort through the CFC to sanitize it. After 3 minutes, open m3.",
     "You do not have to wait for the boil kettle temperature to reach the desired fermenation temperature. You can stop whirlpooling as soon as the output of the CFC reaches fermetation temperature. There can be a 20 degree difference between CFC in- and output temperature."
   ],
   "settings": [
@@ -118,13 +120,13 @@
     {
       "id": "m6",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "m7",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
