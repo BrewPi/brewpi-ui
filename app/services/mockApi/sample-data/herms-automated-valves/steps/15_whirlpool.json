@@ -3,8 +3,8 @@
   "name": "Whirlpool",
   "notes": [
     "When boiling is finished, we create a whirlpool in te kettle",
-    "By whirlpooling the wort, suspended particles (trub) will be gathered in the middle of the kettle and we can prevent pumping them to your fermenter later.",
-    "In this step, be bypass the counter-flow chiller, so it will not decrease our flow rate and the intensity of the whirlpool."
+    "By whirlpooling the wort, suspended particles (trub) will be gathered in the center of the kettle and we can prevent pumping them to the fermenter later.",
+    "In this step, we bypass the counter-flow chiller, so it will not decrease our flow rate and the intensity of the whirlpool."
   ],
   "settings": [
     {

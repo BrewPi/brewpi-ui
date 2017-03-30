@@ -4,7 +4,7 @@
   "notes": [
     "Our final step is to clean the system. First we'll flush the entire system with clean cold water, in this step and the next 3.",
     "If hot tap water is available, this step can also be done with hot water.",
-    "If there is enough water left from the HLT, this hot water can also be used by toggling m2 and v2",
+    "If there is enough water left in the HLT, this hot water can also be used by toggling m2 and v2",
     "Note that the coil is flushed in opposite direction of the mash recirculation step (back flushing)."
   ],
   "settings": [
