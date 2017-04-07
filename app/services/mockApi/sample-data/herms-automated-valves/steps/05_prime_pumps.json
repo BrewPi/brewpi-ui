@@ -2,7 +2,8 @@
   "id": 5,
   "name": "Prime pumps",
   "notes": [
-    "To remove air from pumps, we shortly open valve after each pump above a bucket."
+    "To remove air from pumps, we shortly open the valve after each pump over a bucket.",
+    "The pumps need to be mounted below the kettles so the kettle water pressure will be enough to bleed the air out of the pumps."
   ],
   "settings": [
     {

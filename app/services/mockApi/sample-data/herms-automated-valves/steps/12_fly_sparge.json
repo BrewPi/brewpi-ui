@@ -4,7 +4,7 @@
   "notes": [
     "The wort is now pumped to the boil kettle",
     "Hot water is pumped from the HLT on top of the grain bed to flush out all remaining sugar.",
-    "Both pumps are running on low speed to keep the output of the mash tun just under water."
+    "Both pumps are running on the same low speed to keep a constant level in the mash tun."
   ],
   "settings": [
     {
@@ -143,7 +143,7 @@
     {
       "id": "bk",
       "settings": {
-        "volume": 25,
+        "volume": 20,
         "liquid": "wort"
       }
     },
@@ -151,7 +151,7 @@
       "id": "mt",
       "settings": {
         "grain": 15,
-        "volume": 10,
+        "volume": 15,
         "liquid": "runoff"
       }
     },

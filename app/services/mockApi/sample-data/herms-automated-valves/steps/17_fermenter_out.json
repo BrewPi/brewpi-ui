@@ -3,7 +3,7 @@
   "name": "Pump wort to fermenter",
   "notes": [
     "When the beer has been cooled enough, it is ready to be pumped to the fermenter.",
-    "Note that the boil kettle temperature can still be around 40 degrees, while the CFC output temperature is around 20 degrees."
+    "Note that the boil kettle temperature can still be around 40 degrees, while the CFC output temperature is already around 20 degrees."
   ],
   "settings": [
     {

@@ -3,7 +3,9 @@
   "name": "Heat HLT and boil kettle",
   "notes": [
     "The HLT is pre-heated for the first mash step.",
-    "The BK is pre-heated to the strike temperature. This temperature is higher than the first mash step to account for temperature losses to the grain and kettle."
+    "The BK is pre-heated to the strike temperature.",
+    "Strike water is the water that is added to the grains for the mash.",
+    "The strike water temperature is higher than the first mash step temperature to account for temperature losses to the grain and kettle."
   ],
   "settings": [
     {

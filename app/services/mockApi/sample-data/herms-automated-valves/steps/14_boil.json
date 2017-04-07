@@ -3,8 +3,8 @@
   "name": "Boil",
   "notes": [
     "The wort is boiled for 60 or 90 minutes",
-    "Hop is added in multiple additions, according to recipe.",
-    "It is imported to not cover the kettle during the boil, so DMS can boil off."
+    "Hop is added in multiple additions, depending on the recipe.",
+    "It is important to not cover the kettle during the boil, so DMS can boil off."
   ],  
   "settings": [
     {
@@ -118,13 +118,13 @@
     {
       "id": "m6",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "m7",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
