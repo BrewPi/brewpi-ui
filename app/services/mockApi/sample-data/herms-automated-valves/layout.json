@@ -530,7 +530,7 @@
         "type": "VALVE_MOTOR",
         "options": {
           "slot": 8
-        }
+        },
         "rotate": 270
       },
       "x": 12,
