@@ -59,21 +59,18 @@ function* onStepApplied() {
       }
     }
   }
-  const evenClose = slotsToApply.filter((slot) => slot.slot % 2 === 0 && slot.pos === 'closed');
-  const unevenClose = slotsToApply.filter((slot) => slot.slot % 2 !== 0 && slot.pos === 'closed');
-  const evenOpen = slotsToApply.filter((slot) => slot.slot % 2 === 0 && slot.pos === 'open');
-  const unevenOpen = slotsToApply.filter((slot) => slot.slot % 2 !== 0 && slot.pos === 'open');
-  yield delay(100);
-  for (const group of [evenClose, unevenClose, evenOpen, unevenOpen]) {
+  const closed = slotsToApply.filter((slot) => slot.pos === 'closed');
+  const open = slotsToApply.filter((slot) => slot.pos === 'open');
+  for (const group of [closed, open]) {
     console.log(group);
     for (const slot of group) {
       console.log('applying ', JSON.stringify(slot));
-      axios.post('http://raspberrypi.local/socketmessage.php',
-        `messageType=writeDevice&message={"i":${slot.slot},"w":${slot.pos === 'open' ? 1 : 2}}`
+      axios.post('http://127.0.0.1/socketmessage.php',
+        `messageType=writeDevice&message={"i":${slot.slot},"w":${slot.pos === 'open' ? 1 : 0}}`
       );
     }
     if (group.length !== 0) {
-      yield delay(10000);
+      // yield delay(10000);
     }
   }
 }
