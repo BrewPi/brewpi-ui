@@ -20,19 +20,19 @@
     {
       "id": "v3",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v4",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v5",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -44,13 +44,13 @@
     {
       "id": "v7",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "v8",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
