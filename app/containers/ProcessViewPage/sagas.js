@@ -68,6 +68,7 @@ function* onStepApplied() {
       axios.post('http://127.0.0.1/socketmessage.php',
         `messageType=writeDevice&message={"i":${slot.slot},"w":${slot.pos === 'open' ? 1 : 0}}`
       );
+      yield delay(200); // give some time to process command
     }
     if (group.length !== 0) {
       // yield delay(10000);
