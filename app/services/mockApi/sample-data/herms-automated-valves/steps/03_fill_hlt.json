@@ -6,79 +6,61 @@
   ],
   "settings": [
     {
-      "id": "v1",
+      "id": "HLT-in",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v2",
+      "id": "MT-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v3",
+      "id": "Coil-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v4",
+      "id": "Coil-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v5",
+      "id": "MT-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v6",
+      "id": "MT-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v7",
+      "id": "BK-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v8",
+      "id": "BK-half",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v9",
+      "id": "Water",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v10",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v11",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v12",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v13",
+      "id": "Route-1",
       "settings": {
         "pos": "closed"
       }
@@ -90,43 +72,37 @@
       }
     },
     {
-      "id": "m2",
+      "id": "Wort",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Wort-cfc",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "drain",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Water-fill",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "m3",
+      "id": "Water-cfc",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "m4",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m8",
+      "id": "Out",
       "settings": {
         "pos": "closed"
       }
