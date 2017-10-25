@@ -32,7 +32,7 @@
     },
     {
       "part": {
-        "type": "Burner",
+        "type": "BURNER",
         "id": "b1"
       },
       "x": 3,

@@ -67,7 +67,7 @@ const componentTable = {
   FRIDGE_TALL: FridgeTall,
   FRIDGE_FAN: FridgeFan,
   BLOWER_FAN: BlowerFan,
-  Burner: Burner,
+  BURNER: Burner,
   FRIDGE_SHELF: FridgeShelf,
   GLYCOL_RESERVOIR: GlycolReservoir,
   CORNEY_KEG: Keg,
@@ -178,6 +178,43 @@ export const rotateFlows = (oldFlows, angle) => {
   return newFlows;
 };
 
+const flipFlowTile = (oldFlows) => {
+  const newFlows = oldFlows;
+  for (const [key, value] of Object.entries(newFlows)) {
+    let newKey = key.replace('l', '#'); // temporary replacement while we replace r
+    newKey = newKey.replace('r', 'l');
+    newKey = newKey.replace('#', 'r');
+
+    let newValue = value.replace('l', '#'); // temporary replacement while we replace r
+    newValue = newValue.replace('r', 'l');
+    newValue = newValue.replace('#', 'r');
+
+    newFlows[newKey] = newValue;
+  }
+  return newFlows;
+};
+
+
+export const flipFlows = (oldFlows) => {
+  let newFlows;
+  // flows can be an Array[] or Array[][]
+  // for components that span multiple blocks
+  if (oldFlows.constructor === Array) {
+    let toFlip = oldFlows;
+    if (oldFlows[0].constructor !== Array) {
+      toFlip = [oldFlows]; // ensure it is a two-dimensional array
+    }
+    newFlows = toFlip;
+    // flip each row
+    newFlows = newFlows.map((x) => x.reverse());
+    // flip each tile
+    newFlows = newFlows.map((y) => y.map((x) => flipFlowTile(x)));
+  } else {
+    // flows is a single tile
+    newFlows = flipFlowTile(oldFlows);
+  }
+  return newFlows;
+};
 
 export class Part extends React.Component {
   // static functions to get component info without instantiating
@@ -190,9 +227,16 @@ export class Part extends React.Component {
     if (typeof flowFunction !== 'function') {
       return {};
     }
-    const flows = flowFunction(data);
+    let flows = flowFunction(data);
     const rotate = data.get('rotate');
-    return (rotate) ? rotateFlows(flows, rotate) : flows;
+    const flip = data.get('flip');
+    if (flip) {
+      flows = flipFlows(flows, rotate);
+    }
+    if (rotate) {
+      flows = rotateFlows(flows, rotate);
+    }
+    return flows;
   }
 
   static flowDimensions(data) {
