@@ -342,16 +342,30 @@ const flowTableSelector = createSelector(
     const width = possibleFlowTable.width;
     const height = possibleFlowTable.height;
     let actualFlowTable = new Table(width, height);
+
+    // first expand from high pressure sources (external inputs)
     for (let x = 0; x < width; x += 1) {
       for (let y = 0; y < height; y += 1) {
         const tileFlow = possibleFlowTable.getCell(x, y);
         if (tileFlow !== undefined && tileFlow.s !== undefined && tileFlow.liquid !== undefined) { // this tile is a source, start an expanding flow path from here
-          let pressure = 0;
-          if (tileFlow.pressure) {
-            pressure = tileFlow.presure;
+          const sourcePressure = parseInt(tileFlow.s.split('+')[1], 10);
+          if (sourcePressure > 10) {
+            const expanded = expandFlow(x, y, 's', tileFlow.liquid, 0, possibleFlowTable, actualFlowTable);
+            actualFlowTable = expanded.flow;
           }
-          const expanded = expandFlow(x, y, 's', tileFlow.liquid, pressure, possibleFlowTable, actualFlowTable);
-          actualFlowTable = expanded.flow;
+        }
+      }
+    }
+
+    for (let x = 0; x < width; x += 1) {
+      for (let y = 0; y < height; y += 1) {
+        const tileFlow = possibleFlowTable.getCell(x, y);
+        if (tileFlow !== undefined && tileFlow.s !== undefined && tileFlow.liquid !== undefined) { // this tile is a source, start an expanding flow path from here
+          const sourcePressure = parseInt(tileFlow.s.split('+')[1], 10);
+          if (sourcePressure >= 0 && sourcePressure <= 10) {
+            const expanded = expandFlow(x, y, 's', tileFlow.liquid, 0, possibleFlowTable, actualFlowTable);
+            actualFlowTable = expanded.flow;
+          }
         }
       }
     }
