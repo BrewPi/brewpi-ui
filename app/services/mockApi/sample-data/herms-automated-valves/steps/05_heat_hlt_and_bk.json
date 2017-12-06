@@ -1,8 +1,11 @@
 {
-  "id": 26,
-  "name": "CIP: flush cleaner",
+  "id": 6,
+  "name": "Heat HLT and boil kettle",
   "notes": [
-    "After the cleaning solution has been pumped through the entire system, we drain it and flush the system with water again. The extra water steps are omitted here,because they're identical to the previous water CIP steps."
+    "The HLT is pre-heated for the first mash step.",
+    "The BK is pre-heated to the strike temperature.",
+    "Strike water is the water that is added to the grains for the mash.",
+    "The strike water temperature is higher than the first mash step temperature to account for temperature losses to the grain and kettle."
   ],
   "settings": [
     {
@@ -12,19 +15,7 @@
       }
     },
     {
-      "id": "Water",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
       "id": "MT-in",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Route-1",
       "settings": {
         "pos": "closed"
       }
@@ -36,21 +27,15 @@
       }
     },
     {
-      "id": "Route-2",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
       "id": "Coil-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "MT-in",
+      "id": "BK-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -62,13 +47,31 @@
     {
       "id": "BK-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "BK-half",
       "settings": {
         "pos": "closed"
+      }
+    },
+    {
+      "id": "Water",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Route-1",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Route-2",
+      "settings": {
+        "pos": "open"
       }
     },
     {
@@ -80,11 +83,11 @@
     {
       "id": "Wort-cfc",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
-      "id": "m1",
+      "id": "drain",
       "settings": {
         "pos": "closed"
       }
@@ -102,52 +105,23 @@
       }
     },
     {
-      "id": "m4",
+      "id": "Out",
       "settings": {
         "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m8",
-      "settings": {
-        "pos": "open"
       }
     },
     {
       "id": "hlt",
       "settings": {
-        "volume": 10.0,
-        "liquid": "hotwater"        
+        "volume": 50.0,
+        "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 10,
-        "liquid": "cleaner"
-      }
-    },
-    {
-      "id": "mt",
-      "settings": {
+        "volume": 24.5,
+        "liquid": "hotwater"
       }
     },
     {
@@ -159,32 +133,20 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 0
+        "duty": 100
       }
     },
     {
       "id": "heat_bk",
       "settings": {
-        "duty": 0
-      }
-    },
-    {
-      "id": "p1",
-      "settings":{
-        "power": false
-      }
-    },
-    {
-      "id": "p2",
-      "settings":{
-        "power": true,
-        "speed": 100
+        "duty": 100
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 20
+        "val": 45.3,
+        "set": 67
       }
     },
     {
@@ -196,7 +158,20 @@
     {
       "id": "spbk",
       "settings": {
-        "val": 48
+        "val": 57.7,
+        "set": 73
+      }
+    },
+    {
+      "id": "p1",
+      "settings":{
+        "power": false
+      }
+    },
+    {
+      "id": "p2",
+      "settings":{
+        "power": false
       }
     }
   ]

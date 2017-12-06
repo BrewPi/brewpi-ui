@@ -1,9 +1,12 @@
 {
-  "id": 9,
-  "name": "Mash rest 10 min",
+  "id": 16,
+  "name": "Cool",
   "notes": [
-    "It is recommended to give the grain bed some time to settle before you start pumping. This will prevent getting air in the pumps and will prevent a stuck mash.",
-    "Because the grain bed has some time to settle and compact, the pumps will suck fewer small particles towards the filter which could potentially clog it."
+    "DMS (Dimethyl Sulfide) is created in wort whenever it is heated. It is an off-flavor that has the aroma of cooked corn.",
+    "When the wort is still boiling, DMS is boiled off and will not be a problem.",
+    "When boiling is stopped, DMS is no longer boiled off, but it is still created until the beer is cooled. Therefore, we want to cross this temperature range as quickly as possible. This is done with a counter-flow wort chiller (CFC).",
+    "Do not cool for the first 3 minutes to pump hot wort through the CFC to sanitize it. After 3 minutes, open valve 'Water-cfc'.",
+    "You do not have to wait for the boil kettle temperature to reach the desired fermenation temperature. You can stop whirlpooling as soon as the output of the CFC reaches fermetation temperature. There can be a 20 degree difference between CFC in- and output temperature."
   ],
   "settings": [
     {
@@ -13,21 +16,9 @@
       }
     },
     {
-      "id": "Water",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
       "id": "MT-in",
       "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "Route-1",
-      "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -37,21 +28,15 @@
       }
     },
     {
-      "id": "Route-2",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
       "id": "Coil-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "MT-in",
+      "id": "BK-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -73,6 +58,24 @@
       }
     },
     {
+      "id": "Water",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Route-1",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Route-2",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
       "id": "Wort",
       "settings": {
         "pos": "closed"
@@ -81,11 +84,11 @@
     {
       "id": "Wort-cfc",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "m1",
+      "id": "drain",
       "settings": {
         "pos": "closed"
       }
@@ -103,54 +106,29 @@
       }
     },
     {
-      "id": "m4",
+      "id": "Out",
       "settings": {
         "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m8",
-      "settings": {
-        "pos": "open"
       }
     },
     {
       "id": "hlt",
       "settings": {
-        "volume": 50.0,
+        "volume": 30.0,
         "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 0
+        "volume": 50,
+        "liquid": "wort"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "grain": 15,
-        "volume": 30,
-        "liquid": "wort"
+        "grain": 15
       }
     },
     {
@@ -171,24 +149,37 @@
         "duty": 0
       }
     },
-        {
+    {
+      "id": "p1",
+      "settings":{
+        "power": false
+      }
+    },
+    {
+      "id": "p2",
+      "settings":{
+        "power": true,
+        "speed": 100
+      }
+    },
+    {
       "id": "sphlt",
       "settings": {
-        "val": 67,
-        "set": 67
+        "val": 60,
+        "set": 60
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 67.5,
-        "set": 67.7
+        "val": 20
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 20
+        "val": 47,
+        "set": 20
       }
     }
   ]

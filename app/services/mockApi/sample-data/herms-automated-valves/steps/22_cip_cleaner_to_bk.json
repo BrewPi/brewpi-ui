@@ -1,19 +1,9 @@
 {
-  "id": 8,
-  "name": "Mash in from boil kettle",
-  "notes": [
-    "The strike water is pumped from the boil kettle to the mash tun.",
-    "If we calculated our grain temperature losses correctly, the mash should have the right temperature after mixing grain and water."
-  ],
+  "id": 23,
+  "name": "CIP-cleaner: pump cleaner to boil kettle",
   "settings": [
     {
       "id": "HLT-in",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Water",
       "settings": {
         "pos": "closed"
       }
@@ -25,19 +15,7 @@
       }
     },
     {
-      "id": "Route-1",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
       "id": "Coil-out",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Route-2",
       "settings": {
         "pos": "open"
       }
@@ -49,27 +27,45 @@
       }
     },
     {
-      "id": "MT-in",
+      "id": "BK-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "MT-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "BK-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "BK-half",
       "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Water",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Route-1",
+      "settings": {
         "pos": "open"
+      }
+    },
+    {
+      "id": "Route-2",
+      "settings": {
+        "pos": "closed"
       }
     },
     {
@@ -81,11 +77,11 @@
     {
       "id": "Wort-cfc",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "m1",
+      "id": "drain",
       "settings": {
         "pos": "closed"
       }
@@ -103,55 +99,28 @@
       }
     },
     {
-      "id": "m4",
+      "id": "Out",
       "settings": {
         "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m8",
-      "settings": {
-        "pos": "open"
       }
     },
     {
       "id": "hlt",
       "settings": {
-        "volume": 50.0,
-        "liquid": "hotwater"
-      }
-    },
-    {
-      "id": "mt",
-      "settings": {
-        "grain": 15,
-        "volume": 20,
-        "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 10,
-        "liquid": "hotwater"
+        "volume": 15,
+        "liquid": "cleaner"
+      }
+    },
+    {
+      "id": "mt",
+      "settings": {
+        "volume": 15,
+        "liquid": "cleaner"
       }
     },
     {
@@ -163,7 +132,7 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 10
+        "duty": 0
       }
     },
     {
@@ -173,30 +142,34 @@
       }
     },
     {
+      "id": "p1",
+      "settings":{
+        "power": false,
+        "speed": 100
+      }
+    },
+    {
       "id": "p2",
       "settings":{
-        "power": true,
-        "speed": 100
+        "power": true
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 67,
-        "set": 67
+        "val": 20
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 52.7,
-        "set": 67.5
+        "val": 54.2
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 72.5
+        "val": 20
       }
     }
   ]

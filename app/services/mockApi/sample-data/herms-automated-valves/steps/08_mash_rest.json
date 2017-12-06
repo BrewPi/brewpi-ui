@@ -1,43 +1,25 @@
 {
-  "id": 17,
-  "name": "Pump wort to fermenter",
+  "id": 9,
+  "name": "Mash rest 10 min",
   "notes": [
-    "When the beer has been cooled enough, it is ready to be pumped to the fermenter.",
-    "Note that the boil kettle temperature can still be around 40 degrees, while the CFC output temperature is already around 20 degrees."
+    "It is recommended to give the grain bed some time to settle before you start pumping. This will prevent getting air in the pumps and will prevent a stuck mash.",
+    "Because the grain bed has some time to settle and compact, the pumps will suck fewer small particles towards the filter which could potentially clog it."
   ],
   "settings": [
     {
       "id": "HLT-in",
       "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Water",
-      "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "MT-in",
       "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Route-1",
-      "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Coil-out",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Route-2",
       "settings": {
         "pos": "closed"
       }
@@ -49,7 +31,7 @@
       }
     },
     {
-      "id": "MT-in",
+      "id": "BK-in",
       "settings": {
         "pos": "closed"
       }
@@ -63,13 +45,31 @@
     {
       "id": "BK-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "BK-half",
       "settings": {
         "pos": "closed"
+      }
+    },
+    {
+      "id": "Water",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Route-1",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Route-2",
+      "settings": {
+        "pos": "open"
       }
     },
     {
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "m1",
+      "id": "drain",
       "settings": {
         "pos": "closed"
       }
@@ -99,57 +99,34 @@
     {
       "id": "Water-cfc",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
-      "id": "m4",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m5",
+      "id": "Out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "m6",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m8",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
       "id": "hlt",
       "settings": {
-        "volume": 30.0,
+        "volume": 50.0,
         "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 10,
-        "liquid": "wort"
+        "volume": 0
       }
     },
     {
       "id": "mt",
       "settings": {
-        "grain": 15
+        "grain": 15,
+        "volume": 30,
+        "liquid": "wort"
       }
     },
     {
@@ -171,36 +148,36 @@
       }
     },
     {
-      "id": "p1",
-      "settings":{
-        "power": false
+      "id": "sphlt",
+      "settings": {
+        "val": 67,
+        "set": 67
       }
     },
     {
-      "id": "p2",
+      "id": "spmt",
+      "settings": {
+        "val": 67.5,
+        "set": 67.7
+      }
+    },
+    {
+      "id": "spbk",
+      "settings": {
+        "val": 20
+      }
+    },
+    {
+      "id": "p1",
       "settings":{
         "power": true,
         "speed": 100
       }
     },
     {
-      "id": "sphlt",
-      "settings": {
-        "val": 60,
-        "set": 60
-      }
-    },
-    {
-      "id": "spmt",
-      "settings": {
-        "val": 20
-      }
-    },
-    {
-      "id": "spbk",
-      "settings": {
-        "val": 20,
-        "set": 20
+      "id": "p2",
+      "settings":{
+        "power": false
       }
     }
   ]

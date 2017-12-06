@@ -1,10 +1,8 @@
 {
-  "id": 12,
-  "name": "Fly sparge",
+  "id": 7,
+  "name": "Add grain to mash tun",
   "notes": [
-    "The wort is now pumped to the boil kettle",
-    "Hot water is pumped from the HLT on top of the grain bed to flush out all remaining sugar.",
-    "Both pumps are running on the same low speed to keep a constant level in the mash tun."
+    "While the HLT and BK are heating, we can add grain to the mash tun."
   ],
   "settings": [
     {
@@ -14,19 +12,7 @@
       }
     },
     {
-      "id": "Water",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
       "id": "MT-in",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "Route-1",
       "settings": {
         "pos": "closed"
       }
@@ -38,19 +24,13 @@
       }
     },
     {
-      "id": "Route-2",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
       "id": "Coil-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "MT-in",
+      "id": "BK-in",
       "settings": {
         "pos": "open"
       }
@@ -58,7 +38,7 @@
     {
       "id": "MT-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -69,6 +49,24 @@
     },
     {
       "id": "BK-half",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Water",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Route-1",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Route-2",
       "settings": {
         "pos": "open"
       }
@@ -86,7 +84,7 @@
       }
     },
     {
-      "id": "m1",
+      "id": "drain",
       "settings": {
         "pos": "closed"
       }
@@ -104,55 +102,29 @@
       }
     },
     {
-      "id": "m4",
+      "id": "Out",
       "settings": {
         "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m8",
-      "settings": {
-        "pos": "open"
       }
     },
     {
       "id": "hlt",
       "settings": {
-        "volume": 45.0,
+        "volume": 50.0,
         "liquid": "hotwater"
-      }
-    },
-    {
-      "id": "bk",
-      "settings": {
-        "volume": 20,
-        "liquid": "wort"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "grain": 15,
-        "volume": 15,
-        "liquid": "runoff"
+        "grain": 15
+      }
+    },
+    {
+      "id": "bk",
+      "settings": {
+        "volume": 24.5,
+        "liquid": "hotwater"
       }
     },
     {
@@ -164,46 +136,45 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 10
+        "duty": 100
       }
     },
     {
       "id": "heat_bk",
       "settings": {
-        "duty": 0
-      }
-    },
-    {
-      "id": "p1",
-      "settings":{
-        "power": true,
-        "speed": 40
-      }
-    },
-    {
-      "id": "p2",
-      "settings":{
-        "power": true,
-        "speed": 40
+        "duty": 100
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 76.0,
-        "set": 75.5
+        "val": 67,
+        "set": 67
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 74.9
+        "val": 20
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 73.3
+        "val": 73,
+        "set": 73
+      }
+    },
+    {
+      "id": "p1",
+      "settings":{
+        "power": false
+      }
+    },
+    {
+      "id": "p2",
+      "settings":{
+        "power": false
       }
     }
   ]

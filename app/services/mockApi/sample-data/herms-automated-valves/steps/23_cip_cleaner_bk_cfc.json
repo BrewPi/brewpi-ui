@@ -1,9 +1,8 @@
 {
-  "id": 5,
-  "name": "Prime pumps",
+  "id": 24,
+  "name": "CIP-cleaner: recirc cleaner through boil kettle and CFC",
   "notes": [
-    "To remove air from pumps, we shortly open the valve after each pump over a bucket.",
-    "The pumps need to be mounted below the kettles so the kettle water pressure will be enough to bleed the air out of the pumps."
+    "Shortly open the fermenter output to get some cleaner through there too."
   ],
   "settings": [
     {
@@ -13,31 +12,13 @@
       }
     },
     {
-      "id": "Water",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
       "id": "MT-in",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Route-1",
       "settings": {
         "pos": "open"
       }
     },
     {
       "id": "Coil-out",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Route-2",
       "settings": {
         "pos": "open"
       }
@@ -49,9 +30,9 @@
       }
     },
     {
-      "id": "MT-in",
+      "id": "BK-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -69,6 +50,24 @@
     {
       "id": "BK-half",
       "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Water",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Route-1",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Route-2",
+      "settings": {
         "pos": "closed"
       }
     },
@@ -81,13 +80,13 @@
     {
       "id": "Wort-cfc",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "m1",
+      "id": "drain",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -103,47 +102,26 @@
       }
     },
     {
-      "id": "m4",
+      "id": "Out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "m5",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m8",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
       "id": "hlt",
       "settings": {
-        "volume": 50.0,
-        "liquid": "water"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 24.5,
-        "liquid": "water"
+        "volume": 30,
+        "liquid": "cleaner"
+      }
+    },
+    {
+      "id": "mt",
+      "settings": {
       }
     },
     {
@@ -153,21 +131,46 @@
       }
     },
     {
-      "id": "sphlt",
+      "id": "heat_hlt",
       "settings": {
-        "val": 15
+        "duty": 0
       }
     },
     {
-      "id": "spmt",
+      "id": "heat_bk",
+      "settings": {
+        "duty": 0
+      }
+    },
+    {
+      "id": "p1",
+      "settings":{
+        "power": false,
+        "speed": 100
+      }
+    },
+    {
+      "id": "p2",
+      "settings":{
+        "power": true
+      }
+    },
+    {
+      "id": "sphlt",
       "settings": {
         "val": 20
       }
     },
     {
+      "id": "spmt",
+      "settings": {
+        "val": 54.2
+      }
+    },
+    {
       "id": "spbk",
       "settings": {
-        "val": 15
+        "val": 20
       }
     }
   ]

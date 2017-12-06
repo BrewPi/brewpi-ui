@@ -1,8 +1,10 @@
 {
   "id": 25,
-  "name": "CIP: recirc cleaner through boil kettle and CFC",
+  "name": "CIP-cleaner: flush cleaner to drain",
   "notes": [
-    "Shortly open m4 and m5 over a bucket to also sanitize outputs."
+    "After the cleaning solution has been pumped through the entire system, we pump it to the drain.",
+    "Repeat steps 18-20 to flush the system with clean water once more."
+
   ],
   "settings": [
     {
@@ -12,33 +14,15 @@
       }
     },
     {
-      "id": "Water",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
       "id": "MT-in",
       "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Route-1",
-      "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Coil-out",
       "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Route-2",
-      "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -48,7 +32,7 @@
       }
     },
     {
-      "id": "MT-in",
+      "id": "BK-in",
       "settings": {
         "pos": "open"
       }
@@ -72,9 +56,27 @@
       }
     },
     {
-      "id": "Wort",
+      "id": "Water",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Route-1",
       "settings": {
         "pos": "open"
+      }
+    },
+    {
+      "id": "Route-2",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Wort",
+      "settings": {
+        "pos": "closed"
       }
     },
     {
@@ -84,9 +86,9 @@
       }
     },
     {
-      "id": "m1",
+      "id": "drain",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -102,46 +104,20 @@
       }
     },
     {
-      "id": "m4",
+      "id": "Out",
       "settings": {
         "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m8",
-      "settings": {
-        "pos": "open"
       }
     },
     {
       "id": "hlt",
       "settings": {
-        "volume": 10.0,
-        "liquid": "hotwater"        
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 20,
+        "volume": 10,
         "liquid": "cleaner"
       }
     },
@@ -171,14 +147,14 @@
     {
       "id": "p1",
       "settings":{
-        "power": false
+        "power": false,
+        "speed": 100
       }
     },
     {
       "id": "p2",
       "settings":{
-        "power": true,
-        "speed": 100
+        "power": true
       }
     },
     {
@@ -190,13 +166,13 @@
     {
       "id": "spmt",
       "settings": {
-        "val": 20
+        "val": 54.2
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 53.4
+        "val": 20
       }
     }
   ]

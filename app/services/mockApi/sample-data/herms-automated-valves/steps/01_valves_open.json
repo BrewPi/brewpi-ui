@@ -2,8 +2,8 @@
   "id": 1,
   "name": "All valves open",
   "notes": [
-    "This layout uses 13 motorized valves and 7 manual valves.", "Manual valves on the kettles remain open during the brew.",
-    "Manual valves are also used for inputs and outputs of the system as a whole, so we can make sure a hose is connected before opening."
+    "This layout uses 16 remotely controlled valves and 1 manual valve for the wort to the fermenter labeled 'out'.",
+    "Additional valves on the kettles are optional and are not included in the schematic."
   ],
   "settings": [
     {
@@ -31,7 +31,7 @@
       }
     },
     {
-      "id": "MT-in",
+      "id": "BK-in",
       "settings": {
         "pos": "open"
       }
@@ -67,7 +67,7 @@
       }
     },
     {
-      "id": "m1",
+      "id": "Route-2",
       "settings": {
         "pos": "open"
       }
@@ -124,6 +124,18 @@
       "id": "spbk",
       "settings": {
         "val": 20
+      }
+    },
+    {
+      "id": "p1",
+      "settings":{
+        "power": false
+      }
+    },
+    {
+      "id": "p2",
+      "settings":{
+        "power": false
       }
     }
   ]

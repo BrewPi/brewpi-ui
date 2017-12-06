@@ -27,7 +27,7 @@
       }
     },
     {
-      "id": "MT-in",
+      "id": "BK-in",
       "settings": {
         "pos": "closed"
       }
@@ -63,7 +63,7 @@
       }
     },
     {
-      "id": "m1",
+      "id": "Route-2",
       "settings": {
         "pos": "closed"
       }
@@ -120,6 +120,18 @@
       "id": "spbk",
       "settings": {
         "val": 20
+      }
+    },
+    {
+      "id": "p1",
+      "settings":{
+        "power": false
+      }
+    },
+    {
+      "id": "p2",
+      "settings":{
+        "power": false
       }
     }
   ]

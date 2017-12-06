@@ -1,19 +1,17 @@
 {
-  "id": 22,
-  "name": "CIP: prepare cleaner in mash tun",
+  "id": 10,
+  "name": "Mash recirculation",
   "notes": [
-    "We use the remaining hot water from the HLT to prepare hot cleaning solution in the mash tun."
+    "To control the temperature of the mash, the wort is pumped through the coil in the HLT. The water in the HLT will heat up the wort.",
+    "This heat exchange is what gives the HERMS its name: heat excange recirculating mash system",
+    "By heating the mash indirectly, the wort will never get hotter than the HLT temperature. This prevents overheating and scorching.",
+    "The setpoint of the HLT is dynamic and controlled by BrewPi, based on the temperature error in the mash tun.",
+    "The mash can go through multiple temperature steps."
   ],
   "settings": [
     {
       "id": "HLT-in",
       "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Water",
-      "settings": {
         "pos": "open"
       }
     },
@@ -21,34 +19,22 @@
       "id": "MT-in",
       "settings": {
         "pos": "open"
-      }
-    },
-    {
-      "id": "Route-1",
-      "settings": {
-        "pos": "closed"
       }
     },
     {
       "id": "Coil-out",
       "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Route-2",
-      "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Coil-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "MT-in",
+      "id": "BK-in",
       "settings": {
         "pos": "closed"
       }
@@ -56,7 +42,7 @@
     {
       "id": "MT-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -72,9 +58,27 @@
       }
     },
     {
-      "id": "Wort",
+      "id": "Water",
       "settings": {
         "pos": "closed"
+      }
+    },
+    {
+      "id": "Route-1",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Route-2",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Wort",
+      "settings": {
+        "pos": "open"
       }
     },
     {
@@ -84,7 +88,7 @@
       }
     },
     {
-      "id": "m1",
+      "id": "drain",
       "settings": {
         "pos": "closed"
       }
@@ -102,52 +106,30 @@
       }
     },
     {
-      "id": "m4",
+      "id": "Out",
       "settings": {
         "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m8",
-      "settings": {
-        "pos": "open"
       }
     },
     {
       "id": "hlt",
       "settings": {
-        "volume": 20.0,
+        "volume": 50.0,
         "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
+        "volume": 0
       }
     },
     {
       "id": "mt",
       "settings": {
-        "volume": 10,
-        "liquid": "cleaner"
+        "grain": 15,
+        "volume": 30,
+        "liquid": "wort"
       }
     },
     {
@@ -159,7 +141,7 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 0
+        "duty": 10
       }
     },
     {
@@ -178,19 +160,22 @@
     {
       "id": "p2",
       "settings":{
-        "power": false
+        "power": true,
+        "speed": 100
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 59
+        "val": 68.3,
+        "set": 69.2
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 54.2
+        "val": 67.6,
+        "set": 67.7
       }
     },
     {

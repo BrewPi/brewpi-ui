@@ -1,12 +1,55 @@
 {
-  "id": 20,
-  "name": "CIP: flush mash tun with water",
+  "id": 18,
+  "name": "CIP-Water: flush coil and CFC with water",
   "notes": [
-    "While flushing the mash tun with water, we can clean it with soft cloth."
+    "Our final step is to clean the system. First we'll flush with water, then with a cleaner like PBW and then with water again.",
+    "Note that the coil and CFC are flushed in opposite direction of the mashing steps (back flushing)."
   ],
   "settings": [
     {
       "id": "HLT-in",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "MT-in",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Coil-out",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Coil-in",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "BK-in",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "MT-out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "BK-out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "BK-half",
       "settings": {
         "pos": "closed"
       }
@@ -18,55 +61,13 @@
       }
     },
     {
-      "id": "MT-in",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
       "id": "Route-1",
       "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Coil-out",
-      "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Route-2",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Coil-in",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "MT-in",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "MT-out",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "BK-out",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "BK-half",
       "settings": {
         "pos": "closed"
       }
@@ -84,9 +85,9 @@
       }
     },
     {
-      "id": "m1",
+      "id": "drain",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -102,33 +103,9 @@
       }
     },
     {
-      "id": "m4",
+      "id": "Out",
       "settings": {
         "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m8",
-      "settings": {
-        "pos": "open"
       }
     },
     {
@@ -141,13 +118,14 @@
     {
       "id": "bk",
       "settings": {
+        "volume": 10,
+        "liquid": "wort"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "volume": 15,
-        "liquid": "water"
+        "grain": 15
       }
     },
     {
@@ -177,11 +155,10 @@
     {
       "id": "p2",
       "settings":{
-        "power": true,
-        "speed": 100
+        "power": false
       }
     },
-        {
+    {
       "id": "sphlt",
       "settings": {
         "val": 60,
@@ -191,7 +168,7 @@
     {
       "id": "spmt",
       "settings": {
-        "val": 15
+        "val": 20
       }
     },
     {

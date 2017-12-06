@@ -1,22 +1,12 @@
 {
-  "id": 16,
-  "name": "Cool",
+  "id": 19,
+  "name": "CIP-Water: flush MT and BK with water",
   "notes": [
-    "DMS (Dimethyl Sulfide) is created in wort whenever it is heated. It is an off-flavor that has the aroma of cooked corn.",
-    "When the wort is still boiling, DMS is boiled off and will not be a problem.",
-    "When boiling is stopped, DMS is no longer boiled off, but it is still created until the beer is cooled. Therefore, we want to cross this temperature range as quickly as possible. This is done with a counter-flow wort chiller (CFC).",
-    "Do not cool for the first 3 minutes to pump hot wort through the CFC to sanitize it. After 3 minutes, open m3.",
-    "You do not have to wait for the boil kettle temperature to reach the desired fermenation temperature. You can stop whirlpooling as soon as the output of the CFC reaches fermetation temperature. There can be a 20 degree difference between CFC in- and output temperature."
+    "Note that the HLT has only seen clean water and doesn't need flushing."
   ],
   "settings": [
     {
       "id": "HLT-in",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Water",
       "settings": {
         "pos": "closed"
       }
@@ -28,19 +18,7 @@
       }
     },
     {
-      "id": "Route-1",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
       "id": "Coil-out",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "Route-2",
       "settings": {
         "pos": "closed"
       }
@@ -52,7 +30,7 @@
       }
     },
     {
-      "id": "MT-in",
+      "id": "BK-in",
       "settings": {
         "pos": "open"
       }
@@ -60,17 +38,35 @@
     {
       "id": "MT-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "BK-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "BK-half",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Water",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Route-1",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Route-2",
       "settings": {
         "pos": "closed"
       }
@@ -88,7 +84,7 @@
       }
     },
     {
-      "id": "m1",
+      "id": "drain",
       "settings": {
         "pos": "closed"
       }
@@ -96,43 +92,19 @@
     {
       "id": "Water-fill",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Water-cfc",
       "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m4",
-      "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "m5",
+      "id": "Out",
       "settings": {
         "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m8",
-      "settings": {
-        "pos": "open"
       }
     },
     {
@@ -145,14 +117,15 @@
     {
       "id": "bk",
       "settings": {
-        "volume": 50,
-        "liquid": "wort"
+        "volume": 35,
+        "liquid": "water"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "grain": 15
+        "volume": 10,
+        "liquid": "water"
       }
     },
     {
@@ -182,8 +155,7 @@
     {
       "id": "p2",
       "settings":{
-        "power": true,
-        "speed": 100
+        "power": true
       }
     },
     {
@@ -202,8 +174,7 @@
     {
       "id": "spbk",
       "settings": {
-        "val": 47,
-        "set": 20
+        "val": 20
       }
     }
   ]

@@ -1,18 +1,14 @@
 {
-  "id": 11,
-  "name": "Raise to sparge temperature",
+  "id": 13,
+  "name": "Sparge Out",
   "notes": [
-    "The temperature of the mash is now raised to the sparge temperature. This step stops the enzyme action and makes the grainbed and wort more fluid."
+    "The water pump is stopped and all wort is pumped to the boil kettle.",
+    "As soon as the boil kettle element is under water, the element can be turned on to start bringing the wort to boil.",
+    "Go to the next step (boil) when all wort is transfered to close valves and prevent wort from leaking back into the mash tun due to communicating vessels."
   ],
   "settings": [
     {
       "id": "HLT-in",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "Water",
       "settings": {
         "pos": "closed"
       }
@@ -20,23 +16,11 @@
     {
       "id": "MT-in",
       "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "Route-1",
-      "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "Coil-out",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "Route-2",
       "settings": {
         "pos": "closed"
       }
@@ -44,13 +28,13 @@
     {
       "id": "Coil-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
-      "id": "MT-in",
+      "id": "BK-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -68,13 +52,31 @@
     {
       "id": "BK-half",
       "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Water",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Route-1",
+      "settings": {
         "pos": "open"
+      }
+    },
+    {
+      "id": "Route-2",
+      "settings": {
+        "pos": "closed"
       }
     },
     {
       "id": "Wort",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -84,7 +86,7 @@
       }
     },
     {
-      "id": "m1",
+      "id": "drain",
       "settings": {
         "pos": "closed"
       }
@@ -102,54 +104,31 @@
       }
     },
     {
-      "id": "m4",
+      "id": "Out",
       "settings": {
         "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m8",
-      "settings": {
-        "pos": "open"
       }
     },
     {
       "id": "hlt",
       "settings": {
-        "volume": 50.0,
+        "volume": 30.0,
         "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 0
+        "volume": 42,
+        "liquid": "wort"
       }
     },
     {
       "id": "mt",
       "settings": {
         "grain": 15,
-        "volume": 30,
-        "liquid": "wort"
+        "volume": 8,
+        "liquid": "runoff"
       }
     },
     {
@@ -161,47 +140,46 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 10
+        "duty": 0
       }
     },
     {
       "id": "heat_bk",
       "settings": {
-        "duty": 0
+        "duty": 100
       }
     },
     {
       "id": "p1",
       "settings":{
-        "power": true,
-        "speed": 100
+        "power": false
       }
     },
     {
       "id": "p2",
       "settings":{
         "power": true,
-        "speed": 100
+        "speed": 40
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 77.0,
-        "set": 77.7
+        "val": 75.2,
+        "set": 60
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 72.9,
-        "set": 75.6
+        "val": 72.8
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 20
+        "val": 82.9,
+        "set": 100
       }
     }
   ]

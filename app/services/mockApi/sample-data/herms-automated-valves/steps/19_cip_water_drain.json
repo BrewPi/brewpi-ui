@@ -1,8 +1,8 @@
 {
-  "id": 21,
-  "name": "CIP: flush boil kettle with water",
+  "id": 20,
+  "name": "CIP-Water: drain water",
   "notes": [
-  "While flushing the boil kettle with water, we can clean it with soft cloth."
+    "All cleaning water is pumped to the drain."
   ],
   "settings": [
     {
@@ -12,19 +12,7 @@
       }
     },
     {
-      "id": "Water",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
       "id": "MT-in",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Route-1",
       "settings": {
         "pos": "open"
       }
@@ -36,19 +24,13 @@
       }
     },
     {
-      "id": "Route-2",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
       "id": "Coil-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "MT-in",
+      "id": "BK-in",
       "settings": {
         "pos": "open"
       }
@@ -68,6 +50,24 @@
     {
       "id": "BK-half",
       "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Water",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Route-1",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Route-2",
+      "settings": {
         "pos": "closed"
       }
     },
@@ -80,19 +80,19 @@
     {
       "id": "Wort-cfc",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
-      "id": "m1",
+      "id": "drain",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Water-fill",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -102,33 +102,9 @@
       }
     },
     {
-      "id": "m4",
+      "id": "Out",
       "settings": {
         "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m8",
-      "settings": {
-        "pos": "open"
       }
     },
     {
@@ -141,13 +117,15 @@
     {
       "id": "bk",
       "settings": {
-        "volume": 15,
+        "volume": 30,
         "liquid": "water"
       }
     },
     {
       "id": "mt",
       "settings": {
+        "volume": 0,
+        "liquid": "water"
       }
     },
     {
@@ -177,8 +155,7 @@
     {
       "id": "p2",
       "settings":{
-        "power": true,
-        "speed": 100
+        "power": true
       }
     },
     {
@@ -197,7 +174,7 @@
     {
       "id": "spbk",
       "settings": {
-        "val": 15
+        "val": 20
       }
     }
   ]

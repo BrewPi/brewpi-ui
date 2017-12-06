@@ -1,22 +1,16 @@
 {
-  "id": 10,
-  "name": "Mash recirculation",
+  "id": 15,
+  "name": "Whirlpool",
   "notes": [
-    "To control the temperature of the mash, the wort is pumped through the coil in the HLT. The water in the HLT will heat up the wort.",
-    "This heat exchange is what gives the HERMS its name: heat excange recirculating mash system",
-    "By heating the mash indirectly, the wort will never get hotter than the HLT temperature. This prevents overheating and scorching.",
-    "The setpoint of the HLT is dynamic and controlled by BrewPi, based on the temperature error in the mash tun.",
-    "The mash can go through multiple temperature steps."
+    "When boiling is finished, we create a whirlpool in te kettle.",
+    "By whirlpooling the wort, suspended particles (trub) will be gathered in the center of the kettle and we can prevent pumping them to the fermenter later.",
+    "In this step, we bypass the counter-flow chiller, so it will not decrease our flow rate and the intensity of the whirlpool.",
+    "We take our wort from the middle of the kettle, instead of the filter. This prevents us from sucking small particles into the filter and clogging it.",
+    "The wort higher up in the kettle is also warmer than at the bottom, because hot liquid rises. This makes the next step (cooling) quicker."
   ],
   "settings": [
     {
       "id": "HLT-in",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "Water",
       "settings": {
         "pos": "closed"
       }
@@ -24,23 +18,11 @@
     {
       "id": "MT-in",
       "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "Route-1",
-      "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "Coil-out",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "Route-2",
       "settings": {
         "pos": "closed"
       }
@@ -48,19 +30,19 @@
     {
       "id": "Coil-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
-      "id": "MT-in",
+      "id": "BK-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "MT-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -76,9 +58,27 @@
       }
     },
     {
-      "id": "Wort",
+      "id": "Water",
       "settings": {
         "pos": "closed"
+      }
+    },
+    {
+      "id": "Route-1",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Route-2",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Wort",
+      "settings": {
+        "pos": "open"
       }
     },
     {
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "m1",
+      "id": "drain",
       "settings": {
         "pos": "closed"
       }
@@ -106,54 +106,29 @@
       }
     },
     {
-      "id": "m4",
+      "id": "Out",
       "settings": {
         "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m8",
-      "settings": {
-        "pos": "open"
       }
     },
     {
       "id": "hlt",
       "settings": {
-        "volume": 50.0,
+        "volume": 30.0,
         "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 0
+        "volume": 50,
+        "liquid": "wort"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "grain": 15,
-        "volume": 30,
-        "liquid": "wort"
+        "grain": 15
       }
     },
     {
@@ -177,8 +152,7 @@
     {
       "id": "p1",
       "settings":{
-        "power": true,
-        "speed": 100
+        "power": false
       }
     },
     {
@@ -191,21 +165,21 @@
     {
       "id": "sphlt",
       "settings": {
-        "val": 68.3,
-        "set": 69.2
+        "val": 60,
+        "set": 60
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 67.6,
-        "set": 67.7
+        "val": 20
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 20
+        "val": 90,
+        "set": 20
       }
     }
   ]

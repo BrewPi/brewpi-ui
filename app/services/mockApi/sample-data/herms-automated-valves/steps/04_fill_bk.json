@@ -13,21 +13,9 @@
       }
     },
     {
-      "id": "Water",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
       "id": "MT-in",
       "settings": {
         "pos": "closed"
-      }
-    },
-    {
-      "id": "Route-1",
-      "settings": {
-        "pos": "open"
       }
     },
     {
@@ -37,19 +25,13 @@
       }
     },
     {
-      "id": "Route-2",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
       "id": "Coil-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "MT-in",
+      "id": "BK-in",
       "settings": {
         "pos": "open"
       }
@@ -73,6 +55,24 @@
       }
     },
     {
+      "id": "Water",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Route-1",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Route-2",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
       "id": "Wort",
       "settings": {
         "pos": "closed"
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "m1",
+      "id": "drain",
       "settings": {
         "pos": "closed"
       }
@@ -103,31 +103,7 @@
       }
     },
     {
-      "id": "m4",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m8",
+      "id": "Out",
       "settings": {
         "pos": "closed"
       }
@@ -168,6 +144,18 @@
       "id": "spbk",
       "settings": {
         "val": 15
+      }
+    },
+    {
+      "id": "p1",
+      "settings":{
+        "power": false
+      }
+    },
+    {
+      "id": "p2",
+      "settings":{
+        "power": false
       }
     }
   ]

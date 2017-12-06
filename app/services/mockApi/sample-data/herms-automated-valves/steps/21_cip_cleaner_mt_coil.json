@@ -1,14 +1,54 @@
 {
-  "id": 15,
-  "name": "Whirlpool",
+  "id": 22,
+  "name": "CIP-cleaner: recirc cleaner through mash tun and coil",
   "notes": [
-    "When boiling is finished, we create a whirlpool in te kettle",
-    "By whirlpooling the wort, suspended particles (trub) will be gathered in the center of the kettle and we can prevent pumping them to the fermenter later.",
-    "In this step, we bypass the counter-flow chiller, so it will not decrease our flow rate and the intensity of the whirlpool."
+    "The cleaning solution is pumped through all parts of the system, in this step and the next 3."
   ],
   "settings": [
     {
       "id": "HLT-in",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "MT-in",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Coil-out",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Coil-in",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "BK-in",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "MT-out",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "BK-out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "BK-half",
       "settings": {
         "pos": "closed"
       }
@@ -20,21 +60,9 @@
       }
     },
     {
-      "id": "MT-in",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
       "id": "Route-1",
       "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Coil-out",
-      "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -44,39 +72,9 @@
       }
     },
     {
-      "id": "Coil-in",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "MT-in",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "MT-out",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "BK-out",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "BK-half",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
       "id": "Wort",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -86,7 +84,7 @@
       }
     },
     {
-      "id": "m1",
+      "id": "drain",
       "settings": {
         "pos": "closed"
       }
@@ -104,53 +102,26 @@
       }
     },
     {
-      "id": "m4",
+      "id": "Out",
       "settings": {
         "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m8",
-      "settings": {
-        "pos": "open"
       }
     },
     {
       "id": "hlt",
       "settings": {
-        "volume": 30.0,
-        "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 50,
-        "liquid": "wort"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "grain": 15
+        "volume": 30,
+        "liquid": "cleaner"
       }
     },
     {
@@ -162,7 +133,7 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 10
+        "duty": 0
       }
     },
     {
@@ -174,34 +145,32 @@
     {
       "id": "p1",
       "settings":{
-        "power": false
+        "power": false,
+        "speed": 100
       }
     },
     {
       "id": "p2",
       "settings":{
-        "power": true,
-        "speed": 100
+        "power": true
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 60,
-        "set": 60
+        "val": 59
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 20
+        "val": 54.2
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 47,
-        "set": 20
+        "val": 20
       }
     }
   ]
