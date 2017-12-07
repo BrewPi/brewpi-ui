@@ -22,7 +22,7 @@ import { TempSensors } from '../TempSensors';
 import { BeerBottle } from '../BeerBottle';
 import { Carboy } from '../Carboy';
 import { Conical } from '../Conical';
-import { FridgeTall, FridgeFan, FridgeShelf } from '../FridgeTall';
+import { FridgeTall, FridgeShelf } from '../FridgeTall';
 import { GlycolReservoir } from '../GlycolReservoir';
 import { Keg } from '../Keg';
 import { TubularHeater } from '../TubularHeater';
@@ -65,7 +65,6 @@ const componentTable = {
   BEER_BOTTLE: BeerBottle,
   CONICAL: Conical,
   FRIDGE_TALL: FridgeTall,
-  FRIDGE_FAN: FridgeFan,
   BLOWER_FAN: BlowerFan,
   BURNER: Burner,
   FRIDGE_SHELF: FridgeShelf,
