@@ -57,14 +57,16 @@
   position: absolute;
   bottom: -6px;
   text-align: center;
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 400;
   color: white;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
   text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
+  overflow: visible;
+  white-space: nowrap;
 }
 
 .Valve {
