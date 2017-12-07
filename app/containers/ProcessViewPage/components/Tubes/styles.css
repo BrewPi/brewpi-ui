@@ -10,3 +10,8 @@
   stroke-width: 5pt;
   stroke-linecap: round;
 }
+
+.flipped {
+  transform: scaleX(-1);
+  transform-origin: 25px;
+}

@@ -179,7 +179,7 @@ export const rotateFlows = (oldFlows, angle) => {
 };
 
 const flipFlowTile = (oldFlows) => {
-  const newFlows = oldFlows;
+  const newFlows = Object.assign({}, oldFlows);
   for (const [key, value] of Object.entries(newFlows)) {
     let newKey = key.replace('l', '#'); // temporary replacement while we replace r
     newKey = newKey.replace('r', 'l');
