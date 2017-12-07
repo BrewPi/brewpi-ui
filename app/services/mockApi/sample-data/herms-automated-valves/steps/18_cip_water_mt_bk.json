@@ -2,6 +2,7 @@
   "id": 19,
   "name": "CIP-Water: flush MT and BK with water",
   "notes": [
+    "We can rinse the mash tun and boil kettle at the same time.",
     "Note that the HLT has only seen clean water and doesn't need flushing."
   ],
   "settings": [

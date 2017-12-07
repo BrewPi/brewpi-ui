@@ -6,7 +6,7 @@
     "When the wort is still boiling, DMS is boiled off and will not be a problem.",
     "When boiling is stopped, DMS is no longer boiled off, but it is still created until the beer is cooled. Therefore, we want to cross this temperature range as quickly as possible. This is done with a counter-flow wort chiller (CFC).",
     "Do not cool for the first 3 minutes to pump hot wort through the CFC to sanitize it. After 3 minutes, open valve 'Water-cfc'.",
-    "You do not have to wait for the boil kettle temperature to reach the desired fermenation temperature. You can stop whirlpooling as soon as the output of the CFC reaches fermetation temperature. There can be a 20 degree difference between CFC in- and output temperature."
+    "You do not have to wait for entire kettle to reach the desired fermenation temperature. There can be a 20 degree difference between CFC in- and output temperature. By pumping from the CFC output to the fermenter instead of from the kettle, you can transwer while doing the last bit of cooling. This saves a lot of time, because cooling gets slower as the temperature difference gets smaller."
   ],
   "settings": [
     {

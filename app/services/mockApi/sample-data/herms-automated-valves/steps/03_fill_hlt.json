@@ -2,7 +2,7 @@
   "id": 3,
   "name": "Fill hot liquor tun",
   "notes": [
-    "The hot liquor tun (HLT) is filled with cold water or hot water if available."
+    "The hot liquor tun (HLT) is filled with cold water or with hot water if this is available."
   ],
   "settings": [
     {

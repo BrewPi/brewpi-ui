@@ -1,6 +1,9 @@
 {
   "id": 23,
   "name": "CIP-cleaner: pump cleaner to boil kettle",
+  "notes": [
+    "While the cleaner is in the kettles, we can clean the kettle walls with a soft cloth."
+  ],
   "settings": [
     {
       "id": "HLT-in",
