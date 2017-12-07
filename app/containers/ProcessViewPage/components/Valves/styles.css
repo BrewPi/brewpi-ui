@@ -13,6 +13,9 @@
   fill: #FFF;
   stroke: #FFF;
   stroke-width: 2pt;
+}
+
+.rotating {
   transform-origin: 25px 25px;
   transition-duration: 1s;
 }
@@ -29,16 +32,16 @@
   transform: rotate(270deg);
 }
 
-.powerClosing {
-  color: #F53;
-}
-
-.powerOpening {
-  color: #5C5;
-}
-
 .powerIcon {
   fill: #000;
+}
+
+.powerIcon.powerClosing {
+  fill: #F53;
+}
+
+.powerIcon.powerOpening {
+  fill: #5C5;
 }
 
 .ballOpen {

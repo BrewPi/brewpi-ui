@@ -77,7 +77,9 @@ class Manual extends React.Component {
         <SvgParent>
           {renderedLiquid}
           <SvgTube className={styles.tube} />
-          <SvgBall className={classNames(styles.ball, posClass)} />
+          <g className={classNames(posClass, styles.rotating)}>
+            <SvgBall className={styles.ball} />
+          </g>
           <FlowArrows flows={this.props.flows} />
         </SvgParent>
         <span className={styles.id}>{this.props.id}</span>
@@ -111,10 +113,11 @@ class Motor extends React.Component {
         <SvgParent>
           {renderedLiquid}
           <SvgTube className={styles.tube} />
-          <SvgBall className={classNames(styles.ball, posClass)} />
-          <SvgMotor className={powerClass} />
-          <SvgMotorPower className={styles.powerIcon} />
           <FlowArrows flows={this.props.flows} />
+          <g className={classNames(posClass, styles.rotating)}>
+            <SvgBall className={classNames(styles.ball)} />
+            <SvgMotorPower className={classNames(styles.powerIcon, powerClass)} />
+          </g>
         </SvgParent>
         <span className={styles.id}>{this.props.id}</span>
       </button>
@@ -157,8 +160,10 @@ class ManualTee extends React.Component {
         <SvgParent>
           {renderedLiquid}
           <SvgTTube className={styles.tube} />
-          <g className={variantClass[this.props.options.variant]}>
-            <SvgTBall className={classNames(styles.ball, posClass)} />
+          <g className={classNames(posClass, styles.rotating)}>
+            <g className={variantClass[this.props.options.variant]}>
+              <SvgTBall className={styles.ball} />
+            </g>
           </g>
           <FlowArrows flows={this.props.flows} />
         </SvgParent>
