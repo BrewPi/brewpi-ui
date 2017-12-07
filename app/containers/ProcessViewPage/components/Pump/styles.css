@@ -50,3 +50,7 @@
   text-align: right;
   font-size: 10px;
 }
+
+.unflip {
+  transform: scaleX(-1);
+}

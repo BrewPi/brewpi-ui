@@ -1,136 +1,110 @@
 {
-  "id": 13,
-  "name": "Sparge Out",
+  "id": 20,
+  "name": "CIP-Water: drain water",
   "notes": [
-    "The water pump is stopped and all wort is pumped to the boil kettle.",
-    "As soon as the boil kettle element is under water, the element can be turned on to start bringing the wort to boil.",
-    "Don't forget to still apply the next step (boil) to close v9 and prevent wort from leaking back into the mash tun (communicating vessels)."
+    "All cleaning water is pumped to the drain."
   ],
   "settings": [
     {
-      "id": "v1",
+      "id": "HLT-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v2",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v3",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v4",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v6",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v7",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v8",
+      "id": "MT-in",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v9",
+      "id": "Coil-out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Coil-in",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "BK-in",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v10",
+      "id": "MT-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v11",
+      "id": "BK-out",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v12",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v13",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m1",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m2",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m3",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m4",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
+      "id": "BK-half",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "m7",
+      "id": "Water",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "m8",
+      "id": "Route-1",
       "settings": {
         "pos": "open"
+      }
+    },
+    {
+      "id": "Route-2",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Wort",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Wort-cfc",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "drain",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Water-fill",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Water-cfc",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Out",
+      "settings": {
+        "pos": "closed"
       }
     },
     {
@@ -143,16 +117,15 @@
     {
       "id": "bk",
       "settings": {
-        "volume": 42,
-        "liquid": "wort"
+        "volume": 30,
+        "liquid": "water"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "grain": 15,
-        "volume": 8,
-        "liquid": "runoff"
+        "volume": 0,
+        "liquid": "water"
       }
     },
     {
@@ -164,13 +137,13 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 0
+        "duty": 10
       }
     },
     {
       "id": "heat_bk",
       "settings": {
-        "duty": 100
+        "duty": 0
       }
     },
     {
@@ -182,28 +155,26 @@
     {
       "id": "p2",
       "settings":{
-        "power": true,
-        "speed": 40
+        "power": true
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 75.2,
+        "val": 60,
         "set": 60
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 72.8
+        "val": 20
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 82.9,
-        "set": 100
+        "val": 20
       }
     }
   ]

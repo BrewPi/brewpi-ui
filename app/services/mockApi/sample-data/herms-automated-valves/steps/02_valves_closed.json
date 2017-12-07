@@ -1,129 +1,109 @@
 {
   "id": 2,
   "name": "All valves closed",
+  "notes": [
+    "On a brew day, you'll start with a quick rinse of the system with water (step 18-20), then brew (step 3-17), then clean again with water and cleaner (step 18-24)",
+    "The layout in real life is laid out the same as shown here, the vertical positioning matches the real world setup. The pumps are below the kettles and the drain is the lowest point of the setup."
+  ],
   "settings": [
     {
-      "id": "v1",
+      "id": "HLT-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v2",
+      "id": "MT-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v3",
+      "id": "Coil-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v4",
+      "id": "Coil-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v5",
+      "id": "BK-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v6",
+      "id": "MT-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v7",
+      "id": "BK-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v8",
+      "id": "BK-half",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v9",
+      "id": "Water",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v10",
+      "id": "Route-1",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v11",
+      "id": "Route-2",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v12",
+      "id": "Wort",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v13",
+      "id": "Wort-cfc",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "m1",
+      "id": "drain",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "m2",
+      "id": "Water-fill",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "m3",
+      "id": "Water-cfc",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "m4",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m8",
+      "id": "Out",
       "settings": {
         "pos": "closed"
       }
@@ -144,6 +124,18 @@
       "id": "spbk",
       "settings": {
         "val": 20
+      }
+    },
+    {
+      "id": "p1",
+      "settings":{
+        "power": false
+      }
+    },
+    {
+      "id": "p2",
+      "settings":{
+        "power": false
       }
     }
   ]

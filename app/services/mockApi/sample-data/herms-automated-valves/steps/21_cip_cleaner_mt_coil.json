@@ -1,156 +1,127 @@
 {
-  "id": 9,
-  "name": "Mash rest 10 min",
+  "id": 22,
+  "name": "CIP-cleaner: recirc cleaner through mash tun and coil",
   "notes": [
-    "It is recommended to give the grain bed some time to settle before you start pumping. This will prevent getting air in the pumps and will prevent a stuck mash.",
-    "Because the grain bed has some time to settle and compact, the pumps will suck fewer small particles towards the filter which could potentially clog it."
+    "The cleaning solution is pumped through all parts of the system, in this step and the next 3."
   ],
   "settings": [
     {
-      "id": "v1",
+      "id": "HLT-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v2",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v3",
+      "id": "MT-in",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v4",
+      "id": "Coil-out",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v6",
+      "id": "Coil-in",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v7",
+      "id": "BK-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v8",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v9",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v10",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v11",
+      "id": "MT-out",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v12",
+      "id": "BK-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v13",
+      "id": "BK-half",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "m1",
+      "id": "Water",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "m2",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m3",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m4",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
+      "id": "Route-1",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "m7",
+      "id": "Route-2",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Wort",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "m8",
+      "id": "Wort-cfc",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "drain",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Water-fill",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Water-cfc",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Out",
+      "settings": {
+        "pos": "closed"
       }
     },
     {
       "id": "hlt",
       "settings": {
-        "volume": 50.0,
-        "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 0
       }
     },
     {
       "id": "mt",
       "settings": {
-        "grain": 15,
         "volume": 30,
-        "liquid": "wort"
+        "liquid": "cleaner"
       }
     },
     {
@@ -162,7 +133,7 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 10
+        "duty": 0
       }
     },
     {
@@ -171,18 +142,29 @@
         "duty": 0
       }
     },
-        {
+    {
+      "id": "p1",
+      "settings":{
+        "power": false,
+        "speed": 100
+      }
+    },
+    {
+      "id": "p2",
+      "settings":{
+        "power": true
+      }
+    },
+    {
       "id": "sphlt",
       "settings": {
-        "val": 67,
-        "set": 67
+        "val": 59
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 67.5,
-        "set": 67.7
+        "val": 54.2
       }
     },
     {

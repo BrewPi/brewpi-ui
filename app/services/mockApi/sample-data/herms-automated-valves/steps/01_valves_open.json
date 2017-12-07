@@ -2,132 +2,110 @@
   "id": 1,
   "name": "All valves open",
   "notes": [
-    "This layout uses 13 motorized valves and 7 manual valves.", "Manual valves on the kettles remain open during the brew.",
-    "Manual valves are also used for inputs and outputs of the system as a whole, so we can make sure a hose is connected before opening."
+    "This layout uses 16 remotely controlled valves and 1 manual valve for the wort to the fermenter labeled 'out'. Additional valves on the kettles are optional and are not included in the schematic.",
+    "The goal of this layout is to have a closed system that is fully automated and clean-in-place cycles can be done with a few clicks.",
+    "The steps are pre-defined and can be cycled through with the top menu. Additionally, each valve can be clicked to change its position. The flows are calculated based on the valve positions, water input, pump power and kettle content.",
+    "The flows are calculated in the browser. Only when apply is clicked, they are sent to the controller. This allows you to set the system to a state which is not already defined and apply it too."    
   ],
   "settings": [
     {
-      "id": "v1",
+      "id": "HLT-in",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v2",
+      "id": "MT-in",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v3",
+      "id": "Coil-out",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v4",
+      "id": "Coil-in",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v5",
+      "id": "BK-in",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v6",
+      "id": "MT-out",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v7",
+      "id": "BK-out",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v8",
+      "id": "BK-half",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v9",
+      "id": "Water",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v10",
+      "id": "Route-1",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v11",
+      "id": "Route-2",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v12",
+      "id": "Wort",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v13",
+      "id": "Wort-cfc",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "m1",
+      "id": "drain",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "m2",
+      "id": "Water-fill",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "m3",
+      "id": "Water-cfc",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "m4",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m8",
+      "id": "Out",
       "settings": {
         "pos": "open"
       }
@@ -148,6 +126,18 @@
       "id": "spbk",
       "settings": {
         "val": 20
+      }
+    },
+    {
+      "id": "p1",
+      "settings":{
+        "power": false
+      }
+    },
+    {
+      "id": "p2",
+      "settings":{
+        "power": false
       }
     }
   ]

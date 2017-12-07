@@ -28,9 +28,13 @@ class Pump extends React.Component {
   render() {
     const power = this.props.settings.power;
     const speed = this.props.settings.speed;
+    const flip = this.props.flip;
     const liquid = pickLiquid(this.props.flows);
+    const unflipStyle = flip ? styles.unflip : undefined; // is parent flipped?
+
     let bladeRotateStyle = {};
     let bladeRotateClass = {};
+
     if (power === true) {
       bladeRotateStyle = RotateCss.speedStyle(speed);
       bladeRotateClass = RotateCss.styles.rotate;
@@ -45,7 +49,7 @@ class Pump extends React.Component {
           <SvgLiquidPump className={styles.liquid} style={Liquids.strokeStyle(liquid)} />
           <SvgTubes className={classNames(styles.tubes)} />
         </SvgParent>
-        <span className={styles.id}>{this.props.id}</span>
+        <span className={classNames(styles.id, unflipStyle)}>{this.props.id}</span>
       </button>
     );
   }
@@ -58,6 +62,7 @@ Pump.propTypes = {
   flows: React.PropTypes.array,
   id: React.PropTypes.string,
   onClicked: React.PropTypes.func,
+  flip: React.PropTypes.bool,
 };
 Pump.defaultProps = {
   settings: {

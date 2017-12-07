@@ -1,134 +1,113 @@
 {
-  "id": 7,
-  "name": "Add grain to mash tun",
+  "id": 6,
+  "name": "Heat HLT and boil kettle",
   "notes": [
-    "While the HLT and BK are heating, we can add grain to the mash tun."
+    "The HLT is pre-heated for the first mash step.",
+    "The BK is pre-heated to the strike temperature.",
+    "Strike water is the water that is added to the grains for the mash.",
+    "The strike water temperature is higher than the first mash step temperature to account for temperature losses to the grain and kettle."
   ],
   "settings": [
     {
-      "id": "v1",
+      "id": "HLT-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v2",
+      "id": "MT-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v3",
+      "id": "Coil-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v4",
+      "id": "Coil-in",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "BK-in",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v5",
+      "id": "MT-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v6",
+      "id": "BK-out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "BK-half",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Water",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Route-1",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v7",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v8",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v9",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v10",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v11",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v12",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v13",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m1",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m2",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m3",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m4",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
+      "id": "Route-2",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "m7",
+      "id": "Wort",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
-      "id": "m8",
+      "id": "Wort-cfc",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "drain",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Water-fill",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Water-cfc",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Out",
+      "settings": {
+        "pos": "closed"
       }
     },
     {
@@ -136,12 +115,6 @@
       "settings": {
         "volume": 50.0,
         "liquid": "hotwater"
-      }
-    },
-    {
-      "id": "mt",
-      "settings": {
-        "grain": 15
       }
     },
     {
@@ -172,7 +145,7 @@
     {
       "id": "sphlt",
       "settings": {
-        "val": 67,
+        "val": 45.3,
         "set": 67
       }
     },
@@ -185,8 +158,20 @@
     {
       "id": "spbk",
       "settings": {
-        "val": 73,
+        "val": 57.7,
         "set": 73
+      }
+    },
+    {
+      "id": "p1",
+      "settings":{
+        "power": false
+      }
+    },
+    {
+      "id": "p2",
+      "settings":{
+        "power": false
       }
     }
   ]

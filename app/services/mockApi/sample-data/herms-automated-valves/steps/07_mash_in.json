@@ -1,151 +1,133 @@
 {
-  "id": 19,
-  "name": "CIP: flush CFC with water",
+  "id": 8,
+  "name": "Mash in from boil kettle",
   "notes": [
-    "Note that the CFC is flushed in opposite direction of the cooling step (back flushing)."
+    "The strike water is pumped from the boil kettle to the mash tun.",
+    "If we calculated our grain temperature losses correctly, the mash should hit the right temperature after mixing grain and water."
   ],
   "settings": [
     {
-      "id": "v1",
+      "id": "HLT-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v2",
+      "id": "MT-in",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v3",
+      "id": "Coil-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v4",
+      "id": "Coil-in",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "BK-in",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "MT-out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "BK-out",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v5",
+      "id": "BK-half",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v6",
+      "id": "Water",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Route-1",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v7",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v8",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v9",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v10",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v11",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v12",
+      "id": "Route-2",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v13",
+      "id": "Wort",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "m1",
+      "id": "Wort-cfc",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "m2",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m3",
+      "id": "drain",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "m4",
+      "id": "Water-fill",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "m5",
+      "id": "Water-cfc",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "m6",
+      "id": "Out",
       "settings": {
         "pos": "closed"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m8",
-      "settings": {
-        "pos": "open"
       }
     },
     {
       "id": "hlt",
       "settings": {
-        "volume": 30.0,
+        "volume": 50.0,
+        "liquid": "hotwater"
+      }
+    },
+    {
+      "id": "mt",
+      "settings": {
+        "grain": 15,
+        "volume": 20,
         "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-      }
-    },
-    {
-      "id": "mt",
-      "settings": {
+        "volume": 10,
+        "liquid": "hotwater"
       }
     },
     {
@@ -167,6 +149,33 @@
       }
     },
     {
+      "id": "p2",
+      "settings":{
+        "power": true,
+        "speed": 100
+      }
+    },
+    {
+      "id": "sphlt",
+      "settings": {
+        "val": 67,
+        "set": 67
+      }
+    },
+    {
+      "id": "spmt",
+      "settings": {
+        "val": 52.7,
+        "set": 67.5
+      }
+    },
+    {
+      "id": "spbk",
+      "settings": {
+        "val": 72.5
+      }
+    },
+    {
       "id": "p1",
       "settings":{
         "power": false
@@ -176,25 +185,6 @@
       "id": "p2",
       "settings":{
         "power": false
-      }
-    },
-    {
-      "id": "sphlt",
-      "settings": {
-        "val": 60,
-        "set": 60
-      }
-    },
-    {
-      "id": "spmt",
-      "settings": {
-        "val": 20
-      }
-    },
-    {
-      "id": "spbk",
-      "settings": {
-        "val": 20
       }
     }
   ]

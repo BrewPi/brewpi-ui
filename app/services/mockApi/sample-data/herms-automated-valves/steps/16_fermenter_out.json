@@ -1,132 +1,109 @@
 {
-  "id": 25,
-  "name": "CIP: recirc cleaner through boil kettle and CFC",
+  "id": 17,
+  "name": "Pump wort to fermenter",
   "notes": [
-    "Shortly open m4 and m5 over a bucket to also sanitize outputs."
+    "When the beer has been cooled enough, it is ready to be pumped to the fermenter. We pump the beer to the fermenter from the filter at the bottom of the kettle, through the CFC.",
+    "Note that the boil kettle temperature can still be around 40 degrees, while the CFC output temperature is already around 20 degrees."
   ],
   "settings": [
     {
-      "id": "v1",
+      "id": "HLT-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v2",
+      "id": "MT-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v3",
+      "id": "Coil-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v4",
+      "id": "Coil-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v5",
+      "id": "BK-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v6",
+      "id": "MT-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v7",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v8",
+      "id": "BK-out",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v9",
+      "id": "BK-half",
+      "settings": {
+        "pos": "half"
+      }
+    },
+    {
+      "id": "Water",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v10",
+      "id": "Route-1",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v11",
+      "id": "Route-2",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v12",
+      "id": "Wort",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Wort-cfc",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "v13",
+      "id": "drain",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "m1",
+      "id": "Water-fill",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "m2",
+      "id": "Water-cfc",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "m3",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m4",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m7",
-      "settings": {
-        "pos": "open"
-      }
-    },
-    {
-      "id": "m8",
+      "id": "Out",
       "settings": {
         "pos": "open"
       }
@@ -134,20 +111,21 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 10.0,
-        "liquid": "hotwater"        
+        "volume": 30.0,
+        "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 20,
-        "liquid": "cleaner"
+        "volume": 10,
+        "liquid": "wort"
       }
     },
     {
       "id": "mt",
       "settings": {
+        "grain": 15
       }
     },
     {
@@ -159,7 +137,7 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 0
+        "duty": 10
       }
     },
     {
@@ -184,7 +162,8 @@
     {
       "id": "sphlt",
       "settings": {
-        "val": 20
+        "val": 60,
+        "set": 60
       }
     },
     {
@@ -196,7 +175,8 @@
     {
       "id": "spbk",
       "settings": {
-        "val": 53.4
+        "val": 40,
+        "set": 20
       }
     }
   ]

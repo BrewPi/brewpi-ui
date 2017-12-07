@@ -55,11 +55,16 @@
 
 .id {
   position: absolute;
-  right: 1px;
-  bottom: 0;
-  width: 100%;
-  text-align: right;
-  font-size: 10px;
+  bottom: -6px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
 }
 
 .Valve {

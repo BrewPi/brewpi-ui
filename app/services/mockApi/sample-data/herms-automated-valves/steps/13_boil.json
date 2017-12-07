@@ -4,133 +4,110 @@
   "notes": [
     "The wort is boiled for 60 or 90 minutes",
     "Hop is added in multiple additions, depending on the recipe.",
-    "It is important to not cover the kettle during the boil, so DMS can boil off."
-  ],  
+    "It is important to not cover the kettle during the boil, so DMS can boil off.",
+    "While the wort is boiling, you have time to scoop the grain out of the MT. A wet vac works great to suck up every last grain. "
+  ],
   "settings": [
     {
-      "id": "v1",
+      "id": "HLT-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v2",
+      "id": "MT-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v3",
+      "id": "Coil-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v4",
+      "id": "Coil-in",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "v5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-     {
-      "id": "v6",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v7",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v8",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v9",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v10",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v11",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v12",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "v13",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m1",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m2",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m3",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m4",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m5",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "m6",
+      "id": "BK-in",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "m7",
+      "id": "MT-out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "BK-out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "BK-half",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Water",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Route-1",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "m8",
+      "id": "Route-2",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Wort",
       "settings": {
         "pos": "open"
+      }
+    },
+    {
+      "id": "Wort-cfc",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "drain",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Water-fill",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Water-cfc",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Out",
+      "settings": {
+        "pos": "closed"
       }
     },
     {

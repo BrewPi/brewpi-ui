@@ -1,0 +1,188 @@
+{
+  "id": 10,
+  "name": "Mash recirculation",
+  "notes": [
+    "To control the temperature of the mash, the wort is pumped through the coil in the HLT. The water in the HLT will heat up the wort.",
+    "This heat exchange is what gives the HERMS its name: heat excange recirculating mash system. By heating the mash indirectly, the wort will never get hotter than the HLT temperature. This prevents overheating and scorching.",
+    "The setpoint of the HLT is dynamic and controlled by BrewPi, based on the temperature error in the mash tun.",
+    "Because all heat that is generated in the HLT will eventually even out between the HLT and mash tun, the best performance can be achieved with little water in the HLT, just enough to submerge the coil. With less thermal mass in the HLT, we can make bigger temperature swings in the HLT without overshooting in the mash tun. A bigger temperature difference leads to faster rise times.",
+    "To deal with the small volume in the HLT, the HLT can be slowly filled to sparge temperature during the last mash step at a rate that the heating elements can keep up with. Alternatively, a fourth kettle can be used to hold hot sparge water and the small HLT is only used as a heat exchanger."
+  ],
+  "settings": [
+    {
+      "id": "HLT-in",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "MT-in",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Coil-out",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Coil-in",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "BK-in",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "MT-out",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "BK-out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "BK-half",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Water",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Route-1",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Route-2",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Wort",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
+      "id": "Wort-cfc",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "drain",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Water-fill",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Water-cfc",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "hlt",
+      "settings": {
+        "volume": 50.0,
+        "liquid": "hotwater"
+      }
+    },
+    {
+      "id": "bk",
+      "settings": {
+        "volume": 0
+      }
+    },
+    {
+      "id": "mt",
+      "settings": {
+        "grain": 15,
+        "volume": 30,
+        "liquid": "wort"
+      }
+    },
+    {
+      "id": "in1",
+      "settings": {
+        "liquid": "water"
+      }
+    },
+    {
+      "id": "heat_hlt",
+      "settings": {
+        "duty": 10
+      }
+    },
+    {
+      "id": "heat_bk",
+      "settings": {
+        "duty": 0
+      }
+    },
+    {
+      "id": "p1",
+      "settings":{
+        "power": true,
+        "speed": 100
+      }
+    },
+    {
+      "id": "p2",
+      "settings":{
+        "power": true,
+        "speed": 100
+      }
+    },
+    {
+      "id": "sphlt",
+      "settings": {
+        "val": 68.3,
+        "set": 69.2
+      }
+    },
+    {
+      "id": "spmt",
+      "settings": {
+        "val": 67.6,
+        "set": 67.7
+      }
+    },
+    {
+      "id": "spbk",
+      "settings": {
+        "val": 20
+      }
+    }
+  ]
+}
