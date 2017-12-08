@@ -679,7 +679,6 @@
         "type": "TUBE_STRAIGHT"
       },
       "x": [
-        13,
         17,
         18
       ],
@@ -913,6 +912,14 @@
       },
       "x": 17,
       "y": 0
+    },
+    {
+      "part": {
+        "type": "TEMP_SENSOR_INLINE",
+        "id": "cfcouttemp"
+      },
+      "x": 13,
+      "y": 12
     }
   ],
   "id": "v0"

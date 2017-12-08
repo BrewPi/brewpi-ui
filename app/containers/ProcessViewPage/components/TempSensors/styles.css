@@ -5,17 +5,8 @@
   fill: none;
 }
 
-.splitTube {
-  stroke: #FFF;
-  stroke-width: 2pt;
-  stroke-linecap: round;
-  fill: none;
-}
-
 .value {
   text-anchor: middle;
-  font-size: 14px;
   fill: #FFF;
-  font-family: Roboto;
-  font-weight: 700;
+  font-weight: 800;
 }

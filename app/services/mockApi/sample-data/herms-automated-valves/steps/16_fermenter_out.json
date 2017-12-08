@@ -3,6 +3,7 @@
   "name": "Pump wort to fermenter",
   "notes": [
     "When the beer has been cooled enough, it is ready to be pumped to the fermenter. We pump the beer to the fermenter from the filter at the bottom of the kettle, through the CFC.",
+    "You do not have to wait for entire kettle to reach the desired fermenation temperature. There can be a 20 degree difference between CFC in- and output temperature. By pumping from the CFC output to the fermenter instead of from the kettle, you can transfer while doing the last bit of cooling. This saves a lot of time, because cooling gets slower as the temperature difference gets smaller.",
     "Note that the boil kettle temperature can still be around 40 degrees, while the CFC output temperature is already around 20 degrees."
   ],
   "settings": [
@@ -177,6 +178,12 @@
       "settings": {
         "val": 40,
         "set": 20
+      }
+    },
+    {
+      "id": "cfcouttemp",
+      "settings": {
+        "val": 20.5
       }
     }
   ]

@@ -56,7 +56,7 @@
     {
       "id": "Water",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -161,20 +161,26 @@
     {
       "id": "sphlt",
       "settings": {
-        "val": 60,
-        "set": 60
+        "val": 65,
+        "set": 65
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 20
+        "val": 18
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 20
+        "val": 15
+      }
+    },
+    {
+      "id": "cfcouttemp",
+      "settings": {
+        "val": 18
       }
     }
   ]

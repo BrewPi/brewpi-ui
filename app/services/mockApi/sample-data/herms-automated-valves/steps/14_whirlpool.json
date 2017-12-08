@@ -182,6 +182,12 @@
         "val": 90,
         "set": 20
       }
+    },
+    {
+      "id": "cfcouttemp",
+      "settings": {
+        "val": 20
+      }
     }
   ]
 }

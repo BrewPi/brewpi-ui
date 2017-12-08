@@ -294,9 +294,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <BlowerFan />
               </td>
               <td>
-                <BlowerFan settings={{ power: true, speed: 20 }} flows={[{ dir: { l: 'r' }, flowing: 'lR', liquid: '$1' }]} />
-                <BlowerFan settings={{ power: true, speed: 50 }} flows={[{ dir: { l: 'r' }, flowing: 'lR', liquid: '$1' }]} />
-                <BlowerFan settings={{ power: true, speed: 100 }} flows={[{ dir: { l: 'r' }, flowing: 'lR', liquid: '$1' }]} />
+                <BlowerFan settings={{ power: true, speed: 20 }} />
+                <BlowerFan settings={{ power: true, speed: 50 }} />
+                <BlowerFan settings={{ power: true, speed: 100 }} />
               </td>
             </tr>
             <tr>
@@ -305,9 +305,9 @@ class CatalogPage extends React.Component { // eslint-disable-line react/prefer-
                 <TempSensors.Inline />
               </td>
               <td>
-                <TempSensors.Inline liquid={'water'} />
-                <TempSensors.Inline liquid={'hotwater'} />
-                <TempSensors.Inline liquid={'beer'} />
+                <TempSensors.Inline settings={{ val: 5 }} flows={[{ dir: { l: 'r' }, flowing: 'lR', liquid: 'water' }]} />
+                <TempSensors.Inline settings={{ val: 20.5 }} flows={[{ dir: { l: 'r' }, flowing: 'lR', liquid: 'hotwater' }]} />
+                <TempSensors.Inline settings={{ val: 100.2 }} flows={[{ dir: { l: 'r' }, flowing: 'lR', liquid: 'beer' }]} />
               </td>
             </tr>
             <tr>

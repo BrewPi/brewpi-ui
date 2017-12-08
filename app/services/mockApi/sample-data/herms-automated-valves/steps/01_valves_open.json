@@ -5,7 +5,7 @@
     "This layout uses 16 remotely controlled valves and 1 manual valve for the wort to the fermenter labeled 'out'. Additional valves on the kettles are optional and are not included in the schematic.",
     "The goal of this layout is to have a closed system that is fully automated and clean-in-place cycles can be done with a few clicks.",
     "The steps are pre-defined and can be cycled through with the top menu. Additionally, each valve can be clicked to change its position. The flows are calculated based on the valve positions, water input, pump power and kettle content.",
-    "The flows are calculated in the browser. Only when apply is clicked, they are sent to the controller. This allows you to set the system to a state which is not already defined and apply it too."    
+    "The flows are calculated in the browser. Only when apply is clicked, they are sent to the controller. This allows you to set the system to a state which is not predefined and then apply it."    
   ],
   "settings": [
     {
@@ -138,6 +138,12 @@
       "id": "p2",
       "settings":{
         "power": false
+      }
+    },
+    {
+      "id": "cfcouttemp",
+      "settings": {
+        "val": 20
       }
     }
   ]

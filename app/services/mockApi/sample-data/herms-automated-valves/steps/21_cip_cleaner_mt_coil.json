@@ -158,17 +158,23 @@
     {
       "id": "sphlt",
       "settings": {
-        "val": 59
+        "val": 20
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 54.2
+        "val": 52.7
       }
     },
     {
       "id": "spbk",
+      "settings": {
+        "val": 20
+      }
+    },
+    {
+      "id": "cfcouttemp",
       "settings": {
         "val": 20
       }

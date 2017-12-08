@@ -162,20 +162,26 @@
     {
       "id": "sphlt",
       "settings": {
-        "val": 60,
-        "set": 60
+        "val": 64.2,
+        "set": 65
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 20
+        "val": 15
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 20
+        "val": 15
+      }
+    },
+    {
+      "id": "cfcouttemp",
+      "settings": {
+        "val": 16.5
       }
     }
   ]

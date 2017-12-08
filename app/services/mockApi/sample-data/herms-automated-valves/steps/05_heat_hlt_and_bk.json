@@ -173,6 +173,12 @@
       "settings":{
         "power": false
       }
+    },
+    {
+      "id": "cfcouttemp",
+      "settings": {
+        "val": 20
+      }
     }
   ]
 }
