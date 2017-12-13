@@ -721,11 +721,26 @@
     },
     {
       "part": {
-        "rotate": 270,
-        "type": "TUBE_TEE"
+        "type": "TUBE_CROSS"
       },
       "x": 20,
       "y": 12
+    },
+    {
+      "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 180
+      },
+      "x": 21,
+      "y": 12
+    },
+    {
+      "part": {
+        "type": "TUBE_OUTPUT",
+        "rotate": 90
+      },
+      "x": 21,
+      "y": 14
     },
     {
       "part": {
@@ -775,7 +790,7 @@
     },
     {
       "part": {
-        "id": "drain",
+        "id": "Drain",
         "type": "VALVE_MOTOR",
         "options": {
           "slot": 13
@@ -783,6 +798,19 @@
 
       },
       "x": 19,
+      "y": 13
+    },
+    {
+      "part": {
+        "id": "Sample",
+        "type": "VALVE_MANUAL",
+        "rotate": 270,
+        "options": {
+          "slot": 13
+        }
+
+      },
+      "x": 21,
       "y": 13
     },
     {

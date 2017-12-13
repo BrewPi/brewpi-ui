@@ -86,7 +86,7 @@
       }
     },
     {
-      "id": "drain",
+      "id": "Drain",
       "settings": {
         "pos": "closed"
       }
@@ -107,6 +107,12 @@
       "id": "Out",
       "settings": {
         "pos": "open"
+      }
+    },
+    {
+      "id": "Sample",
+      "settings": {
+        "pos": "closed"
       }
     },
     {
