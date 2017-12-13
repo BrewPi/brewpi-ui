@@ -125,8 +125,7 @@
     {
       "id": "bk",
       "settings": {
-        "volume": 10,
-        "liquid": "wort"
+        "volume": 0
       }
     },
     {
