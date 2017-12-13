@@ -156,7 +156,8 @@
     {
       "id": "p1",
       "settings":{
-        "power": false
+        "power": true,
+        "speed": 50
       }
     },
     {
