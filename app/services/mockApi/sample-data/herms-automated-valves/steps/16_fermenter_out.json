@@ -1,5 +1,5 @@
 {
-  "id": 17,
+  "id": 16,
   "name": "Pump wort to fermenter",
   "notes": [
     "When the beer has been cooled enough, it is ready to be pumped to the fermenter. We pump the beer to the fermenter from the filter at the bottom of the kettle, through the CFC.",
@@ -52,7 +52,7 @@
     {
       "id": "BK-half",
       "settings": {
-        "pos": "half"
+        "pos": "closed"
       }
     },
     {

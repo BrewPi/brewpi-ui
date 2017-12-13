@@ -1,11 +1,10 @@
 {
-  "id": 13,
-  "name": "Boil",
+  "id": 17,
+  "name": "Push wort out of CFC",
   "notes": [
-    "The wort is boiled for 60 or 90 minutes",
-    "Hop is added in multiple additions, depending on the recipe.",
-    "It is important to not cover the kettle during the boil, so DMS can boil off.",
-    "While the wort is boiling, you have time to scoop the grain out of the MT. A wet vac works great to suck up every last grain. "
+    "When all wort has been pumped to the fermenter, there can be quite a bit left in the CFC.",
+    "We can push this wort out with water from the HLT or water input and catch it from the sample valve if we want to salvage it.",
+    "Note that we can also top up the fermenter by opening 'Out'."
   ],
   "settings": [
     {
@@ -35,7 +34,7 @@
     {
       "id": "BK-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -59,7 +58,7 @@
     {
       "id": "Water",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -71,19 +70,19 @@
     {
       "id": "Route-2",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Wort",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "Wort-cfc",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -113,7 +112,7 @@
     {
       "id": "Sample",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -126,7 +125,7 @@
     {
       "id": "bk",
       "settings": {
-        "volume": 50,
+        "volume": 10,
         "liquid": "wort"
       }
     },
@@ -145,13 +144,13 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 0
+        "duty": 10
       }
     },
     {
       "id": "heat_bk",
       "settings": {
-        "duty": 100
+        "duty": 0
       }
     },
     {
@@ -169,7 +168,7 @@
     {
       "id": "sphlt",
       "settings": {
-        "val": 66.2,
+        "val": 60,
         "set": 60
       }
     },
@@ -182,14 +181,14 @@
     {
       "id": "spbk",
       "settings": {
-        "val": 100,
-        "set": 100
+        "val": 40,
+        "set": 20
       }
     },
     {
       "id": "cfcouttemp",
       "settings": {
-        "val": 20
+        "val": 20.5
       }
     }
   ]

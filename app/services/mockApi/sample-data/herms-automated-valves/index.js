@@ -21,14 +21,15 @@ view.steps = [
   require('./steps/14_whirlpool.json'),
   require('./steps/15_cool.json'),
   require('./steps/16_fermenter_out.json'),
-  require('./steps/17_cip_water_coil_cfc.json'),
-  require('./steps/18_cip_water_mt_bk.json'),
-  require('./steps/19_cip_water_drain.json'),
-  require('./steps/20_cip_prepare_cleaner.json'),
-  require('./steps/21_cip_cleaner_mt_coil.json'),
-  require('./steps/22_cip_cleaner_to_bk.json'),
-  require('./steps/23_cip_cleaner_bk_cfc.json'),
-  require('./steps/24_cip_cleaner_drain.json'),
+  require('./steps/17_push_wort_out_cfc.json'),
+  require('./steps/18_cip_water_coil_cfc.json'),
+  require('./steps/19_cip_water_mt_bk.json'),
+  require('./steps/20_cip_water_drain.json'),
+  require('./steps/21_cip_prepare_cleaner.json'),
+  require('./steps/22_cip_cleaner_mt_coil.json'),
+  require('./steps/23_cip_cleaner_to_bk.json'),
+  require('./steps/24_cip_cleaner_bk_cfc.json'),
+  require('./steps/25_cip_cleaner_drain.json'),
 ];
 
 export default view;
