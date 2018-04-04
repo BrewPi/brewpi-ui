@@ -1,8 +1,8 @@
 {
-  "id": 24,
-  "name": "CIP-cleaner: recirc cleaner through boil kettle and CFC",
+  "id": 22,
+  "name": "CIP-cleaner: recirc cleaner through mash tun and coil",
   "notes": [
-    "Shortly open the fermenter output to get some cleaner through there too."
+    "The cleaning solution is pumped through all parts of the system, in this step and the next 3."
   ],
   "settings": [
     {
@@ -26,31 +26,31 @@
     {
       "id": "Coil-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "BK-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "MT-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "BK-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "BK-half",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -74,17 +74,17 @@
     {
       "id": "Wort",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Wort-cfc",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
-      "id": "drain",
+      "id": "Drain",
       "settings": {
         "pos": "closed"
       }
@@ -108,6 +108,12 @@
       }
     },
     {
+      "id": "Sample",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
       "id": "hlt",
       "settings": {
       }
@@ -115,13 +121,13 @@
     {
       "id": "bk",
       "settings": {
-        "volume": 30,
-        "liquid": "cleaner"
       }
     },
     {
       "id": "mt",
       "settings": {
+        "volume": 30,
+        "liquid": "cleaner"
       }
     },
     {
@@ -164,11 +170,17 @@
     {
       "id": "spmt",
       "settings": {
-        "val": 54.2
+        "val": 52.7
       }
     },
     {
       "id": "spbk",
+      "settings": {
+        "val": 20
+      }
+    },
+    {
+      "id": "cfcouttemp",
       "settings": {
         "val": 20
       }

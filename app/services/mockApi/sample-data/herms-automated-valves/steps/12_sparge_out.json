@@ -1,5 +1,5 @@
 {
-  "id": 13,
+  "id": 12,
   "name": "Sparge Out",
   "notes": [
     "The water pump is stopped and all wort is pumped to the boil kettle.",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "id": "drain",
+      "id": "Drain",
       "settings": {
         "pos": "closed"
       }
@@ -105,6 +105,12 @@
     },
     {
       "id": "Out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Sample",
       "settings": {
         "pos": "closed"
       }
@@ -180,6 +186,12 @@
       "settings": {
         "val": 82.9,
         "set": 100
+      }
+    },
+    {
+      "id": "cfcouttemp",
+      "settings": {
+        "val": 20
       }
     }
   ]

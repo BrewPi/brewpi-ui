@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "drain",
+      "id": "Drain",
       "settings": {
         "pos": "open"
       }
@@ -104,6 +104,12 @@
     },
     {
       "id": "Out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Sample",
       "settings": {
         "pos": "closed"
       }
@@ -175,6 +181,12 @@
       "id": "spbk",
       "settings": {
         "val": 20
+      }
+    },
+    {
+      "id": "cfcouttemp",
+      "settings": {
+        "val": 15
       }
     }
   ]

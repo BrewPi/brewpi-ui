@@ -15,12 +15,11 @@ const SvgBall = require('./svg/ball.svg?tag=g');
 const SvgBlades = require('./svg/blades.svg?tag=g');
 const SvgLiquidPump = require('./svg/liquid_pump.svg?tag=g');
 
-
 class Pump extends React.Component {
   static flows = (data) => {
     const power = data.getIn(['settings', 'power']);
     if (power) {
-      return { l: 'r+99' };
+      return { r: 'l+99' };
     }
     return { l: 'r', r: 'l' };
   };
@@ -36,7 +35,7 @@ class Pump extends React.Component {
     let bladeRotateClass = {};
 
     if (power === true) {
-      bladeRotateStyle = RotateCss.speedStyle(speed);
+      bladeRotateStyle = RotateCss.speedStyle(speed, false); // pumps turn counter-clockwise
       bladeRotateClass = RotateCss.styles.rotate;
     }
     return (

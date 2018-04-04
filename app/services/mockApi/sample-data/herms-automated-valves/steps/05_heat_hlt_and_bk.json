@@ -1,5 +1,5 @@
 {
-  "id": 6,
+  "id": 5,
   "name": "Heat HLT and boil kettle",
   "notes": [
     "The HLT is pre-heated for the first mash step.",
@@ -87,7 +87,7 @@
       }
     },
     {
-      "id": "drain",
+      "id": "Drain",
       "settings": {
         "pos": "closed"
       }
@@ -106,6 +106,12 @@
     },
     {
       "id": "Out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Sample",
       "settings": {
         "pos": "closed"
       }
@@ -172,6 +178,12 @@
       "id": "p2",
       "settings":{
         "power": false
+      }
+    },
+    {
+      "id": "cfcouttemp",
+      "settings": {
+        "val": 20
       }
     }
   ]

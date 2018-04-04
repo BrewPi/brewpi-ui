@@ -1,12 +1,11 @@
 {
-  "id": 16,
+  "id": 15,
   "name": "Cool",
   "notes": [
     "DMS (Dimethyl Sulfide) is created in wort whenever it is heated. It is an off-flavor that has the aroma of cooked corn.",
     "When the wort is still boiling, DMS is boiled off and will not be a problem.",
     "When boiling is stopped, DMS is no longer boiled off, but it is still created until the beer is cooled. Therefore, we want to cross this temperature range as quickly as possible. This is done with a counter-flow wort chiller (CFC).",
-    "Do not cool for the first 3 minutes to pump hot wort through the CFC to sanitize it. After 3 minutes, open valve 'Water-cfc'.",
-    "You do not have to wait for entire kettle to reach the desired fermenation temperature. There can be a 20 degree difference between CFC in- and output temperature. By pumping from the CFC output to the fermenter instead of from the kettle, you can transwer while doing the last bit of cooling. This saves a lot of time, because cooling gets slower as the temperature difference gets smaller."
+    "Do not cool for the first 3 minutes to pump hot wort through the CFC to sanitize it. After 3 minutes, open valve 'Water-cfc'."
   ],
   "settings": [
     {
@@ -88,7 +87,7 @@
       }
     },
     {
-      "id": "drain",
+      "id": "Drain",
       "settings": {
         "pos": "closed"
       }
@@ -107,6 +106,12 @@
     },
     {
       "id": "Out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Sample",
       "settings": {
         "pos": "closed"
       }
@@ -178,8 +183,14 @@
     {
       "id": "spbk",
       "settings": {
-        "val": 47,
+        "val": 57,
         "set": 20
+      }
+    },
+    {
+      "id": "cfcouttemp",
+      "settings": {
+        "val": 29
       }
     }
   ]

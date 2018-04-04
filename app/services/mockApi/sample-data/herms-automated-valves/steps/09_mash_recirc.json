@@ -1,5 +1,5 @@
 {
-  "id": 10,
+  "id": 9,
   "name": "Mash recirculation",
   "notes": [
     "To control the temperature of the mash, the wort is pumped through the coil in the HLT. The water in the HLT will heat up the wort.",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "drain",
+      "id": "Drain",
       "settings": {
         "pos": "closed"
       }
@@ -107,6 +107,12 @@
     },
     {
       "id": "Out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Sample",
       "settings": {
         "pos": "closed"
       }
@@ -180,6 +186,12 @@
     },
     {
       "id": "spbk",
+      "settings": {
+        "val": 20
+      }
+    },
+    {
+      "id": "cfcouttemp",
       "settings": {
         "val": 20
       }

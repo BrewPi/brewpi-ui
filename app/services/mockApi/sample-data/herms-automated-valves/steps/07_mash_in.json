@@ -1,5 +1,5 @@
 {
-  "id": 8,
+  "id": 7,
   "name": "Mash in from boil kettle",
   "notes": [
     "The strike water is pumped from the boil kettle to the mash tun.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "drain",
+      "id": "Drain",
       "settings": {
         "pos": "closed"
       }
@@ -104,6 +104,12 @@
     },
     {
       "id": "Out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Sample",
       "settings": {
         "pos": "closed"
       }
@@ -185,6 +191,12 @@
       "id": "p2",
       "settings":{
         "power": false
+      }
+    },
+    {
+      "id": "cfcouttemp",
+      "settings": {
+        "val": 20
       }
     }
   ]

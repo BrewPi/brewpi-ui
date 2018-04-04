@@ -13,6 +13,9 @@
   fill: #FFF;
   stroke: #FFF;
   stroke-width: 2pt;
+}
+
+.rotating {
   transform-origin: 25px 25px;
   transition-duration: 1s;
 }
@@ -29,16 +32,16 @@
   transform: rotate(270deg);
 }
 
-.powerClosing {
-  color: #F53;
-}
-
-.powerOpening {
-  color: #5C5;
-}
-
 .powerIcon {
   fill: #000;
+}
+
+.powerIcon.powerClosing {
+  fill: #F53;
+}
+
+.powerIcon.powerOpening {
+  fill: #5C5;
 }
 
 .ballOpen {
@@ -57,14 +60,16 @@
   position: absolute;
   bottom: -6px;
   text-align: center;
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 400;
   color: white;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
   text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
+  overflow: visible;
+  white-space: nowrap;
 }
 
 .Valve {

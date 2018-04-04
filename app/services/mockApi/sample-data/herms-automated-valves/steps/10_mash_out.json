@@ -1,5 +1,5 @@
 {
-  "id": 11,
+  "id": 10,
   "name": "Raise to sparge temperature",
   "notes": [
     "The temperature of the mash is now raised to the sparge temperature. This step stops the enzyme action and makes the grainbed and wort more fluid."
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "drain",
+      "id": "Drain",
       "settings": {
         "pos": "closed"
       }
@@ -103,6 +103,12 @@
     },
     {
       "id": "Out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Sample",
       "settings": {
         "pos": "closed"
       }
@@ -176,6 +182,12 @@
     },
     {
       "id": "spbk",
+      "settings": {
+        "val": 20
+      }
+    },
+    {
+      "id": "cfcouttemp",
       "settings": {
         "val": 20
       }

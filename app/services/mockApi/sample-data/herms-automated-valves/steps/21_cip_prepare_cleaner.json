@@ -1,8 +1,8 @@
 {
-  "id": 20,
-  "name": "CIP-Water: drain water",
+  "id": 21,
+  "name": "CIP: prepare cleaner in mash tun",
   "notes": [
-    "All cleaning water is pumped to the drain."
+    "We use the remaining hot water from the HLT to prepare a hot cleaning solution in the mash tun, for example PBW."
   ],
   "settings": [
     {
@@ -44,13 +44,13 @@
     {
       "id": "BK-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "BK-half",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -62,7 +62,7 @@
     {
       "id": "Route-1",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -84,9 +84,9 @@
       }
     },
     {
-      "id": "drain",
+      "id": "Drain",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -108,24 +108,28 @@
       }
     },
     {
+      "id": "Sample",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
       "id": "hlt",
       "settings": {
-        "volume": 30.0,
+        "volume": 10.0,
         "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 30,
-        "liquid": "water"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "volume": 0,
-        "liquid": "water"
+        "volume": 30,
+        "liquid": "cleaner"
       }
     },
     {
@@ -137,7 +141,7 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 10
+        "duty": 0
       }
     },
     {
@@ -149,30 +153,36 @@
     {
       "id": "p1",
       "settings":{
-        "power": false
+        "power": true,
+        "speed": 100
       }
     },
     {
       "id": "p2",
       "settings":{
-        "power": true
+        "power": false
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 60,
-        "set": 60
+        "val": 64
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 20
+        "val": 59.3
       }
     },
     {
       "id": "spbk",
+      "settings": {
+        "val": 20
+      }
+    },
+    {
+      "id": "cfcouttemp",
       "settings": {
         "val": 20
       }

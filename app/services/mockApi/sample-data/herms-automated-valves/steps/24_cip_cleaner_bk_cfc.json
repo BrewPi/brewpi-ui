@@ -1,8 +1,8 @@
 {
-  "id": 21,
-  "name": "CIP: prepare cleaner in mash tun",
+  "id": 24,
+  "name": "CIP-cleaner: recirc cleaner through boil kettle and CFC",
   "notes": [
-    "We use the remaining hot water from the HLT to prepare a hot cleaning solution in the mash tun, for example PBW."
+    "Shortly open the fermenter output and sample valve to get some cleaner through there too."
   ],
   "settings": [
     {
@@ -20,7 +20,7 @@
     {
       "id": "Coil-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -44,25 +44,25 @@
     {
       "id": "BK-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "BK-half",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Water",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "Route-1",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -80,11 +80,11 @@
     {
       "id": "Wort-cfc",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "drain",
+      "id": "Drain",
       "settings": {
         "pos": "closed"
       }
@@ -108,22 +108,26 @@
       }
     },
     {
+      "id": "Sample",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
       "id": "hlt",
       "settings": {
-        "volume": 10.0,
-        "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
+        "volume": 30,
+        "liquid": "cleaner"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "volume": 30,
-        "liquid": "cleaner"
       }
     },
     {
@@ -147,32 +151,38 @@
     {
       "id": "p1",
       "settings":{
-        "power": true,
+        "power": false,
         "speed": 100
       }
     },
     {
       "id": "p2",
       "settings":{
-        "power": false
+        "power": true
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 59
+        "val": 20
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 54.2
+        "val": 20
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 20
+        "val": 45.0
+      }
+    },
+    {
+      "id": "cfcouttemp",
+      "settings": {
+        "val": 44.5
       }
     }
   ]

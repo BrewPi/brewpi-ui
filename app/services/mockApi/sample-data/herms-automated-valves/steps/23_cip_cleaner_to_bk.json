@@ -1,8 +1,8 @@
 {
-  "id": 22,
-  "name": "CIP-cleaner: recirc cleaner through mash tun and coil",
+  "id": 23,
+  "name": "CIP-cleaner: pump cleaner to boil kettle",
   "notes": [
-    "The cleaning solution is pumped through all parts of the system, in this step and the next 3."
+    "While the cleaner is in the kettles, we can clean the kettle walls with a soft cloth."
   ],
   "settings": [
     {
@@ -26,13 +26,13 @@
     {
       "id": "Coil-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "BK-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -74,17 +74,17 @@
     {
       "id": "Wort",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "Wort-cfc",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "drain",
+      "id": "Drain",
       "settings": {
         "pos": "closed"
       }
@@ -108,6 +108,12 @@
       }
     },
     {
+      "id": "Sample",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
       "id": "hlt",
       "settings": {
       }
@@ -115,12 +121,14 @@
     {
       "id": "bk",
       "settings": {
+        "volume": 15,
+        "liquid": "cleaner"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "volume": 30,
+        "volume": 15,
         "liquid": "cleaner"
       }
     },
@@ -158,19 +166,25 @@
     {
       "id": "sphlt",
       "settings": {
-        "val": 59
+        "val": 20
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 54.2
+        "val": 49.9
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 20
+        "val": 48.4
+      }
+    },
+    {
+      "id": "cfcouttemp",
+      "settings": {
+        "val": 48.8
       }
     }
   ]

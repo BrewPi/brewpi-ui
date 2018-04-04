@@ -1,9 +1,9 @@
 {
-  "id": 19,
-  "name": "CIP-Water: flush MT and BK with water",
+  "id": 25,
+  "name": "CIP-cleaner: flush cleaner to drain",
   "notes": [
-    "We can rinse the mash tun and boil kettle at the same time.",
-    "Note that the HLT has only seen clean water and doesn't need flushing."
+    "After the cleaning solution has been pumped through the entire system, we pump it to the drain.",
+    "Repeat steps 18-20 to flush the system with clean water once more."
   ],
   "settings": [
     {
@@ -21,7 +21,7 @@
     {
       "id": "Coil-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -39,13 +39,13 @@
     {
       "id": "MT-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "BK-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -57,7 +57,7 @@
     {
       "id": "Water",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -75,7 +75,7 @@
     {
       "id": "Wort",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -85,15 +85,15 @@
       }
     },
     {
-      "id": "drain",
+      "id": "Drain",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Water-fill",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -109,24 +109,26 @@
       }
     },
     {
+      "id": "Sample",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
       "id": "hlt",
       "settings": {
-        "volume": 30.0,
-        "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 35,
-        "liquid": "water"
+        "volume": 10,
+        "liquid": "cleaner"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "volume": 10,
-        "liquid": "water"
       }
     },
     {
@@ -138,7 +140,7 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 10
+        "duty": 0
       }
     },
     {
@@ -150,7 +152,8 @@
     {
       "id": "p1",
       "settings":{
-        "power": false
+        "power": false,
+        "speed": 100
       }
     },
     {
@@ -162,20 +165,25 @@
     {
       "id": "sphlt",
       "settings": {
-        "val": 60,
-        "set": 60
+        "val": 20
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 20
+        "val": 54.2
       }
     },
     {
       "id": "spbk",
       "settings": {
         "val": 20
+      }
+    },
+    {
+      "id": "cfcouttemp",
+      "settings": {
+        "val": 42
       }
     }
   ]

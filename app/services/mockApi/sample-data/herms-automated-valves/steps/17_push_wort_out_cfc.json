@@ -1,9 +1,10 @@
 {
-  "id": 25,
-  "name": "CIP-cleaner: flush cleaner to drain",
+  "id": 17,
+  "name": "Push wort out of CFC",
   "notes": [
-    "After the cleaning solution has been pumped through the entire system, we pump it to the drain.",
-    "Repeat steps 18-20 to flush the system with clean water once more."
+    "When all wort has been pumped to the fermenter, there can be quite a bit left in the CFC.",
+    "We can push this wort out with water from the HLT or water input and catch it from the sample valve if we want to salvage it.",
+    "Note that we can also top up the fermenter by opening 'Out'."
   ],
   "settings": [
     {
@@ -15,13 +16,13 @@
     {
       "id": "MT-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "Coil-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -33,7 +34,7 @@
     {
       "id": "BK-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -45,7 +46,7 @@
     {
       "id": "BK-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -57,7 +58,7 @@
     {
       "id": "Water",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -69,7 +70,7 @@
     {
       "id": "Route-2",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -81,13 +82,13 @@
     {
       "id": "Wort-cfc",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "drain",
+      "id": "Drain",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -109,20 +110,28 @@
       }
     },
     {
+      "id": "Sample",
+      "settings": {
+        "pos": "open"
+      }
+    },
+    {
       "id": "hlt",
       "settings": {
+        "volume": 30.0,
+        "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 10,
-        "liquid": "cleaner"
+        "volume": 0
       }
     },
     {
       "id": "mt",
       "settings": {
+        "grain": 15
       }
     },
     {
@@ -134,7 +143,7 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 0
+        "duty": 10
       }
     },
     {
@@ -146,32 +155,40 @@
     {
       "id": "p1",
       "settings":{
-        "power": false,
-        "speed": 100
+        "power": true,
+        "speed": 50
       }
     },
     {
       "id": "p2",
       "settings":{
-        "power": true
+        "power": false
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 20
+        "val": 60,
+        "set": 60
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 54.2
+        "val": 20
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 20
+        "val": 40,
+        "set": 20
+      }
+    },
+    {
+      "id": "cfcouttemp",
+      "settings": {
+        "val": 20.5
       }
     }
   ]

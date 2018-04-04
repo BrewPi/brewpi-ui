@@ -1,5 +1,5 @@
 {
-  "id": 12,
+  "id": 11,
   "name": "Fly sparge",
   "notes": [
     "The wort is now pumped to the boil kettle",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "id": "drain",
+      "id": "Drain",
       "settings": {
         "pos": "closed"
       }
@@ -105,6 +105,12 @@
     },
     {
       "id": "Out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Sample",
       "settings": {
         "pos": "closed"
       }
@@ -180,6 +186,12 @@
       "id": "spbk",
       "settings": {
         "val": 73.3
+      }
+    },
+    {
+      "id": "cfcouttemp",
+      "settings": {
+        "val": 20
       }
     }
   ]

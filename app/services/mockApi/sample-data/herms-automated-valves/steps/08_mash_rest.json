@@ -1,5 +1,5 @@
 {
-  "id": 9,
+  "id": 8,
   "name": "Mash rest 10 min",
   "notes": [
     "It is recommended to give the grain bed some time to settle before you start pumping. This will prevent getting air in the pumps and will also prevent a stuck mash.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "drain",
+      "id": "Drain",
       "settings": {
         "pos": "closed"
       }
@@ -104,6 +104,12 @@
     },
     {
       "id": "Out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "Sample",
       "settings": {
         "pos": "closed"
       }
@@ -178,6 +184,12 @@
       "id": "p2",
       "settings":{
         "power": false
+      }
+    },
+    {
+      "id": "cfcouttemp",
+      "settings": {
+        "val": 20
       }
     }
   ]
