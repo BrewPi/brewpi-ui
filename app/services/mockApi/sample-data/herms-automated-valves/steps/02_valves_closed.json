@@ -2,8 +2,8 @@
   "id": 2,
   "name": "All valves closed",
   "notes": [
-    "On a brew day, you'll start with a quick rinse of the system with water (step 18-20), then brew (step 3-17), then clean again with water and cleaner (step 18-24)",
-    "The layout in real life is laid out the same as shown here, the vertical positioning matches the real world setup. The pumps are below the kettles and the drain is the lowest point of the setup."
+    "On a brew day, you'll start with a quick rinse of the system with water and PBW if you didn't leave it clean last time (see CIP steps). Then you brew and CIP again afterwards.",
+    "The layout in real life closely resembles the layout here. The pumps are below the kettles and the drain is the lowest point of the setup to be able to fully drain the system by opening all valves."
   ],
   "settings": [
     {
@@ -49,7 +49,7 @@
       }
     },
     {
-      "id": "BK-half",
+      "id": "MT-spray",
       "settings": {
         "pos": "closed"
       }
@@ -73,13 +73,13 @@
       }
     },
     {
-      "id": "Wort",
+      "id": "CFC-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "Wort-cfc",
+      "id": "CFC-in",
       "settings": {
         "pos": "closed"
       }
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "Sample",
+      "id": "BK-spray",
       "settings": {
         "pos": "closed"
       }

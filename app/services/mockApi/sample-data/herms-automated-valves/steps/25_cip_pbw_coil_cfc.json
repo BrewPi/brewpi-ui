@@ -1,8 +1,8 @@
 {
-  "id": 21,
-  "name": "CIP: prepare cleaner in mash tun",
+  "id": 25,
+  "name": "CIP PBW: HERMS coil and CFC",
   "notes": [
-    "We use the remaining hot water from the HLT to prepare a hot cleaning solution in the mash tun, for example PBW."
+    "The PBW is pumped to the mash tun through the HERMS coil and CFC."
   ],
   "settings": [
     {
@@ -20,19 +20,19 @@
     {
       "id": "Coil-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Coil-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "BK-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -44,11 +44,11 @@
     {
       "id": "BK-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "BK-half",
+      "id": "MT-spray",
       "settings": {
         "pos": "closed"
       }
@@ -56,7 +56,7 @@
     {
       "id": "Water",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -72,15 +72,15 @@
       }
     },
     {
-      "id": "Wort",
+      "id": "CFC-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "Wort-cfc",
+      "id": "CFC-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -108,7 +108,7 @@
       }
     },
     {
-      "id": "Sample",
+      "id": "BK-spray",
       "settings": {
         "pos": "closed"
       }
@@ -116,19 +116,21 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 10.0,
-        "liquid": "hotwater"
+        "liquid": "hotwater",
+        "volume": 20
       }
     },
     {
       "id": "bk",
       "settings": {
+        "volume": 10,
+        "liquid": "cleaner"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "volume": 30,
+        "volume": 15,
         "liquid": "cleaner"
       }
     },
@@ -153,38 +155,38 @@
     {
       "id": "p1",
       "settings":{
-        "power": true,
+        "power": false,
         "speed": 100
       }
     },
     {
       "id": "p2",
       "settings":{
-        "power": false
+        "power": true
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 64
+        "val": 73
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 59.3
+        "val": 70
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 20
+        "val": 70
       }
     },
     {
       "id": "cfcouttemp",
       "settings": {
-        "val": 20
+        "val": 70
       }
     }
   ]

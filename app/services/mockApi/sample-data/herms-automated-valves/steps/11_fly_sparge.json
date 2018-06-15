@@ -3,8 +3,7 @@
   "name": "Fly sparge",
   "notes": [
     "The wort is now pumped to the boil kettle",
-    "Hot water is pumped from the HLT on top of the grain bed to flush out all remaining sugar.",
-    "Both pumps are running on the same low speed to keep a constant level in the mash tun."
+    "Hot water is pumped from the HLT on top of the grain bed to flush out all remaining sugar."
   ],
   "settings": [
     {
@@ -50,7 +49,7 @@
       }
     },
     {
-      "id": "BK-half",
+      "id": "MT-spray",
       "settings": {
         "pos": "closed"
       }
@@ -74,13 +73,13 @@
       }
     },
     {
-      "id": "Wort",
+      "id": "CFC-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
-      "id": "Wort-cfc",
+      "id": "CFC-in",
       "settings": {
         "pos": "closed"
       }
@@ -110,7 +109,7 @@
       }
     },
     {
-      "id": "Sample",
+      "id": "BK-spray",
       "settings": {
         "pos": "closed"
       }
@@ -132,7 +131,7 @@
     {
       "id": "mt",
       "settings": {
-        "grain": 15,
+        "grain": 25,
         "volume": 15,
         "liquid": "runoff"
       }
@@ -172,20 +171,21 @@
     {
       "id": "sphlt",
       "settings": {
-        "val": 76.0,
-        "set": 75.5
+        "val": 76.5,
+        "set": 76.5
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 74.9
+        "val": 76.5
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 73.3
+        "val": 73.3,
+        "set": 100
       }
     },
     {

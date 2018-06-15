@@ -1,10 +1,11 @@
 {
-  "id": 16,
-  "name": "Pump wort to fermenter",
+  "id": 19,
+  "name": "CIP water: flush HERMS coil",
   "notes": [
-    "When the beer has been cooled enough, it is ready to be pumped to the fermenter. We pump the beer to the fermenter from the filter at the bottom of the kettle, through the CFC.",
-    "You do not have to wait for entire kettle to reach the desired fermenation temperature. There can be a 20 degree difference between CFC in- and output temperature. By pumping from the CFC output to the fermenter instead of from the kettle, you can transfer while doing the last bit of cooling. This saves a lot of time, because cooling gets slower as the temperature difference gets smaller.",
-    "Note that the boil kettle temperature can still be around 40 degrees, while the CFC output temperature is already around 20 degrees."
+    "Our final step is to clean the system. First we'll flush with water, then with a cleaner like PBW and then with water again.",
+    "This system is designed for Clean-In-Place (CIP): no kettles or hoses are moved and we let pumps do the work.",
+    "These steps are also recommended before brewing, but are not listed twice.",
+    "First we will flush the HLT coil with tap water (in opposite direction!). Don't do this too long to not cool the HLT."
   ],
   "settings": [
     {
@@ -22,13 +23,13 @@
     {
       "id": "Coil-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Coil-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -46,11 +47,11 @@
     {
       "id": "BK-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
-      "id": "BK-half",
+      "id": "MT-spray",
       "settings": {
         "pos": "closed"
       }
@@ -58,7 +59,7 @@
     {
       "id": "Water",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -74,27 +75,27 @@
       }
     },
     {
-      "id": "Wort",
+      "id": "CFC-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "Wort-cfc",
+      "id": "CFC-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "Drain",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Water-fill",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -106,11 +107,11 @@
     {
       "id": "Out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
-      "id": "Sample",
+      "id": "BK-spray",
       "settings": {
         "pos": "closed"
       }
@@ -118,21 +119,18 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 30.0,
+        "volume": 55.0,
         "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 10,
-        "liquid": "wort"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "grain": 15
       }
     },
     {
@@ -144,7 +142,7 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 10
+        "duty": 100
       }
     },
     {
@@ -162,15 +160,14 @@
     {
       "id": "p2",
       "settings":{
-        "power": true,
-        "speed": 100
+        "power": false
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 60,
-        "set": 60
+        "val": 73,
+        "set": 75
       }
     },
     {
@@ -182,14 +179,13 @@
     {
       "id": "spbk",
       "settings": {
-        "val": 40,
-        "set": 20
+        "val": 20
       }
     },
     {
       "id": "cfcouttemp",
       "settings": {
-        "val": 20.5
+        "val": 20
       }
     }
   ]

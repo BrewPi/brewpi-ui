@@ -3,7 +3,7 @@ import getopt
 import sys
 import os
 import json
-import OrderedDict
+from collections import OrderedDict
 
 # Read in command line arguments 
 try:
@@ -19,11 +19,11 @@ moveY = 0
 for o, a in opts:
     # print help message for command line options
     if o in ('-h', '--help'):
-        printStdErr("\n Available command line options: ")
-        printStdErr("--help: print this help message")
-        printStdErr("--x <value> move all components by value in the x direction")
-        printStdErr("--y <value> move all components by value in the y direction")
-        printStdErr("--file: <path> target file, required")
+        print("\n Available command line options: ")
+        print("--help: print this help message")
+        print("--x <value> move all components by value in the x direction")
+        print("--y <value> move all components by value in the y direction")
+        print("--file: <path> target file, required")
         exit()
     # supply a config file
     if o in ('-x', '--x'):
@@ -46,16 +46,18 @@ with open(targetFile) as fp:
         newPart = part
         oldX = part['x']
         oldY = part['y']
-        if type(oldX) is list:
-            newPart['x'] = [x + moveX for x in oldX]
-        else:
-            newPart['x'] = oldX + moveX
-        if type(oldY) is list:
-            newPart['y'] = [y + moveY for y in oldY]
-        else:
-            newPart['y'] = oldY + moveY
+        if oldY >= 9 and oldY <= 10 and type(oldY) is not list and \
+            oldX >= 2 and oldX <= 8 and type(oldX) is not list:
+            if type(oldX) is list:
+                newPart['x'] = [x + moveX for x in oldX]
+            else:
+                newPart['x'] = oldX + moveX
+            if type(oldY) is list:
+                newPart['y'] = [y + moveY for y in oldY]
+            else:
+                newPart['y'] = oldY + moveY
         newParts.append(newPart)
     newData['parts'] = newParts
 
-    with open(targetFile + '-moved.json', 'w') as outfile:
-        json.dump(newData, outfile)
+with open(targetFile, 'w') as outfile:
+    json.dump(newData, outfile)

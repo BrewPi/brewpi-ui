@@ -5,7 +5,8 @@
     "The wort is boiled for 60 or 90 minutes",
     "Hop is added in multiple additions, depending on the recipe.",
     "It is important to not cover the kettle during the boil, so DMS can boil off.",
-    "While the wort is boiling, you have time to scoop the grain out of the MT. A wet vac works great to suck up every last grain. "
+    "Any leftover sparge water can be pumped to the drain through the CFC, backflushing it.",
+    "While the wort is boiling, you have time to scoop the grain out of the MT. A wet vac works great to suck up every last grain."
   ],
   "settings": [
     {
@@ -35,7 +36,7 @@
     {
       "id": "BK-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -51,7 +52,7 @@
       }
     },
     {
-      "id": "BK-half",
+      "id": "MT-spray",
       "settings": {
         "pos": "closed"
       }
@@ -59,37 +60,37 @@
     {
       "id": "Water",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Route-1",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "Route-2",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "Wort",
+      "id": "CFC-out",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "Wort-cfc",
+      "id": "CFC-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Drain",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -111,7 +112,7 @@
       }
     },
     {
-      "id": "Sample",
+      "id": "BK-spray",
       "settings": {
         "pos": "closed"
       }
@@ -119,7 +120,7 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 30.0,
+        "volume": 15.0,
         "liquid": "hotwater"
       }
     },
@@ -133,7 +134,7 @@
     {
       "id": "mt",
       "settings": {
-        "grain": 15
+        "grain": 25
       }
     },
     {
@@ -157,7 +158,7 @@
     {
       "id": "p1",
       "settings":{
-        "power": false
+        "power": true
       }
     },
     {
@@ -169,8 +170,7 @@
     {
       "id": "sphlt",
       "settings": {
-        "val": 66.2,
-        "set": 60
+        "val": 74.2
       }
     },
     {
@@ -189,7 +189,7 @@
     {
       "id": "cfcouttemp",
       "settings": {
-        "val": 20
+        "val": 73
       }
     }
   ]

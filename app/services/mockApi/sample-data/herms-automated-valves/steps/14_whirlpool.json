@@ -3,11 +3,7 @@
   "name": "Whirlpool",
   "notes": [
     "When boiling is finished, we create a whirlpool in te kettle.",
-    "By whirlpooling the wort, suspended particles (trub) will be gathered in the center of the kettle and we can prevent pumping them to the fermenter later.",
-    "In this step, we bypass the counter-flow chiller, so it will not decrease our flow rate and the intensity of the whirlpool.",
-    "We take our wort from the middle of the kettle, instead of the filter. This prevents us from sucking small particles into the filter and clogging it.",
-    "The wort higher up in the kettle is also warmer than at the bottom because hot liquid rises. This makes the next step (cooling) quicker.",
-    "During the whirlpool, you can already connect the output tube to the fermenter and hang it in the kettle. Then you can pump some 90 degree worth through it to sanitize the tube."
+    "By whirlpooling the wort, suspended particles (trub) will be gathered in the center of the kettle and we can prevent pumping them to the fermenter later."
   ],
   "settings": [
     {
@@ -49,13 +45,13 @@
     {
       "id": "BK-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "BK-half",
+      "id": "MT-spray",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -67,7 +63,7 @@
     {
       "id": "Route-1",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -77,13 +73,13 @@
       }
     },
     {
-      "id": "Wort",
+      "id": "CFC-out",
       "settings": {
         "pos": "open"
       }
     },
     {
-      "id": "Wort-cfc",
+      "id": "CFC-in",
       "settings": {
         "pos": "closed"
       }
@@ -113,7 +109,7 @@
       }
     },
     {
-      "id": "Sample",
+      "id": "BK-spray",
       "settings": {
         "pos": "closed"
       }
@@ -121,8 +117,6 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 30.0,
-        "liquid": "hotwater"
       }
     },
     {
@@ -135,7 +129,6 @@
     {
       "id": "mt",
       "settings": {
-        "grain": 15
       }
     },
     {
@@ -147,7 +140,6 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 10
       }
     },
     {

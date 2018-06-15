@@ -11,7 +11,7 @@
     {
       "id": "HLT-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -47,11 +47,11 @@
     {
       "id": "BK-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "BK-half",
+      "id": "MT-spray",
       "settings": {
         "pos": "closed"
       }
@@ -65,23 +65,23 @@
     {
       "id": "Route-1",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "Route-2",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
-      "id": "Wort",
+      "id": "CFC-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "Wort-cfc",
+      "id": "CFC-in",
       "settings": {
         "pos": "closed"
       }
@@ -111,7 +111,7 @@
       }
     },
     {
-      "id": "Sample",
+      "id": "BK-spray",
       "settings": {
         "pos": "closed"
       }
@@ -119,7 +119,7 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 50.0,
+        "volume": 45,
         "liquid": "hotwater"
       }
     },
@@ -152,7 +152,7 @@
       "id": "sphlt",
       "settings": {
         "val": 45.3,
-        "set": 67
+        "set": 68.7
       }
     },
     {
@@ -171,13 +171,13 @@
     {
       "id": "p1",
       "settings":{
-        "power": false
+        "power": true
       }
     },
     {
       "id": "p2",
       "settings":{
-        "power": false
+        "power": true
       }
     },
     {
