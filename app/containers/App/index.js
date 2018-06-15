@@ -35,9 +35,6 @@ export default class App extends React.Component { // eslint-disable-line react/
               <IndexLinkContainer to={'/processview/herms-automated-valves'} >
                 <NavItem>HERMS automated valves</NavItem>
               </IndexLinkContainer>
-              <IndexLinkContainer to={'/processview/herms-manual-valves'} >
-                <NavItem>HERMS manual valves</NavItem>
-              </IndexLinkContainer>
               <IndexLinkContainer to={'/processview/herms-hose-swap'} >
                 <NavItem>HERMS hose swap</NavItem>
               </IndexLinkContainer>
