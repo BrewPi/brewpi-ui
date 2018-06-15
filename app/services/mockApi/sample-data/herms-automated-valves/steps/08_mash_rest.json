@@ -2,8 +2,8 @@
   "id": 8,
   "name": "Mash rest 10 min",
   "notes": [
-    "It is recommended to give the grain bed some time to settle before you start pumping. This will prevent getting air in the pumps and will also prevent a stuck mash.",
-    "Because the grain bed has some time to settle and compact, the pumps will suck fewer small particles towards the filter which could potentially clog it."
+    "After 5 minutes, stir the grain a bit to break up any dough balls.",
+    "It is recommended to give the grain bed some time to settle before you start pumping. If the grain bed gets some time to settle and compact, the pumps will suck fewer small particles towards the filter which could potentially clog it."
   ],
   "settings": [
     {
@@ -49,7 +49,7 @@
       }
     },
     {
-      "id": "BK-half",
+      "id": "MT-spray",
       "settings": {
         "pos": "closed"
       }
@@ -73,13 +73,13 @@
       }
     },
     {
-      "id": "Wort",
+      "id": "CFC-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
-      "id": "Wort-cfc",
+      "id": "CFC-in",
       "settings": {
         "pos": "closed"
       }
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "Sample",
+      "id": "BK-spray",
       "settings": {
         "pos": "closed"
       }
@@ -117,7 +117,7 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 50.0,
+        "volume": 45,
         "liquid": "hotwater"
       }
     },
@@ -130,7 +130,7 @@
     {
       "id": "mt",
       "settings": {
-        "grain": 15,
+        "grain": 25,
         "volume": 30,
         "liquid": "wort"
       }
@@ -156,15 +156,15 @@
     {
       "id": "sphlt",
       "settings": {
-        "val": 67,
-        "set": 67
+        "val": 68.7,
+        "set": 68.7
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 67.5,
-        "set": 67.7
+        "val": 66.5,
+        "set": 66.7
       }
     },
     {

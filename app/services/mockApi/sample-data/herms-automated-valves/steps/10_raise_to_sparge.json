@@ -1,15 +1,15 @@
 {
-  "id": 19,
-  "name": "CIP-Water: flush MT and BK with water",
+  "id": 10,
+  "name": "Raise to sparge temperature",
   "notes": [
-    "We can rinse the mash tun and boil kettle at the same time.",
-    "Note that the HLT has only seen clean water and doesn't need flushing."
+    "The temperature of the mash is now raised to the sparge temperature. This step stops the enzyme action and makes the grainbed and wort more fluid.",
+    "After the mash has reached the sparge temperature, you can stop pump 2 and add extra sparge water to the HLT if needed."
   ],
   "settings": [
     {
       "id": "HLT-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -21,19 +21,19 @@
     {
       "id": "Coil-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Coil-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "BK-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -49,7 +49,7 @@
       }
     },
     {
-      "id": "BK-half",
+      "id": "MT-spray",
       "settings": {
         "pos": "closed"
       }
@@ -57,7 +57,7 @@
     {
       "id": "Water",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -73,13 +73,13 @@
       }
     },
     {
-      "id": "Wort",
+      "id": "CFC-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
-      "id": "Wort-cfc",
+      "id": "CFC-in",
       "settings": {
         "pos": "closed"
       }
@@ -93,7 +93,7 @@
     {
       "id": "Water-fill",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "Sample",
+      "id": "BK-spray",
       "settings": {
         "pos": "closed"
       }
@@ -117,22 +117,22 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 30.0,
+        "volume": 45,
         "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 35,
-        "liquid": "water"
+        "volume": 0
       }
     },
     {
       "id": "mt",
       "settings": {
-        "volume": 10,
-        "liquid": "water"
+        "grain": 25,
+        "volume": 30,
+        "liquid": "wort"
       }
     },
     {
@@ -144,7 +144,7 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 10
+        "duty": 100
       }
     },
     {
@@ -156,38 +156,41 @@
     {
       "id": "p1",
       "settings":{
-        "power": false
+        "power": true,
+        "speed": 100
       }
     },
     {
       "id": "p2",
       "settings":{
-        "power": true
+        "power": true,
+        "speed": 100
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 64.2,
-        "set": 65
+        "val": 77.5,
+        "set": 81.0
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 15
+        "val": 72.9,
+        "set": 76.5
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 15
+        "val": 20
       }
     },
     {
       "id": "cfcouttemp",
       "settings": {
-        "val": 16.5
+        "val": 20
       }
     }
   ]

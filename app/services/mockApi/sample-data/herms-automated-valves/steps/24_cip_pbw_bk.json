@@ -1,10 +1,9 @@
 {
-  "id": 12,
-  "name": "Sparge Out",
+  "id": 24,
+  "name": "CIP PBW: boil kettle",
   "notes": [
-    "The water pump is stopped and all wort is pumped to the boil kettle.",
-    "As soon as the boil kettle element is under water, the element can be turned on to start bringing the wort to boil.",
-    "Go to the next step (boil) when all wort is transfered to close valves and prevent wort from leaking back into the mash tun due to communicating vessels."
+    "The boil kettle is sprayed clean by the spray ball in the lid.",
+    "Shortly open the BK-in valve to also clean that path."
   ],
   "settings": [
     {
@@ -16,13 +15,13 @@
     {
       "id": "MT-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Coil-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -34,19 +33,19 @@
     {
       "id": "BK-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "MT-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "BK-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -64,7 +63,7 @@
     {
       "id": "Route-1",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -82,7 +81,7 @@
     {
       "id": "CFC-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -112,29 +111,26 @@
     {
       "id": "BK-spray",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "hlt",
       "settings": {
-        "volume": 30.0,
-        "liquid": "hotwater"
+        "liquid": "hotwater",
+        "volume": 15
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 42,
-        "liquid": "wort"
+        "volume": 30,
+        "liquid": "cleaner"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "grain": 25,
-        "volume": 8,
-        "liquid": "runoff"
       }
     },
     {
@@ -152,39 +148,38 @@
     {
       "id": "heat_bk",
       "settings": {
-        "duty": 100
+        "duty": 0
       }
     },
     {
       "id": "p1",
       "settings":{
-        "power": false
+        "power": false,
+        "speed": 100
       }
     },
     {
       "id": "p2",
       "settings":{
-        "power": true,
-        "speed": 40
+        "power": true
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 75.2
+        "val": 73
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 72.8
+        "val": 70
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 82.9,
-        "set": 100
+        "val": 70
       }
     },
     {

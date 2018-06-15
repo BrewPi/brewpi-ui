@@ -1,8 +1,9 @@
 {
-  "id": 24,
-  "name": "CIP-cleaner: recirc cleaner through boil kettle and CFC",
+  "id": 18,
+  "name": "Top up fermenter",
   "notes": [
-    "Shortly open the fermenter output and sample valve to get some cleaner through there too."
+    "If extra top-up water is needed to reach the desired gravity and volume in the fermenter, you can pump water from the HLT to the fermenter. If needed, heat it enough to sanitize it.",
+    "This will also push the wort left in the CFC to the fermenter."
   ],
   "settings": [
     {
@@ -14,13 +15,13 @@
     {
       "id": "MT-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "Coil-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -32,7 +33,7 @@
     {
       "id": "BK-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -44,19 +45,19 @@
     {
       "id": "BK-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
-      "id": "BK-half",
+      "id": "MT-spray",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "Water",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -72,13 +73,13 @@
       }
     },
     {
-      "id": "Wort",
+      "id": "CFC-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "Wort-cfc",
+      "id": "CFC-in",
       "settings": {
         "pos": "open"
       }
@@ -98,17 +99,17 @@
     {
       "id": "Water-cfc",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "Sample",
+      "id": "BK-spray",
       "settings": {
         "pos": "closed"
       }
@@ -116,13 +117,14 @@
     {
       "id": "hlt",
       "settings": {
+        "volume": 55.0,
+        "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 30,
-        "liquid": "cleaner"
+        "volume": 0
       }
     },
     {
@@ -139,7 +141,7 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 0
+        "duty": 10
       }
     },
     {
@@ -151,38 +153,40 @@
     {
       "id": "p1",
       "settings":{
-        "power": false,
-        "speed": 100
+        "power": true,
+        "speed": 50
       }
     },
     {
       "id": "p2",
       "settings":{
-        "power": true
+        "power": false
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 20
+        "val": 75,
+        "set": 75
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 20
+        "val": 72
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 45.0
+        "val": 40,
+        "set": 20
       }
     },
     {
       "id": "cfcouttemp",
       "settings": {
-        "val": 44.5
+        "val": 20
       }
     }
   ]

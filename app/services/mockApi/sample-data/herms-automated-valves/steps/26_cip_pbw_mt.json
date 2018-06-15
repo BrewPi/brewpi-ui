@@ -1,11 +1,9 @@
 {
-  "id": 15,
-  "name": "Cool",
+  "id": 26,
+  "name": "CIP PBW: mash tun",
   "notes": [
-    "DMS (Dimethyl Sulfide) is created in wort whenever it is heated. It is an off-flavor that has the aroma of cooked corn.",
-    "When the wort is still boiling, DMS is boiled off and will not be a problem.",
-    "When boiling is stopped, DMS is no longer boiled off, but it is still created until the beer is cooled. Therefore, we want to cross this temperature range as quickly as possible. This is done with a counter-flow wort chiller (CFC).",
-    "Do not cool for the first 3 minutes to pump hot wort through the CFC to sanitize it. After 3 minutes, open valve 'Water-cfc'."
+    "The mash tun is sprayed clean by the spray ball in the lid.",
+    "Shortly open the MT-in valve to also clean that path."
   ],
   "settings": [
     {
@@ -35,13 +33,13 @@
     {
       "id": "BK-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "MT-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -51,7 +49,7 @@
       }
     },
     {
-      "id": "BK-half",
+      "id": "MT-spray",
       "settings": {
         "pos": "open"
       }
@@ -71,19 +69,19 @@
     {
       "id": "Route-2",
       "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Wort",
-      "settings": {
-        "pos": "closed"
-      }
-    },
-    {
-      "id": "Wort-cfc",
-      "settings": {
         "pos": "open"
+      }
+    },
+    {
+      "id": "CFC-out",
+      "settings": {
+        "pos": "closed"
+      }
+    },
+    {
+      "id": "CFC-in",
+      "settings": {
+        "pos": "closed"
       }
     },
     {
@@ -111,7 +109,7 @@
       }
     },
     {
-      "id": "Sample",
+      "id": "BK-spray",
       "settings": {
         "pos": "closed"
       }
@@ -119,21 +117,20 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 30.0,
-        "liquid": "hotwater"
+        "liquid": "hotwater",
+        "volume": 15
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 50,
-        "liquid": "wort"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "grain": 15
+        "volume": 30,
+        "liquid": "cleaner"
       }
     },
     {
@@ -145,7 +142,7 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 10
+        "duty": 0
       }
     },
     {
@@ -157,40 +154,38 @@
     {
       "id": "p1",
       "settings":{
-        "power": false
+        "power": false,
+        "speed": 100
       }
     },
     {
       "id": "p2",
       "settings":{
-        "power": true,
-        "speed": 100
+        "power": true
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 60,
-        "set": 60
+        "val": 73
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 20
+        "val": 70
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 57,
-        "set": 20
+        "val": 20
       }
     },
     {
       "id": "cfcouttemp",
       "settings": {
-        "val": 29
+        "val": 20
       }
     }
   ]

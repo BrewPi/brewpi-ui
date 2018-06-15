@@ -1,10 +1,8 @@
 {
-  "id": 17,
-  "name": "Push wort out of CFC",
+  "id": 20,
+  "name": "CIP water: flush CFC",
   "notes": [
-    "When all wort has been pumped to the fermenter, there can be quite a bit left in the CFC.",
-    "We can push this wort out with water from the HLT or water input and catch it from the sample valve if we want to salvage it.",
-    "Note that we can also top up the fermenter by opening 'Out'."
+    "Next we'll flush the CFC (also in opposite direction!)"
   ],
   "settings": [
     {
@@ -50,7 +48,7 @@
       }
     },
     {
-      "id": "BK-half",
+      "id": "MT-spray",
       "settings": {
         "pos": "closed"
       }
@@ -64,7 +62,7 @@
     {
       "id": "Route-1",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -74,13 +72,13 @@
       }
     },
     {
-      "id": "Wort",
+      "id": "CFC-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "Wort-cfc",
+      "id": "CFC-in",
       "settings": {
         "pos": "open"
       }
@@ -88,13 +86,13 @@
     {
       "id": "Drain",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Water-fill",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -110,28 +108,26 @@
       }
     },
     {
-      "id": "Sample",
+      "id": "BK-spray",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "hlt",
       "settings": {
-        "volume": 30.0,
+        "volume": 55.0,
         "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 0
       }
     },
     {
       "id": "mt",
       "settings": {
-        "grain": 15
       }
     },
     {
@@ -155,8 +151,7 @@
     {
       "id": "p1",
       "settings":{
-        "power": true,
-        "speed": 50
+        "power": false
       }
     },
     {
@@ -168,8 +163,8 @@
     {
       "id": "sphlt",
       "settings": {
-        "val": 60,
-        "set": 60
+        "val": 75,
+        "set": 75
       }
     },
     {
@@ -181,14 +176,13 @@
     {
       "id": "spbk",
       "settings": {
-        "val": 40,
-        "set": 20
+        "val": 20
       }
     },
     {
       "id": "cfcouttemp",
       "settings": {
-        "val": 20.5
+        "val": 15
       }
     }
   ]

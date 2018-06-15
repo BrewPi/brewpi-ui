@@ -1,21 +1,21 @@
 {
-  "id": 25,
-  "name": "CIP-cleaner: flush cleaner to drain",
+  "id": 17,
+  "name": "Empty HLT coil",
   "notes": [
-    "After the cleaning solution has been pumped through the entire system, we pump it to the drain.",
-    "Repeat steps 18-20 to flush the system with clean water once more."
+    "To salvage the wort left in the HLT coil, you can let it drain to the fermenter.",
+    "If gravity is not enough to do it, you could add some water in the mash tun or boil kettle to push with pump 2."
   ],
   "settings": [
     {
       "id": "HLT-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "MT-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -27,29 +27,29 @@
     {
       "id": "Coil-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "BK-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "MT-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "BK-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
-      "id": "BK-half",
+      "id": "MT-spray",
       "settings": {
         "pos": "closed"
       }
@@ -73,13 +73,13 @@
       }
     },
     {
-      "id": "Wort",
+      "id": "CFC-out",
       "settings": {
         "pos": "closed"
       }
     },
     {
-      "id": "Wort-cfc",
+      "id": "CFC-in",
       "settings": {
         "pos": "closed"
       }
@@ -87,7 +87,7 @@
     {
       "id": "Drain",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -99,17 +99,17 @@
     {
       "id": "Water-cfc",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "Sample",
+      "id": "BK-spray",
       "settings": {
         "pos": "closed"
       }
@@ -117,13 +117,14 @@
     {
       "id": "hlt",
       "settings": {
+        "volume": 65.0,
+        "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 10,
-        "liquid": "cleaner"
+        "volume": 0
       }
     },
     {
@@ -140,7 +141,7 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 0
+        "duty": 100
       }
     },
     {
@@ -152,38 +153,39 @@
     {
       "id": "p1",
       "settings":{
-        "power": false,
-        "speed": 100
+        "power": true
       }
     },
     {
       "id": "p2",
       "settings":{
-        "power": true
+        "power": false
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 20
+        "val": 73,
+        "set": 75
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 54.2
+        "val": 72
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 20
+        "val": 40,
+        "set": 20
       }
     },
     {
       "id": "cfcouttemp",
       "settings": {
-        "val": 42
+        "val": 20
       }
     }
   ]

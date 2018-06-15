@@ -1,20 +1,24 @@
 {
-  "id": 22,
-  "name": "CIP-cleaner: recirc cleaner through mash tun and coil",
+  "id": 16,
+  "name": "Cool and transfer",
   "notes": [
-    "The cleaning solution is pumped through all parts of the system, in this step and the next 3."
+    "In this setup, we cool in a single pass, while also re-using the heat by transfering it to the HLT.", 
+    "You should now connect the transfer hose to your fermenter.",
+    "Fill the HLT with water. This water and the HERMS coil will act as a pre-cooler and will be heated to be later used for cleaning", 
+    "Also open the cooling water for the CFC, and then start pump 2 to do a single pass cool through the HLT coil and the CFC.", 
+    "Adjust the flow rate to maintain the desired output temperature" 
   ],
   "settings": [
     {
       "id": "HLT-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "MT-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -38,17 +42,17 @@
     {
       "id": "MT-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "BK-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "BK-half",
+      "id": "MT-spray",
       "settings": {
         "pos": "closed"
       }
@@ -62,7 +66,7 @@
     {
       "id": "Route-1",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -72,15 +76,15 @@
       }
     },
     {
-      "id": "Wort",
+      "id": "CFC-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
-      "id": "Wort-cfc",
+      "id": "CFC-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -98,17 +102,17 @@
     {
       "id": "Water-cfc",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
-      "id": "Sample",
+      "id": "BK-spray",
       "settings": {
         "pos": "closed"
       }
@@ -116,18 +120,20 @@
     {
       "id": "hlt",
       "settings": {
+        "volume": 65.0,
+        "liquid": "water"
       }
     },
     {
       "id": "bk",
       "settings": {
+        "volume": 50,
+        "liquid": "wort"
       }
     },
     {
       "id": "mt",
       "settings": {
-        "volume": 30,
-        "liquid": "cleaner"
       }
     },
     {
@@ -139,7 +145,6 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 0
       }
     },
     {
@@ -151,32 +156,33 @@
     {
       "id": "p1",
       "settings":{
-        "power": false,
-        "speed": 100
+        "power": true
       }
     },
     {
       "id": "p2",
       "settings":{
-        "power": true
+        "power": true,
+        "speed": 100
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 20
+        "val": 15
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 52.7
+        "val": 20
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 20
+        "val": 95,
+        "set": 20
       }
     },
     {
