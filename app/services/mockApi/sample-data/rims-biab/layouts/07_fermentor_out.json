@@ -52,7 +52,8 @@
       "part": {
         "type": "PUMP",
         "rotate": 90,
-        "id": "p1"
+        "id": "p1",
+        "flip": true
       },
       "x": 0,
       "y": 9
