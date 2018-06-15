@@ -12,8 +12,12 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
+import { withRouter } from 'react-router';
 
-export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
+class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  componentDidMount() {
+    this.props.history.push('/processview/herms-automated-valves'); // eslint-disable-line
+  }
 
   render() {
     return (
@@ -23,3 +27,5 @@ export default class HomePage extends React.Component { // eslint-disable-line r
     );
   }
 }
+
+export default withRouter(HomePage);
