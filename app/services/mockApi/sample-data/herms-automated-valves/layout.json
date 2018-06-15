@@ -6,31 +6,27 @@
         "rotate": 90,
         "type": "TUBE_ELBOW"
       },
+      "x": 0,
+      "y": 2
+    },
+    {
+      "part": {
+        "type": "TUBE_STRAIGHT"
+      },
       "x": 1,
-      "y": 1
+      "y": 2
     },
     {
       "part": {
         "rotate": 90,
         "type": "TUBE_STRAIGHT"
       },
-      "x": 1,
+      "x": 0,
       "y": [
-        2,
         3,
         4,
         5,
         6,
-        7    
-      ]
-    },
-    {
-      "part": {
-        "rotate": 90,
-        "type": "TUBE_STRAIGHT"
-      },
-      "x": 2,
-      "y": [
         7,
         8,
         9
@@ -38,48 +34,35 @@
     },
     {
       "part": {
+        "rotate": 90,
         "type": "TUBE_STRAIGHT"
-      },
-      "x": 3,
-      "y": 11
-    },
-    {
-      "part": {
-        "type": "TUBE_ELBOW"
       },
       "x": 1,
       "y": 8
-    },    
-    {
-      "part": {
-        "rotate": 0,
-        "id": "in1",
-        "type": "TUBE_INPUT"
-      },
-      "x": 2,
-      "y": 13
     },
     {
       "part": {
         "rotate": 90,
         "type": "TUBE_ELBOW"
       },
-      "x": 2,
-      "y": 6
+      "x": 1,
+      "y": 7
     },
     {
       "part": {
         "type": "TUBE_ELBOW"
       },
-      "x": 2,
+      "x": 0,
       "y": 11
     },
     {
       "part": {
-        "type": "TUBE_STRAIGHT"
+        "rotate": 0,
+        "id": "in1",
+        "type": "TUBE_INPUT"
       },
-      "x": 2,
-      "y": 1
+      "x": 0,
+      "y": 13
     },
     {
       "part": {
@@ -87,8 +70,8 @@
         "id": "p1",
         "rotate": 270
       },
-      "x": 2,
-      "y": 10
+      "x": 1,
+      "y": 9
     },
     {
       "part": {
@@ -100,22 +83,22 @@
           "width": 4
         }
       },
-      "x": 3,
-      "y": 1
+      "x": 2,
+      "y": 2
     },
     {
       "part": {
         "type": "TUBE_WHIRLPOOL"
       },
-      "x": 3,
-      "y": 1
+      "x": 2,
+      "y": 2
     },
     {
       "part": {
         "rotate": 180,
         "type": "COIL"
       },
-      "x": 4,
+      "x": 3,
       "y": 3
     },
     {
@@ -123,37 +106,22 @@
         "type": "HEATING_ELEMENT",
         "id": "heat_hlt"
       },
-      "x": 2,
-      "y": 5
+      "x": 1,
+      "y": 6
     },
     {
       "part": {
         "type": "TUBE_DIP"
       },
-      "x": 3,
-      "y": 6
-    },
-    {
-      "part": {
-        "type": "TUBE_DIP",
-        "flip": true
-      },
-      "x": 19,
-      "y": 4
-    },
-    {
-      "part": {
-        "type": "TUBE_STRAIGHT"
-      },
-      "x": [3, 4, 10],
-      "y": 8
+      "x": 2,
+      "y": 7
     },
     {
       "part": {
         "type": "TUBE_STRAIGHT",
         "rotate": 90
       },
-      "x": 5,
+      "x": 4,
       "y": 9
     },
     {
@@ -165,37 +133,41 @@
           "slot": 1
         }
       },
-      "x": 5,
+      "x": 0,
       "y": 10
     },
     {
       "part": {
-        "rotate": 180,
+        "rotate": 90,
         "type": "TUBE_ELBOW"
       },
-      "x": 5,
+      "x": 4,
       "y": 8
     },
     {
       "part": {
         "type": "VALVE_CHECK",
-        "rotate": 0
+        "rotate": 90
       },
-      "x": 4,
-      "y": 11
+      "x": 1,
+      "y": 10
     },
     {
       "part": {
         "type": "TUBE_CROSS"
       },
-      "x": [5,9],
+      "x": [
+        1,
+        6,
+        14
+      ],
       "y": 11
     },
     {
       "part": {
         "type": "TUBE_TEE"
       },
-      "x": 5,
+      "x": 1,
       "y": 13
     },
     {
@@ -206,7 +178,7 @@
           "slot": 2
         }
       },
-      "x": 6,
+      "x": 3,
       "y": 11
     },
     {
@@ -214,16 +186,25 @@
         "rotate": 180,
         "type": "TUBE_ELBOW"
       },
-      "x": 8,
+      "x": 6,
       "y": 4
+    },
+    {
+      "part": {
+        "rotate": 180,
+        "type": "TUBE_ELBOW"
+      },
+      "x": 7,
+      "y": 3
     },
     {
       "part": {
         "rotate": 90,
         "type": "TUBE_STRAIGHT"
       },
-      "x": 8,
+      "x": 7,
       "y": [
+        4,
         5,
         6,
         7,
@@ -232,54 +213,19 @@
     },
     {
       "part": {
-        "rotate": 0,
-        "type": "TUBE_BRIDGE"
-      },
-      "x": 7,
-      "y": 4
-    },
-    {
-      "part": {
-        "rotate": 0,
-        "type": "TUBE_BRIDGE"
-      },
-      "x": 2,
-      "y": 8
-    },
-    {
-      "part": {
         "type": "TUBE_STRAIGHT"
       },
-      "x": [        
+      "x": [
+        2,
         3,
         4,
-        7,
-        8,
-        9,
-        14,
-        15,
-        17,
-        18
-        ],
-      "y": 13
-    },
-    {
-      "part": {
-        "type": "TUBE_STRAIGHT"
-      },
-      "x": [        
-        15,
-        17,
-        18
+        5,
+        6,
+        11,
+        12,
+        13
       ],
-      "y": 12
-    },
-    {
-      "part": {
-        "type": "TUBE_STRAIGHT"
-      },
-      "x": 15,
-      "y": 1
+      "y": 13
     },
     {
       "part": {
@@ -287,14 +233,6 @@
         "rotate": 90
       },
       "x": 16,
-      "y": 13
-    },
-    {
-      "part": {
-        "type": "TUBE_STRAIGHT",
-        "rotate": 90
-      },
-      "x": 11,
       "y": 9
     },
     {
@@ -302,13 +240,14 @@
         "type": "TUBE_STRAIGHT"
       },
       "x": [
+        2,
+        8,
+        9,
+        10,
+        11,
         12,
         13,
-        15,
-        16,
-        17,
-        18,
-        19
+        15
       ],
       "y": 11
     },
@@ -317,38 +256,38 @@
         "rotate": 90,
         "type": "TUBE_ELBOW"
       },
-      "x": 7,
-      "y": 1
+      "x": 8,
+      "y": 2
     },
     {
       "part": {
         "rotate": 90,
         "type": "TUBE_STRAIGHT"
       },
-      "x": 7,
+      "x": 8,
       "y": [
-        2,
         3,
         4,
         5,
         6,
-        7,
-        8,
-        9
+        7
       ]
     },
     {
       "part": {
         "type": "TUBE_BRIDGE"
       },
-      "x": 7,
-      "y": 3
+      "x": [
+        6,
+        7
+      ],
+      "y": 8
     },
     {
       "part": {
         "type": "TUBE_STRAIGHT"
       },
-      "x": 8,
+      "x": 6,
       "y": 3
     },
     {
@@ -360,32 +299,50 @@
           "slot": 3
         }
       },
-      "x": 7,
+      "x": 4,
       "y": 10
     },
     {
       "part": {
-        "rotate": 180,
+        "rotate": 90,
         "type": "TUBE_ELBOW"
       },
-      "x": 9,
-      "y": 3
+      "x": 16,
+      "y": 8
+    },
+    {
+      "part": {
+        "rotate": 270,
+        "type": "TUBE_ELBOW"
+      },
+      "x": 20,
+      "y": 8
     },
     {
       "part": {
         "rotate": 90,
         "type": "TUBE_STRAIGHT"
       },
-      "x": 9,
+      "x": 6,
       "y": [
-        4,
         5,
         6,
-        7
+        7,
+        8,
+        9
       ]
     },
     {
       "part": {
+        "type": "TUBE_ELBOW",
+        "rotate": 0
+      },
+      "x": 7,
+      "y": 9
+    },
+    {
+      "part": {
+        "rotate": 180,
         "type": "TUBE_ELBOW"
       },
       "x": 8,
@@ -393,25 +350,10 @@
     },
     {
       "part": {
-        "rotate": 180,
-        "type": "TUBE_ELBOW"
+        "type": "TUBE_ELBOW",
+        "rotate": 270
       },
-      "x": 9,
-      "y": 9
-    },
-    {
-      "part": {
-        "type": "TUBE_ELBOW"
-      },
-      "x": 9,
-      "y": 8
-    },
-    {
-      "part": {
-        "rotate": 180,
-        "type": "TUBE_ELBOW"
-      },
-      "x": 11,
+      "x": 8,
       "y": 8
     },
     {
@@ -419,7 +361,7 @@
         "type": "TUBE_ELBOW",
         "rotate": 0
       },
-      "x": 9,
+      "x": 6,
       "y": 12
     },
     {
@@ -432,25 +374,15 @@
           "width": 4
         }
       },
-      "x": 10,
-      "y": 1
+      "x": 9,
+      "y": 2
     },
     {
       "part": {
         "type": "TUBE_INLET"
       },
-      "x": 10,
-      "y": 1
-    },
-    {
-      "part": {
-        "type": "TUBE_STRAIGHT"
-      },
-      "x": [
-        8,
-        9
-      ],
-      "y": 1
+      "x": 9,
+      "y": 2
     },
     {
       "part": {
@@ -460,7 +392,7 @@
           "slot": 4
         }
       },
-      "x": 8,
+      "x": 5,
       "y": 11
     },
     {
@@ -469,7 +401,7 @@
         "type": "VALVE_MOTOR",
         "rotate": 270
       },
-      "x": 5,
+      "x": 1,
       "y": 12
     },
     {
@@ -481,7 +413,7 @@
           "slot": 5
         }
       },
-      "x": 9,
+      "x": 6,
       "y": 10
     },
     {
@@ -492,24 +424,16 @@
           "slot": 6
         }
       },
-      "x": 10,
+      "x": 7,
       "y": 11
     },
     {
       "part": {
         "id": "Water-cfc",
-        "type": "VALVE_MOTOR"
+        "type": "VALVE_MANUAL"
       },
-      "x": 6,
+      "x": 7,
       "y": 13
-    },
-    {
-      "part": {
-        "rotate": 90,
-        "type": "TUBE_STRAIGHT"
-      },
-      "x": 14,
-      "y": [7,8,9]
     },
     {
       "part": {
@@ -520,7 +444,7 @@
           "slot": 7
         }
       },
-      "x": 11,
+      "x": 8,
       "y": 10
     },
     {
@@ -532,7 +456,7 @@
         },
         "rotate": 270
       },
-      "x": 14,
+      "x": 16,
       "y": 10
     },
     {
@@ -540,9 +464,8 @@
         "type": "TUBE_TEE"
       },
       "x": [
-        7,
-        11,
-        14
+        4,
+        8
       ],
       "y": 11
     },
@@ -551,18 +474,7 @@
         "type": "LAUTERHEXE",
         "rotate": 180
       },
-      "x": 10,
-      "y": 6
-    },
-    {
-      "part": {
-        "type": "TUBE_STRAIGHT"
-      },
-      "x": [
-        16,
-        17,
-        18        
-      ],
+      "x": 9,
       "y": 7
     },
     {
@@ -570,44 +482,20 @@
         "rotate": 180,
         "type": "TUBE_ELBOW"
       },
-      "x": 15,
-      "y": 6
-    },
-    {
-      "part": {
-        "type": "TUBE_BRIDGE"
-      },
-      "x": 14,
-      "y": 6
-    },
-    {
-      "part": {
-        "type": "TUBE_ELBOW"
-      },
-      "x": 15,
+      "x": 13,
       "y": 7
     },
     {
       "part": {
-        "rotate": 90,
         "type": "TUBE_STRAIGHT"
       },
-      "x": 14,
-      "y": [
-        2,
-        3,
-        4,
+      "x": [
         5,
-        6
-      ]
-    },
-    {
-      "part": {
-        "rotate": 90,
-        "type": "TUBE_ELBOW"
-      },
-      "x": 14,
-      "y": 1
+        17,
+        18,
+        19
+      ],
+      "y": 8
     },
     {
       "part": {
@@ -620,45 +508,29 @@
         }
       },
       "x": 16,
-      "y": 1
+      "y": 2
     },
     {
       "part": {
-        "type": "TUBE_WHIRLPOOL"
+        "type": "TUBE_WHIRLPOOL",
+        "flip": true
       },
-      "x": 16,
-      "y": 1
+      "x": 19,
+      "y": 2
     },
     {
       "part": {
         "type": "HEATING_ELEMENT",
-        "flip": true,
         "id": "heat_bk"
       },
-      "x": 16,
-      "y": 5
-    },
-    {
-      "part": {
-        "type": "LAUTERHEXE",
-        "rotate": 180
-      },
-      "x": 16,
+      "x": 15,
       "y": 6
     },
     {
       "part": {
-        "type": "TUBE_STRAIGHT"
+        "type": "TUBE_DIP"
       },
-      "x": 20,
-      "y": 4
-    },
-    {
-      "part": {
-        "rotate": 90,
-        "type": "TUBE_STRAIGHT"
-      },
-      "x": 20,
+      "x": 16,
       "y": 7
     },
     {
@@ -666,8 +538,14 @@
         "rotate": 90,
         "type": "TUBE_STRAIGHT"
       },
-      "x": 21,
-      "y": [5, 6, 7]
+      "x": 20,
+      "y": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
     },
     {
       "part": {
@@ -678,16 +556,15 @@
           "slot": 9
         }
       },
-      "x": 19,
+      "x": 13,
       "y": 8
     },
     {
       "part": {
-        "type": "TUBE_OUTPUT",
-        "rotate": 90
+        "type": "TUBE_OUTPUT"
       },
-      "x": 16,
-      "y": 15
+      "x": 12,
+      "y": 12
     },
     {
       "part": {
@@ -698,31 +575,8 @@
           "slot": 10
         }
       },
-      "x": 20,
+      "x": 15,
       "y": 8
-    },
-    {
-      "part": {
-        "id": "BK-half",
-        "rotate": 270,
-        "type": "VALVE_MOTOR",
-        "options": {
-          "slot": 14
-        }
-      },
-      "x": 21,
-      "y": 8
-    },
-    {
-      "part": {
-        "id": "Wort",
-        "type": "VALVE_MOTOR",
-        "options": {
-          "slot": 11
-        }
-      },
-      "x": 19,
-      "y": 12
     },
     {
       "part": {
@@ -732,7 +586,7 @@
           "slot": 12
         }
       },
-      "x": 14,
+      "x": 7,
       "y": 12
     },
     {
@@ -742,27 +596,17 @@
         "options": {
           "slot": 13
         }
-
       },
-      "x": 19,
-      "y": 13
+      "x": 15,
+      "y": 12
     },
     {
       "part": {
         "id": "Out",
-        "type": "VALVE_MANUAL",
-        "rotate": 270
+        "type": "VALVE_MANUAL"
       },
-      "x": 16,
-      "y": 14
-    },
-    {
-      "part": {
-        "rotate": 0,
-        "type": "TUBE_BRIDGE"
-      },
-      "x": 16,
-      "y": 13
+      "x": 18,
+      "y": 12
     },
     {
       "part": {
@@ -770,134 +614,109 @@
         "type": "PUMP",
         "id": "p2"
       },
-      "x": 20,
+      "x": 14,
       "y": 10
     },
     {
       "part": {
-        "rotate": 0,
-        "type": "TUBE_CROSS"
+        "rotate": 180,
+        "type": "TUBE_TEE"
       },
-      "x": 20,
+      "x": 14,
       "y": 9
     },
     {
       "part": {
-        "rotate": 270,
-        "type": "TUBE_TEE"
-      },
-      "x": 20,
-      "y": [11,12]
-    },
-    {
-      "part": {
         "rotate": 180,
         "type": "TUBE_ELBOW"
       },
       "x": 20,
-      "y": 6
+      "y": 2
     },
     {
       "part": {
-        "rotate": 180,
+        "rotate": 90,
         "type": "TUBE_ELBOW"
       },
-      "x": 21,
-      "y": 4
-    },
-    {
-      "part": {
-        "rotate": 180,
-        "type": "TUBE_ELBOW"
-      },
-      "x": 19,
+      "x": 15,
       "y": 7
     },
     {
       "part": {
         "type": "CFC"
       },
-      "x": 10,
+      "x": 8,
       "y": 12
     },
     {
       "part": {
-        "rotate": 180,
-        "type": "TUBE_TEE"
-      },
-      "x": 13,
-      "y": 13
-    },
-    {
-      "part": {
-        "rotate": 180,
-        "type": "TUBE_TEE"
+        "type": "TUBE_ELBOW",
+        "rotate": 270
       },
       "x": 16,
-      "y": 12
+      "y": 11
     },
     {
       "part": {
-        "rotate": 270,
-        "type": "TUBE_ELBOW"
+        "rotate": 0,
+        "type": "TUBE_TEE"
       },
-      "x": 20,
+      "x": 14,
       "y": 13
-    },
-    {
-      "part": {
-        "rotate": 270,
-        "type": "TUBE_ELBOW"
-      },
-      "x": 21,
-      "y": 9
     },
     {
       "part": {
         "rotate": 0,
         "type": "TUBE_ELBOW"
       },
-      "x": 19,
+      "x": 13,
       "y": 9
     },
     {
       "part": {
-        "rotate": 90,
+        "rotate": 270,
+        "type": "TUBE_ELBOW"
+      },
+      "x": 15,
+      "y": 9
+    },
+    {
+      "part": {
         "type": "TUBE_OUTPUT"
       },
-      "x": 13,
-      "y": 14
+      "x": 15,
+      "y": 13
     },
     {
       "part": {
         "type": "SETPOINT",
         "id": "sphlt"
       },
-      "x": 4,
-      "y": 0
+      "x": 2,
+      "y": 1
     },
     {
       "part": {
         "type": "SETPOINT",
         "id": "spmt"
       },
-      "x": 11,
-      "y": 0
+      "x": 9,
+      "y": 1
     },
     {
       "part": {
         "type": "SETPOINT",
         "id": "spbk"
       },
-      "x": 17,
-      "y": 0
+      "x": 16,
+      "y": 1
     },
     {
       "part": {
         "type": "TEMP_SENSOR_INLINE",
         "id": "cfcouttemp"
       },
-      "x": 13,
+      "x": 11,
       "y": 12
     }
   ],
