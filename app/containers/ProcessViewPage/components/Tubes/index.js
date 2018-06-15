@@ -35,35 +35,42 @@ import { Liquids } from '../Liquids';
 
 class Input extends React.Component {
   static flows = () => ({ s: 'r+99' }); // source on the right edge
-
   render() {
+    const flipped = this.props.flip ? styles.flipped : undefined; // is parent flipped?
     return (
       <SvgParent>
         <SvgLiquidInput className={styles.liquid} style={Liquids.strokeStyle(pickLiquid(this.props.flows))} />
         <SvgTubeInput className={styles.tube} />
-        <FlowArrows flows={this.props.flows} />
+        <g className={flipped}>
+          <FlowArrows flows={this.props.flows} />
+        </g>
       </SvgParent>
     );
   }
 }
 Input.propTypes = {
   flows: React.PropTypes.array,
+  flip: React.PropTypes.bool,
 };
 
 class Output extends React.Component {
   static flows = () => ({ l: 's' }); // sink on the left edge
   render() {
+    const flipped = this.props.flip ? styles.flipped : undefined; // is parent flipped?
     return (
       <SvgParent>
         <SvgLiquidOutput className={styles.liquid} style={Liquids.strokeStyle(pickLiquid(this.props.flows))} />
         <SvgTubeOutput className={styles.tube} />
-        <FlowArrows flows={this.props.flows} />
+        <g className={flipped}>
+          <FlowArrows flows={this.props.flows} />
+        </g>
       </SvgParent>
     );
   }
 }
 Output.propTypes = {
   flows: React.PropTypes.array,
+  flip: React.PropTypes.bool,
 };
 
 
@@ -152,17 +159,21 @@ Bridge.propTypes = {
 class Inlet extends React.Component {
   static flows = () => ({ l: 'k' });
   render() {
+    const flipped = this.props.flip ? styles.flipped : undefined; // is parent flipped?
     return (
       <SvgParent>
         <SvgLiquidInlet className={styles.liquid} style={Liquids.strokeStyle(pickLiquid(this.props.flows))} />
         <SvgTubeInlet className={styles.tube} />
-        <FlowArrows flows={this.props.flows} />
+        <g className={flipped}>
+          <FlowArrows flows={this.props.flows} />
+        </g>
       </SvgParent>
     );
   }
 }
 Inlet.propTypes = {
   flows: React.PropTypes.array,
+  flip: React.PropTypes.bool,
 };
 
 class InletStraight extends React.Component {
@@ -209,17 +220,21 @@ Dip.propTypes = {
 class InletWhirlpool extends React.Component {
   static flows = () => ([[{ l: 'b' }], [{ t: 'b' }], [{ t: 'b' }], [{ t: 'k' }]]);
   render() {
+    const flipped = this.props.flip ? styles.flipped : undefined; // is parent flipped?
     return (
       <SvgParent viewBox={'0 0 50 200'}>
         <SvgLiquidInletWhirlpool className={styles.liquid} style={Liquids.strokeStyle(pickLiquid(this.props.flows, 0, 0))} />
         <SvgTubeInletWhirlpool className={styles.tube} />
-        <FlowArrows2D flows={this.props.flows} />
+        <g className={flipped}>
+          <FlowArrows2D flows={this.props.flows} />
+        </g>
       </SvgParent>
     );
   }
 }
 InletWhirlpool.propTypes = {
   flows: React.PropTypes.array,
+  flip: React.PropTypes.bool,
 };
 
 class Fitting extends React.Component {
