@@ -1,9 +1,12 @@
 {
   "id": 14,
-  "name": "Whirlpool",
+  "name": "Boil",
   "notes": [
-    "When boiling is finished, we create a whirlpool in te kettle.",
-    "By whirlpooling the wort, suspended particles (trub) will be gathered in the center of the kettle and we can prevent pumping them to the fermenter later."
+    "The wort is boiled for 60 or 90 minutes",
+    "Hop is added in multiple additions, depending on the recipe.",
+    "It is important to not cover the kettle during the boil, so DMS can boil off.",
+    "Any leftover sparge water can be pumped to the drain through the CFC, backflushing it.",
+    "While the wort is boiling, you have time to scoop the grain out of the MT. A wet vac works great to suck up every last grain."
   ],
   "settings": [
     {
@@ -33,7 +36,7 @@
     {
       "id": "BK-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -45,7 +48,7 @@
     {
       "id": "BK-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -57,7 +60,7 @@
     {
       "id": "Water",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -69,7 +72,7 @@
     {
       "id": "Route-2",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -81,13 +84,13 @@
     {
       "id": "CFC-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Drain",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -117,6 +120,8 @@
     {
       "id": "hlt",
       "settings": {
+        "volume": 15.0,
+        "liquid": "hotwater"
       }
     },
     {
@@ -129,6 +134,7 @@
     {
       "id": "mt",
       "settings": {
+        "grain": 25
       }
     },
     {
@@ -140,32 +146,31 @@
     {
       "id": "heat_hlt",
       "settings": {
+        "duty": 0
       }
     },
     {
       "id": "heat_bk",
       "settings": {
-        "duty": 0
+        "duty": 100
       }
     },
     {
       "id": "p1",
       "settings":{
-        "power": false
+        "power": true
       }
     },
     {
       "id": "p2",
       "settings":{
-        "power": true,
-        "speed": 100
+        "power": false
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 60,
-        "set": 60
+        "val": 74.2
       }
     },
     {
@@ -177,14 +182,14 @@
     {
       "id": "spbk",
       "settings": {
-        "val": 90,
-        "set": 20
+        "val": 100,
+        "set": 100
       }
     },
     {
       "id": "cfcouttemp",
       "settings": {
-        "val": 20
+        "val": 73
       }
     }
   ]

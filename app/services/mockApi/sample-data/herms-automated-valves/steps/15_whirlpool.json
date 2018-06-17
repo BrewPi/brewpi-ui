@@ -1,15 +1,15 @@
 {
-  "id": 17,
-  "name": "Empty HLT coil",
+  "id": 15,
+  "name": "Whirlpool",
   "notes": [
-    "To salvage the wort left in the HLT coil, you can let it drain to the fermenter.",
-    "If gravity is not enough to do it, you could add some water in the mash tun or boil kettle to push with pump 2."
+    "When boiling is finished, we create a whirlpool in te kettle.",
+    "By whirlpooling the wort, suspended particles (trub) will be gathered in the center of the kettle and we can prevent pumping them to the fermenter later."
   ],
   "settings": [
     {
       "id": "HLT-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -21,31 +21,31 @@
     {
       "id": "Coil-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "Coil-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "BK-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "MT-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "BK-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -63,7 +63,7 @@
     {
       "id": "Route-1",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -75,7 +75,7 @@
     {
       "id": "CFC-out",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -99,13 +99,13 @@
     {
       "id": "Water-cfc",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "Out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -117,14 +117,13 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 65.0,
-        "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 0
+        "volume": 50,
+        "liquid": "wort"
       }
     },
     {
@@ -141,7 +140,6 @@
     {
       "id": "heat_hlt",
       "settings": {
-        "duty": 100
       }
     },
     {
@@ -153,32 +151,33 @@
     {
       "id": "p1",
       "settings":{
-        "power": true
+        "power": false
       }
     },
     {
       "id": "p2",
       "settings":{
-        "power": false
+        "power": true,
+        "speed": 100
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 73,
-        "set": 75
+        "val": 60,
+        "set": 60
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 72
+        "val": 20
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 40,
+        "val": 90,
         "set": 20
       }
     },

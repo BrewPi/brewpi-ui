@@ -1,18 +1,15 @@
 {
-  "id": 16,
-  "name": "Cool and transfer",
+  "id": 13,
+  "name": "Push wort out of HERMS coil",
   "notes": [
-    "In this setup, we cool in a single pass, while also re-using the heat by transfering it to the HLT.", 
-    "You should now connect the transfer hose to your fermenter.",
-    "Fill the HLT with water. This water and the HERMS coil will act as a pre-cooler and will be heated to be later used for cleaning", 
-    "Also open the cooling water for the CFC, and then start pump 2 to do a single pass cool through the HLT coil and the CFC.", 
-    "Adjust the flow rate to maintain the desired output temperature" 
+    "We push the wort left in the HERMS coil to the boil kettle.",
+    "This will increase brewhouse efficiency and it cleans the coil now that the sugars are still hot and easy to flush."
   ],
   "settings": [
     {
       "id": "HLT-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -36,7 +33,7 @@
     {
       "id": "BK-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -48,7 +45,7 @@
     {
       "id": "BK-out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -60,13 +57,13 @@
     {
       "id": "Water",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
       "id": "Route-1",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -84,7 +81,7 @@
     {
       "id": "CFC-in",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -102,13 +99,13 @@
     {
       "id": "Water-cfc",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
       "id": "Out",
       "settings": {
-        "pos": "open"
+        "pos": "closed"
       }
     },
     {
@@ -120,20 +117,23 @@
     {
       "id": "hlt",
       "settings": {
-        "volume": 65.0,
-        "liquid": "water"
+        "volume": 30.0,
+        "liquid": "hotwater"
       }
     },
     {
       "id": "bk",
       "settings": {
-        "volume": 50,
+        "volume": 42,
         "liquid": "wort"
       }
     },
     {
       "id": "mt",
       "settings": {
+        "grain": 25,
+        "volume": 0,
+        "liquid": "runoff"
       }
     },
     {
@@ -145,12 +145,13 @@
     {
       "id": "heat_hlt",
       "settings": {
+        "duty": 0
       }
     },
     {
       "id": "heat_bk",
       "settings": {
-        "duty": 0
+        "duty": 100
       }
     },
     {
@@ -163,26 +164,26 @@
       "id": "p2",
       "settings":{
         "power": true,
-        "speed": 100
+        "speed": 40
       }
     },
     {
       "id": "sphlt",
       "settings": {
-        "val": 15
+        "val": 75.2
       }
     },
     {
       "id": "spmt",
       "settings": {
-        "val": 20
+        "val": 72.8
       }
     },
     {
       "id": "spbk",
       "settings": {
-        "val": 95,
-        "set": 20
+        "val": 82.9,
+        "set": 100
       }
     },
     {

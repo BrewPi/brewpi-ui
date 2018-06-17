@@ -1,17 +1,18 @@
 {
-  "id": 15,
-  "name": "Prepare for transfer",
+  "id": 17,
+  "name": "Cool and transfer",
   "notes": [
-    "DMS (Dimethyl Sulfide) is created in wort whenever it is heated. It is an off-flavor that has the aroma of cooked corn. When the wort is still boiling, DMS is boiled off and will not be a problem.",
-    "When boiling is stopped, DMS is no longer boiled off, but it is still created until the beer is cooled. Therefore, we want to cross this temperature range as quickly as possible.",
-    "But first we'll sanitize the transfer path. Connect your transfer hose to the output. If the hose is long enough to reach the BK, hang it in the kettle. Otherwise, catch the hot wort in a clean bucket and put it back in the BK afterwards.",
-    "By first transfering some boiling hot wort without cooling (and back into the BK), you'll sanitize your transfer hose and CFC."
+    "In this setup, we cool in a single pass, while also re-using the heat by transfering it to the HLT.", 
+    "You should now connect the transfer hose to your fermenter.",
+    "Fill the HLT with water. This water and the HERMS coil will act as a pre-cooler and will be heated to be later used for cleaning", 
+    "Also open the cooling water for the CFC, and then start pump 2 to do a single pass cool through the HLT coil and the CFC.", 
+    "Adjust the flow rate to maintain the desired output temperature" 
   ],
   "settings": [
     {
       "id": "HLT-in",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -101,7 +102,7 @@
     {
       "id": "Water-cfc",
       "settings": {
-        "pos": "closed"
+        "pos": "open"
       }
     },
     {
@@ -119,6 +120,8 @@
     {
       "id": "hlt",
       "settings": {
+        "volume": 65.0,
+        "liquid": "water"
       }
     },
     {
@@ -153,7 +156,7 @@
     {
       "id": "p1",
       "settings":{
-        "power": false
+        "power": true
       }
     },
     {
@@ -166,7 +169,7 @@
     {
       "id": "sphlt",
       "settings": {
-        "val": 20
+        "val": 15
       }
     },
     {
@@ -185,7 +188,7 @@
     {
       "id": "cfcouttemp",
       "settings": {
-        "val": 92
+        "val": 20
       }
     }
   ]
