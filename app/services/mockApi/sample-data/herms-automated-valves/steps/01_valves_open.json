@@ -2,10 +2,10 @@
   "id": 1,
   "name": "All valves open",
   "notes": [
-    "This layout uses 16 remotely controlled valves and 2 manual valves (Beer-out and CFC-water)",
-    "The goal of this design is to have a closed system that is fully automated and clean-in-place cycles can be done with a few clicks.",
-    "The steps are pre-defined and can be cycled through with the top menu. Additionally, each valve can be clicked to change its position. The flows are calculated based on the valve positions, water input, pump power and kettle content.",
-    "The flows are calculated in the browser. Only when apply is clicked, they are sent to the controller. This allows you to try out a new configuration before applying it"   
+    "This brewing setup uses 16 remotely controlled valves and 2 manual valves, for the beer output and the counter flow chiller water.",
+    "This setup is designed as a closed system that can be fully automated for brewing and cleaning. Clean-in-place cycles can be done with a few clicks before and after brewing.",
+    "The steps are pre-defined and can be cycled through with the top menu. With the arrows or drop-down menu you can select the next brewing step and just click 'Apply' to toggle all valves.",
+    "If you want to put the system in a state that is not pre-defined, you can click the valves and pumps. In the browser it will calculate what the new flows would be and when you click 'Apply' the state will be copied to the real world hardware."   
   ],
   "settings": [
     {

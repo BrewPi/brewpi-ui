@@ -3,7 +3,7 @@
   "name": "Fill boil kettle",
   "notes": [
     "The boil kettle (BK) is filled with strike water for the mash.",
-    "By preparing the strike water in the boil kettle, we can measure its temperature and volume separately."
+    "We heat the strike water in the boil kettle, instead of taking it from the HLT, so we can measure the volume in advance and make it hotter than the HLT water. This is needed because it is mixed with cold grain."
   ],
   "settings": [
     {

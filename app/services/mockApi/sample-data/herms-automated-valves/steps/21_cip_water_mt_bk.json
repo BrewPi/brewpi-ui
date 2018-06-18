@@ -2,8 +2,8 @@
   "id": 21,
   "name": "CIP water: flush MT and BK",
   "notes": [
-    "We can rinse the mash tun and boil kettle with the spray balls in the lid.",
-    "You can also shortly open MT-in and BK-in to flush those paths",
+    "To rinse the mash tun an boil kettle, we mounted spray balls in the lid. They start spinning when water flows through them with enough pressure. This sprays the entire inside of the kettle with water or cleaner.",
+    "You can also shortly open MT-in and BK-in to flush those paths.",
     "Note that the HLT has only seen clean water and doesn't need flushing."
   ],
   "settings": [

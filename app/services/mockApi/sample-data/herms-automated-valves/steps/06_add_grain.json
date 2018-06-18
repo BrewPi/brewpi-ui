@@ -2,7 +2,7 @@
   "id": 6,
   "name": "Add grain to mash tun",
   "notes": [
-    "While the HLT and BK are heating, we can add grain to the mash tun."
+    "While the HLT and BK are heating, we can crush the grain and add it to the mash tun."
   ],
   "settings": [
     {
