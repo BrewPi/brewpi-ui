@@ -4,9 +4,9 @@
   "notes": [
     "In this setup, we cool in a single pass, while also re-using the heat by transfering it to the HLT.", 
     "You should now connect the transfer hose to your fermenter.",
-    "Fill the HLT with water. This water and the HERMS coil will act as a pre-cooler and will be heated to be later used for cleaning", 
+    "Fill the HLT with water. This water and the HERMS coil will act as a pre-cooler and will be heated to be later used for cleaning.",
     "Also open the cooling water for the CFC, and then start pump 2 to do a single pass cool through the HLT coil and the CFC.", 
-    "Adjust the flow rate to maintain the desired output temperature" 
+    "Adjust the flow rate to maintain the desired output temperature." 
   ],
   "settings": [
     {

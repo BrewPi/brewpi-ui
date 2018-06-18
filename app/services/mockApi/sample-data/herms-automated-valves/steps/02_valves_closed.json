@@ -2,7 +2,7 @@
   "id": 2,
   "name": "All valves closed",
   "notes": [
-    "On a brew day, you'll start with a quick rinse of the system with water and PBW if you didn't leave it clean last time (see CIP steps). Then you brew and CIP again afterwards.",
+    "On a brew day, you'll start with a quick rinse of the system with water and a cleaner like PBW if you didn't leave it clean last time (see CIP steps). Then you brew and CIP again afterwards.",
     "The layout in real life closely resembles the layout here. The pumps are below the kettles and the drain is the lowest point of the setup to be able to fully drain the system by opening all valves."
   ],
   "settings": [
